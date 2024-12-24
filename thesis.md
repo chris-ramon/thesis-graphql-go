@@ -1,26 +1,6 @@
 
 
-FACULTAD DE INGENIERÍA
-
-Carrera de Ingeniería Empresarial y de Sistemas 
-
-DESARROLLO DE LA IMPLEMENTACIÓN DEL PROTOCOLO ESTÁNDAR GRAPHQL EN EL LENGUAJE DE PROGRAMACIÓN GO
-
-Trabajo de Suficiencia Profesional para optar el Título Profesional de Ingeniero Empresarial y de Sistemas
-
-ROGER CHRISTIAN RAMÓN RODRIGUEZ
-TODO: código-proyecto
-
-ASESOR:
-TODO: nombre-del-asesor
-código-del-asesor
-
-
-Lima – Perú
-2024
 ÍNDICE
-
-
 
 Capítulo 1: Introducción	3
 Capítulo 2: Planteamiento Del Problema	4
