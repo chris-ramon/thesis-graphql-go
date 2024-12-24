@@ -1,77 +1,112 @@
 
-
 ÍNDICE
 
+TODO:
+Aim is to understand why gql plus go.
+Aim is to build why gql plus go, and how it successfully works.
+When building picking up the req - all other thesis
+Understanding why go was picked up
+Understanding why gql is a successfully solution
+
+Aim is to, light understanding of why gql plus light understanding why go was the opted-in, why it was decided to be open-source, and the successful implementation so we needed build it, why the need to have a gql + go + compat + program schema
+
+
+
+rq1. 
+rq2. 
+
 Capítulo 1: Introducción	3
-Capítulo 2: Planteamiento Del Problema	4
-2.1 Situación Problemática.	4
-2.2 Formulación del Problema.	5
-2.3 Justificación de la Investigación.	6
-2.4 Objetivos.	7
-2.4.1 Objetivo General.	7
-2.4.2 Objetivo Específicos.	7
-Capítulo 3: Marco Teórico	8
-3.1 Antecedentes Internacionales.	8
-3.2 Antecedentes Nacionales.	9
-3.3 Bases Teóricas.	9
-3.4 Definición De Términos.	9
-Capítulo 4: Desarrollo Del Proyecto	11
-4.1. Metodología Utilizada.	11
-4.2 Fases.	12
-4.2.1 Análisis.	12
-4.2.1.1 Especificación de Requerimientos.	12
-4.2.2 Diseño.	13
-4.2.3 Desarollo.	13
-4.2.4 Testeo.	13
-4.2.5 Despliegue.	13
-4.3 Tipos de Metodologías Ágiles.	13
-4.4 Artefactos.	13
-4.5 Arquitectura de la Implementación.	13
-Capítulo 5: Análisis Y Resultados	14
-Conclusiones	14
-Recomendaciones	14
-Referencias	14
-
-
-
+Capítulo 2: Planteamiento del Problema	5
+2.1 Situación Problemática.	5
+2.2 Formulación del Problema.	6
+2.3 Justificación de la Investigación.	7
+2.4 Objetivos.	8
+2.4.1 Objetivo General.	8
+2.4.2 Objetivo Específicos.	8
+Capítulo 3: Marco Teórico	10
+3.1 Antecedentes Internacionales.	10
+3.2 Antecedentes Nacionales.	11
+3.3 Bases Teóricas.	11
+3.4 Definición de Términos.	11
+Capítulo 4: Desarrollo del Proyecto	12
+4.1. Metodología.	12
+4.2 Análisis.	13
+4.2.1 Introducción	14
+4.2.2 Identificar Tareas	14
+4.2.3 Priorizar Tareas	17
+4.2.4 Mapear Tareas	17
+4.2.5 Alcance.	18
+4.2.6 Especificación de Requerimientos.	18
+4.2 Diseño.	19
+4.3 Arquitectura	19
+4.4 Desarollo.	20
+4.5 Testeo.	20
+4.6 Despliegue.	20
+4.7 Artefactos.	21
+Capítulo 5: Resultados	21
+Conclusiones	22
+Recomendaciones	22
+Referencias	23
 
 
 Capítulo 1: Introducción
 
-La presente tesis plantea el desarrollo de la implementación de la biblioteca open-source graphql-go, que sigue el estándar referencial, GraphQL es un protocolo para poder intercambiar datos entre el cliente y el servidor.
+La presente tesis desarrolla la implementación del proyecto open-source graphql-go que produce varios artefactos principalmente una biblioteca Go, que utiliza GitHub como sistema de control de código y versionamiento, sigue el estándar referencial graphql-js la cuál es una biblioteca open-source construida en JavaScript principalmente sigue la especificación oficial referencial GraphQL.
 
-Es innovador porque soluciona múltiples problemas de tradicionales protocolos de comunicación entre cliente y servidor, los cuales tienen como principal forma de comunicación centralizar la responsabilidad del lado del servidor.
+GraphQL es un protocolo de comunicación, diseñado para comunicar clientes y servidores a través de describir sus capacidades declarativamente usando su propio lenguaje de consultas, mutaciones y subscripciones, sirve para construir sistemas web, idealmente clientes web orientados a la interfaz de usuarios y servidores web.
 
-La implementación final es resultado de cubrir todo el estándar hasta el año 2016, la forma como se verifica que la implementación es funcional es a través de cubrir todos las pruebas de la implementación referencial graphql-js.
+Es innovador porque soluciona múltiples problemas de protocolos tradicionales, los cuales tienen como principal forma de comunicación centralizar la responsabilidad del lado del servidor web causando problemas de escalabilidad y mantenimiento.
 
-El resultado de la tesis produjo la biblioteca open-source graphql-go, que es usada en muchas empresas a nivel mundial, y también varios proyectos open-source que tiene mucho impacto positivo para poder mejorar la efectividad y eficiencia en la comunicación de clientes y servidores.
+Se logra el objetivo de la tesis a través de cubrir todo el estándar hasta el año 2016, la forma como se verifica que la implementación es funcional es a través de cubrir todos las pruebas de la implementación referencial graphql-js hasta la versión v0.6.0.
 
-Capítulo 2: Planteamiento Del Problema
+El resultado de la tesis es la biblioteca open-source graphql-go, que es usada en muchas empresas de diferentes países y proyectos open-source, causando impacto positivo para poder mejorar la efectividad y eficiencia en la comunicación de clientes-servidores web y creó una referencia estable para otras implementaciones.
+
+
+
+
+
+
+
+
+
+
+Capítulo 2: Planteamiento del Problema
 2.1 Situación Problemática.
 
-La forma tradicional de construir software es usando herramientas que permiten comunicar servidores y clientes a través de protocolos tradicionales cómo: SOAP, REST y RPC.
+La forma tradicional de construir software client-server es usando herramientas que permiten su comunicación a través de protocolos tradicionales cómo: RPC[1], SOAP[2], REST[3].
 
-Estas herramientas tienen cómo principal funcionamiento delegar la responsabilidad al servidor, que es dónde se definen que data puede ser obtenida, modificada y eliminada, esta estrategia de comunicación genera varios problemas que son resueltos a demanda.
+Estas herramientas centralizan el funcionamiento en el servidor, dónde se define con que data se puede interactuar, esta estrategia de comunicación genera varios problemas que son resueltos a demanda con soluciones a demanda.
 
-Los protocolos tradicionales requieren más recursos para poder enviar los datos desde el servidor al cliente.
+Múltiples endpoints son creados para poder cubrir diferentes casos de uso lo cuál incrementa la complejidad para poder administrar las peticiones del lado del cliente.
 
-Los límites de qué datos enviar del cliente al servidor son definidos en el servidor causando más sobrecarga al lado del cliente, la forma de definir que datos intercambiar son de múltiples formas causando la necesidad de crear un estándar.
+Estos diferentes endpoints causan over-fetching y under-fetching de datos, la consecuencia es que se requiere múltiples peticiones para consolidar la información, ya que el servidor decide que datos enviar por lo tanto los datos recibidos pueden ser mayor o menor a lo esperado.
 
-La escalabilidad es limitada del lado del frontend porque múltiples niveles de abstracción son necesarios para coordinar la comunicación creando complejidad que hace el frontend poco mantenible por lo tanto creando necesidad de integrar muchas soluciones para aliviar los problemas.
+Una de las principales consecuencias de tener múltiples endpoints es que se crean peticiones anidadas causando complejidad que resulta en el problema conocido cómo: n + 1.
 
-La separación de responsabilidad es limitada porque los servidores definen que data se obtiene.
-Los protocolos actuales causan múltiples formas de manejar el versionamiento de las APIs que tienen como resultado complejidad en el servidor que causan limitada escalabilidad y crear múltiples formas de versionamiento y agregan complejidad al frontend.
+Ineficiencia de mantenibilidad porque cuando se hacen cambios en el servidor impacto en cascada en los diferentes clientes que dependen del servidor por lo tanto los clientes son más propensos a errores.
 
-El intercambio de datos entre cliente y servidor usando herramientas tradicionales causan múltiples idas y vueltas de intercambio de datos que incrementan el uso de recursos y agregan complejidad del lado del frontend para consolidar el estado del software.
+Problemas de escalabilidad en los servidores porque tienen la responsabilidad de decidir y enviar datos lo cuál causa impacto en la redes asociadas porque más recursos son consumidos principalmente el ancho de banda.
 
-El desarrollo del software es lento porque requiere coordinación con múltiples endpoints con las herramientas tradicionales, por lo tanto el flujo de trabajo requiere mayores recursos porque hacer cambios impacta el servidor y el cliente.
+Incremento de costo porque los datos que son envíados desde los servidores requieren más capacidad para poder atender la demanda por lo tanto más aprovisionamiento y recursos son necesarios.
+
+Experiencia de desarrollo limitada porque se requiere muchas herramientas para interactuar con cada uno de los protocolos que usan los servidores causando impacto negativo en integrar nuevos.
+Lenta experiencia de desarrollo porque múltiples herramientas son requeridas para interactuar con los diferentes protocolos que crean dificultades al momento de integrar nuevos miembros a los proyectos principalmente curvas de aprendizaje complejas.
+
+Complejidad en las aplicaciones del lado del cliente porque son necesarios múltiples niveles de abstracción para coordinar y re-consolidar la información haciendo que el código sea difícil de mantener porque son necesarios muchas soluciones para mitigar los problemas.
+
+Los protocolos tradicionales causan múltiples formas de manejar el versionamiento de las APIs que tienen como resultado complejidad en el servidor que causan limitada extensibilidad.
+
 2.2 Formulación del Problema.
 
 Problema general
 
-¿Por qué desarrollar la implementación del estándar GraphQL en el lenguaje de programación Go, y confirmar su compatibilidad con la implementación referencial, y cómo validar su utilidad en empresas y proyectos open-source ?
+Let’s describe why each research question is important.
+
+¿Por qué desarrollar la implementación del estándar GraphQL en el lenguaje de programación Go, y confirmar su compatibilidad con la implementación referencial graphql-js, y cómo validar su utilidad en empresas de diferentes países y múltiples proyectos open-source ?
 
 Problema específicos
+
+Let’s describe why each research question is important.
 
 ¿Qué otras bibliotecas open-source similares existen?
 
@@ -173,7 +208,7 @@ Concluye que el país con mayor interés en aplicar una implementación de Graph
 Concluye que el año dónde se realizaron más soluciones informáticas es el 2019.
 
 3.3 Bases Teóricas.
-3.4 Definición De Términos.
+3.4 Definición de Términos.
 
 Rapid Application Development (RAD): A methodology that emphasizes and prioritizes rapid iterations of software development.
 
@@ -194,21 +229,8 @@ Public Codebase: The source of the project is at a public repository so can be a
 Rapid Prototyping: Creates the right environment for rapid prototyping of new features, which enables the participation of all the community via the tooling of the source of the code.
 
 Collaboration: Encourages all types of participation which can be from different experiences so the community of contributors are able to participate and learn in different ways.
-
-
-
-Planteamiento del problema.
-Resulta que el problema principal es que lo estándares evolucionaron desde múltiples protocolos para intercambiar datos de cliente y servidor, eg. soap, rest, estas soluciones tienen como principal funcionamiento enviar datos del servidor, quiere decir que el servidor decide que datos enviar, por lo tanto los recursos que se usan son más amplios, la optimización es a nivel ad-hoc y no muy escalable, por lo tanto el mantenimiento resulta complejo y por eso nace la necesidad de crear nuevas herramientas.
-
-La definición de que datos obtener son el servidor, por lo tanto la forma de construir los sistemas depende de la documentación de los APIs del lado del servidor.
-
-Pero una de las formas más eficientes de construir apps es empezar desde la UI, entonces cuando se desarrolla la app, el equipo UI sabe que datos necesita, por lo tanto en lado del software de la UI se decide qué datos obtener, y la forma de obtener los datos con las herramientas existentes hace complejo el trabajo porque los datos que obtener se definen en el servidor y una mejor estrategia es definir qué datos usar basado en los UI components del lado del cliente.
-
-Also we can mention that the need of an implementation on the go programming language was needed because the language is fully adopted for modern software therefore the need to have a version of the graphql-js.
-
-
-Capítulo 4: Desarrollo Del Proyecto
-4.1. Metodología Utilizada.
+Capítulo 4: Desarrollo del Proyecto
+4.1. Metodología.
 
 The methodologies that were used are:
 
@@ -232,90 +254,249 @@ Public Codebase: The project was publicly available since the early stages of de
 Rapid Prototyping: Since we leveraged GitHub as a central part of the workflow of the project, it enabled rapid iterations of including sets of changes from the graphql-js reference implementation versions.
 
 Collaboration: it enabled different contributors from different parts that learned from the project and they were to add value.
+4.2 Análisis.
+
+It was decided to implement the GraphQL standard in Go following the methodologies listed above to have a working initial version and continue iterating from there:
+Rapid application development (RAD): From the initial version there was multiple number of iterations that made the library stable:
 
 
-4.2 Fases.
+Prototyping: We have earlier versions that have the implementation work as a prototype which helped us to validate and test main functionalities.
 
-4.2.1 Análisis.
-Why was decided to do the implementation
+User Feedback: Since we used GitHub as a central main source, there was continued feedback from the community in order to incorporate those.
 
-4.2.1.1 Introducción
+Fast turnaround: There were multiple pivots on the implementation of the main components with the aim of friendly APIs.
 
-The implementation was decided to be built because at the time when the GraphQL Standard was released in 2015 there was no implementation in the programming language Go.
-
-The reference implementation that was released together was graphq-js.
-
-So there was the need to create the library in the Go programming language which matches the reference implementation in order to have compatibility at certain version.
+Open-source development methodology: We leveraged GitHub as source of the code, and we used multiple of those features to create the library as a open-source project:
 
 
-4.2.1.2 Identificar Tareas
-Which tasks were created in order to detail the implementation
+Peer Review: The pull-requests that included new functionality had constantly reviewed to improve the quality and reduce the number of errors.
 
-The strategy we did in order to find the tasks to create the Go implementation was to port changes matching the version from graphql-js.
+Decentralized Contributors: We had multiple contributors via GitHub since they were able to review the library and propose improvements and report bugs.
 
-Those tasks were delivered using mainly GitHub via pull-requests, besides the porting changes there were small incremental pull-requests that improved certain parts of the implementation.
+Public Codebase: The library was developed publicly therefore the codebase could be leveraged for different purposes.
+
+Rapid Prototyping: The library was created as continuous iteration via multiple prototypes.
+Collaboration: Since GitHub were used, collaboration is the central part of the development with constant collaboration of multiple contributors.
+4.2.1 Introducción
+
+The implementation was decided to be built because at the time when the GraphQL standard was released in 2015, and at that time there was no implementation available in the programming language Go, therefore the opportunity to create a Go library for it.
+
+One important highlight is that the standard was released at similar time together with the reference implementation graphql-js, therefore those two artifacts were used to identify the tasks that are part of this section.
+
+The tasks matches the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via pull requests so we could accomplish compatibility at each version level.
+
+4.2.2 Identificar Tareas
+
+The strategy we did in order to find the tasks to create the Go implementation was to port changes matching the versions from graphql-js at component level, some tasks did include changes on multiple components.
+
+Those tasks were delivered using GitHub via pull-requests, besides porting changes there were small incremental improvements.
 
 The following tasks were identified:
 
-
-
-
-
-Porting Changes Matching Versions:
-
+Task Name
+Components
+Description
+Pull Requests
+Version
 Porting changes from graphql-js version 0.4.18.
+Errors, languages, types, execution, validation.
+Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
+Consolidate the extension definition outside the type definition.
+Make operation name optional.
+Compliance with the int sizing based on the specification.
+Changes on the function signature of graphql.NewTypeInfo
+Enable the possibility of removing the experimental FieldDefFn.
 https://github.com/graphql-go/graphql/pull/117 
+0.4.18.
 Porting changes from graphql-js version 0.5.0.
+
+
+Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
+Improvements on introspection related to directive locations.
+Improvements in the schema language related to directives.
+Consolidates the `getTypeOf` method into the executor component.
+Schema changes related to types.
+Consolidate arguments including context to executor.
+Improvements in types overlapping in rules component.
+Add schema definition into language component.
 https://github.com/graphql-go/graphql/pull/123 
+0.5.0.
 Porting changes from graphql-js version 0.6.0.
+
+
+
+
 https://github.com/graphql-go/graphql/pull/192
-
-Main Components:
-
-
+0.6.0.
 Executor
+
+
+
+
 https://github.com/graphql-go/graphql/pull/8 
-Source: 
+
+
+Source
+
+
+
+
 https://github.com/graphql-go/graphql/pull/5
 
 
 Visitor
+
+
+
+
 https://github.com/graphql-go/graphql/pull/10 
+
+
 Printer
+
+
+
+
 https://github.com/graphql-go/graphql/pull/10 
-Parser:
+
+
+Parser
+
+
+
+
 https://github.com/graphql-go/graphql/pull/2 
 
 
-Lexer:
-AST:
+Lexer
+
+
+
+
 https://github.com/graphql-go/graphql/pull/3 
-Collector:
-Resolver:
+
+
+AST
+
+
+
+
+
+
+
+
+Collector
+
+
+
+
+
+
+
+
+Resolver
+
+
+
+
 https://github.com/graphql-go/graphql/pull/288 
 
 
-Other Components:
 Types
+
+
+
+
 https://github.com/graphql-go/graphql/pull/12 
 
+
 Errors
+
+
+
+
 https://github.com/graphql-go/graphql/pull/423
 
 
+CircleCI
 
-Build System:
-CircleCI:
+
+
+
 https://github.com/graphql-go/graphql/pull/361
 
 
 
-4.2.1.3 Priorizar Tareas
 
-4.2.1.4 Mapear Tareas
+4.2.3 Priorizar Tareas
 
-4.2.1.5 Medir Alcance
-4.2.1.1 Especificación de Requerimientos.
+Task priority was based on the iteration of different versions matching the reference implementation, below we list the tasks names along their priority and duration.
+
+
+Task Name
+Priority
+Duration
+Contributor
+Pull Request
+
+
+
+
+
+
+
+
+
+
+
+
+4.2.4 Mapear Tareas
+
+Tasks mapping are based on matching the unit tasks against the project thesis requirements, below we list the tasks names against their requirements plus the main implementation components.
+
+Task Name
+Requerimientos Funcionales
+GraphQL Component
+Pull Request
+
+
+
+
+
+
+
+
+
+
+4.2.5 Alcance.
+
+Research goals:
+Identify the problems of the traditional client-server protocols.
+Implement the GraphQL standard in Go.
+Produce a Go open-source library.
+Verify the compatibility against the GraphQL reference implementation.
+Create the environment for preserving the end-result.
+
+Goals clarifications:
+Problems identified were opted-in to consider only the following protocols: 
+Implementation limited up-to graphql-js version: 0.6.0.
+Specific features were implemented starting from graphql-js version: 0.6.0.
+
+
+
+Potential biases identification:
+Implementation is committed to open-source.
+Standard implementation graphql-js compatible commitment.
+
+Limits of the research:
+Limited up-to a graphql-js version 0.6.0 tests suites.
+Limited to GraphQL schema programmatically defined.
+
+Not included in this research:
+Other type of schema definition strategies such as: Inference from text schema-first.
+
+
+4.2.6 Especificación de Requerimientos.
 
 Related to how the system behaves at an internal level.
 How all different apis of gql behave
@@ -344,26 +525,10 @@ Requerimientos de dominio:
 GraphQL Standard Spec:
 Open-source Standards:
 Go Standards:
-4.2.2 Diseño.
+4.2 Diseño.
+What are the internal design of the GraphQL standard, let’s add here diagrams of the workflow, also let’s add each component workflow, prop using uml something like that, also, let’s add GraphQL Playground, GraphQL GraphiQL.
 
-4.2.3 Desarollo.
-
-4.2.4 Testeo.
-
-4.2.5 Despliegue.
-
-What are the process of the open-source project ?
-
-
-
-
-
-4.2.1 Diagrama de flujo del proceso AS IS
-
-
-4.3 Tipos de Metodologías Ágiles.
-4.4 Artefactos.
-4.5 Arquitectura de la Implementación.
+4.3 Arquitectura
 
 query/mutation/subscription as source.
 Source: Source-in.
@@ -378,73 +543,104 @@ State machine is a representation of a workflow of nodes that produce as an end-
 GraphQL have multiple components that can be represented as a state machine, for example the most important component that are abstracted as:
 AST state machine, up-down direction.
 Source partial state machine, because one way flow.
-Capítulo 5: Análisis Y Resultados
 
+
+4.4 Desarollo.
+
+How is the distribution of the task accomplished ? Let’s add here screenshots of the PRs, maybe a table, let’s break the task into a simpler list and here let’s add more detailed tasks.
+
+Also we could add a taks mapping against the components and linking with the code components in Go down to graphql js components.
+4.5 Testeo.
+
+Also let’s add percentage of accomplishing for reaching the desire covering tests results of graphql-js.
+
+Also we are matching the tasks names against the set of unit tests in order to make sure the compatibility against the graphql-js reference implementation.
+
+
+Task Name
+GraphQL JS Unit Test
+GraphQL Go Unit Test
+Pull Request
+
+
+
+
+
+
+
+
+
+
+4.6 Despliegue.
+
+TODO: Add screenshots of each tool, for main components of gql.
+
+The open-source project was centralized in GitHub, where we leverage different features that enabled the openness of the library, such as:
+
+Comments: 
+Pull Requests:
+Issues:
+Stats:
+Documentation:
+Releases:
+Tags:
+
+Also we had a continuous integration pipeline that guarantees that new functionality was fully tested against all the test suite, we leverage the following both providers: TravisCI and CircleCI.
+
+TravisCI was deprecated in favor of CircleCI due to the latter having more modern functionality that was better for the future proof of the project.
+
+The following features of the continuous integration are in place:
+Building:
+Per Go version building:
+
+
+
+
+To guarantee that the suite of unit tests matched a high level standard set at a percentage accepted by the open-source community we leveraged Coveralls, and the following features were used:
+
+
+
+
+Besides that we also leverage the Go’s feature “go doc” in order to self document the library
+
+4.7 Artefactos.
+
+End result library at github.
+
+
+Capítulo 5: Resultados
+What was found as part of the research, focused on the main research question ?
+What are the research data collected that supports the success of this research, text and numbers end-results ?
+
+Qualitative data:
+List of unit tests from reference implementation.
+
+Quantitative data:
+Percentage compatibility of unit tests against reference implementation.
+
+Artifacts:
+An open-source Go library.
 Conclusiones
+What are the answers of the secondary questions that are part of the research ?
+What are the end results describing that the objectives were successfully accomplished ?
 
 Recomendaciones
+What are the recommendations for future related work that is strongly tie to this thesis ?
+
+
+
+
 
 Referencias
 
-
-
-Marco Teórico
-
-
-
-Antecedentes internacionales
-All other go implementations
-
-Antecedentes nacionales
-Check go local implementations
-
-Bases teoricas
-Sistemas de informacion q es
-
-Estandard basado en graphql-js, check the implemtation strategy
-
-Metodologia Scrum: Yes because new way build software so we can conclude i followed this.
-
-
-Definicion de terminos
-All the new terms that the new standard generates based on the solution
-
-Desarrollo del Proyecto
-Scrum strategy in details
-
-With end result of the project
-
-Análisis y Resultados
-We can include here that the tools is well created and useful we can show the test passing the percentages based on the graphlq js implementation
-
-And also listed of the dependant projects, and perhaps we add some emails asking how does it work for them, we can do some analysis on how their apis work well.
-
-Add more number of the tests and adoption.
-
-Conclusiones
-Here we can conclude that the the the end result of the problem was fully covered and that the library is completed well stablished full adopted has their niche.
-
-
-
-Referencias Bibliográficas
-
-Facebook, Inc. (2019). GraphQL referencia estándar.
-https://spec.graphql.org/October2021/
-
-
-GraphQL Spec.
-https://github.com/graphql/graphql-spec
-
-
-Official Website.
-https://graphql-go.github.io/graphql-go.org/
-
-
-GraphQL Queries as state machine.
-https://rmosolgo.github.io/ruby/graphql/2016/11/12/graphql-query-as-a-state-machine.html
-
-
-GraphQL Spec License.
-https://jointdevelopment.org/
+Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021/
+GraphQL Spec: https://github.com/graphql/graphql-spec
+Official Website: https://graphql-go.github.io/graphql-go.org/
+GraphQL Queries as state machine: https://rmosolgo.github.io/ruby/graphql/2016/11/12/graphql-query-as-a-state-machine.html
+GraphQL Spec License: https://jointdevelopment.org/
+Open Systems Interconnection: https://aws.amazon.com/what-is/osi-model/
+REST: https://datatracker.ietf.org/doc/html/rfc7231 
+SOAP: https://datatracker.ietf.org/doc/html/rfc4227
+RPC: https://datatracker.ietf.org/doc/html/rfc5531 https://datatracker.ietf.org/doc/html/rfc1050
 
 
