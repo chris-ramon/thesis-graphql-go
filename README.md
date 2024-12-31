@@ -1,13 +1,13 @@
 # Contents
 
-1.[Introduction](#introduction)
-2.[Problem Statement](#2-problem-statement)
-2.1 Context
-2.2 Analysis
-2.3 Research Statement
-2.4 Objectives
-2.4.1 General
-2.4.2 Specific
+- [Introduction](#introduction)
+- [Problem Statement](#2-problem-statement)
+  - Context
+  - Analysis
+  - Research Statement
+  - Objectives
+    - General
+    - Specific
 
 1. Theory Framework
 3.1 International Previous Work 
