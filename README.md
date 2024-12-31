@@ -1,19 +1,20 @@
 # Contents
 
-1. [Introduction](#introduction)
-2. [Problem Statement](#2-problem-statement)
+1.[Introduction](#introduction)
+2.[Problem Statement](#2-problem-statement)
 2.1 Context
 2.2 Analysis
 2.3 Research Statement
 2.4 Objectives
 2.4.1 General
 2.4.2 Specific
-3. Theory Framework
+
+1. Theory Framework
 3.1 International Previous Work 
 3.2 National Previous Work
 3.3 Baseline
 3.4 Glossary
-4. Development 
+1. Development 
 4.1. Methodology
 4.2 Analysis
 4.2.1 Introduction
@@ -28,10 +29,10 @@
 4.5 Testeo.	19
 4.6 Despliegue.	19
 4.7 Artefactos.	20
-5. Results
-6. Conclusions
-7. Recomendations
-8. References
+1. Results
+2. Conclusions
+3. Recomendations
+4. References
 
 ## Introduction
 La presente tesis desarrolla la implementación del estándar GraphQL en el lenguaje de programación Go, y verifica su compatibilidad.
