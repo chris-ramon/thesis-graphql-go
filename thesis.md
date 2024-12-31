@@ -1,75 +1,70 @@
-
-ÍNDICE
-
-TODO:
-Aim is to understand why gql plus go.
-Aim is to build why gql plus go, and how it successfully works.
-When building picking up the req - all other thesis
-Understanding why go was picked up
-Understanding why gql is a successfully solution
-
-Aim is to, light understanding of why gql plus light understanding why go was the opted-in, why it was decided to be open-source, and the successful implementation so we needed build it, why the need to have a gql + go + compat + program schema
-
-
-
-rq1. 
-rq2. 
-
 Capítulo 1: Introducción	3
-Capítulo 2: Planteamiento del Problema	5
-2.1 Situación Problemática.	5
-2.2 Formulación del Problema.	6
-2.3 Justificación de la Investigación.	7
+Capítulo 2: Planteamiento del Problema	4
+2.1 Situación Problemática.	4
+2.2 Formulación del Problema.	5
+2.3 Justificación de la Investigación.	6
 2.4 Objetivos.	8
 2.4.1 Objetivo General.	8
 2.4.2 Objetivo Específicos.	8
-Capítulo 3: Marco Teórico	10
-3.1 Antecedentes Internacionales.	10
-3.2 Antecedentes Nacionales.	11
-3.3 Bases Teóricas.	11
-3.4 Definición de Términos.	11
-Capítulo 4: Desarrollo del Proyecto	12
-4.1. Metodología.	12
-4.2 Análisis.	13
-4.2.1 Introducción	14
-4.2.2 Identificar Tareas	14
-4.2.3 Priorizar Tareas	17
-4.2.4 Mapear Tareas	17
-4.2.5 Alcance.	18
-4.2.6 Especificación de Requerimientos.	18
-4.2 Diseño.	19
-4.3 Arquitectura	19
-4.4 Desarollo.	20
-4.5 Testeo.	20
-4.6 Despliegue.	20
-4.7 Artefactos.	21
-Capítulo 5: Resultados	21
-Conclusiones	22
-Recomendaciones	22
-Referencias	23
+Capítulo 3: Marco Teórico	8
+3.1 Antecedentes Internacionales.	8
+3.2 Antecedentes Nacionales.	9
+3.3 Bases Teóricas.	10
+3.4 Definición de Términos.	10
+Capítulo 4: Desarrollo del Proyecto	11
+4.1. Metodología.	11
+4.2 Análisis.	12
+4.2.1 Introducción	13
+4.2.2 Identificar Tareas	13
+4.2.3 Priorizar Tareas	15
+4.2.4 Mapear Tareas	16
+4.2.5 Alcance.	16
+4.2.6 Especificación de Requerimientos.	17
+4.2 Diseño.	17
+4.3 Arquitectura	18
+4.4 Desarollo.	18
+4.5 Testeo.	19
+4.6 Despliegue.	19
+4.7 Artefactos.	20
+Capítulo 5: Resultados	20
+Conclusiones	20
+Recomendaciones	20
+Referencias	21
+1. Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021/	21
+2. GraphQL Spec: https://github.com/graphql/graphql-spec	21
+3. Official Website: https://graphql-go.github.io/graphql-go.org/	21
+4. GraphQL Queries as state machine: https://rmosolgo.github.io/ruby/graphql/2016/11/12/graphql-query-as-a-state-machine.html	21
+5. GraphQL Spec License: https://jointdevelopment.org/	21
+6. Open Systems Interconnection: https://aws.amazon.com/what-is/osi-model/	21
+7. REST: https://datatracker.ietf.org/doc/html/rfc7231	21
+8. SOAP: https://datatracker.ietf.org/doc/html/rfc4227	21
+9. RPC: https://datatracker.ietf.org/doc/html/rfc5531 https://datatracker.ietf.org/doc/html/rfc1050	21
+10. GraphQL Implementations Releases: https://youtu.be/783ccP__No8?t=1253	21
 
 
 Capítulo 1: Introducción
+La presente tesis desarrolla la implementación del estándar GraphQL en el lenguaje de programación Go, y verifica su compatibilidad.
 
-La presente tesis desarrolla la implementación del proyecto open-source graphql-go que produce varios artefactos principalmente una biblioteca Go, que utiliza GitHub como sistema de control de código y versionamiento, sigue el estándar referencial graphql-js la cuál es una biblioteca open-source construida en JavaScript principalmente sigue la especificación oficial referencial GraphQL.
+GraphQL es un protocolo de comunicación entre clientes y servidores, las capacidades de los servidores son descritos a través de esquemas, que es la interfaz principal para realizar distintas operaciones cómo: consultas, mutaciones y subscripciones, fue idealmente creado para comunicar servidores y clientes orientados a la interfaz de usuarios.
 
-GraphQL es un protocolo de comunicación, diseñado para comunicar clientes y servidores a través de describir sus capacidades declarativamente usando su propio lenguaje de consultas, mutaciones y subscripciones, sirve para construir sistemas web, idealmente clientes web orientados a la interfaz de usuarios y servidores web.
+La implementación tiene dos principales fuentes de desarrollo:
+La especificación GraphQL.
+La implementación de GraphQL en el lenguaje de programación JavaScript.
 
-Es innovador porque soluciona múltiples problemas de protocolos tradicionales, los cuales tienen como principal forma de comunicación centralizar la responsabilidad del lado del servidor web causando problemas de escalabilidad y mantenimiento.
+El objetivo de la implementación es tener compatibilidad con la implementación en JavaScript hasta la versión v0.6.0.
 
-Se logra el objetivo de la tesis a través de cubrir todo el estándar hasta el año 2016, la forma como se verifica que la implementación es funcional es a través de cubrir todos las pruebas de la implementación referencial graphql-js hasta la versión v0.6.0.
+La implementación crea un proyecto GitHub, el cuál es adoptado cómo sistema de control de versiones de código y herramienta del ciclo de vida del desarrollo de software.
 
-El resultado de la tesis es la biblioteca open-source graphql-go, que es usada en muchas empresas de diferentes países y proyectos open-source, causando impacto positivo para poder mejorar la efectividad y eficiencia en la comunicación de clientes-servidores web y creó una referencia estable para otras implementaciones.
+La implementación decide por Go porque es un lenguaje de programación moderno y que es adoptado constantemente por nuevos proyectos[todo:citar] se enfoca software orientado a la nube por lo tanto aprovecha todos los beneficios de GraphQL.
 
+La compatibilidad de la implementación es verificada usando varios frameworks de validación cómo:
+Pruebas unitarias de compatibilidad.
+End-users pruebas funcionales.
+Pruebas de interfaz de usuario.
 
+El resultado de la implementación es una biblioteca de software de código abierto.
 
-
-
-
-
-
-
-
+El éxito de la implementación es confirmado a través de identificar proyectos open source y empresas que dependen de la biblioteca para usar todos los beneficios de la biblioteca.
 Capítulo 2: Planteamiento del Problema
 2.1 Situación Problemática.
 
@@ -95,50 +90,30 @@ Lenta experiencia de desarrollo porque múltiples herramientas son requeridas pa
 Complejidad en las aplicaciones del lado del cliente porque son necesarios múltiples niveles de abstracción para coordinar y re-consolidar la información haciendo que el código sea difícil de mantener porque son necesarios muchas soluciones para mitigar los problemas.
 
 Los protocolos tradicionales causan múltiples formas de manejar el versionamiento de las APIs que tienen como resultado complejidad en el servidor que causan limitada extensibilidad.
-
 2.2 Formulación del Problema.
 
 Problema general
+Has the implementation reached the defined state in order to fulfill the GraphQL features that were defined by the version v0.6.0 ?
+Has the compatibility results shown that the quality standards were accomplished to meet the defined validations ?
 
-Let’s describe why each research question is important.
-
-¿Por qué desarrollar la implementación del estándar GraphQL en el lenguaje de programación Go, y confirmar su compatibilidad con la implementación referencial graphql-js, y cómo validar su utilidad en empresas de diferentes países y múltiples proyectos open-source ?
+Description of research questions:
+Aims to investigate the first part of the research focusing on the implementation life cycle of the GraphQL standard.
+Aims to verify the compatibility of the implementation by leveraging multiple validation frameworks.
 
 Problema específicos
+Are there any other GraphQL implementations ?
+Why was it decided to build the implementation as an open source project ?
+How was the compatibility verification measured ?
+Which companies and open source projects use the software library ?
+Which framework of maintenance was set up for the software library ?
 
-Let’s describe why each research question is important.
+Description of the research questions:
 
-¿Qué otras bibliotecas open-source similares existen?
-
-¿Cómo fue la coordinación de la construcción de la biblioteca open-source graphql-go?
-
-¿Qué herramientas se usaron para la construcción de la biblioteca open-source graphql-go?
-
-¿Por qué se decidió que la biblioteca graphql-go sea open-source?
-
-¿Qué fue implementado de la biblioteca open-source graphql-go?
-
-¿Cómo la biblioteca open-source graphql-go fue implementado?
-
-¿Cuánto tiempo tomó construir la biblioteca open-source graphql-go?
-
-¿Qué estrategia se usó para construir la biblioteca open-source graphql-go?
-
-¿Dónde fue presentado y cómo fue aceptado?
-
-¿Cuándo alcanzó la estabilidad y qué implica?
-
-¿Cómo medimos la compatibilidad con la implementación referencial?
-
-¿Qué empresas y proyectos open-source usan la biblioteca open-source graphql-go?
-
-¿Cuál es el impacto positivo en las empresas y proyectos open-source?
-
-¿Cuál es el estado actual del proyecto open-source graphql-go?
-
-¿Cuántas personas colaboraron en la construcción del proyecto open-source graphql-go?
-
-¿Cómo es el mantenimiento del proyecto open-source graphql-go?
+Aims to describe what other implementations are in order to decide which best practices to follow and have them as reference for this implementation.
+Aims to describe the decision of leveraging the software development strategy of open source so the future maintenance is ensured for keeping the project alive.
+Aims to describe the different strategies to verify the compatibility of the implementation.
+Aims to describe which companies and open source projects leverage all the benefits of the implementation in their own software.
+Aims to describe the different tooling around the software library that was setup in order to build and maintain the implementation.
 
 2.3 Justificación de la Investigación.
 
@@ -146,14 +121,15 @@ Hernández y Mendoza (2018) la justificación de los argumentos son necesarios y
 
 Seguidamente se desarrollan las justificaciones del estudio.
 
-
 Justificación teórica
 
 Hernández y Mendoza (2018) argumentan que se crea valor cuando se justifica una teoría, el resultado puede ser usado por nuevos investigadores y crear nuevos conceptos.
 
-La investigación justifica la teoría porque implementa la biblioteca inicial del estándar GraphQL en el lenguaje de programación Go, crea valor porque funda las bases para siguientes implementaciones.
+It was observed that at the time of the release of the GraphQL specification in the year 2015 the implementations were limited only to JavaScript[10].
 
-Además la investigación es justificada porque la biblioteca es necesaria para resolver problemas modernos en el intercambio de datos entre clientes y servidores.
+The implementation result can be used by different other researchers because it was decided to maintain it as an open source project.
+
+It does create new concepts because at the time the implementation was released there were no other Go implementations so it created a based and foundational reference for upcoming new implementations.
 
 Justificación práctica
 
@@ -642,5 +618,5 @@ Open Systems Interconnection: https://aws.amazon.com/what-is/osi-model/
 REST: https://datatracker.ietf.org/doc/html/rfc7231 
 SOAP: https://datatracker.ietf.org/doc/html/rfc4227
 RPC: https://datatracker.ietf.org/doc/html/rfc5531 https://datatracker.ietf.org/doc/html/rfc1050
-
+GraphQL Implementations Releases: https://youtu.be/783ccP__No8?t=1253 
 
