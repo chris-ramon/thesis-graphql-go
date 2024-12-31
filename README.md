@@ -1,31 +1,36 @@
-Capítulo 1: Introducción	3
-Capítulo 2: Planteamiento del Problema	4
-2.1 Situación Problemática.	4
-2.2 Formulación del Problema.	5
-2.3 Justificación de la Investigación.	6
-2.4 Objetivos.	8
-2.4.1 Objetivo General.	8
-2.4.2 Objetivo Específicos.	8
-Capítulo 3: Marco Teórico	8
-3.1 Antecedentes Internacionales.	8
-3.2 Antecedentes Nacionales.	9
-3.3 Bases Teóricas.	10
-3.4 Definición de Términos.	10
-Capítulo 4: Desarrollo del Proyecto	11
-4.1. Metodología.	11
-4.2 Análisis.	12
-4.2.1 Introducción	13
-4.2.2 Identificar Tareas	13
-4.2.3 Priorizar Tareas	15
-4.2.4 Mapear Tareas	16
-4.2.5 Alcance.	16
-4.2.6 Especificación de Requerimientos.	17
+# Contents
+
+1. Introduction
+2. Problem Statement
+2.1 Context
+2.2 Analysis
+2.3 Research Statement
+2.4 Objectives
+2.4.1 General
+2.4.2 Specific
+
+3. Theory Framework
+3.1 International Previous Work 
+3.2 National Previous Work
+3.3 Baseline
+3.4 Glossary
+
+4. Development 
+4.1. Methodology
+4.2 Analysis
+4.2.1 Introduction
+4.2.2 Tasks
+4.2.3 Priorization
+4.2.4 Planning
+4.2.5 Scope
+4.2.6 Requirements
 4.2 Diseño.	17
 4.3 Arquitectura	18
 4.4 Desarollo.	18
 4.5 Testeo.	19
 4.6 Despliegue.	19
 4.7 Artefactos.	20
+
 Capítulo 5: Resultados	20
 Conclusiones	20
 Recomendaciones	20
@@ -65,8 +70,10 @@ Pruebas de interfaz de usuario.
 El resultado de la implementación es una biblioteca de software de código abierto.
 
 El éxito de la implementación es confirmado a través de identificar proyectos open source y empresas que dependen de la biblioteca para usar todos los beneficios de la biblioteca.
-Capítulo 2: Planteamiento del Problema
-2.1 Situación Problemática.
+
+2. Problem Statement
+
+2.1 Context.
 
 La forma tradicional de construir software client-server es usando herramientas que permiten su comunicación a través de protocolos tradicionales cómo: RPC[1], SOAP[2], REST[3].
 
@@ -90,9 +97,11 @@ Lenta experiencia de desarrollo porque múltiples herramientas son requeridas pa
 Complejidad en las aplicaciones del lado del cliente porque son necesarios múltiples niveles de abstracción para coordinar y re-consolidar la información haciendo que el código sea difícil de mantener porque son necesarios muchas soluciones para mitigar los problemas.
 
 Los protocolos tradicionales causan múltiples formas de manejar el versionamiento de las APIs que tienen como resultado complejidad en el servidor que causan limitada extensibilidad.
-2.2 Formulación del Problema.
 
-Problema general
+2.2 Analysis.
+
+Main research questions:
+
 Has the implementation reached the defined state in order to fulfill the GraphQL features that were defined by the version v0.6.0 ?
 Has the compatibility results shown that the quality standards were accomplished to meet the defined validations ?
 
@@ -100,7 +109,8 @@ Description of research questions:
 Aims to investigate the first part of the research focusing on the implementation life cycle of the GraphQL standard.
 Aims to verify the compatibility of the implementation by leveraging multiple validation frameworks.
 
-Problema específicos
+Secondary research questions:
+
 Are there any other GraphQL implementations ?
 Why was it decided to build the implementation as an open source project ?
 How was the compatibility verification measured ?
@@ -115,7 +125,7 @@ Aims to describe the different strategies to verify the compatibility of the imp
 Aims to describe which companies and open source projects leverage all the benefits of the implementation in their own software.
 Aims to describe the different tooling around the software library that was setup in order to build and maintain the implementation.
 
-2.3 Justificación de la Investigación.
+2.3 Research Statement.
 
 Hernández y Mendoza (2018) la justificación de los argumentos son necesarios y responden a las razones del desarrollo del estudio, la importancia del problema y a quién afecta.
 
@@ -143,12 +153,13 @@ Justificación social
 Hernández y Mendoza (2018) argumenta que la justificación social impacta la sociedad y para los usuarios finales de la investigación
 La investigación tiene impacto social porque tiene beneficio en las empresas y proyectos porque el estándar GraphQL es open-source lo cual tiene impacto positivo en términos de usar la biblioteca de manera que no incurra en costos, y se pueda obtener el beneficio de múltiples contribuidores que mejoran la implementación.
 Así cómo también permite mejor mantenimiento a largo plazo que podrá ser a prueba de futuro, apalancamiento infinitas mejoras cómo errores y correcciones de seguridad.
-2.4 Objetivos.
-2.4.1 Objetivo General.
+
+2.4 Objectives.
+2.4.1 General.
 
 Implementar el estándar GraphQL en el lenguaje de programación Go.
 
-2.4.2 Objetivo Específicos.
+2.4.2 Specifics.
 
 Describir los detalles de la implementación del estándar GraphQL en el lenguaje de programación Go, especialmente relacionados a seguir la implementación de referencia: graphql-js.
 
@@ -156,8 +167,8 @@ Describir que la implementación cubra los tests fundamentales de la implementac
 
 Describir la utilidad de los usuarios finales y su impacto positivo en empresas y proyectos open-source.
 
-Capítulo 3: Marco Teórico
-3.1 Antecedentes Internacionales.
+Theory Framework
+3.1 International Previous Work.
 
 99designs/gqlgen (2016/10/12): Implements a schema based graphql which generates all the components on the server side at build time, the key value is that all the parts are described on the graphql file which contains all the definitions of a type system and from there via using the command line interface commands it generates all the Go code which are: An http/s server, GraphQL endpoint and unit tests, and related development tools such as GraphQL Playground.
 
@@ -172,7 +183,8 @@ The drawbacks being that the schema is defined at text level which have their li
 dosco/graphjin (2019/03/24): Implements the GraphQL standard, being main features the ability to generate the API from a schema that generates the SQL queries, so it is an end-to-end solution similar than a object-relational-mapping, it does support multiple databases, allows end users to just focus on the GraphQL schema side so the Go code is generated, using the API enables to perform queries, mutations and subscriptions.
 
 The drawbacks being that the end-to-end solution locks-in the implementation which is hard to extend, therefore the dependency on having internal hooks exposed and requires strong dependency on the maintainers.
-3.2 Antecedentes Nacionales.
+
+3.2 National Previous Work.
 
 (Karla Cecilia Reyes Burgos, 2023) Realizó un estudio titulado: Servicios web con GraphQL: una revisión sistemática de la literatura, el cual detalla la recopilación de fuentes que investigan el uso de GraphQL, y tienen cómo principal objetivo responder las siguientes preguntas:
 ¿Qué áreas de la ciencia demuestran mayor interés en el desarrollo de servicios web usando GraphQL?
