@@ -8,31 +8,30 @@
   - Objectives
     - General
     - Specific
-
-1. Theory Framework
-3.1 International Previous Work 
-3.2 National Previous Work
-3.3 Baseline
-3.4 Glossary
-1. Development 
-4.1. Methodology
-4.2 Analysis
-4.2.1 Introduction
-4.2.2 Tasks
-4.2.3 Priorization
-4.2.4 Planning
-4.2.5 Scope
-4.2.6 Requirements
-4.2 Diseño.	17
-4.3 Arquitectura	18
-4.4 Desarollo.	18
-4.5 Testeo.	19
-4.6 Despliegue.	19
-4.7 Artefactos.	20
-1. Results
-2. Conclusions
-3. Recomendations
-4. References
+- Theory Framework
+  - International Previous Work 
+  - National Previous Work
+  - Baseline
+  - Glossary
+- Development 
+  - Methodology
+  - Analysis
+  - Introduction
+  - Tasks
+  - Priorization
+  - Planning
+  - Scope
+  - Requirements
+  - Design
+  - Architecture
+  - Development
+  - Testing
+  - Deployment
+  - Artifacts
+- Results
+- Conclusions
+- Recomendations
+- References
 
 ## Introduction
 La presente tesis desarrolla la implementación del estándar GraphQL en el lenguaje de programación Go, y verifica su compatibilidad.
