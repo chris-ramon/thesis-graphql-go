@@ -1,20 +1,18 @@
 # Contents
 
-1. Introduction
-2. Problem Statement
+1. [Introduction](#introduction)
+2. [Problem Statement](#2-problem-statement)
 2.1 Context
 2.2 Analysis
 2.3 Research Statement
 2.4 Objectives
 2.4.1 General
 2.4.2 Specific
-
 3. Theory Framework
 3.1 International Previous Work 
 3.2 National Previous Work
 3.3 Baseline
 3.4 Glossary
-
 4. Development 
 4.1. Methodology
 4.2 Analysis
@@ -30,24 +28,12 @@
 4.5 Testeo.	19
 4.6 Despliegue.	19
 4.7 Artefactos.	20
+5. Results
+6. Conclusions
+7. Recomendations
+8. References
 
-Capítulo 5: Resultados	20
-Conclusiones	20
-Recomendaciones	20
-Referencias	21
-1. Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021/	21
-2. GraphQL Spec: https://github.com/graphql/graphql-spec	21
-3. Official Website: https://graphql-go.github.io/graphql-go.org/	21
-4. GraphQL Queries as state machine: https://rmosolgo.github.io/ruby/graphql/2016/11/12/graphql-query-as-a-state-machine.html	21
-5. GraphQL Spec License: https://jointdevelopment.org/	21
-6. Open Systems Interconnection: https://aws.amazon.com/what-is/osi-model/	21
-7. REST: https://datatracker.ietf.org/doc/html/rfc7231	21
-8. SOAP: https://datatracker.ietf.org/doc/html/rfc4227	21
-9. RPC: https://datatracker.ietf.org/doc/html/rfc5531 https://datatracker.ietf.org/doc/html/rfc1050	21
-10. GraphQL Implementations Releases: https://youtu.be/783ccP__No8?t=1253	21
-
-
-Capítulo 1: Introducción
+## Introduction
 La presente tesis desarrolla la implementación del estándar GraphQL en el lenguaje de programación Go, y verifica su compatibilidad.
 
 GraphQL es un protocolo de comunicación entre clientes y servidores, las capacidades de los servidores son descritos a través de esquemas, que es la interfaz principal para realizar distintas operaciones cómo: consultas, mutaciones y subscripciones, fue idealmente creado para comunicar servidores y clientes orientados a la interfaz de usuarios.
@@ -71,9 +57,9 @@ El resultado de la implementación es una biblioteca de software de código abie
 
 El éxito de la implementación es confirmado a través de identificar proyectos open source y empresas que dependen de la biblioteca para usar todos los beneficios de la biblioteca.
 
-2. Problem Statement
+## 2. Problem Statement
 
-2.1 Context.
+### 2.1 Context.
 
 La forma tradicional de construir software client-server es usando herramientas que permiten su comunicación a través de protocolos tradicionales cómo: RPC[1], SOAP[2], REST[3].
 
