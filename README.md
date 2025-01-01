@@ -59,7 +59,7 @@ El éxito de la implementación es confirmado a través de identificar proyectos
 
 ## 2. Problem Statement
 
-### 2.1 Context.
+### 2.1 Context
 
 La forma tradicional de construir software client-server es usando herramientas que permiten su comunicación a través de protocolos tradicionales cómo: RPC[1], SOAP[2], REST[3].
 
@@ -84,7 +84,7 @@ Complejidad en las aplicaciones del lado del cliente porque son necesarios múlt
 
 Los protocolos tradicionales causan múltiples formas de manejar el versionamiento de las APIs que tienen como resultado complejidad en el servidor que causan limitada extensibilidad.
 
-2.2 Analysis.
+### 2.2 Analysis
 
 Main research questions:
 
@@ -111,7 +111,7 @@ Aims to describe the different strategies to verify the compatibility of the imp
 Aims to describe which companies and open source projects leverage all the benefits of the implementation in their own software.
 Aims to describe the different tooling around the software library that was setup in order to build and maintain the implementation.
 
-2.3 Research Statement.
+### 2.3 Research Statement
 
 Hernández y Mendoza (2018) la justificación de los argumentos son necesarios y responden a las razones del desarrollo del estudio, la importancia del problema y a quién afecta.
 
@@ -140,12 +140,12 @@ Hernández y Mendoza (2018) argumenta que la justificación social impacta la so
 La investigación tiene impacto social porque tiene beneficio en las empresas y proyectos porque el estándar GraphQL es open-source lo cual tiene impacto positivo en términos de usar la biblioteca de manera que no incurra en costos, y se pueda obtener el beneficio de múltiples contribuidores que mejoran la implementación.
 Así cómo también permite mejor mantenimiento a largo plazo que podrá ser a prueba de futuro, apalancamiento infinitas mejoras cómo errores y correcciones de seguridad.
 
-2.4 Objectives.
-2.4.1 General.
+### 2.4 Objectives
+### 2.4.1 General
 
 Implementar el estándar GraphQL en el lenguaje de programación Go.
 
-2.4.2 Specifics.
+### 2.4.2 Specifics
 
 Describir los detalles de la implementación del estándar GraphQL en el lenguaje de programación Go, especialmente relacionados a seguir la implementación de referencia: graphql-js.
 
@@ -153,8 +153,8 @@ Describir que la implementación cubra los tests fundamentales de la implementac
 
 Describir la utilidad de los usuarios finales y su impacto positivo en empresas y proyectos open-source.
 
-Theory Framework
-3.1 International Previous Work.
+# Theory Framework
+## 3.1 International Previous Work
 
 99designs/gqlgen (2016/10/12): Implements a schema based graphql which generates all the components on the server side at build time, the key value is that all the parts are described on the graphql file which contains all the definitions of a type system and from there via using the command line interface commands it generates all the Go code which are: An http/s server, GraphQL endpoint and unit tests, and related development tools such as GraphQL Playground.
 
@@ -170,7 +170,7 @@ dosco/graphjin (2019/03/24): Implements the GraphQL standard, being main feature
 
 The drawbacks being that the end-to-end solution locks-in the implementation which is hard to extend, therefore the dependency on having internal hooks exposed and requires strong dependency on the maintainers.
 
-3.2 National Previous Work.
+## 3.2 National Previous Work
 
 (Karla Cecilia Reyes Burgos, 2023) Realizó un estudio titulado: Servicios web con GraphQL: una revisión sistemática de la literatura, el cual detalla la recopilación de fuentes que investigan el uso de GraphQL, y tienen cómo principal objetivo responder las siguientes preguntas:
 ¿Qué áreas de la ciencia demuestran mayor interés en el desarrollo de servicios web usando GraphQL?
@@ -181,8 +181,8 @@ Concluye que el país con mayor interés en aplicar una implementación de Graph
 ¿En qué año se encuentran la mayor cantidad de investigaciones con respecto al desarrollo de servicios web usando GraphQL?
 Concluye que el año dónde se realizaron más soluciones informáticas es el 2019.
 
-3.3 Bases Teóricas.
-3.4 Definición de Términos.
+## 3.3 Bases Teóricas
+## 3.4 Definición de Términos
 
 Rapid Application Development (RAD): A methodology that emphasizes and prioritizes rapid iterations of software development.
 
@@ -251,7 +251,8 @@ Public Codebase: The library was developed publicly therefore the codebase could
 
 Rapid Prototyping: The library was created as continuous iteration via multiple prototypes.
 Collaboration: Since GitHub were used, collaboration is the central part of the development with constant collaboration of multiple contributors.
-4.2.1 Introducción
+
+### 4.2.1 Introducción
 
 The implementation was decided to be built because at the time when the GraphQL standard was released in 2015, and at that time there was no implementation available in the programming language Go, therefore the opportunity to create a Go library for it.
 
@@ -259,7 +260,7 @@ One important highlight is that the standard was released at similar time togeth
 
 The tasks matches the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via pull requests so we could accomplish compatibility at each version level.
 
-4.2.2 Identificar Tareas
+### 4.2.2 Identificar Tareas
 
 The strategy we did in order to find the tasks to create the Go implementation was to port changes matching the versions from graphql-js at component level, some tasks did include changes on multiple components.
 
@@ -402,7 +403,7 @@ https://github.com/graphql-go/graphql/pull/361
 
 
 
-4.2.3 Priorizar Tareas
+### 4.2.3 Priorizar Tareas
 
 Task priority was based on the iteration of different versions matching the reference implementation, below we list the tasks names along their priority and duration.
 
@@ -424,7 +425,7 @@ Pull Request
 
 
 
-4.2.4 Mapear Tareas
+### 4.2.4 Mapear Tareas
 
 Tasks mapping are based on matching the unit tasks against the project thesis requirements, below we list the tasks names against their requirements plus the main implementation components.
 
@@ -442,7 +443,7 @@ Pull Request
 
 
 
-4.2.5 Alcance.
+### 4.2.5 Alcance
 
 Research goals:
 Identify the problems of the traditional client-server protocols.
@@ -470,7 +471,7 @@ Not included in this research:
 Other type of schema definition strategies such as: Inference from text schema-first.
 
 
-4.2.6 Especificación de Requerimientos.
+### 4.2.6 Especificación de Requerimientos.
 
 Related to how the system behaves at an internal level.
 How all different apis of gql behave
@@ -499,10 +500,12 @@ Requerimientos de dominio:
 GraphQL Standard Spec:
 Open-source Standards:
 Go Standards:
-4.2 Diseño.
+
+### 4.2 Diseño
+
 What are the internal design of the GraphQL standard, let’s add here diagrams of the workflow, also let’s add each component workflow, prop using uml something like that, also, let’s add GraphQL Playground, GraphQL GraphiQL.
 
-4.3 Arquitectura
+### 4.3 Arquitectura
 
 query/mutation/subscription as source.
 Source: Source-in.
@@ -519,12 +522,13 @@ AST state machine, up-down direction.
 Source partial state machine, because one way flow.
 
 
-4.4 Desarollo.
+### 4.4 Desarollo
 
 How is the distribution of the task accomplished ? Let’s add here screenshots of the PRs, maybe a table, let’s break the task into a simpler list and here let’s add more detailed tasks.
 
 Also we could add a taks mapping against the components and linking with the code components in Go down to graphql js components.
-4.5 Testeo.
+
+### 4.5 Testeo
 
 Also let’s add percentage of accomplishing for reaching the desire covering tests results of graphql-js.
 
@@ -536,16 +540,7 @@ GraphQL JS Unit Test
 GraphQL Go Unit Test
 Pull Request
 
-
-
-
-
-
-
-
-
-
-4.6 Despliegue.
+### 4.6 Despliegue
 
 TODO: Add screenshots of each tool, for main components of gql.
 
@@ -577,12 +572,13 @@ To guarantee that the suite of unit tests matched a high level standard set at a
 
 Besides that we also leverage the Go’s feature “go doc” in order to self document the library
 
-4.7 Artefactos.
+### 4.7 Artefactos
 
 End result library at github.
 
 
-Capítulo 5: Resultados
+### Resultados
+
 What was found as part of the research, focused on the main research question ?
 What are the research data collected that supports the success of this research, text and numbers end-results ?
 
@@ -592,20 +588,21 @@ List of unit tests from reference implementation.
 Quantitative data:
 Percentage compatibility of unit tests against reference implementation.
 
-Artifacts:
+### Artifacts
 An open-source Go library.
-Conclusiones
+
+### Conclusiones
 What are the answers of the secondary questions that are part of the research ?
 What are the end results describing that the objectives were successfully accomplished ?
 
-Recomendaciones
+### Recomendaciones
 What are the recommendations for future related work that is strongly tie to this thesis ?
 
 
 
 
 
-Referencias
+### Referencias
 
 Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021/
 GraphQL Spec: https://github.com/graphql/graphql-spec
