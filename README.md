@@ -61,28 +61,28 @@ The success of the implementation is confirmed by identifying the open source pr
 
 ### 2.1 Context
 
-La forma tradicional de construir software client-server es usando herramientas que permiten su comunicación a través de protocolos tradicionales cómo: RPC[1], SOAP[2], REST[3].
+The traditional strategy for building software is by using tools that allow the communication between clients and servers using traditional protocols such as: RPC[1], SOAP[2], REST[3].
 
-Estas herramientas centralizan el funcionamiento en el servidor, dónde se define con que data se puede interactuar, esta estrategia de comunicación genera varios problemas que son resueltos a demanda con soluciones a demanda.
+These tools centralizes the functionaing on the server side, where the data is defined so it can be interacted with, these strategies of communication generates various problems which are solved on demand with different solutions.
 
-Múltiples endpoints son creados para poder cubrir diferentes casos de uso lo cuál incrementa la complejidad para poder administrar las peticiones del lado del cliente.
+Multiple endpoints are created in order to cover multiple use cases which creates complexity to manage because the end-to-end requests are on the client side.
 
-Estos diferentes endpoints causan over-fetching y under-fetching de datos, la consecuencia es que se requiere múltiples peticiones para consolidar la información, ya que el servidor decide que datos enviar por lo tanto los datos recibidos pueden ser mayor o menor a lo esperado.
+These different endpoints causes over-fetching and under-fetching of data, the consequence is that it requires multiple requests in order to consolidate the information, because the server decided which data to send therefore the payloads are greater or lower than expected.
 
-Una de las principales consecuencias de tener múltiples endpoints es que se crean peticiones anidadas causando complejidad que resulta en el problema conocido cómo: n + 1.
+One of the principle consequences of having multiple endpoints is that it creates nested requests causing complexity named: n + 1 problem.
 
-Ineficiencia de mantenibilidad porque cuando se hacen cambios en el servidor impacto en cascada en los diferentes clientes que dependen del servidor por lo tanto los clientes son más propensos a errores.
+Ineficiency at the maintainability side, because when changes are made on the server side the impact is on cascade to the different clients which depend on the server therefore the clients are more error prone.
 
-Problemas de escalabilidad en los servidores porque tienen la responsabilidad de decidir y enviar datos lo cuál causa impacto en la redes asociadas porque más recursos son consumidos principalmente el ancho de banda.
+There are scalability problems on the server side causing more band-width usage.
 
-Incremento de costo porque los datos que son envíados desde los servidores requieren más capacidad para poder atender la demanda por lo tanto más aprovisionamiento y recursos son necesarios.
+Costs increases because the data are send from the servers requires more capacity in order to attend the demand so more provisoning and resources are required.
 
-Experiencia de desarrollo limitada porque se requiere muchas herramientas para interactuar con cada uno de los protocolos que usan los servidores causando impacto negativo en integrar nuevos.
-Lenta experiencia de desarrollo porque múltiples herramientas son requeridas para interactuar con los diferentes protocolos que crean dificultades al momento de integrar nuevos miembros a los proyectos principalmente curvas de aprendizaje complejas.
+Development experience are limited because it requires multiple tools in order to interact with each of the protocols that uses the servers causing negative impact to integrate new ones.
+Slow development experience because multiple tools are required to interact with the different protocols which creates difficulties at the moment of integrate new team members to the proyects and also on the learning curve side.
 
-Complejidad en las aplicaciones del lado del cliente porque son necesarios múltiples niveles de abstracción para coordinar y re-consolidar la información haciendo que el código sea difícil de mantener porque son necesarios muchas soluciones para mitigar los problemas.
+Complexity at the application client side because it requires multiples layers of abstraction to coordinate the re-consolidate the information so the code are difficult to maintain because there are multiple solutions needs in order to address the problems.
 
-Los protocolos tradicionales causan múltiples formas de manejar el versionamiento de las APIs que tienen como resultado complejidad en el servidor que causan limitada extensibilidad.
+The traditional protocols causes multiples strategies to manage the APIs versioning which triggers as result complexity on the server side that causes limited extensibility.
 
 ### 2.2 Analysis
 
