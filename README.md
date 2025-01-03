@@ -2,8 +2,8 @@
 
 - [Introduction](#introduction)
 - [Problem Statement](#2-problem-statement)
-  - Context
-  - Analysis
+  - [Context](#21-context)
+  - [Analysis](#22-analysis)
   - Research Statement
   - Objectives
     - General
