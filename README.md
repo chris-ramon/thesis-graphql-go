@@ -38,20 +38,20 @@ This thesis develops the implementation of the GraphQL standard in the Go progra
 
 GraphQL is a communication protocol between clients and servers, the capacities are delegated to the servers defined via schemas, is the principal interface for making different operations such as: queries, mutations and subscriptions, was created for communicating servers and clients that are user interface oriented.
 
-La implementación tiene dos principales fuentes de desarrollo:
-La especificación GraphQL.
-La implementación de GraphQL en el lenguaje de programación JavaScript.
+The implementation has two main source of development:
+- The GraphQL specification.
+- The GraphQL implementation in the JavaScript programming language.
 
-El objetivo de la implementación es tener compatibilidad con la implementación en JavaScript hasta la versión v0.6.0.
+The main objective of the implementation is to have compatibility with the JavaScript implementation up-to the v0.6.0 version.
 
-La implementación crea un proyecto GitHub, el cuál es adoptado cómo sistema de control de versiones de código y herramienta del ciclo de vida del desarrollo de software.
+The implementation creates a GitHub proyect, which is adopted as a code version control system and software development life cycle tool.
 
-La implementación decide por Go porque es un lenguaje de programación moderno y que es adoptado constantemente por nuevos proyectos[todo:citar] se enfoca software orientado a la nube por lo tanto aprovecha todos los beneficios de GraphQL.
+The implementation decides for the Go programming language because its modern and is constantly adopted by new projects, it focuses on cloud computing therefore leverages all the benefits of GraphQL.
 
-La compatibilidad de la implementación es verificada usando varios frameworks de validación cómo:
-Pruebas unitarias de compatibilidad.
-End-users pruebas funcionales.
-Pruebas de interfaz de usuario.
+The implementation compatibility is verified by various validation frameworks such as:
+- Compatibility unit tests.
+- Functional tests.
+- User interface oriented tests.
 
 El resultado de la implementación es una biblioteca de software de código abierto.
 
