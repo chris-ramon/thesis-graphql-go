@@ -113,13 +113,13 @@ Aims to describe the different tooling around the software library that was setu
 
 ### 2.3 Research Statement
 
-Hernández y Mendoza (2018) la justificación de los argumentos son necesarios y responden a las razones del desarrollo del estudio, la importancia del problema y a quién afecta.
+Hernández and Mendoza (2018): The justification of arguments are needed for responding the reasonings of the study development, the importance of the problem and who affects. 
 
-Seguidamente se desarrollan las justificaciones del estudio.
+Consequently the justifications of the studay are elaborated.
 
-Justificación teórica
+#### Theory Justification
 
-Hernández y Mendoza (2018) argumentan que se crea valor cuando se justifica una teoría, el resultado puede ser usado por nuevos investigadores y crear nuevos conceptos.
+Hernández and Mendoza (2018): Argues that value is created when justification of a theory is made, the result can be used by new researchers and to create new concepts.
 
 It was observed that at the time of the release of the GraphQL specification in the year 2015 the implementations were limited only to JavaScript[10].
 
@@ -127,18 +127,18 @@ The implementation result can be used by different other researchers because it 
 
 It does create new concepts because at the time the implementation was released there were no other Go implementations so it created a based and foundational reference for upcoming new implementations.
 
-Justificación práctica
+#### Applied Justification
 
-Hernández y Mendoza (2018) argumenta que para justificar la práctica se debe crear valor al resolver uno más problemas reales a través de innovaciones y tecnologías para la calidad de los procesos.
+Hernández and Mendoza (2018): Argues that the justification of the pratice creates value when solving one or more real problems through innovation and technologies for the quality of the processes.
 
+The investigation is justified because it creates value through the library and the quality of the implementation is guarantee through multiple validations frameworks.
 
-La investigación justifica la práctica porque se crea valor mediante la implementación de la biblioteca GraphQL en el lenguaje de programación Go, a través de pequeñas iteraciones que agregan valor, se usó herramientas de desarrollo modernas.
+#### Social Justificación
 
+Hernández and Mendoza (2018) argues that the social justification impacts the society and for the end users of the investigation.
 
-Justificación social
-Hernández y Mendoza (2018) argumenta que la justificación social impacta la sociedad y para los usuarios finales de la investigación
-La investigación tiene impacto social porque tiene beneficio en las empresas y proyectos porque el estándar GraphQL es open-source lo cual tiene impacto positivo en términos de usar la biblioteca de manera que no incurra en costos, y se pueda obtener el beneficio de múltiples contribuidores que mejoran la implementación.
-Así cómo también permite mejor mantenimiento a largo plazo que podrá ser a prueba de futuro, apalancamiento infinitas mejoras cómo errores y correcciones de seguridad.
+The investigation has social impact because it has benefits for open source and companies because the implementation end result is open source and the impact is at full transparency because all the development is centralized in GitHub and due to the license the cost of usage is zero, and cascades infinity improvements because many contributors supports the library creating changes that allows the library to be future proof that avoids error regressions and security fixes.
+
 
 ### 2.4 Objectives
 ### 2.4.1 General
