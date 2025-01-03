@@ -34,7 +34,7 @@
 - References
 
 ## Introduction
-This thesis develops the implementation of the GraphQL standard in the Go programming language and validates its compatibility.
+This thesis develops the implementation of the GraphQL standard in the Go programming language and validates it's compatibility.
 
 GraphQL is a communication protocol between clients and servers, the capacities are delegated to the servers defined via schemas, is the principal interface for making different operations such as: queries, mutations and subscriptions, was created for communicating servers and clients that are user interface oriented.
 
@@ -46,16 +46,16 @@ The main objective of the implementation is to have compatibility with the JavaS
 
 The implementation creates a GitHub proyect, which is adopted as a code version control system and software development life cycle tool.
 
-The implementation decides for the Go programming language because its modern and is constantly adopted by new projects, it focuses on cloud computing therefore leverages all the benefits of GraphQL.
+The implementation decides for the Go programming language because it's modern and is constantly adopted by new projects, it focuses on cloud computing therefore leverages all the benefits of GraphQL.
 
 The implementation compatibility is verified by various validation frameworks such as:
 - Compatibility unit tests.
 - Functional tests.
 - User interface oriented tests.
 
-El resultado de la implementación es una biblioteca de software de código abierto.
+The result of the implementation is a open source software library.
 
-El éxito de la implementación es confirmado a través de identificar proyectos open source y empresas que dependen de la biblioteca para usar todos los beneficios de la biblioteca.
+The success of the implementation is confirmed by identifying the open source projects and companies that depends on the library so they wire them into their own software.
 
 ## 2. Problem Statement
 
