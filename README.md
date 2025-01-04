@@ -190,14 +190,16 @@ The drawbacks being that the end-to-end solution locks-in the implementation whi
 
 ## 3.2 National Previous Work
 
-(Karla Cecilia Reyes Burgos, 2023) Realizó un estudio titulado: Servicios web con GraphQL: una revisión sistemática de la literatura, el cual detalla la recopilación de fuentes que investigan el uso de GraphQL, y tienen cómo principal objetivo responder las siguientes preguntas:
-¿Qué áreas de la ciencia demuestran mayor interés en el desarrollo de servicios web usando GraphQL?
-Concluye que la medicina es la mayor área de ciencia interesada y que aplica una implementación de GraphQL.
-¿Qué países han demostrado mayor interés en el desarrollo de servicios web
-usando GraphQL?
-Concluye que el país con mayor interés en aplicar una implementación de GraphQL es Estados Unidos.
-¿En qué año se encuentran la mayor cantidad de investigaciones con respecto al desarrollo de servicios web usando GraphQL?
-Concluye que el año dónde se realizaron más soluciones informáticas es el 2019.
+(Karla Cecilia Reyes Burgos, 2023) Created a research titled: Web services with GraphQL. Which is a sistematic literature, that details the recopilation of diverse resources which investigates the GraphQL usage, and has as a principal aim answer the following questions:
+
+- ¿Which areas the science proves greater interest in the development of web services using GraphQL?
+- The medicine industry is the greater area of science interested that applies a GraphQL implementation.
+
+- ¿Which countries had shown greater interest in the develpoment of web services using GraphQL?
+- The country with greater interest in apply a GraphQL implementation is USA.
+
+- ¿In which year we find the greater quantity of investigations with respect of the development of web services using GraphQL?
+- The year which were more informatic solutions were 2019.
 
 ## 3.3 Fundamental Theories
 
