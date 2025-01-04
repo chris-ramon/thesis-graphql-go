@@ -272,7 +272,7 @@ Public Codebase: The library was developed publicly therefore the codebase could
 Rapid Prototyping: The library was created as continuous iteration via multiple prototypes.
 Collaboration: Since GitHub were used, collaboration is the central part of the development with constant collaboration of multiple contributors.
 
-### 4.2.1 Introducción
+## Introduction
 
 The implementation was decided to be built because at the time when the GraphQL standard was released in 2015, and at that time there was no implementation available in the programming language Go, therefore the opportunity to create a Go library for it.
 
@@ -280,7 +280,7 @@ One important highlight is that the standard was released at similar time togeth
 
 The tasks matches the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via pull requests so we could accomplish compatibility at each version level.
 
-### 4.2.2 Identificar Tareas
+## Tasks
 
 The strategy we did in order to find the tasks to create the Go implementation was to port changes matching the versions from graphql-js at component level, some tasks did include changes on multiple components.
 
