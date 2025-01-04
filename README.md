@@ -143,15 +143,21 @@ The investigation has social impact because it has benefits for open source and 
 ### 2.4 Objectives
 ### 2.4.1 General
 
-Implementar el estándar GraphQL en el lenguaje de programación Go.
+GraphQL implementation and compatibility verification.
 
 ### 2.4.2 Specifics
 
-Describir los detalles de la implementación del estándar GraphQL en el lenguaje de programación Go, especialmente relacionados a seguir la implementación de referencia: graphql-js.
+- Investigate the GraphQL standard implementation life cycle.
 
-Describir que la implementación cubra los tests fundamentales de la implementación referencial(graphql-js) hasta la versión v0.6.0.
+- Investigate the compatibility verification leveraging varios frameworks.
 
-Describir la utilidad de los usuarios finales y su impacto positivo en empresas y proyectos open-source.
+- Investigate current state of alternative implementations.
+
+- Investigate the decision making for opting-in for open-source model.
+
+- Investigate which companies use the end result software library.
+
+- Investigate the tooling around the project.
 
 # Theory Framework
 ## 3.1 International Previous Work
