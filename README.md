@@ -199,8 +199,9 @@ Concluye que el país con mayor interés en aplicar una implementación de Graph
 ¿En qué año se encuentran la mayor cantidad de investigaciones con respecto al desarrollo de servicios web usando GraphQL?
 Concluye que el año dónde se realizaron más soluciones informáticas es el 2019.
 
-## 3.3 Bases Teóricas
-## 3.4 Definición de Términos
+## 3.3 Fundamental Theories
+
+## 3.4 Glossary
 
 Rapid Application Development (RAD): A methodology that emphasizes and prioritizes rapid iterations of software development.
 
@@ -221,8 +222,9 @@ Public Codebase: The source of the project is at a public repository so can be a
 Rapid Prototyping: Creates the right environment for rapid prototyping of new features, which enables the participation of all the community via the tooling of the source of the code.
 
 Collaboration: Encourages all types of participation which can be from different experiences so the community of contributors are able to participate and learn in different ways.
-Capítulo 4: Desarrollo del Proyecto
-4.1. Metodología.
+
+# Development
+## Methodology
 
 The methodologies that were used are:
 
