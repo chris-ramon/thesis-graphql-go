@@ -89,26 +89,36 @@ The traditional protocols causes multiples strategies to manage the APIs version
 #### Main research questions:
 
 Has the implementation reached the defined state in order to fulfill the GraphQL features that were defined by the version v0.6.0 ?
+
 Has the compatibility results shown that the quality standards were accomplished to meet the defined validations ?
 
 #### Description of research questions:
 Aims to investigate the first part of the research focusing on the implementation life cycle of the GraphQL standard.
+
 Aims to verify the compatibility of the implementation by leveraging multiple validation frameworks.
 
 #### Secondary research questions:
 
 Are there any other GraphQL implementations ?
+
 Why was it decided to build the implementation as an open source project ?
+
 How was the compatibility verification measured ?
+
 Which companies and open source projects use the software library ?
+
 Which framework of maintenance was set up for the software library ?
 
 #### Description of the research questions:
 
 Aims to describe what other implementations are in order to decide which best practices to follow and have them as reference for this implementation.
+
 Aims to describe the decision of leveraging the software development strategy of open source so the future maintenance is ensured for keeping the project alive.
+
 Aims to describe the different strategies to verify the compatibility of the implementation.
+
 Aims to describe which companies and open source projects leverage all the benefits of the implementation in their own software.
+
 Aims to describe the different tooling around the software library that was setup in order to build and maintain the implementation.
 
 ### 2.3 Research Statement
