@@ -99,7 +99,9 @@ Aims to verify the compatibility of the implementation by leveraging multiple va
 
 #### Secondary research questions:
 
-Are there any other GraphQL implementations ?
+Which other GraphQL implementations are ?
+
+Which Go best practices were decided to use ?
 
 Why was it decided to build the implementation as an open source project ?
 
