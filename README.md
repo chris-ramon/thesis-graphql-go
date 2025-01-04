@@ -4,15 +4,15 @@
 - [Problem Statement](#2-problem-statement)
   - [Context](#21-context)
   - [Analysis](#22-analysis)
-  - Research Statement
-  - Objectives
-    - General
-    - Specific
-- Theory Framework
-  - International Previous Work 
-  - National Previous Work
-  - Baseline
-  - Glossary
+  - [Research Statement](#23-research-statement)
+  - [Objectives](#24-objectives)
+    - [General](#241-general)
+    - [Specific](#242-specifics)
+- [Theory Framework](#theory-framework)
+  - [International Previous Work](#31-international-previous-work)
+  - [National Previous Work](#32-national-previous-work)
+  - [Fundamental Theories](#)
+  - [Glossary](#)
 - Development 
   - Methodology
   - Analysis
