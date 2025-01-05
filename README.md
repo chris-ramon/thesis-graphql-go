@@ -623,15 +623,24 @@ What are the recommendations for future related work that is strongly tie to thi
 
 ### References
 
-Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021/
-GraphQL Spec: https://github.com/graphql/graphql-spec
-Official Website: https://graphql-go.github.io/graphql-go.org/
-GraphQL Queries as state machine: https://rmosolgo.github.io/ruby/graphql/2016/11/12/graphql-query-as-a-state-machine.html
-GraphQL Spec License: https://jointdevelopment.org/
-Open Systems Interconnection: https://aws.amazon.com/what-is/osi-model/
-REST: https://datatracker.ietf.org/doc/html/rfc7231 
-SOAP: https://datatracker.ietf.org/doc/html/rfc4227
-RPC: https://datatracker.ietf.org/doc/html/rfc5531 https://datatracker.ietf.org/doc/html/rfc1050
-GraphQL Implementations Releases: https://youtu.be/783ccP__No8?t=1253 
+- Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021
+
+- GraphQL Spec: https://github.com/graphql/graphql-spec
+
+- Official Website: https://graphql-go.github.io/graphql-go.org
+
+- GraphQL Queries as state machine: https://rmosolgo.github.io/ruby/graphql/2016/11/12/graphql-query-as-a-state-machine.html
+
+- GraphQL Spec License: https://jointdevelopment.org
+
+- Open Systems Interconnection: https://aws.amazon.com/what-is/osi-model
+
+- REST: https://datatracker.ietf.org/doc/html/rfc7231
+
+- SOAP: https://datatracker.ietf.org/doc/html/rfc4227
+
+- RPC: https://datatracker.ietf.org/doc/html/rfc5531 https://datatracker.ietf.org/doc/html/rfc1050
+
+- GraphQL Implementations Releases: https://youtu.be/783ccP__No8?t=1253
 
 
