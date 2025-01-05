@@ -1,37 +1,37 @@
 # Contents
 
 - [Introduction](#introduction)
-- [Problem Statement](#2-problem-statement)
-  - [Context](#21-context)
-  - [Analysis](#22-analysis)
-  - [Research Statement](#23-research-statement)
-  - [Objectives](#24-objectives)
-    - [General](#241-general)
-    - [Specific](#242-specifics)
+- [Problem Statement](#problem-statement)
+  - [Context](#context)
+  - [Analysis](#analysis)
+  - [Research Statement](#research-statement)
+  - [Objectives](#objectives)
+    - [General](#general)
+    - [Specific](#specifics)
 - [Theory Framework](#theory-framework)
-  - [International Previous Work](#31-international-previous-work)
-  - [National Previous Work](#32-national-previous-work)
-  - [Fundamental Theories](#)
-  - [Glossary](#)
-- Development 
-  - Methodology
-  - Analysis
-  - Introduction
-  - Tasks
-  - Priorization
-  - Planning
-  - Scope
-  - Requirements
-  - Design
-  - Architecture
-  - Development
-  - Testing
-  - Deployment
-  - Artifacts
-- Results
-- Conclusions
-- Recomendations
-- References
+  - [International Previous Work](#international-previous-work)
+  - [National Previous Work](#national-previous-work)
+  - [Fundamental Theories](#fundamental-theories)
+  - [Glossary](#glossary)
+- [Development](#development)
+  - [Methodology](#methodology)
+  - [Analysis](#analysis)
+  - [Introduction](#introduction)
+  - [Tasks](#tasks)
+  - [Priorization](#priorization)
+  - [Planning](#planning)
+  - [Scope](#scope)
+  - [Requirements](#requirements)
+  - [Design](#design)
+  - [Architecture](#architeture)
+  - [Development](#develpoment)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+  - [Artifacts](#artifacts)
+- [Results](#results)
+- [Conclusions](#conclusions)
+- [Recomendations](#recomendations)
+- [References](#references)
 
 ## Introduction
 This thesis develops the implementation of the GraphQL standard in the Go programming language and validates it's compatibility.
