@@ -1,8 +1,8 @@
 # Contents
 
-- [Introduction](#introduction)
-- [Problem Statement](#problem-statement)
-  - [Context](#context)
+- [1. Introduction](#1-introduction)
+- [2. Problem Statement](#2-problem-statement)
+  - [2.1 Context](#21-context)
   - [Analysis](#analysis)
   - [Research Statement](#research-statement)
   - [Objectives](#objectives)
@@ -57,9 +57,9 @@ The result of the implementation is a open source software library.
 
 The success of the implementation is confirmed by identifying the open source projects and companies that depends on the library so they wire them into their own software.
 
-## Problem Statement
+## 2. Problem Statement
 
-### Context
+### 2.1 Context
 
 The traditional strategy for building software is by using tools that allow the communication between clients and servers using traditional protocols such as: RPC[1], SOAP[2], REST[3].
 
