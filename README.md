@@ -57,9 +57,9 @@ The result of the implementation is a open source software library.
 
 The success of the implementation is confirmed by identifying the open source projects and companies that depends on the library so they wire them into their own software.
 
-## 2. Problem Statement
+## Problem Statement
 
-### 2.1 Context
+### Context
 
 The traditional strategy for building software is by using tools that allow the communication between clients and servers using traditional protocols such as: RPC[1], SOAP[2], REST[3].
 
@@ -84,7 +84,7 @@ Complexity at the application client side because it requires multiples layers o
 
 The traditional protocols causes multiples strategies to manage the APIs versioning which triggers as result complexity on the server side that causes limited extensibility.
 
-### 2.2 Analysis
+### Analysis
 
 #### Main research questions:
 
@@ -123,7 +123,7 @@ Aims to describe which companies and open source projects leverage all the benef
 
 Aims to describe the different tooling around the software library that was setup in order to build and maintain the implementation.
 
-### 2.3 Research Statement
+### Research Statement
 
 Hernández and Mendoza (2018): The justification of arguments are needed for responding the reasonings of the study development, the importance of the problem and who affects. 
 
@@ -152,12 +152,12 @@ Hernández and Mendoza (2018) argues that the social justification impacts the s
 The investigation has social impact because it has benefits for open source and companies because the implementation end result is open source and the impact is at full transparency because all the development is centralized in GitHub and due to the license the cost of usage is zero, and cascades infinity improvements because many contributors supports the library creating changes that allows the library to be future proof that avoids error regressions and security fixes.
 
 
-### 2.4 Objectives
-### 2.4.1 General
+### Objectives
+### General
 
 GraphQL implementation and compatibility verification.
 
-### 2.4.2 Specifics
+### Specifics
 
 - Investigate the GraphQL standard implementation life cycle.
 
@@ -172,7 +172,7 @@ GraphQL implementation and compatibility verification.
 - Investigate the tooling around the project.
 
 # Theory Framework
-## 3.1 International Previous Work
+## International Previous Work
 
 99designs/gqlgen (2016/10/12): Implements a schema based graphql which generates all the components on the server side at build time, the key value is that all the parts are described on the graphql file which contains all the definitions of a type system and from there via using the command line interface commands it generates all the Go code which are: An http/s server, GraphQL endpoint and unit tests, and related development tools such as GraphQL Playground.
 
@@ -188,7 +188,7 @@ dosco/graphjin (2019/03/24): Implements the GraphQL standard, being main feature
 
 The drawbacks being that the end-to-end solution locks-in the implementation which is hard to extend, therefore the dependency on having internal hooks exposed and requires strong dependency on the maintainers.
 
-## 3.2 National Previous Work
+## National Previous Work
 
 (Karla Cecilia Reyes Burgos, 2023) Created a research titled: Web services with GraphQL. Which is a sistematic literature, that details the recopilation of diverse resources which investigates the GraphQL usage, and has as a principal aim answer the following questions:
 
@@ -201,9 +201,9 @@ The drawbacks being that the end-to-end solution locks-in the implementation whi
 - ¿In which year we find the greater quantity of investigations with respect of the development of web services using GraphQL?
 - The year which were more informatic solutions were 2019.
 
-## 3.3 Fundamental Theories
+## Fundamental Theories
 
-## 3.4 Glossary
+## Glossary
 
 Rapid Application Development (RAD): A methodology that emphasizes and prioritizes rapid iterations of software development.
 
@@ -250,7 +250,8 @@ Public Codebase: The project was publicly available since the early stages of de
 Rapid Prototyping: Since we leveraged GitHub as a central part of the workflow of the project, it enabled rapid iterations of including sets of changes from the graphql-js reference implementation versions.
 
 Collaboration: it enabled different contributors from different parts that learned from the project and they were to add value.
-4.2 Análisis.
+
+## Analysis
 
 It was decided to implement the GraphQL standard in Go following the methodologies listed above to have a working initial version and continue iterating from there:
 Rapid application development (RAD): From the initial version there was multiple number of iterations that made the library stable:
@@ -425,7 +426,7 @@ https://github.com/graphql-go/graphql/pull/361
 
 
 
-### 4.2.3 Priorizar Tareas
+### Priorization
 
 Task priority was based on the iteration of different versions matching the reference implementation, below we list the tasks names along their priority and duration.
 
@@ -447,7 +448,7 @@ Pull Request
 
 
 
-### 4.2.4 Mapear Tareas
+### Planning
 
 Tasks mapping are based on matching the unit tasks against the project thesis requirements, below we list the tasks names against their requirements plus the main implementation components.
 
@@ -465,7 +466,7 @@ Pull Request
 
 
 
-### 4.2.5 Alcance
+### Scope
 
 Research goals:
 Identify the problems of the traditional client-server protocols.
@@ -493,7 +494,7 @@ Not included in this research:
 Other type of schema definition strategies such as: Inference from text schema-first.
 
 
-### 4.2.6 Especificación de Requerimientos.
+### Requirements
 
 Related to how the system behaves at an internal level.
 How all different apis of gql behave
@@ -523,11 +524,11 @@ GraphQL Standard Spec:
 Open-source Standards:
 Go Standards:
 
-### 4.2 Diseño
+### Design
 
 What are the internal design of the GraphQL standard, let’s add here diagrams of the workflow, also let’s add each component workflow, prop using uml something like that, also, let’s add GraphQL Playground, GraphQL GraphiQL.
 
-### 4.3 Arquitectura
+### Architecture
 
 query/mutation/subscription as source.
 Source: Source-in.
@@ -544,13 +545,13 @@ AST state machine, up-down direction.
 Source partial state machine, because one way flow.
 
 
-### 4.4 Desarollo
+### Development
 
 How is the distribution of the task accomplished ? Let’s add here screenshots of the PRs, maybe a table, let’s break the task into a simpler list and here let’s add more detailed tasks.
 
 Also we could add a taks mapping against the components and linking with the code components in Go down to graphql js components.
 
-### 4.5 Testeo
+### Testing
 
 Also let’s add percentage of accomplishing for reaching the desire covering tests results of graphql-js.
 
@@ -562,7 +563,7 @@ GraphQL JS Unit Test
 GraphQL Go Unit Test
 Pull Request
 
-### 4.6 Despliegue
+### Deployment
 
 TODO: Add screenshots of each tool, for main components of gql.
 
@@ -594,12 +595,8 @@ To guarantee that the suite of unit tests matched a high level standard set at a
 
 Besides that we also leverage the Go’s feature “go doc” in order to self document the library
 
-### 4.7 Artefactos
 
-End result library at github.
-
-
-### Resultados
+### Results
 
 What was found as part of the research, focused on the main research question ?
 What are the research data collected that supports the success of this research, text and numbers end-results ?
@@ -613,18 +610,18 @@ Percentage compatibility of unit tests against reference implementation.
 ### Artifacts
 An open-source Go library.
 
-### Conclusiones
+### Conclusions
 What are the answers of the secondary questions that are part of the research ?
 What are the end results describing that the objectives were successfully accomplished ?
 
-### Recomendaciones
+### Recomendations
 What are the recommendations for future related work that is strongly tie to this thesis ?
 
 
 
 
 
-### Referencias
+### References
 
 Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021/
 GraphQL Spec: https://github.com/graphql/graphql-spec
