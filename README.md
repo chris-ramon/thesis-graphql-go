@@ -277,9 +277,9 @@ Collaboration: Since GitHub were used, collaboration is the central part of the 
 
 ## Introduction
 
-The implementation was decided to be built because at the time when the GraphQL standard was released in 2015, and at that time there was no implementation available in the programming language Go, therefore the opportunity to create a Go library for it.
+The implementation was decided to be built because at the time the GraphQL standard was released in 2015 there were no implementations available in the Go programming language therefore the opportunity to create an open source software library was available.
 
-One important highlight is that the standard was released at similar time together with the reference implementation graphql-js, therefore those two artifacts were used to identify the tasks that are part of this section.
+One important highlight is that the standard was released at similar time together with the reference implementation graphql-js therefore those two artifacts were used to identify the tasks that are part of this section.
 
 The tasks matches the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via pull requests so we could accomplish compatibility at each version level.
 
