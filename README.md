@@ -5,9 +5,10 @@
   - [2.1 Context](#21-context)
   - [2.2 Analysis](#22-analysis)
   - [2.3 Research Statement](#23-research-statement)
-  - [2.4 Objectives](#24-objectives)
-    - [2.1.1 General](#211-general)
-    - [2.2.2 Specific](#222-specifics)
+  - [2.4 Theory Justification](#24-theory-justification)
+  - [2.5 Objectives](#25-objectives)
+    - [2.5.1 General](#251-general)
+    - [2.5.2 Specific](#252-specifics)
 - [3. Theory Framework](#3-theory-framework)
   - [3.1 International Previous Work](#31-international-previous-work)
   - [3.2 National Previous Work](#32-national-previous-work)
@@ -84,7 +85,7 @@ Complexity at the application client side because it requires multiples layers o
 
 The traditional protocols causes multiples strategies to manage the APIs versioning which triggers as result complexity on the server side that causes limited extensibility.
 
-### Analysis
+### 2.2 Analysis
 
 #### Main research questions:
 
@@ -123,13 +124,13 @@ Aims to describe which companies and open source projects leverage all the benef
 
 Aims to describe the different tooling around the software library that was setup in order to build and maintain the implementation.
 
-### Research Statement
+### 2.3 Research Statement
 
 Hernández and Mendoza (2018): The justification of arguments are needed for responding the reasonings of the study development, the importance of the problem and who affects. 
 
 Consequently the justifications of the studay are elaborated.
 
-#### Theory Justification
+#### 2.4 Theory Justification
 
 Hernández and Mendoza (2018): Argues that value is created when justification of a theory is made, the result can be used by new researchers and to create new concepts.
 
@@ -152,12 +153,12 @@ Hernández and Mendoza (2018) argues that the social justification impacts the s
 The investigation has social impact because it has benefits for open source and companies because the implementation end result is open source and the impact is at full transparency because all the development is centralized in GitHub and due to the license the cost of usage is zero, and cascades infinity improvements because many contributors supports the library creating changes that allows the library to be future proof that avoids error regressions and security fixes.
 
 
-### Objectives
-### General
+### 2.5 Objectives
+### 2.5.1 General
 
 GraphQL implementation and compatibility verification.
 
-### Specifics
+### 2.5.2 Specifics
 
 - Investigate the GraphQL standard implementation life cycle.
 
@@ -171,8 +172,8 @@ GraphQL implementation and compatibility verification.
 
 - Investigate the tooling around the project.
 
-# Theory Framework
-## International Previous Work
+# 3 Theory Framework
+## 3.1 International Previous Work
 
 99designs/gqlgen (2016/10/12): Implements a schema based graphql which generates all the components on the server side at build time, the key value is that all the parts are described on the graphql file which contains all the definitions of a type system and from there via using the command line interface commands it generates all the Go code which are: An http/s server, GraphQL endpoint and unit tests, and related development tools such as GraphQL Playground.
 
@@ -188,7 +189,7 @@ dosco/graphjin (2019/03/24): Implements the GraphQL standard, being main feature
 
 The drawbacks being that the end-to-end solution locks-in the implementation which is hard to extend, therefore the dependency on having internal hooks exposed and requires strong dependency on the maintainers.
 
-## National Previous Work
+## 3.2 National Previous Work
 
 (Karla Cecilia Reyes Burgos, 2023) Created a research titled: Web services with GraphQL. Which is a sistematic literature, that details the recopilation of diverse resources which investigates the GraphQL usage, and has as a principal aim answer the following questions:
 
@@ -201,9 +202,9 @@ The drawbacks being that the end-to-end solution locks-in the implementation whi
 - ¿In which year we find the greater quantity of investigations with respect of the development of web services using GraphQL?
 - The year which were more informatic solutions were 2019.
 
-## Fundamental Theories
+## 3.3 Fundamental Theories
 
-## Glossary
+## 3.4 Glossary
 
 Rapid Application Development (RAD): A methodology that emphasizes and prioritizes rapid iterations of software development.
 
@@ -225,8 +226,8 @@ Rapid Prototyping: Creates the right environment for rapid prototyping of new fe
 
 Collaboration: Encourages all types of participation which can be from different experiences so the community of contributors are able to participate and learn in different ways.
 
-# Development
-## Methodology
+# 4. Development
+## 4.1 Methodology
 
 The methodologies that were used are:
 
@@ -251,7 +252,7 @@ Rapid Prototyping: Since we leveraged GitHub as a central part of the workflow o
 
 Collaboration: it enabled different contributors from different parts that learned from the project and they were to add value.
 
-## Analysis
+## 4.2 Analysis
 
 It was decided to implement the GraphQL standard in Go following the methodologies listed above to have a working initial version and continue iterating from there:
 Rapid application development (RAD): From the initial version there was multiple number of iterations that made the library stable:
@@ -275,7 +276,7 @@ Public Codebase: The library was developed publicly therefore the codebase could
 Rapid Prototyping: The library was created as continuous iteration via multiple prototypes.
 Collaboration: Since GitHub were used, collaboration is the central part of the development with constant collaboration of multiple contributors.
 
-## Introduction
+## 4.3 Introduction
 
 The implementation was decided to be built because at the time the GraphQL standard was released in 2015 there were no implementations available in the Go programming language therefore the opportunity to create an open source software library was available.
 
@@ -283,7 +284,7 @@ One important highlight is that the standard was released at similar time togeth
 
 The tasks matches the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via pull requests so we could accomplish compatibility at each version level.
 
-## Tasks
+## 4.4 Tasks
 
 The strategy we did in order to find the tasks to create the Go implementation was to port changes matching the versions from graphql-js at component level, some tasks did include changes on multiple components.
 
@@ -426,7 +427,7 @@ https://github.com/graphql-go/graphql/pull/361
 
 
 
-### Priorization
+### 4.5 Priorization
 
 Task priority was based on the iteration of different versions matching the reference implementation, below we list the tasks names along their priority and duration.
 
@@ -448,7 +449,7 @@ Pull Request
 
 
 
-### Planning
+### 4.6 Planning
 
 Tasks mapping are based on matching the unit tasks against the project thesis requirements, below we list the tasks names against their requirements plus the main implementation components.
 
@@ -466,7 +467,7 @@ Pull Request
 
 
 
-### Scope
+### 4.7 Scope
 
 Research goals:
 Identify the problems of the traditional client-server protocols.
@@ -494,7 +495,7 @@ Not included in this research:
 Other type of schema definition strategies such as: Inference from text schema-first.
 
 
-### Requirements
+### 4.8 Requirements
 
 Related to how the system behaves at an internal level.
 How all different apis of gql behave
@@ -524,11 +525,11 @@ GraphQL Standard Spec:
 Open-source Standards:
 Go Standards:
 
-### Design
+### 4.9 Design
 
 What are the internal design of the GraphQL standard, let’s add here diagrams of the workflow, also let’s add each component workflow, prop using uml something like that, also, let’s add GraphQL Playground, GraphQL GraphiQL.
 
-### Architecture
+### 4.10 Architecture
 
 query/mutation/subscription as source.
 Source: Source-in.
@@ -545,13 +546,13 @@ AST state machine, up-down direction.
 Source partial state machine, because one way flow.
 
 
-### Development
+### 4.11 Development
 
 How is the distribution of the task accomplished ? Let’s add here screenshots of the PRs, maybe a table, let’s break the task into a simpler list and here let’s add more detailed tasks.
 
 Also we could add a taks mapping against the components and linking with the code components in Go down to graphql js components.
 
-### Testing
+### 4.12 Testing
 
 Also let’s add percentage of accomplishing for reaching the desire covering tests results of graphql-js.
 
@@ -563,7 +564,7 @@ GraphQL JS Unit Test
 GraphQL Go Unit Test
 Pull Request
 
-### Deployment
+### 4.13 Deployment
 
 TODO: Add screenshots of each tool, for main components of gql.
 
@@ -595,8 +596,10 @@ To guarantee that the suite of unit tests matched a high level standard set at a
 
 Besides that we also leverage the Go’s feature “go doc” in order to self document the library
 
+# 4.14 Artifacts
+An open-source Go library.
 
-### Results
+# 5. Results
 
 What was found as part of the research, focused on the main research question ?
 What are the research data collected that supports the success of this research, text and numbers end-results ?
@@ -607,21 +610,16 @@ List of unit tests from reference implementation.
 Quantitative data:
 Percentage compatibility of unit tests against reference implementation.
 
-### Artifacts
-An open-source Go library.
 
-### Conclusions
+
+# 6. Conclusions
 What are the answers of the secondary questions that are part of the research ?
 What are the end results describing that the objectives were successfully accomplished ?
 
-### Recomendations
+# 7. Recomendations
 What are the recommendations for future related work that is strongly tie to this thesis ?
 
-
-
-
-
-### References
+# 8. References
 
 - Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021
 
