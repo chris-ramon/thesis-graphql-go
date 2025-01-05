@@ -33,7 +33,7 @@
 - [Recomendations](#recomendations)
 - [References](#references)
 
-## Introduction
+## 1. Introduction
 This thesis develops the implementation of the GraphQL standard in the Go programming language and validates it's compatibility.
 
 GraphQL is a communication protocol between clients and servers, the capacities are delegated to the servers defined via schemas, is the principal interface for making different operations such as: queries, mutations and subscriptions, was created for communicating servers and clients that are user interface oriented.
