@@ -331,7 +331,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Porting changes from graphql-js version 0.6.0.</td>
-      <td></td>
+      <td>Definition, Directives, Executor, Introspection, Rules, Schema, Validator.</td>
       <td>
 <p>Definition, Directives, Executor, Introspection, Rules, Schema, Validator</p>
 <p>- Deepen introspection query from 3 levels to 7.</p>
