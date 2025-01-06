@@ -301,27 +301,31 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Porting changes from graphql-js version 0.4.18.</td>
-      <td>Errors, languages, types, execution, validation.</td>
-      <td>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
-Consolidate the extension definition outside the type definition.
-Make operation name optional.
-Compliance with the int sizing based on the specification.
-Changes on the function signature of graphql.NewTypeInfo
-Enable the possibility of removing the experimental FieldDefFn.</td>
+      <td>Errors, Languages, Types, Execution, Validation.</td>
+      <td>
+<p>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:</p>
+<p>- Consolidates the extension definition outside the type definition.</p>
+<p>- Makes operation name optional.</p>
+<p>- Compliance with the int sizing based on the specification.</p>
+<p>- Changes on the function signature of graphql.NewTypeInfo</p>
+<p>- Enables the possibility of removing the experimental FieldDefFn.</p>
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/117</td>
       <td>0.4.18.</td>
     </tr>
     <tr>
       <td>Porting changes from graphql-js version 0.5.0.</td>
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Types</td>
-      <td>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
-Improvements on introspection related to directive locations.
-Improvements in the schema language related to directives.
-Consolidates the `getTypeOf` method into the executor component.
-Schema changes related to types.
-Consolidate arguments including context to executor.
-Improvements in types overlapping in rules component.
-Add schema definition into language component.</td>
+      <td>
+<p>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:</p>
+<p>- Improvements on introspection related to directive locations.</p>
+<p>- Improvements in the schema language related to directives.</p>
+<p>- Consolidates the `getTypeOf` method into the executor component.</p>
+<p>- Schema changes related to types.</p>
+<p>- Consolidate arguments including context to executor.</p>
+<p>- Improvements in types overlapping in rules component.</p>
+<p>- Add schema definition into language component.</p>
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/123</td>
       <td>0.5.0.</td>
     </tr>
