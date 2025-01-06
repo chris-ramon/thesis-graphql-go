@@ -286,146 +286,138 @@ The tasks matches the main functionalities of the reference implementation graph
 
 ## 4.4 Tasks
 
-The strategy we did in order to find the tasks to create the Go implementation was to port changes matching the versions from graphql-js at component level, some tasks did include changes on multiple components.
+The following tasks were identified as part of the implementation, most of the tasks are at one to one relationship that covers single components, other tasks did cover multiple functionalities.
 
-Those tasks were delivered using GitHub via pull-requests, besides porting changes there were small incremental improvements.
+The develpoment workflow of the tasks were centralized at GitHub, next listing those tasks:
 
-The following tasks were identified:
-
-Task Name
-Components
-Description
-Pull Requests
-Version
-Porting changes from graphql-js version 0.4.18.
-Errors, languages, types, execution, validation.
-Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
+<table>
+  <tbody>
+    <tr>
+      <th align="center">Task Name</th>
+      <th align="center">Components</th>
+      <th align="center">Description</th>
+      <th align="center">Pull Requests</th>
+      <th align="center">Version</th>
+    </tr>
+    <tr>
+      <td>Porting changes from graphql-js version 0.4.18.</td>
+      <td>Errors, languages, types, execution, validation.</td>
+      <td>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
 Consolidate the extension definition outside the type definition.
 Make operation name optional.
 Compliance with the int sizing based on the specification.
 Changes on the function signature of graphql.NewTypeInfo
-Enable the possibility of removing the experimental FieldDefFn.
-https://github.com/graphql-go/graphql/pull/117 
-0.4.18.
-Porting changes from graphql-js version 0.5.0.
-
-
-Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
+Enable the possibility of removing the experimental FieldDefFn.</td>
+      <td>https://github.com/graphql-go/graphql/pull/117</td>
+      <td>0.4.18.</td>
+    </tr>
+    <tr>
+      <td>Porting changes from graphql-js version 0.5.0.</td>
+      <td>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
 Improvements on introspection related to directive locations.
 Improvements in the schema language related to directives.
 Consolidates the `getTypeOf` method into the executor component.
 Schema changes related to types.
 Consolidate arguments including context to executor.
 Improvements in types overlapping in rules component.
-Add schema definition into language component.
-https://github.com/graphql-go/graphql/pull/123 
-0.5.0.
-Porting changes from graphql-js version 0.6.0.
-
-
-
-
-https://github.com/graphql-go/graphql/pull/192
-0.6.0.
-Executor
-
-
-
-
-https://github.com/graphql-go/graphql/pull/8 
-
-
-Source
-
-
-
-
-https://github.com/graphql-go/graphql/pull/5
-
-
-Visitor
-
-
-
-
-https://github.com/graphql-go/graphql/pull/10 
-
-
-Printer
-
-
-
-
-https://github.com/graphql-go/graphql/pull/10 
-
-
-Parser
-
-
-
-
-https://github.com/graphql-go/graphql/pull/2 
-
-
-Lexer
-
-
-
-
-https://github.com/graphql-go/graphql/pull/3 
-
-
-AST
-
-
-
-
-
-
-
-
-Collector
-
-
-
-
-
-
-
-
-Resolver
-
-
-
-
-https://github.com/graphql-go/graphql/pull/288 
-
-
-Types
-
-
-
-
-https://github.com/graphql-go/graphql/pull/12 
-
-
-Errors
-
-
-
-
-https://github.com/graphql-go/graphql/pull/423
-
-
-CircleCI
-
-
-
-
-https://github.com/graphql-go/graphql/pull/361
-
-
-
+Add schema definition into language component.</td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/123</td>
+      <td>0.5.0.</td>
+    </tr>
+    <tr>
+      <td>Porting changes from graphql-js version 0.6.0.</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/192</td>
+      <td>0.6.0.</td>
+    </tr>
+    <tr>
+      <td>Executor</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/8</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/5</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Visitor</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Printer</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/10</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Parser</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/2</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Lexer</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>AST</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Collector</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Resolver</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/288</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Types</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/12</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Errors</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/423</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CircleCI</td>
+      <td></td>
+      <td></td>
+      <td>https://github.com/graphql-go/graphql/pull/361</td>
+      <td></td>
+    </tr>    
+  </tbody>
+</table>
 
 ### 4.5 Priorization
 
