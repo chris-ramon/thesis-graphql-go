@@ -315,7 +315,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Porting changes from graphql-js version 0.5.0.</td>
-      <td>Definition, Directives, Executor, Introspection, Rules, Schema, Types</td>
+      <td>Definition, Directives, Executor, Introspection, Rules, Schema, Types.</td>
       <td>
 <p>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:</p>
 <p>- Improvements on introspection related to directive locations.</p>
@@ -332,7 +332,18 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     <tr>
       <td>Porting changes from graphql-js version 0.6.0.</td>
       <td></td>
-      <td></td>
+      <td>
+<p>Definition, Directives, Executor, Introspection, Rules, Schema, Validator</p>
+<p>- Deepen introspection query from 3 levels to 7.</p>
+<p>- Improves validation error message when field names conflict.</p>
+<p>- Improves validation error messages by listing suggestions.</p>
+<p>- Fixes a bug where an empty "block" list could be skipped by the printer.</p>
+<p>- Exports introspection in public API.</p>
+<p>- Schema Language Directives.</p>
+<p>- Directive location: schema definition.</p>
+<p>- Deprecated directive tag.</p>
+<p>- Validation: improving overlapping fields quality.</p>        
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/192</td>
       <td>0.6.0.</td>
     </tr>
