@@ -317,7 +317,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
       <td>Porting changes from graphql-js version 0.5.0.</td>
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Types.</td>
       <td>
-<p>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:</p>
+<p>Port changes from graphql-js up to the version v0.5.0 which includes the following functionalities:</p>
 <p>- Improvements on introspection related to directive locations.</p>
 <p>- Improvements in the schema language related to directives.</p>
 <p>- Consolidates the `getTypeOf` method into the executor component.</p>
@@ -333,7 +333,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
       <td>Porting changes from graphql-js version 0.6.0.</td>
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Validator.</td>
       <td>
-<p>Definition, Directives, Executor, Introspection, Rules, Schema, Validator</p>
+<p>Port changes from graphql-js up to the version v0.6.0 which includes the following functionalities:</p>
 <p>- Deepen introspection query from 3 levels to 7.</p>
 <p>- Improves validation error message when field names conflict.</p>
 <p>- Improves validation error messages by listing suggestions.</p>
