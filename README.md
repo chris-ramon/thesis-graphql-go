@@ -313,6 +313,7 @@ Enable the possibility of removing the experimental FieldDefFn.</td>
     </tr>
     <tr>
       <td>Porting changes from graphql-js version 0.5.0.</td>
+      <td>Definition, Directives, Executor, Introspection, Rules, Schema, Types</td>
       <td>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:
 Improvements on introspection related to directive locations.
 Improvements in the schema language related to directives.
@@ -321,7 +322,6 @@ Schema changes related to types.
 Consolidate arguments including context to executor.
 Improvements in types overlapping in rules component.
 Add schema definition into language component.</td>
-      <td></td>
       <td>https://github.com/graphql-go/graphql/pull/123</td>
       <td>0.5.0.</td>
     </tr>
