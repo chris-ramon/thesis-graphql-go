@@ -349,10 +349,16 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Executor</td>
-      <td></td>
-      <td></td>
+      <td>Errors, Executor, Language, Types.</td>
+      <td>
+<p>- Executor implementation.</p>
+<p>- Partial implementation of resolve fields.</p>
+<p>- Implemented most of the types.</p>
+<p>- Partial schema definition implementation</p>
+<p>- Added starwars graphql tests.</p>
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/8</td>
-      <td></td>
+      <td>0.4.18</td>
     </tr>
     <tr>
       <td>Source</td>
