@@ -362,7 +362,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Source</td>
-      <td>Source</td>
+      <td>Source.</td>
       <td>
 <p>- Adding source api implementation.</p>
       </td>
@@ -371,7 +371,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Visitor</td>
-      <td>Visitor, Printer, Validator</td>
+      <td>Visitor, Printer, Validator.</td>
       <td>
 <p>- Visitor wired to Printer and Validator.</p>
 <p>- Visit component implementation.</p>
