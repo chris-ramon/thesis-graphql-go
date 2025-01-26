@@ -397,10 +397,14 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Parser</td>
-      <td></td>
-      <td></td>
+      <td>Parser, AST.</td>
+      <td>
+<p>- Parser unit tests.</p>
+<p>- AST types definitions.</p>
+<p>- AST files ordering.</p>
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/2</td>
-      <td></td>
+      <td>0.4.18</td>
     </tr>
     <tr>
       <td>Lexer</td>
