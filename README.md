@@ -378,7 +378,6 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
 <p>- AST implementation with enter and leave functions wiring.</p>
 <p>- Visitor implementation related to actions.</p>
 <p>- AST reducer of visitor component.</p>
-<p>- Printer implementation work related to ast node transformations, visitor options.</p>
 <p>- Schema parser tests.</p>
       </td>
       <td>https://github.com/graphql-go/graphql/pull/10</td>
@@ -386,10 +385,15 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Printer</td>
-      <td></td>
-      <td></td>
+      <td>Printer.</td>
+      <td>
+<p>- Printer implementation work related to ast node transformations.</p>
+<p>- Printer and visitor changes related to AST traversal.</p>
+<p>- Printer changes related to node to string transformations.</p>
+<p>- Printer and parser changes to transform string to node.</p>
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/10</td>
-      <td></td>
+      <td>0.4.18</td>
     </tr>
     <tr>
       <td>Parser</td>
