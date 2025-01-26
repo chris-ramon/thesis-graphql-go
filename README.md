@@ -408,10 +408,14 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Lexer</td>
-      <td></td>
-      <td></td>
+      <td>Lexer, AST, Types, Errors.</td>
+      <td>
+<p>- AST structs and definitions.</p>
+<p>- Types improvements.</p>
+<p>- AST types re-estructuring.</p>
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/3</td>
-      <td></td>
+      <td>0.4.18</td>
     </tr>
     <tr>
       <td>AST</td>
