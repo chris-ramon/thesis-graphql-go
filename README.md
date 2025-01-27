@@ -427,10 +427,14 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Collector</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>Collector, Executor, Types</td>
+      <td>
+<p>- Collector fields implementation.</p>
+<p>- Collector work related types, schema definition and scalars.</p>
+<p>- Collector related unit tests.</p>        
+      </td>
+      <td>https://github.com/graphql-go/graphql/pull/8</td>
+      <td>0.4.18</td>
     </tr>
     <tr>
       <td>Resolver</td>
