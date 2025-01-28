@@ -438,10 +438,16 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Resolver</td>
-      <td></td>
-      <td></td>
-      <td>https://github.com/graphql-go/graphql/pull/288</td>
-      <td></td>
+      <td>Resolver</td>
+      <td>
+<p>- Adds resolver component implementation.</p>
+<p>- Adds field resolver interface support.</p>
+      </td>
+      <td>
+<p>- https://github.com/graphql-go/graphql/pull/288</p>
+<p>- https://github.com/graphql-go/graphql/pull/8</p>
+      </td>
+      <td>0.4.18</td>
     </tr>
     <tr>
       <td>Types</td>
