@@ -470,10 +470,12 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>CircleCI</td>
-      <td></td>
-      <td></td>
+      <td>CI, CD.</td>
+      <td>
+<p>- Replaces travis continous integration in favor of circle continous integration.</p>
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/361</td>
-      <td></td>
+      <td>0.6.0</td>
     </tr>    
   </tbody>
 </table>
