@@ -461,10 +461,12 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Errors</td>
-      <td></td>
-      <td></td>
+      <td>Errors</td>
+      <td>
+<p>- Adds original error support.</p>        
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/423</td>
-      <td></td>
+      <td>0.4.18</td>
     </tr>
     <tr>
       <td>CircleCI</td>
