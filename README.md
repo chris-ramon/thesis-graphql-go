@@ -417,7 +417,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>AST</td>
-      <td>AST</td>
+      <td>AST.</td>
       <td>
 <p>- AST structs and definitions.</p>
 <p>- AST types re-estructuring.</p>
@@ -427,7 +427,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Collector</td>
-      <td>Collector, Executor, Types</td>
+      <td>Collector, Executor, Types.</td>
       <td>
 <p>- Collector fields implementation.</p>
 <p>- Collector work related types, schema definition and scalars.</p>
@@ -438,7 +438,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Resolver</td>
-      <td>Resolver</td>
+      <td>Resolver.</td>
       <td>
 <p>- Adds resolver component implementation.</p>
 <p>- Adds field resolver interface support.</p>
@@ -451,7 +451,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Types</td>
-      <td>Types</td>
+      <td>Types.</td>
       <td>
 <p>- Added introspection integration with types.</p>
 <p>- Consolidated types definitions.</p>
@@ -461,7 +461,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Errors</td>
-      <td>Errors</td>
+      <td>Errors.</td>
       <td>
 <p>- Adds original error support.</p>        
       </td>
