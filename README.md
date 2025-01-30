@@ -451,10 +451,13 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
     <tr>
       <td>Types</td>
-      <td></td>
-      <td></td>
+      <td>Types</td>
+      <td>
+<p>- Added introspection integration with types.</p>
+<p>- Consolidated types definitions.</p>
+      </td>
       <td>https://github.com/graphql-go/graphql/pull/12</td>
-      <td></td>
+      <td>0.4.18</td>
     </tr>
     <tr>
       <td>Errors</td>
