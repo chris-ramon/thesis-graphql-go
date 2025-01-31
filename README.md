@@ -674,7 +674,7 @@ What are the recommendations for future related work that is strongly tie to thi
 
 # 8. References
 
-- Facebook, Inc. (2019). GraphQL referencia estándar: https://spec.graphql.org/October2021
+- Facebook, Inc. (2019). GraphQL standard reference: https://spec.graphql.org/October2021
 
 - GraphQL Spec: https://github.com/graphql/graphql-spec
 
