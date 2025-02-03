@@ -270,9 +270,11 @@ References: [IEEE 1012](https://github.com/chris-ramon/thesis-graphql-go/blob/b2
 
 ## 4.2 Analysis
 
-It was decided to implement the GraphQL standard in Go following the methodologies listed above to have a working initial version and continue iterating from there:
-Rapid application development (RAD): From the initial version there was multiple number of iterations that made the library stable:
+#### Implementation
 
+It was decided to implement the GraphQL standard in Go following the methodologies listed above to have a working initial version and continue iterating from there:
+
+Rapid application development (RAD): From the initial version there was multiple number of iterations that made the library stable:
 
 Prototyping: We have earlier versions that have the implementation work as a prototype which helped us to validate and test main functionalities.
 
@@ -282,7 +284,6 @@ Fast turnaround: There were multiple pivots on the implementation of the main co
 
 Open-source development methodology: We leveraged GitHub as source of the code, and we used multiple of those features to create the library as a open-source project:
 
-
 Peer Review: The pull-requests that included new functionality had constantly reviewed to improve the quality and reduce the number of errors.
 
 Decentralized Contributors: We had multiple contributors via GitHub since they were able to review the library and propose improvements and report bugs.
@@ -290,7 +291,29 @@ Decentralized Contributors: We had multiple contributors via GitHub since they w
 Public Codebase: The library was developed publicly therefore the codebase could be leveraged for different purposes.
 
 Rapid Prototyping: The library was created as continuous iteration via multiple prototypes.
+
 Collaboration: Since GitHub were used, collaboration is the central part of the development with constant collaboration of multiple contributors.
+
+#### Validation
+
+The following frameworks for compatibility were created:
+
+- Comparing the unit tests against the JavaScript official reference implementation.
+- Comparing implementation against the standard documentation.
+- Collecting user acceptance information about the software library from GitHub.
+- Comparing high level architecture of key components in terms of definitions.
+  
+The previous mention frameworks were wired to the CI/CD pipeline to ensure compatibility.
+
+Risk Assessment: Listing the risks of not achiving compatibility.
+
+Functionality Testing: Compatibility implementation against the JavaScript official reference implementation unit tests.
+
+Validation Testing: Compatibility validation against the official standard documentation.
+
+User Acceptance Testing: Compatibility validation via collecting information from GitHub.
+
+Design Verification and Reviews: Compatibility validation via architecture key components definitions.
 
 ## 4.3 Introduction
 
