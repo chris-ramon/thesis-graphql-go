@@ -265,7 +265,6 @@ User Acceptance Testing: Process to test the software library with end-users.
 
 Design Verification and Reviews: Process to oversee the software library design or architecture.
 
-
 ## 4.2 Analysis
 
 It was decided to implement the GraphQL standard in Go following the methodologies listed above to have a working initial version and continue iterating from there:
@@ -715,4 +714,8 @@ What are the recommendations for future related work that is strongly tie to thi
 
 - GraphQL Implementations Releases: https://youtu.be/783ccP__No8?t=1253
 
+- IEEE 1012: https://store.accuristech.com/standards/ieee-1012-2016?product_id=1901416&utm_source=google&utm_medium=cpc&utm_campaign=Omni%20|%20Google%20Ads%20|%20ACC-E%20|%20Top%20|%20Top%20|%20Non-Brand%20(Various%20Standards)%20|%20global%20-%20Dynamic&utm_content=Dynamic%20IEEE%20Products&utm_ad=725894111433&utm_term=&matchtype=&device=c&GeoLoc=9186197&placement=&network=g&campaign_id=22035107454&adset_id=172916797152&ad_id=725894111433&utm_term=&utm_campaign=Omni+%7C+Google+Ads+%7C+ACC-E+%7C+Non-Brand+(Various+Standards)+%7C+US+-+Dynamic+Ads&utm_source=adwords&utm_medium=ppc&hsa_acc=4039732030&hsa_cam=22035107454&hsa_grp=172916797152&hsa_ad=725894111433&hsa_src=g&hsa_tgt=dsa-2387125951358&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiA74G9BhAEEiwA8kNfpQjAYrRLZNavr7HLzKzfSnMfksE2HTVxvBuvffHbIC7jmtO1oP0r1RoC8SwQAvD_BwE
 
+- ISO 13485: https://www.iso.org/obp/ui/en/#iso:std:iso:13485:ed-3:v1:en
+
+- ISO 15026: https://www.iso.org/standard/73567.html
