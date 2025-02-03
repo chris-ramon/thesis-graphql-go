@@ -292,8 +292,8 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
 
 <table>
   <tbody>
-    <tr style="text-align:center;font-weight:bold;font-size:18px;">
-      <td colspan=5>Implementation</td>
+    <tr>
+      <td colspan=5 ><p style="text-align:center;font-weight:bold;font-size:18px;">Implementation</p></td>
     </tr>
     <tr>
       <th align="center">Task Name</th>
@@ -485,6 +485,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
     </tr>
   </tbody>
 </table>
+
 
 ### 4.5 Priorization
 
