@@ -265,6 +265,9 @@ User Acceptance Testing: Process to test the software library with end-users.
 
 Design Verification and Reviews: Process to oversee the software library design or architecture.
 
+References: [IEEE 1012](https://github.com/chris-ramon/thesis-graphql-go/blob/b2626cc75dcba11aef045e6a28769411f25f7d26/README.md#8-references), [ISO 13485](https://github.com/chris-ramon/thesis-graphql-go/blob/b2626cc75dcba11aef045e6a28769411f25f7d26/README.md#8-references), [ISO 15026](https://github.com/chris-ramon/thesis-graphql-go/blob/b2626cc75dcba11aef045e6a28769411f25f7d26/README.md#8-references).
+
+
 ## 4.2 Analysis
 
 It was decided to implement the GraphQL standard in Go following the methodologies listed above to have a working initial version and continue iterating from there:
