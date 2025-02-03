@@ -229,7 +229,7 @@ Collaboration: Encourages all types of participation which can be from different
 # 4. Development
 ## 4.1 Methodology
 
-The methodologies that were used are:
+#### Implementation
 
 Rapid Application Development (RAD): We used this methodology in order to implement rapidly iteratively the GraphQL Go implementation following the graphql-js reference:
 
@@ -238,7 +238,6 @@ Prototyping: The GraphQL Go implementation was created from very basic initial i
 User Feedback: As we made progress we received constant feedback that is documented mainly in GitHub, we did not follow a strict plan.
 
 Fast turnaround: We did quick iterations in the implementation because it enabled us to constantly release multiple versions so in order to do so the contributors worked on a fast paced working environment, and also to cover the need of a working version for different companies that leverage the initial versions.
-
 
 Open-source development methodology: The development of the project was by leveraging the different characteristics of the open-source methodology to have multiple contributors adding value to the project, it is decentralized so the project can be keep forever due to the dependency on GitHub which guarantee durability and also the development was continuously iterated in the openness so any person could benefit from the project from learning, up-to proposing changes.
 
@@ -251,6 +250,21 @@ Public Codebase: The project was publicly available since the early stages of de
 Rapid Prototyping: Since we leveraged GitHub as a central part of the workflow of the project, it enabled rapid iterations of including sets of changes from the graphql-js reference implementation versions.
 
 Collaboration: it enabled different contributors from different parts that learned from the project and they were to add value.
+
+#### Validation
+
+Validation process to verify that the software library implemented is successfully compatible with the standard.
+
+Risk Assessment: Proactive approach of identifying and mitigating potential risk of the software library.
+
+Functionality Testing: Process to check that the software library matched the standard.
+
+Validation Testing: Process to ensure that the final software library meets the requirements of the stakeholders.
+
+User Acceptance Testing: Process to test the software library with end-users.
+
+Design Verification and Reviews: Process to oversee the software library design or architecture.
+
 
 ## 4.2 Analysis
 
