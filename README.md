@@ -293,6 +293,9 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
 <table>
   <tbody>
     <tr>
+      <td colspan=5>Implementation</td>
+    </tr>
+    <tr>
       <th align="center">Task Name</th>
       <th align="center">Components</th>
       <th align="center">Description</th>
@@ -476,7 +479,10 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
       </td>
       <td>https://github.com/graphql-go/graphql/pull/361</td>
       <td>0.6.0</td>
-    </tr>    
+    </tr>
+    <tr>
+      <td colspan=5>Validation</td>
+    </tr>
   </tbody>
 </table>
 
