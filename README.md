@@ -10,7 +10,7 @@
     - [2.5.1 General](#251-general)
     - [2.5.2 Specific](#252-specifics)
 - [3. Theory Framework](#3-theory-framework)
-  - [3.1 International Previous Work](#31-international-previous-work)º
+  - [3.1 International Previous Work](#31-international-previous-work)
   - [3.2 National Previous Work](#32-national-previous-work)
   - [3.3 Fundamental Theories](#33-fundamental-theories)
   - [3.4 Glossary](#34-glossary)
