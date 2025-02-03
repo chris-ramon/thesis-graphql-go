@@ -293,7 +293,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
 <table>
   <tbody>
     <tr>
-      <td colspan=5 ><p style="text-align:center;font-weight:bold;font-size:18px;">Implementation</p></td>
+      <td colspan=5 align="center"><b>Implementation</b></td>
     </tr>
     <tr>
       <th align="center">Task Name</th>
@@ -481,7 +481,7 @@ The develpoment workflow of the tasks were centralized at GitHub, next listing t
       <td>0.6.0</td>
     </tr>
     <tr>
-      <td colspan=5>Validation</td>
+      <td colspan=5 align="center"><b>Validation</b></td>      
     </tr>
   </tbody>
 </table>
