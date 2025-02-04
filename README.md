@@ -298,10 +298,10 @@ Collaboration: Since GitHub were used, collaboration is the central part of the 
 
 The following frameworks for compatibility were created:
 
-- Comparing the unit tests against the JavaScript official reference implementation.
-- Comparing implementation against the standard documentation.
-- Collecting user acceptance information about the software library from GitHub.
-- Comparing high level architecture of key components in terms of definitions.
+- [Compatibility Unit Tests](https://github.com/graphql-go/compatibility-unit-tests): Validation compatibility library for comparing GraphQL implementations unit tests results.
+- [Compatibility Standard Definitions](https://github.com/graphql-go/compatibility-standard-definitions): Validation compatibility library for comparing GraphQL's standard definitions against implementations.
+- [Compatibility User Acceptance](https://github.com/graphql-go/compatibility-user-acceptance): Validation compatibility library for GraphQL implementation user acceptance.
+
   
 The previous mention frameworks were wired to the CI/CD pipeline to ensure compatibility.
 
