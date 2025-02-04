@@ -524,6 +524,60 @@ The development workflow of the tasks were centralized at GitHub, next listing t
     <tr>
       <td colspan=5 align="center"><b>Validation</b></td>      
     </tr>
+    <tr>
+      <td>Create the compatibility unit tests framework scaffolding.</td>
+      <td>Compatibility.</td>
+      <td>
+<p>- Create the scaffolding project for the compatibility unit tests framework.</p>
+      </td>
+      <td></td>
+      <td>0.6.0</td>
+    </tr>
+    <tr>
+      <td>Implement the compatibility unit tests framework.</td>
+      <td>Compatibility.</td>
+      <td>
+<p>- Implement the compatibility unit tests framework.</p>
+      </td>
+      <td></td>
+      <td>0.6.0</td>
+    </tr>
+    <tr>
+      <td>Create the scaffolding compatibility standard definitions framework.</td>
+      <td>Compatibility.</td>
+      <td>
+<p>- Create the scaffolding project for the compatibility standard definitions framework.</p>
+      </td>
+      <td></td>
+      <td>0.6.0</td>
+    </tr>
+    <tr>
+      <td>Implement the scaffolding compatibility standard definitions framework.</td>
+      <td>Compatibility.</td>
+      <td>
+<p>- Implement the compatibility standard definitions framework.</p>
+      </td>
+      <td></td>
+      <td>0.6.0</td>
+    </tr>
+    <tr>
+      <td>Create the scaffolding compatibility user acceptance framework.</td>
+      <td>Compatibility.</td>
+      <td>
+<p>- Create the scaffolding project for the compatibility user acceptance framework.</p>
+      </td>
+      <td></td>
+      <td>0.6.0</td>
+    </tr>
+    <tr>
+      <td>Implement the scaffolding compatibility user acceptance framework.</td>
+      <td>Compatibility.</td>
+      <td>
+<p>- Implement the compatibility user acceptance framework.</p>
+      </td>
+      <td></td>
+      <td>0.6.0</td>
+    </tr>    
   </tbody>
 </table>
 
