@@ -323,7 +323,7 @@ The implementation was decided to be built because at the time the GraphQL stand
 
 One important highlight is that the standard was released at similar time together with the reference implementation graphql-js therefore those two artifacts were used to identify the tasks that are part of this section.
 
-The tasks matches the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via GitHub so we could accomplish compatibility at each version.
+The tasks matches the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via GitHub so we could accomplish implementation at each version.
 
 ## 4.4 Tasks
 
