@@ -296,24 +296,26 @@ Collaboration: Since GitHub were used, collaboration is the central part of the 
 
 #### Validation
 
-The following frameworks for compatibility were created:
+The following frameworks for compatibility validation were created:
 
 - [Compatibility Unit Tests](https://github.com/graphql-go/compatibility-unit-tests): Validation compatibility library for comparing GraphQL implementations unit tests results.
 - [Compatibility Standard Definitions](https://github.com/graphql-go/compatibility-standard-definitions): Validation compatibility library for comparing GraphQL's standard definitions against implementations.
 - [Compatibility User Acceptance](https://github.com/graphql-go/compatibility-user-acceptance): Validation compatibility library for GraphQL implementation user acceptance.
 
+Risk Assessment: Compatibility validation of risks, done by wiring the three frameworks created to the continous integration pipeline and in case of regressions against not fullfilling the standard there is warnings and newer changes always being validated for keeping the implementation stable, the following frameworks guarantee risk assessment:
+- Compatibility Unit Tests.
+- Compatibility Standard Definitions.
+- Compatibility User Acceptance.
   
-The previous mention frameworks were wired to the CI/CD pipeline to ensure compatibility.
+Functionality Testing: Compatibility validation against the JavaScript official reference implementation unit tests via the following framework:
+- Compatibility Unit Tests.
 
-Risk Assessment: Listing the risks of not achiving compatibility.
+Validation Testing & Design Verification and Reviews: Compatibility validation against the official standard documentation, via the following framework:
+- Compatibility Standard Definitions. 
 
-Functionality Testing: Compatibility implementation against the JavaScript official reference implementation unit tests.
+User Acceptance Testing: Compatibility validation via collecting acceptance information from GitHub, via the following framework:
+- Compatibility User Acceptance.
 
-Validation Testing: Compatibility validation against the official standard documentation.
-
-User Acceptance Testing: Compatibility validation via collecting acceptance information from GitHub.
-
-Design Verification and Reviews: Compatibility validation via architecture key components definitions.
 
 ## 4.3 Introduction
 
