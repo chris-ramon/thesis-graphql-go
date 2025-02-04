@@ -329,7 +329,7 @@ The tasks matches the main functionalities of the reference implementation graph
 
 The following tasks were identified as part of the implementation, most of the tasks are at one to one relationship that covers single components, other tasks did cover multiple functionalities.
 
-The develpoment workflow of the tasks were centralized at GitHub, next listing those tasks:
+The development workflow of the tasks were centralized at GitHub, next listing those tasks:
 
 <table>
   <tbody>
