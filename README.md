@@ -584,24 +584,23 @@ The development workflow of the tasks were centralized at GitHub, next listing t
 
 ### 4.5 Priorization
 
-Task priority was based on the iteration of different versions matching the reference implementation, below we list the tasks names along their priority and duration.
+#### Implementation
 
+Tasks priorities were based on the iteration of different versions, which matches the reference implementation, below we list the tasks names along their priority duration and contributor.
 
-Task Name
-Priority
-Duration
-Contributor
-Pull Request
-
-
-
-
-
-
-
-
-
-
+<table>
+  <tbody>
+    <tr>
+      <td colspan=5 align="center"><b>Implementation</b></td>
+    </tr>
+    <tr>
+      <th align="center">Task Name</th>
+      <th align="center">Priority</th>
+      <th align="center">Duration</th>
+      <th align="center">Contributor</th>
+    </tr>
+  </tbody>
+</table>
 
 
 ### 4.6 Planning
