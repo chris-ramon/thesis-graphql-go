@@ -311,7 +311,7 @@ Functionality Testing: Compatibility implementation against the JavaScript offic
 
 Validation Testing: Compatibility validation against the official standard documentation.
 
-User Acceptance Testing: Compatibility validation via collecting information from GitHub.
+User Acceptance Testing: Compatibility validation via collecting acceptance information from GitHub.
 
 Design Verification and Reviews: Compatibility validation via architecture key components definitions.
 
