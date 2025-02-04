@@ -522,7 +522,7 @@ The development workflow of the tasks were centralized at GitHub, next listing t
       <td>0.6.0</td>
     </tr>
     <tr>
-      <td colspan=5 align="center"><b>Validation</b></td>      
+      <td colspan=5 align="center"><b>Compatibility Validation</b></td>      
     </tr>
     <tr>
       <td>Create the compatibility unit tests framework scaffolding.</td>
