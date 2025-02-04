@@ -586,12 +586,30 @@ The development workflow of the tasks were centralized at GitHub, next listing t
 
 #### Implementation
 
-Tasks priorities were based on the iteration of different versions, which matches the reference implementation, below we list the tasks names along their priority duration and contributor.
+Tasks priorities were based on the iteration of different versions, which matches the reference implementation, below we list the tasks names along their priority duration and contributor:
 
 <table>
   <tbody>
     <tr>
       <td colspan=5 align="center"><b>Implementation</b></td>
+    </tr>
+    <tr>
+      <th align="center">Task Name</th>
+      <th align="center">Priority</th>
+      <th align="center">Duration</th>
+      <th align="center">Contributor</th>
+    </tr>
+  </tbody>
+</table>
+
+#### Compatibility Validation
+
+Tasks priorities were based on the iteration of different compatibility frameworks, which validates the compatibility of the reference implementation, below we list the tasks names along their priority duration and contributor:
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=5 align="center"><b>Compatibility Validation</b></td>
     </tr>
     <tr>
       <th align="center">Task Name</th>
