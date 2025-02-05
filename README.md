@@ -531,7 +531,8 @@ The development workflow of the tasks were centralized at GitHub, next listing t
 <p>- Create the scaffolding project for the compatibility unit tests framework.</p>
       </td>
       <td>
-- https://github.com/graphql-go/compatibility-unit-tests/pull/1        
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/1</p>
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/2</p>        
       </td>
       <td>0.6.0</td>
     </tr>
