@@ -552,7 +552,9 @@ The development workflow of the tasks were centralized at GitHub, next listing t
       <td>
 <p>- Implement the compatibility unit tests framework.</p>
       </td>
-      <td></td>
+      <td>
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/5</p>
+      </td>
       <td>0.6.0</td>
     </tr>
     <tr>
