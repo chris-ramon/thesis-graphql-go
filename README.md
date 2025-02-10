@@ -531,6 +531,8 @@ The development workflow of the tasks were centralized at GitHub, next listing t
 <p>- Create the architecture project for the compatibility unit tests framework.</p>
       </td>
       <td>        
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/8</p>
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/4</p>
       </td>
       <td>0.6.0</td>
     </tr>    
@@ -542,7 +544,9 @@ The development workflow of the tasks were centralized at GitHub, next listing t
       </td>
       <td>
 <p>- https://github.com/graphql-go/compatibility-unit-tests/pull/1</p>
-<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/2</p>        
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/2</p>
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/7</p>
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/6</p>
       </td>
       <td>0.6.0</td>
     </tr>
@@ -554,6 +558,7 @@ The development workflow of the tasks were centralized at GitHub, next listing t
       </td>
       <td>
 <p>- https://github.com/graphql-go/compatibility-unit-tests/pull/5</p>
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/3</p>        
       </td>
       <td>0.6.0</td>
     </tr>
