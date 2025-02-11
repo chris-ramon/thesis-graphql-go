@@ -558,7 +558,8 @@ The development workflow of the tasks were centralized at GitHub, next listing t
       </td>
       <td>
 <p>- https://github.com/graphql-go/compatibility-unit-tests/pull/5</p>
-<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/3</p>        
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/3</p>
+<p>- https://github.com/graphql-go/compatibility-unit-tests/pull/9</p>        
       </td>
       <td>0.6.0</td>
     </tr>
