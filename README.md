@@ -146,7 +146,7 @@ Hernández and Mendoza (2018): Argues that the justification of the pratice crea
 
 The investigation is justified because it creates value through the library and the quality of the implementation is guarantee through multiple validations frameworks.
 
-#### Social Justificación
+#### Social Justification
 
 Hernández and Mendoza (2018) argues that the social justification impacts the society and for the end users of the investigation.
 
@@ -301,6 +301,12 @@ The following frameworks for compatibility validation were created:
 - [Compatibility Unit Tests](https://github.com/graphql-go/compatibility-unit-tests): Validation compatibility library for comparing GraphQL implementations unit tests results.
 - [Compatibility Standard Definitions](https://github.com/graphql-go/compatibility-standard-definitions): Validation compatibility library for comparing GraphQL's standard definitions against implementations.
 - [Compatibility User Acceptance](https://github.com/graphql-go/compatibility-user-acceptance): Validation compatibility library for GraphQL implementation user acceptance.
+
+Frameworks Design:
+
+##### Compatibility Unit Tests
+
+It was decided to choose JavaScript because there are more JavaScript compilers available.
 
 Risk Assessment: Compatibility validation of risks, done by wiring the three frameworks created to the continous integration pipeline and in case of regressions against not fullfilling the standard there is warnings and newer changes always being validated for keeping the implementation stable, the following frameworks guarantee risk assessment:
 - Compatibility Unit Tests.
