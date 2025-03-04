@@ -302,10 +302,6 @@ The following frameworks for compatibility validation were created:
 - [Compatibility Standard Definitions](https://github.com/graphql-go/compatibility-standard-definitions): Validation compatibility library for comparing GraphQL's standard definitions against implementations.
 - [Compatibility User Acceptance](https://github.com/graphql-go/compatibility-user-acceptance): Validation compatibility library for GraphQL implementation user acceptance.
 
-Frameworks Design:
-
-##### Compatibility Unit Tests
-
 It was decided to choose JavaScript because there are more JavaScript compilers available.
 
 Risk Assessment: Compatibility validation of risks, done by wiring the three frameworks created to the continous integration pipeline and in case of regressions against not fullfilling the standard there is warnings and newer changes always being validated for keeping the implementation stable, the following frameworks guarantee risk assessment:
@@ -321,6 +317,11 @@ Validation Testing & Design Verification and Reviews: Compatibility validation a
 
 User Acceptance Testing: Compatibility validation via collecting acceptance information from GitHub, via the following framework:
 - Compatibility User Acceptance.
+
+
+#### Differences
+
+Standard definitions and unit tests libraries have some cross-cover of validations, the standard definitions analysis are the type system level which enables detailed differences that could be leverage for cross-analysis of implementation versions.
 
 
 ## 4.3 Introduction
