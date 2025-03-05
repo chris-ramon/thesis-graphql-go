@@ -324,6 +324,13 @@ User Acceptance Testing: Compatibility validation via collecting acceptance info
 Standard definitions and unit tests libraries have some cross-cover of validations, the standard definitions analysis are the type system level which enables detailed differences that could be leverage for cross-analysis of implementation versions.
 
 
+#### Findings
+
+While working on the unit tests library compatibility validation found some issues on the GraphQL reference implementation, which was reported via GitHub issues:
+
+- https://github.com/graphql/graphql-js/issues/4353
+
+
 ## 4.3 Introduction
 
 The implementation was decided to be built because at the time the GraphQL standard was released in 2015 there were no implementations available in the Go programming language therefore the opportunity to create an open source software library was available.
