@@ -837,14 +837,17 @@ List of unit tests from reference implementation.
 Quantitative data:
 Percentage compatibility of unit tests against reference implementation.
 
-
-
 # 6. Conclusions
 What are the answers of the secondary questions that are part of the research ?
 What are the end results describing that the objectives were successfully accomplished ?
 
 # 7. Recomendations
 What are the recommendations for future related work that is strongly tie to this thesis ?
+
+#### Validation
+- Usability Testing: UX testing was not covered as part of this thesis, but further work in regards the API design could be done, for example the most high level APIs could be extracted from the reference implementation and compared against the implementation. Also each implementation could be tested as if the APIs are using the most accepted best practices from the community as if it cover the best DX.
+
+- Performance Testing: Similar than the compatibility libraries that were created as part of this thesis, another library could created to compare the response time of queries, mutations and subscriptions of a set of operations so reference and implementations could be compared.
 
 # 8. References
 
