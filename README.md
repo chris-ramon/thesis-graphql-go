@@ -261,7 +261,12 @@ Functionality Testing: Process to check that the software library matched the st
 
 Validation Testing: Process to ensure that the final software library meets the requirements of the stakeholders.
 
-User Acceptance Testing: Process to test the software library with end-users.
+User Acceptance Testing: Process to test the software library with end-users in terms of metrics that proves their engagement and satisfaction aligned with the specification, the following criterias are collected and compared:
+- GitHub Stars.
+- GitHub Issues (Open/Closed).
+- GitHub Issues (Open/Closed, comments that are related to the specification).
+- GitHub Pull Requests (open/closed).
+- GitHub Forks.
 
 Design Verification and Reviews: Process to oversee the software library design or architecture.
 
