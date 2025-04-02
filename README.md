@@ -267,6 +267,7 @@ User Acceptance Testing: Process to test the software library with end-users in 
 - GitHub Issues (Open/Closed, comments that are related to the specification).
 - GitHub Pull Requests (open/closed).
 - GitHub Forks.
+- GitHub Repository License.
 
 Design Verification and Reviews: Process to oversee the software library design or architecture.
 
