@@ -357,14 +357,27 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td colspan=5 align="center"><b>Implementation</b></td>
     </tr>
     <tr>
+      <th align="center">Priority</th>
       <th align="center">Task Name</th>
+      <th align="center">Duration Days(Start/End Dates)</th>
+      <th align="center">Contributors</th>
       <th align="center">Components</th>
       <th align="center">Description</th>
       <th align="center">Pull Requests</th>
       <th align="center">Version</th>
     </tr>
     <tr>
+      <td>1</td>
       <td>Porting changes from graphql-js version 0.4.18.</td>
+      <td>58 days(March 7 2016 / May 4 2016)/td>
+      <td>
+- https://github.com/sogko
+- https://github.com/pspeter3
+- https://github.com/chris-ramon
+- https://github.com/jvatic
+Automated tools </br>
+- https://github.com/coveralls
+      </td>
       <td>Errors, Languages, Types, Execution, Validation.</td>
       <td>
 <p>Port changes from graphql-js up to the version v0.4.18 which includes the following functionalities:</p>
@@ -378,7 +391,10 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18.</td>
     </tr>
     <tr>
+      <td>2</td>
       <td>Porting changes from graphql-js version 0.5.0.</td>
+      <td></td>
+      <td></td>      
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Types.</td>
       <td>
 <p>Port changes from graphql-js up to the version v0.5.0 which includes the following functionalities:</p>
@@ -412,8 +428,11 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.6.0.</td>
     </tr>
     <tr>
+      <td>3</td>
       <td>Executor</td>
       <td>Errors, Executor, Language, Types.</td>
+      <td></td>
+      <td></td>
       <td>
 <p>- Executor implementation.</p>
 <p>- Partial implementation of resolve fields.</p>
@@ -425,7 +444,10 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>4</td>
       <td>Source</td>
+      <td></td>
+      <td></td>
       <td>Source.</td>
       <td>
 <p>- Adding source api implementation.</p>
@@ -434,7 +456,10 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>5</td>
       <td>Visitor</td>
+      <td></td>
+      <td></td>
       <td>Visitor, Printer, Validator.</td>
       <td>
 <p>- Visitor wired to Printer and Validator.</p>
@@ -460,7 +485,10 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>6</td>
       <td>Parser</td>
+      <td></td>
+      <td></td>
       <td>Parser, AST.</td>
       <td>
 <p>- Parser unit tests.</p>
@@ -480,7 +508,10 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>7</td>
       <td>AST</td>
+      <td></td>
+      <td></td>
       <td>AST.</td>
       <td>
 <p>- AST structs and definitions.</p>
@@ -514,7 +545,10 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>8</td>
       <td>Types</td>
+      <td></td>
+      <td></td>
       <td>Types.</td>
       <td>
 <p>- Added introspection integration with types.</p>
@@ -557,7 +591,10 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.6.0</td>
     </tr>    
     <tr>
+      <td>9</td>
       <td>Scaffolding.</td>
+      <td></td>
+      <td></td>
       <td>Compatibility Unit Tests.</td>
       <td>
 <p>- Create the scaffolding project for the compatibility unit tests framework.</p>
@@ -611,16 +648,22 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.6.0</td>
     </tr>
     <tr>
+      <td>10</td>
       <td>Architecture.</td>
+      <td></td>
+      <td></td>
       <td>Compatibility Standard Definitions.</td>
       <td>
 <p>- Create the architecture of the project for the compatibility user acceptance framework.</p>
       </td>
       <td></td>
       <td>0.6.0</td>
-    </tr>    
+    </tr>
     <tr>
+      <td>11</td>
       <td>Scaffolding.</td>
+      <td></td>
+      <td></td>
       <td>Compatibility User Acceptance.</td>
       <td>
 <p>- Create the scaffolding project for the compatibility user acceptance framework.</p>
@@ -629,7 +672,10 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.6.0</td>
     </tr>
     <tr>
+      <td>12</td>
       <td>Implementation.</td>
+      <td></td>
+      <td></td>
       <td>Compatibility User Acceptance.</td>
       <td>
 <p>- Implement the compatibility user acceptance framework.</p>
