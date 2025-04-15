@@ -434,8 +434,6 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td></td>
       <td></td>
       <td>Errors, Executor, Language, Types.</td>
-      <td></td>
-      <td></td>
       <td>
 <p>- Executor implementation.</p>
 <p>- Partial implementation of resolve fields.</p>
