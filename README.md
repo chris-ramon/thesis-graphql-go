@@ -515,7 +515,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>7</td>
+      <td>10</td>
       <td>AST</td>
       <td></td>
       <td></td>
@@ -528,7 +528,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>11</td>
       <td>Collector</td>
       <td></td>
       <td></td>
@@ -542,7 +542,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>12</td>
       <td>Resolver</td>
       <td></td>
       <td></td>
@@ -558,7 +558,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>12</td>
+      <td>13</td>
       <td>Types</td>
       <td></td>
       <td></td>
@@ -571,7 +571,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>13</td>
+      <td>14</td>
       <td>Errors</td>
       <td></td>
       <td></td>
@@ -583,7 +583,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>14</td>
+      <td>15</td>
       <td>CircleCI</td>
       <td></td>
       <td></td>
