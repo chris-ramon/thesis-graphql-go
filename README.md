@@ -4,7 +4,7 @@
 - [2. Problem Statement](#2-problem-statement)
   - [2.1 Context](#21-context)
   - [2.2 Analysis](#22-analysis)
-  - [2.3 Research Statement](#23-research-statement)f
+  - [2.3 Research Statement](#23-research-statement)
   - [2.4 Theory Justification](#24-theory-justification)
   - [2.5 Objectives](#25-objectives)
     - [2.5.1 General](#251-general)
@@ -717,52 +717,6 @@ Listing the tasks that covers the implementation and compatibility validation:
     </tr>    
   </tbody>
 </table>
-
-
-### 4.5 Priorization
-
-#### Implementation
-
-Tasks priorities were based on iterating matching graphql-js versions:
-
-<table>
-  <tbody>
-    <tr>
-      <td colspan=5 align="center"><b>Implementation</b></td>
-    </tr>
-    <tr>
-      <th align="center">Task Name</th>
-      <th align="center">Priority</th>
-      <th align="center">Duration</th>
-      <th align="center">Contributor</th>
-    </tr>
-    <tr>
-      <th align="center">Task Name</th>
-      <th align="center">Priority</th>
-      <th align="center">Duration</th>
-      <th align="center">Contributor</th>
-    </tr>    
-  </tbody>
-</table>
-
-#### Compatibility Validation
-
-Tasks priorities were based on the iteration of different compatibility frameworks, which validates the compatibility of the reference implementation, below we list the tasks names along their priority duration and contributor:
-
-<table>
-  <tbody>
-    <tr>
-      <td colspan=5 align="center"><b>Compatibility Validation</b></td>
-    </tr>
-    <tr>
-      <th align="center">Task Name</th>
-      <th align="center">Priority</th>
-      <th align="center">Duration</th>
-      <th align="center">Contributor</th>
-    </tr>
-  </tbody>
-</table>
-
 
 ### 4.6 Planning
 
