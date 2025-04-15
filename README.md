@@ -4,7 +4,7 @@
 - [2. Problem Statement](#2-problem-statement)
   - [2.1 Context](#21-context)
   - [2.2 Analysis](#22-analysis)
-  - [2.3 Research Statement](#23-research-statement)
+  - [2.3 Research Statement](#23-research-statement)f
   - [2.4 Theory Justification](#24-theory-justification)
   - [2.5 Objectives](#25-objectives)
     - [2.5.1 General](#251-general)
@@ -369,7 +369,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>1</td>
       <td>Porting changes from graphql-js version 0.4.18.</td>
-      <td>58 days(March 7 2016 / May 4 2016)/td>
+      <td>58 days(March 7 2016 / May 4 2016)</td>
       <td>
 - https://github.com/sogko
 - https://github.com/pspeter3
@@ -410,6 +410,7 @@ Automated tools </br>
       <td>0.5.0.</td>
     </tr>
     <tr>
+      <td>3</td>
       <td>Porting changes from graphql-js version 0.6.0.</td>
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Validator.</td>
       <td>
@@ -428,7 +429,7 @@ Automated tools </br>
       <td>0.6.0.</td>
     </tr>
     <tr>
-      <td>3</td>
+      <td>4</td>
       <td>Executor</td>
       <td>Errors, Executor, Language, Types.</td>
       <td></td>
@@ -444,7 +445,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>4</td>
+      <td>5</td>
       <td>Source</td>
       <td></td>
       <td></td>
@@ -456,7 +457,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>5</td>
+      <td>6</td>
       <td>Visitor</td>
       <td></td>
       <td></td>
@@ -473,7 +474,10 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>7</td>
       <td>Printer</td>
+      <td></td>
+      <td></td>
       <td>Printer.</td>
       <td>
 <p>- Printer implementation work related to ast node transformations.</p>
@@ -485,7 +489,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>6</td>
+      <td>8</td>
       <td>Parser</td>
       <td></td>
       <td></td>
@@ -499,7 +503,10 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>9</td>
       <td>Lexer</td>
+      <td></td>
+      <td></td>
       <td>Lexer, Types, Errors.</td>
       <td>
 <p>- Types improvements.</p>
@@ -521,7 +528,10 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>10</td>
       <td>Collector</td>
+      <td></td>
+      <td></td>
       <td>Collector, Executor, Types.</td>
       <td>
 <p>- Collector fields implementation.</p>
@@ -532,7 +542,10 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>11</td>
       <td>Resolver</td>
+      <td></td>
+      <td></td>
       <td>Resolver.</td>
       <td>
 <p>- Adds resolver component implementation.</p>
@@ -545,7 +558,7 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>8</td>
+      <td>12</td>
       <td>Types</td>
       <td></td>
       <td></td>
@@ -558,7 +571,10 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>13</td>
       <td>Errors</td>
+      <td></td>
+      <td></td>
       <td>Errors.</td>
       <td>
 <p>- Adds original error support.</p>        
@@ -567,7 +583,10 @@ Automated tools </br>
       <td>0.4.18</td>
     </tr>
     <tr>
+      <td>14</td>
       <td>CircleCI</td>
+      <td></td>
+      <td></td>
       <td>CI, CD.</td>
       <td>
 <p>- Replaces travis continous integration in favor of circle continous integration.</p>
@@ -579,7 +598,10 @@ Automated tools </br>
       <td colspan=5 align="center"><b>Compatibility Validation</b></td>      
     </tr>
     <tr>
+      <td></td>
       <td>Architecture.</td>
+      <td></td>
+      <td></td>
       <td>Compatibility Unit Tests.</td>
       <td>
 <p>- Create the architecture project for the compatibility unit tests framework.</p>
@@ -591,7 +613,7 @@ Automated tools </br>
       <td>0.6.0</td>
     </tr>    
     <tr>
-      <td>9</td>
+      <td></td>
       <td>Scaffolding.</td>
       <td></td>
       <td></td>
@@ -608,7 +630,10 @@ Automated tools </br>
       <td>0.6.0</td>
     </tr>
     <tr>
+      <td></td>
       <td>Implementation.</td>
+      <td></td>
+      <td></td>
       <td>Compatibility Unit Tests.</td>
       <td>
 <p>- Implement the compatibility unit tests framework.</p>
@@ -621,7 +646,10 @@ Automated tools </br>
       <td>0.6.0</td>
     </tr>
     <tr>
+      <td></td>
       <td>Architecture.</td>
+      <td></td>
+      <td></td>
       <td>Compatibility Standard Definitions.</td>
       <td>
 <p>- Create the architecture of the project for the compatibility standard definitions framework.</p>
@@ -630,7 +658,10 @@ Automated tools </br>
       <td>0.6.0</td>
     </tr>
     <tr>
+      <td></td>
       <td>Scaffolding.</td>
+      <td></td>
+      <td></td>
       <td>Compatibility Standard Definitions.</td>
       <td>
 <p>- Create the scaffolding project for the compatibility standard definitions framework.</p>
@@ -639,6 +670,7 @@ Automated tools </br>
       <td>0.6.0</td>
     </tr>
     <tr>
+      <td></td>
       <td>Implementation.</td>
       <td>Compatibility Standard Definitions.</td>
       <td>
@@ -648,7 +680,7 @@ Automated tools </br>
       <td>0.6.0</td>
     </tr>
     <tr>
-      <td>10</td>
+      <td></td>
       <td>Architecture.</td>
       <td></td>
       <td></td>
@@ -660,7 +692,7 @@ Automated tools </br>
       <td>0.6.0</td>
     </tr>
     <tr>
-      <td>11</td>
+      <td></td>
       <td>Scaffolding.</td>
       <td></td>
       <td></td>
@@ -672,7 +704,7 @@ Automated tools </br>
       <td>0.6.0</td>
     </tr>
     <tr>
-      <td>12</td>
+      <td></td>
       <td>Implementation.</td>
       <td></td>
       <td></td>
