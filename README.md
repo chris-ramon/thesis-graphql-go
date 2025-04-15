@@ -375,8 +375,6 @@ Listing the tasks that covers the implementation and compatibility validation:
 - https://github.com/pspeter3
 - https://github.com/chris-ramon
 - https://github.com/jvatic
-Automated tools </br>
-- https://github.com/coveralls
       </td>
       <td>Errors, Languages, Types, Execution, Validation.</td>
       <td>
