@@ -412,6 +412,8 @@ Automated tools </br>
     <tr>
       <td>3</td>
       <td>Porting changes from graphql-js version 0.6.0.</td>
+      <td></td>
+      <td></td>
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Validator.</td>
       <td>
 <p>Port changes from graphql-js up to the version v0.6.0 which includes the following functionalities:</p>
@@ -431,6 +433,8 @@ Automated tools </br>
     <tr>
       <td>4</td>
       <td>Executor</td>
+      <td></td>
+      <td></td>
       <td>Errors, Executor, Language, Types.</td>
       <td></td>
       <td></td>
