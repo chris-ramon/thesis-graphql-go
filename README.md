@@ -349,7 +349,7 @@ The tasks matches the main functionalities of the reference implementation graph
 
 ## 4.4 Tasks
 
-Listing the following tasks that covers the implementation and compatibility validation:
+Listing the tasks that covers the implementation and compatibility validation:
 
 <table>
   <tbody>
