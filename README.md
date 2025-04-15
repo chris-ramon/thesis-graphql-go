@@ -349,9 +349,7 @@ The tasks matches the main functionalities of the reference implementation graph
 
 ## 4.4 Tasks
 
-The following tasks were identified as part of the implementation, most of the tasks are at one to one relationship that covers single components, other tasks did cover multiple functionalities.
-
-The development workflow of the tasks were centralized at GitHub, next listing those tasks:
+Listing the following tasks that covers the implementation and compatibility validation:
 
 <table>
   <tbody>
@@ -647,7 +645,7 @@ The development workflow of the tasks were centralized at GitHub, next listing t
 
 #### Implementation
 
-Tasks priorities were based on the iteration of different versions, which matches the reference implementation, below we list the tasks names along their priority duration and contributor:
+Tasks priorities were based on iterating matching graphql-js versions:
 
 <table>
   <tbody>
@@ -660,6 +658,12 @@ Tasks priorities were based on the iteration of different versions, which matche
       <th align="center">Duration</th>
       <th align="center">Contributor</th>
     </tr>
+    <tr>
+      <th align="center">Task Name</th>
+      <th align="center">Priority</th>
+      <th align="center">Duration</th>
+      <th align="center">Contributor</th>
+    </tr>    
   </tbody>
 </table>
 
