@@ -359,7 +359,8 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <th align="center">Priority</th>
       <th align="center">Task Name</th>
-      <th align="center">Duration Days(Start/End Dates)</th>
+      <th align="center">PR Created - PR Merged</th>
+      <th align="center">Duration Days</th>
       <th align="center">Contributors</th>
       <th align="center">Components</th>
       <th align="center">Description</th>
@@ -369,6 +370,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>1</td>
       <td>Porting changes from graphql-js version 0.4.18.</td>
+      <td>March 7 2016 - May 4 2016</td>
       <td>58 days(March 7 2016 / May 4 2016)</td>
       <td>
 - https://github.com/sogko
@@ -392,6 +394,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>2</td>
       <td>Porting changes from graphql-js version 0.5.0.</td>
       <td></td>
+      <td></td>
       <td></td>      
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Types.</td>
       <td>
@@ -410,6 +413,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>3</td>
       <td>Porting changes from graphql-js version 0.6.0.</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Validator.</td>
@@ -433,6 +437,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Executor</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Errors, Executor, Language, Types.</td>
       <td>
 <p>- Executor implementation.</p>
@@ -449,6 +454,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Source</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Source.</td>
       <td>
 <p>- Adding source api implementation.</p>
@@ -459,6 +465,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>6</td>
       <td>Visitor</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>Visitor, Printer, Validator.</td>
@@ -478,6 +485,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Printer</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Printer.</td>
       <td>
 <p>- Printer implementation work related to ast node transformations.</p>
@@ -491,6 +499,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>8</td>
       <td>Parser</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>Parser, AST.</td>
@@ -507,6 +516,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Lexer</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Lexer, Types, Errors.</td>
       <td>
 <p>- Types improvements.</p>
@@ -517,6 +527,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>10</td>
       <td>AST</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>AST.</td>
@@ -532,6 +543,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Collector</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Collector, Executor, Types.</td>
       <td>
 <p>- Collector fields implementation.</p>
@@ -544,6 +556,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>12</td>
       <td>Resolver</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>Resolver.</td>
@@ -562,6 +575,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Types</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Types.</td>
       <td>
 <p>- Added introspection integration with types.</p>
@@ -575,6 +589,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Errors</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Errors.</td>
       <td>
 <p>- Adds original error support.</p>        
@@ -585,6 +600,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>15</td>
       <td>CircleCI</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>CI, CD.</td>
@@ -602,6 +618,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Architecture.</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Compatibility Unit Tests.</td>
       <td>
 <p>- Create the architecture project for the compatibility unit tests framework.</p>
@@ -615,6 +632,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td></td>
       <td>Scaffolding.</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>Compatibility Unit Tests.</td>
@@ -634,6 +652,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Implementation.</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Compatibility Unit Tests.</td>
       <td>
 <p>- Implement the compatibility unit tests framework.</p>
@@ -648,6 +667,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td></td>
       <td>Architecture.</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>Compatibility Standard Definitions.</td>
@@ -672,6 +692,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td></td>
       <td>Implementation.</td>
+      <td></td>
       <td>Compatibility Standard Definitions.</td>
       <td>
 <p>- Implement the compatibility standard definitions framework.</p>
@@ -684,6 +705,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>Architecture.</td>
       <td></td>
       <td></td>
+      <td></td>
       <td>Compatibility Standard Definitions.</td>
       <td>
 <p>- Create the architecture of the project for the compatibility user acceptance framework.</p>
@@ -694,6 +716,7 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td></td>
       <td>Scaffolding.</td>
+      <td></td>
       <td></td>
       <td></td>
       <td>Compatibility User Acceptance.</td>
