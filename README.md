@@ -359,8 +359,8 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <th align="center">Priority</th>
       <th align="center">Task Name</th>
-      <th align="center">PR Created - PR Merged</th>
-      <th align="center">Duration Days</th>
+      <th align="center">Duration Interval Dates (Created At - Merged At)</th>
+      <th align="center">Duration In Days</th>
       <th align="center">Contributors</th>
       <th align="center">Components</th>
       <th align="center">Description</th>
@@ -371,7 +371,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>1</td>
       <td>Porting changes from graphql-js version 0.4.18.</td>
       <td>March 7 2016 - May 4 2016</td>
-      <td>58 days(March 7 2016 / May 4 2016)</td>
+      <td>58 days</td>
       <td>
 - https://github.com/sogko
 - https://github.com/pspeter3
