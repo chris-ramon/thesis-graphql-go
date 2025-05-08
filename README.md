@@ -370,13 +370,10 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>1</td>
       <td>Porting changes from graphql-js version 0.4.18.</td>
-      <td>March 7 2016 - May 4 2016</td>
-      <td>58 days</td>
+      <td>2016-03-07 09:07:29 +0000 UTC - 2016-05-30 01:52:47 +0000 UTC</td>
+      <td>83</td>
       <td>
-- https://github.com/sogko
-- https://github.com/pspeter3
-- https://github.com/chris-ramon
-- https://github.com/jvatic
+- https://github.com/sogko</br>- https://github.com/coveralls</br>- https://github.com/pspeter3</br>- https://github.com/chris-ramon</br>- https://github.com/jvatic
       </td>
       <td>Errors, Languages, Types, Execution, Validation.</td>
       <td>
@@ -393,9 +390,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>2</td>
       <td>Porting changes from graphql-js version 0.5.0.</td>
-      <td></td>
-      <td></td>
-      <td></td>      
+      <td>2016-04-18 08:46:26 +0000 UTC - 2016-06-11 21:13:46 +0000 UTC</td>
+      <td>54</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/switchtrue</br>- https://github.com/bsr203</br>- https://github.com/coveralls</br>- https://github.com/kmulvey
+      </td>      
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Types.</td>
       <td>
 <p>Port changes from graphql-js up to the version v0.5.0 which includes the following functionalities:</p>
@@ -413,9 +412,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>3</td>
       <td>Porting changes from graphql-js version 0.6.0.</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2017-03-15 03:38:12 +0000 UTC - 2017-03-15 03:40:57 +0000 UTC</td>
+      <td>1</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/coveralls</br>- https://github.com/F21</br>- https://github.com/tsunammis</br>- https://github.com/mishudark</br>- https://github.com/talk-to-my-car</br>- https://github.com/chris-ramon</br>- https://github.com/chris-ramon</br>- https://github.com/coveralls</br>- https://github.com/sogko"
+      </td>
       <td>Definition, Directives, Executor, Introspection, Rules, Schema, Validator.</td>
       <td>
 <p>Port changes from graphql-js up to the version v0.6.0 which includes the following functionalities:</p>
@@ -435,9 +436,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>4</td>
       <td>Executor</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-16 04:23:35 +0000 UTC - 2015-09-25 23:13:25 +0000 UTC</td>
+      <td>9</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon"
+      </td>
       <td>Errors, Executor, Language, Types.</td>
       <td>
 <p>- Executor implementation.</p>
@@ -452,9 +455,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>5</td>
       <td>Source</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-13 09:36:05 +0000 UTC - 2015-09-14 23:09:05 +0000 UTC</td>
+      <td>1</td>
+      <td>
+- https://github.com/chris-ramon
+      </td>
       <td>Source.</td>
       <td>
 <p>- Adding source api implementation.</p>
@@ -465,9 +470,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>6</td>
       <td>Visitor</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-23 02:42:31 +0000 UTC - 2015-09-25 23:13:54 +0000 UTC</td>
+      <td>2</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon
+      </td>
       <td>Visitor, Printer, Validator.</td>
       <td>
 <p>- Visitor wired to Printer and Validator.</p>
@@ -483,9 +490,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>7</td>
       <td>Printer</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-23 02:42:31 +0000 UTC - 2015-09-25 23:13:54 +0000 UTC</td>
+      <td>2</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon
+      </td>
       <td>Printer.</td>
       <td>
 <p>- Printer implementation work related to ast node transformations.</p>
@@ -499,9 +508,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>8</td>
       <td>Parser</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-10 03:14:07 +0000 UTC - 2015-09-10 18:02:02 +0000 UTC</td>
+      <td>1</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon
+      </td>
       <td>Parser, AST.</td>
       <td>
 <p>- Parser unit tests.</p>
@@ -514,9 +525,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>9</td>
       <td>Lexer</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-10 12:11:05 +0000 UTC - 2015-09-11 05:30:14 +0000 UTC</td>
+      <td>1</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon
+      </td>
       <td>Lexer, Types, Errors.</td>
       <td>
 <p>- Types improvements.</p>
@@ -527,9 +540,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>10</td>
       <td>AST</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-10 12:11:05 +0000 UTC - 2015-09-11 05:30:14 +0000 UTC</td>
+      <td>1</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon
+      </td>
       <td>AST.</td>
       <td>
 <p>- AST structs and definitions.</p>
@@ -541,9 +556,11 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>11</td>
       <td>Collector</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-16 04:23:35 +0000 UTC - 2015-09-25 23:13:25 +0000 UTC</td>
+      <td>9</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon
+      </td>
       <td>Collector, Executor, Types.</td>
       <td>
 <p>- Collector fields implementation.</p>
