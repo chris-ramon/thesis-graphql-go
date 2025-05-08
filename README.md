@@ -573,26 +573,45 @@ Listing the tasks that covers the implementation and compatibility validation:
     <tr>
       <td>12</td>
       <td>Resolver</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2018-03-01 09:36:38 +0000 UTC - 2018-03-08 21:51:05 +0000 UTC</td>
+      <td>7</td>
+      <td>
+- https://github.com/dvic</br>- https://github.com/coveralls</br>- https://github.com/chris-ramon
+      </td>
       <td>Resolver.</td>
       <td>
-<p>- Adds resolver component implementation.</p>
 <p>- Adds field resolver interface support.</p>
       </td>
       <td>
 <p>- https://github.com/graphql-go/graphql/pull/288</p>
-<p>- https://github.com/graphql-go/graphql/pull/8</p>
       </td>
       <td>0.4.18</td>
     </tr>
-    <tr>
+<tr>
       <td>13</td>
+      <td>Resolver</td>
+      <td>2015-09-16 04:23:35 +0000 UTC - 2015-09-25 23:13:25 +0000 UTC</td>
+      <td>9</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon
+      </td>
+      <td>Resolver.</td>
+      <td>
+<p>- Adds resolver component implementation.</p>
+      </td>
+      <td>
+<p>- https://github.com/graphql-go/graphql/pull/8</p>
+      </td>
+      <td>0.4.18</td>
+    </tr>  
+    <tr>
+      <td>14</td>
       <td>Types</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2015-09-26 15:21:47 +0000 UTC - 2015-10-02 01:05:37 +0000 UTC</td>
+      <td>5</td>
+      <td>
+- https://github.com/sogko</br>- https://github.com/chris-ramon</br>- https://github.com/chris-ramon</br>- https://github.com/sogko
+      </td>
       <td>Types.</td>
       <td>
 <p>- Added introspection integration with types.</p>
@@ -602,11 +621,13 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>14</td>
+      <td>15</td>
       <td>Errors</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2018-11-28 04:14:47 +0000 UTC - 2018-12-03 01:16:35 +0000 UTC</td>
+      <td>4</td>
+      <td>
+- https://github.com/chris-ramon</br>- https://github.com/limoli</br>- https://github.com/coveralls</br>- https://github.com/racerxdl
+      </td>
       <td>Errors.</td>
       <td>
 <p>- Adds original error support.</p>        
@@ -615,11 +636,13 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>15</td>
+      <td>16</td>
       <td>CircleCI</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>2018-07-19 03:27:49 +0000 UTC - 2018-07-19 03:41:48 +0000 UTC</td>
+      <td>1</td>
+      <td>
+- https://github.com/chris-ramon</br>- https://github.com/coveralls</br>- https://github.com/chris-ramon</br>- https://github.com/chris-ramon</br>- https://github.com/coveralls
+      </td>
       <td>CI, CD.</td>
       <td>
 <p>- Replaces travis continous integration in favor of circle continous integration.</p>
