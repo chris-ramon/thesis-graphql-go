@@ -933,6 +933,11 @@ An open-source Go library.
 
 # 5. Results
 
+***
+Template:
+
+Results are about show the data.
+
 What was found as part of the research, focused on the main research question ?
 What are the research data collected that supports the success of this research, text and numbers end-results ?
 
@@ -941,10 +946,21 @@ List of unit tests from reference implementation.
 
 Quantitative data:
 Percentage compatibility of unit tests against reference implementation.
+***
+
 
 # 6. Conclusions
+
+***
+Template:
+
+Conclusions are about analyzing the data from the results and answering the main questions.
+
 What are the answers of the secondary questions that are part of the research ?
 What are the end results describing that the objectives were successfully accomplished ?
+
+***
+
 
 # 7. Recomendations
 What are the recommendations for future related work that is strongly tie to this thesis ?
