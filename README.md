@@ -948,7 +948,8 @@ Description:
 GitHub Repository: https://github.com/graphql-go/compatibility-base
 
 Description:
-- Go open-source library that have the base re-usable code used by other `graphql-go/*` libraries.
+
+Go open-source library that has the base reusable code used by other `graphql-go/*` libraries.
 
 ##### `graphql-go/compatibility-unit-tests`
 
