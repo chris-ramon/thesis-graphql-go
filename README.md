@@ -929,7 +929,62 @@ To guarantee that the suite of unit tests matched a high level standard set at a
 Besides that we also leverage the Go’s feature “go doc” in order to self document the library
 
 # 4.14 Artifacts
-An open-source Go library.
+
+Artifacts were created as part of this thesis, most of them are Go open-source libraries that tackle
+specific purposes and detailed below:
+
+#### Implementation
+##### `graphql-go/graphql`
+
+GitHub Repository: https://github.com/graphql-go/graphql
+
+Description:
+
+Go open-source library that implements the `graphql-js` reference implementation.
+
+
+#### Compatibility
+##### `graphql-go/compatibility-base`
+
+GitHub Repository: https://github.com/graphql-go/compatibility-base
+
+Description:
+
+Go open-source library that has the base reusable code used by other `graphql-go/*` libraries.
+
+##### `graphql-go/compatibility-unit-tests`
+
+GitHub Repository: https://github.com/graphql-go/compatibility-unit-tests
+
+Description:
+
+Go open-source library that compares unit test names between a GraphQL reference implementation and other GraphQL implementations.
+
+##### `graphql-go/compatibility-standard-definitions`
+
+GitHub Repository: https://github.com/graphql-go/compatibility-standard-definitions
+
+Description:
+
+Go open-source library that compares the GraphQL reference implementation type system with other GraphQL implementations.
+
+
+##### `graphql-go/compatibility-user-acceptance`
+
+GitHub Repository: https://github.com/graphql-go/compatibility-user-acceptance
+
+Description:
+
+Go open-source library that compares acceptance criteria between the GraphQL reference implementation and other GraphQL implementations.
+
+##### `chris-ramon/design-doc-self-generator`
+
+GitHub Repository: https://github.com/chris-ramon/design-doc-self-generator
+
+Description:
+
+Go open-source library that obtains GitHub information.
+
 
 # 5. Results
 
