@@ -973,7 +973,8 @@ Go open-source library that compares the GraphQL reference implementation type s
 GitHub Repository: https://github.com/graphql-go/compatibility-user-acceptance
 
 Description:
-- Go open-source library that compares the GraphQL reference implementation and GraphQL implementations acceptance criterias.
+
+Go open-source library that compares acceptance criteria between the GraphQL reference implementation and other GraphQL implementations.
 
 ##### `chris-ramon/design-doc-self-generator`
 
