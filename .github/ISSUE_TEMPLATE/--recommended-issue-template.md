@@ -1,6 +1,6 @@
 ---
-name: Issue Template
-about: Template for a New Issue.
+name: "> Recommended Issue Template"
+about: "> Recommended template for a new issue."
 title: "`{Section Name}`: TBC."
 labels: ''
 assignees: ''
