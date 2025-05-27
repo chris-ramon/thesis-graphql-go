@@ -939,7 +939,8 @@ specific purposes and detailed below:
 GitHub Repository: https://github.com/graphql-go/graphql
 
 Description:
-- Go open-source library that implements the `graphql-js` reference implementation.
+
+Go open-source library that implements the `graphql-js` reference implementation.
 
 
 #### Compatibility
