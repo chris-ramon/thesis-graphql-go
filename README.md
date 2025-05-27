@@ -937,25 +937,30 @@ specific purposes and detailed below:
 ##### `graphql-go/graphql`
 
 GitHub Repository: https://github.com/graphql-go/graphql
-Description: Go open-source library that implements the `graphql-js` reference implementation.
+
+Description:
+- Go open-source library that implements the `graphql-js` reference implementation.
 
 
 #### Compatibility
 ##### `graphql-go/compatibility-base`
 
 GitHub Repository: https://github.com/graphql-go/compatibility-base
+
 Description:
 - Go open-source library that have the base re-usable code used by other `graphql-go/*` libraries.
 
 ##### `graphql-go/compatibility-unit-tests`
 
 GitHub Repository: https://github.com/graphql-go/compatibility-unit-tests
+
 Description:
 - Go open-source library that compares unit test names between a GraphQL reference implementation against other GraphQL implementations.
 
 ##### `graphql-go/compatibility-standard-definitions`
 
 GitHub Repository: https://github.com/graphql-go/compatibility-standard-definitions
+
 Description:
 - Go open-source library that compares the GraphQL reference implementation type system against other GraphQL implementations.
 
@@ -963,12 +968,14 @@ Description:
 ##### `graphql-go/compatibility-user-acceptance`
 
 GitHub Repository: https://github.com/graphql-go/compatibility-user-acceptance
+
 Description:
 - Go open-source library that compares the GraphQL reference implementation and GraphQL implementations acceptance criterias.
 
 ##### `chris-ramon/design-doc-self-generator`
 
 GitHub Repository: https://github.com/chris-ramon/design-doc-self-generator
+
 Description:
 - Go open-source library that obtains GitHub information.
 
