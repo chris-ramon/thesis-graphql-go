@@ -956,7 +956,8 @@ Go open-source library that has the base reusable code used by other `graphql-go
 GitHub Repository: https://github.com/graphql-go/compatibility-unit-tests
 
 Description:
-- Go open-source library that compares unit test names between a GraphQL reference implementation against other GraphQL implementations.
+
+Go open-source library that compares unit test names between a GraphQL reference implementation and other GraphQL implementations.
 
 ##### `graphql-go/compatibility-standard-definitions`
 
