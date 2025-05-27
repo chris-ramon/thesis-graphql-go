@@ -981,7 +981,8 @@ Go open-source library that compares acceptance criteria between the GraphQL ref
 GitHub Repository: https://github.com/chris-ramon/design-doc-self-generator
 
 Description:
-- Go open-source library that obtains GitHub information.
+
+Go open-source library that obtains GitHub information.
 
 
 # 5. Results
