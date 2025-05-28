@@ -35,122 +35,122 @@
 - [8. References](#8-references)
 
 ## 1. Introduction
-This thesis develops the implementation of the GraphQL standard in the Go programming language and validates it's compatibility.
+This thesis developed the implementation of the GraphQL standard in the Go programming language and validated its compatibility.
 
-GraphQL is a communication protocol between clients and servers, the capacities are delegated to the servers defined via schemas, is the principal interface for making different operations such as: queries, mutations and subscriptions, was created for communicating servers and clients that are user interface oriented.
+GraphQL is a communication protocol between clients and servers, where capacities are delegated to servers defined via schemas. It is the principal interface for making different operations such as: queries, mutations and subscriptions, and was created for communicating between servers and clients that are user interface oriented.
 
-The implementation has two main source of development:
+The implementation had two main sources of development:
 - The GraphQL specification.
 - The GraphQL implementation in the JavaScript programming language.
 
-The main objective of the implementation is to have compatibility with the JavaScript implementation up-to the v0.6.0 version.
+The main objective of the implementation was to have compatibility with the JavaScript implementation up to the v0.6.0 version.
 
-The implementation creates a GitHub proyect, which is adopted as a code version control system and software development life cycle tool.
+The implementation created a GitHub project, which was adopted as a code version control system and software development life cycle tool.
 
-The implementation decides for the Go programming language because it's modern and is constantly adopted by new projects, it focuses on cloud computing therefore leverages all the benefits of GraphQL.
+The implementation chose the Go programming language because it is modern and is constantly adopted by new projects, it focuses on cloud computing therefore leverages all the benefits of GraphQL.
 
-The implementation compatibility is verified by various validation frameworks such as:
+The implementation compatibility was verified by various validation frameworks such as:
 - Compatibility unit tests.
 - Functional tests.
 - User interface oriented tests.
 
-The result of the implementation is a open source software library.
+The result of the implementation is an open source software library.
 
-The success of the implementation is confirmed by identifying the open source projects and companies that depends on the library so they wire them into their own software.
+The success of the implementation was confirmed by identifying the open source projects and companies that depend on the library and wire it into their own software.
 
 ## 2. Problem Statement
 
 ### 2.1 Context
 
-The traditional strategy for building software is by using tools that allow the communication between clients and servers using traditional protocols such as: RPC[1], SOAP[2], REST[3].
+The traditional strategy for building software is by using tools that allow communication between clients and servers using traditional protocols such as: RPC[1], SOAP[2], REST[3].
 
-These tools centralizes the functionaing on the server side, where the data is defined so it can be interacted with, these strategies of communication generates various problems which are solved on demand with different solutions.
+These tools centralize the functioning on the server side, where the data is defined so it can be interacted with. These strategies of communication generate various problems which are solved on demand with different solutions.
 
 Multiple endpoints are created in order to cover multiple use cases which creates complexity to manage because the end-to-end requests are on the client side.
 
-These different endpoints causes over-fetching and under-fetching of data, the consequence is that it requires multiple requests in order to consolidate the information, because the server decided which data to send therefore the payloads are greater or lower than expected.
+These different endpoints cause over-fetching and under-fetching of data. The consequence is that it requires multiple requests in order to consolidate the information, because the server decides which data to send therefore the payloads are greater or lower than expected.
 
-One of the principle consequences of having multiple endpoints is that it creates nested requests causing complexity named: n + 1 problem.
+One of the principal consequences of having multiple endpoints is that it creates nested requests causing complexity named: n + 1 problem.
 
-Ineficiency at the maintainability side, because when changes are made on the server side the impact is on cascade to the different clients which depend on the server therefore the clients are more error prone.
+Inefficiency at the maintainability side occurs because when changes are made on the server side the impact cascades to the different clients which depend on the server therefore the clients are more error prone.
 
-There are scalability problems on the server side causing more band-width usage.
+There are scalability problems on the server side causing more bandwidth usage.
 
-Costs increases because the data are send from the servers requires more capacity in order to attend the demand so more provisoning and resources are required.
+Costs increase because the data sent from the servers requires more capacity in order to attend the demand so more provisioning and resources are required.
 
-Development experience are limited because it requires multiple tools in order to interact with each of the protocols that uses the servers causing negative impact to integrate new ones.
-Slow development experience because multiple tools are required to interact with the different protocols which creates difficulties at the moment of integrate new team members to the proyects and also on the learning curve side.
+Development experience is limited because it requires multiple tools in order to interact with each of the protocols that the servers use, causing negative impact when integrating new ones.
+Slow development experience occurs because multiple tools are required to interact with the different protocols which creates difficulties at the moment of integrating new team members to the projects and also on the learning curve side.
 
-Complexity at the application client side because it requires multiples layers of abstraction to coordinate the re-consolidate the information so the code are difficult to maintain because there are multiple solutions needs in order to address the problems.
+Complexity at the application client side exists because it requires multiple layers of abstraction to coordinate and re-consolidate the information so the code is difficult to maintain because there are multiple solutions needed in order to address the problems.
 
-The traditional protocols causes multiples strategies to manage the APIs versioning which triggers as result complexity on the server side that causes limited extensibility.
+The traditional protocols cause multiple strategies to manage the APIs versioning which triggers complexity on the server side that causes limited extensibility.
 
 ### 2.2 Analysis
 
 #### Main research questions:
 
-Has the implementation reached the defined state in order to fulfill the GraphQL features that were defined by the version v0.6.0 ?
+Did the implementation reach the defined state in order to fulfill the GraphQL features that were defined by the version v0.6.0?
 
-Has the compatibility results shown that the quality standards were accomplished to meet the defined validations ?
+Have the compatibility results shown that the quality standards were accomplished to meet the defined validations?
 
 #### Description of research questions:
-Aims to investigate the first part of the research focusing on the implementation life cycle of the GraphQL standard.
+The first question aims to investigate the implementation life cycle of the GraphQL standard.
 
-Aims to verify the compatibility of the implementation by leveraging multiple validation frameworks.
+The second question aims to verify the compatibility of the implementation by leveraging multiple validation frameworks.
 
 #### Secondary research questions:
 
-Which other GraphQL implementations are ?
+Which other GraphQL implementations exist?
 
-Which Go best practices were decided to use ?
+Which Go best practices were decided to use?
 
-Why was it decided to build the implementation as an open source project ?
+Why was it decided to build the implementation as an open source project?
 
-How was the compatibility verification measured ?
+How was the compatibility verification measured?
 
-Which companies and open source projects use the software library ?
+Which companies and open source projects use the software library?
 
-Which framework of maintenance was set up for the software library ?
+Which framework of maintenance was set up for the software library?
 
 #### Description of the research questions:
 
-Aims to describe what other implementations are in order to decide which best practices to follow and have them as reference for this implementation.
+This aims to describe what other implementations exist in order to decide which best practices to follow and have them as reference for this implementation.
 
-Aims to describe the decision of leveraging the software development strategy of open source so the future maintenance is ensured for keeping the project alive.
+This aims to describe the decision of leveraging the software development strategy of open source so the future maintenance is ensured for keeping the project alive.
 
-Aims to describe the different strategies to verify the compatibility of the implementation.
+This aims to describe the different strategies to verify the compatibility of the implementation.
 
-Aims to describe which companies and open source projects leverage all the benefits of the implementation in their own software.
+This aims to describe which companies and open source projects leverage all the benefits of the implementation in their own software.
 
-Aims to describe the different tooling around the software library that was setup in order to build and maintain the implementation.
+This aims to describe the different tooling around the software library that was set up in order to build and maintain the implementation.
 
 ### 2.3 Research Statement
 
-Hernández and Mendoza (2018): The justification of arguments are needed for responding the reasonings of the study development, the importance of the problem and who affects. 
+Hernández and Mendoza (2018): The justification of arguments is needed for responding to the reasonings of the study development, the importance of the problem and who it affects. 
 
-Consequently the justifications of the studay are elaborated.
+Consequently the justifications of the study are elaborated.
 
 #### 2.4 Theory Justification
 
-Hernández and Mendoza (2018): Argues that value is created when justification of a theory is made, the result can be used by new researchers and to create new concepts.
+Hernández and Mendoza (2018): Argue that value is created when justification of a theory is made, the result can be used by new researchers and to create new concepts.
 
 It was observed that at the time of the release of the GraphQL specification in the year 2015 the implementations were limited only to JavaScript[10].
 
-The implementation result can be used by different other researchers because it was decided to maintain it as an open source project.
+The implementation result can be used by other researchers because it was decided to maintain it as an open source project.
 
-It does create new concepts because at the time the implementation was released there were no other Go implementations so it created a based and foundational reference for upcoming new implementations.
+It does create new concepts because at the time the implementation was released there were no other Go implementations so it created a base and foundational reference for upcoming new implementations.
 
 #### Applied Justification
 
-Hernández and Mendoza (2018): Argues that the justification of the pratice creates value when solving one or more real problems through innovation and technologies for the quality of the processes.
+Hernández and Mendoza (2018): Argue that the justification of the practice creates value when solving one or more real problems through innovation and technologies for the quality of the processes.
 
-The investigation is justified because it creates value through the library and the quality of the implementation is guarantee through multiple validations frameworks.
+The investigation is justified because it creates value through the library and the quality of the implementation is guaranteed through multiple validation frameworks.
 
 #### Social Justification
 
-Hernández and Mendoza (2018) argues that the social justification impacts the society and for the end users of the investigation.
+Hernández and Mendoza (2018) argue that the social justification impacts the society and the end users of the investigation.
 
-The investigation has social impact because it has benefits for open source and companies because the implementation end result is open source and the impact is at full transparency because all the development is centralized in GitHub and due to the license the cost of usage is zero, and cascades infinity improvements because many contributors supports the library creating changes that allows the library to be future proof that avoids error regressions and security fixes.
+The investigation has social impact because it has benefits for open source and companies because the implementation end result is open source and the impact is at full transparency because all the development is centralized in GitHub and due to the license the cost of usage is zero, and cascades infinite improvements because many contributors support the library creating changes that allow the library to be future proof that avoids error regressions and security fixes.
 
 
 ### 2.5 Objectives
@@ -162,7 +162,7 @@ GraphQL implementation and compatibility verification.
 
 - Investigate the GraphQL standard implementation life cycle.
 
-- Investigate the compatibility verification leveraging varios frameworks.
+- Investigate the compatibility verification leveraging various frameworks.
 
 - Investigate current state of alternative implementations.
 
@@ -175,32 +175,32 @@ GraphQL implementation and compatibility verification.
 # 3 Theory Framework
 ## 3.1 International Previous Work
 
-99designs/gqlgen (2016/10/12): Implements a schema based graphql which generates all the components on the server side at build time, the key value is that all the parts are described on the graphql file which contains all the definitions of a type system and from there via using the command line interface commands it generates all the Go code which are: An http/s server, GraphQL endpoint and unit tests, and related development tools such as GraphQL Playground.
+99designs/gqlgen (2016/10/12): Implements a schema based GraphQL which generates all the components on the server side at build time. The key value is that all the parts are described in the GraphQL file which contains all the definitions of a type system and from there via using the command line interface commands it generates all the Go code which include: An HTTPS server, GraphQL endpoint and unit tests, and related development tools such as GraphQL Playground.
 
-The drawbacks being that the Go code is auto-generated, which limits the extensibility, since the code is locked-in and making changes are difficult because it requires core dependency from the upstream project.
-
-
-graph-gophers/graphql-go (2016/10/12): Implements the GraphQL standard by having as an entry-points the schema as a file, and the types resolvers are defined via code, it is used a library, main advantage being the adoption, also the core is shared across other implementations therefore the benefits are increased by the contributions from the open-source community.
-
-The drawbacks being that the schema is defined at text level which have their limitations in terms of extensibility because it requires extra tooling to maintain the schema source of true.
+The drawbacks are that the Go code is auto-generated, which limits the extensibility, since the code is locked-in and making changes is difficult because it requires core dependency from the upstream project.
 
 
-dosco/graphjin (2019/03/24): Implements the GraphQL standard, being main features the ability to generate the API from a schema that generates the SQL queries, so it is an end-to-end solution similar than a object-relational-mapping, it does support multiple databases, allows end users to just focus on the GraphQL schema side so the Go code is generated, using the API enables to perform queries, mutations and subscriptions.
+graph-gophers/graphql-go (2016/10/12): Implements the GraphQL standard by having as entry-points the schema as a file, and the types resolvers are defined via code. It is used as a library, with the main advantage being the adoption, also the core is shared across other implementations therefore the benefits are increased by the contributions from the open-source community.
 
-The drawbacks being that the end-to-end solution locks-in the implementation which is hard to extend, therefore the dependency on having internal hooks exposed and requires strong dependency on the maintainers.
+The drawbacks are that the schema is defined at text level which has limitations in terms of extensibility because it requires extra tooling to maintain the schema source of truth.
+
+
+dosco/graphjin (2019/03/24): Implements the GraphQL standard, with main features being the ability to generate the API from a schema that generates the SQL queries, so it is an end-to-end solution similar to an object-relational-mapping. It supports multiple databases, allows end users to just focus on the GraphQL schema side so the Go code is generated, using the API enables performing queries, mutations and subscriptions.
+
+The drawbacks are that the end-to-end solution locks-in the implementation which is hard to extend, therefore the dependency on having internal hooks exposed and requires strong dependency on the maintainers.
 
 ## 3.2 National Previous Work
 
-(Karla Cecilia Reyes Burgos, 2023) Created a research titled: Web services with GraphQL. Which is a sistematic literature, that details the recopilation of diverse resources which investigates the GraphQL usage, and has as a principal aim answer the following questions:
+(Karla Cecilia Reyes Burgos, 2023) Created a research titled: Web services with GraphQL. This is a systematic literature that details the recompilation of diverse resources which investigate the GraphQL usage, and has as a principal aim to answer the following questions:
 
-- ¿Which areas the science proves greater interest in the development of web services using GraphQL?
+- Which areas of science show greater interest in the development of web services using GraphQL?
 - The medicine industry is the greater area of science interested that applies a GraphQL implementation.
 
-- ¿Which countries had shown greater interest in the develpoment of web services using GraphQL?
-- The country with greater interest in apply a GraphQL implementation is USA.
+- Which countries had shown greater interest in the development of web services using GraphQL?
+- The country with greater interest in applying a GraphQL implementation is USA.
 
-- ¿In which year we find the greater quantity of investigations with respect of the development of web services using GraphQL?
-- The year which were more informatic solutions were 2019.
+- In which year do we find the greater quantity of investigations with respect to the development of web services using GraphQL?
+- The year which had more informatic solutions was 2019.
 
 ## 3.3 Fundamental Theories
 
@@ -231,25 +231,25 @@ Collaboration: Encourages all types of participation which can be from different
 
 #### Implementation
 
-Rapid Application Development (RAD): We used this methodology in order to implement rapidly iteratively the GraphQL Go implementation following the graphql-js reference:
+Rapid Application Development (RAD): We used this methodology in order to implement the GraphQL Go implementation rapidly and iteratively following the graphql-js reference:
 
 Prototyping: The GraphQL Go implementation was created from very basic initial interfaces that started from the text source, parser, lexer, AST, collectors and resolver.
 
-User Feedback: As we made progress we received constant feedback that is documented mainly in GitHub, we did not follow a strict plan.
+User Feedback: As we made progress we received constant feedback that was documented mainly in GitHub; we did not follow a strict plan.
 
-Fast turnaround: We did quick iterations in the implementation because it enabled us to constantly release multiple versions so in order to do so the contributors worked on a fast paced working environment, and also to cover the need of a working version for different companies that leverage the initial versions.
+Fast turnaround: We did quick iterations in the implementation because it enabled us to constantly release multiple versions so in order to do so the contributors worked in a fast paced working environment, and also to cover the need of a working version for different companies that leveraged the initial versions.
 
-Open-source development methodology: The development of the project was by leveraging the different characteristics of the open-source methodology to have multiple contributors adding value to the project, it is decentralized so the project can be keep forever due to the dependency on GitHub which guarantee durability and also the development was continuously iterated in the openness so any person could benefit from the project from learning, up-to proposing changes.
+Open-source development methodology: The development of the project was done by leveraging the different characteristics of the open-source methodology to have multiple contributors adding value to the project. It is decentralized so the project can be kept forever due to the dependency on GitHub which guarantees durability and also the development was continuously iterated in the open so any person could benefit from the project from learning, up to proposing changes.
 
-Peer Review: The project was constantly peer-review by different persons across the planet, and the key part of those besides proposing improvements is that they reported and sent security fixes to keep the project trustable and safe from vulnerabilities.
+Peer Review: The project was constantly peer-reviewed by different persons across the planet, and the key part of this besides proposing improvements was that they reported and sent security fixes to keep the project trustable and safe from vulnerabilities.
 
 Decentralized Contributors: The project was iterated and leveraged GitHub as a central control for the development; it enabled multiple contributors from different parts of the planet.
 
-Public Codebase: The project was publicly available since the early stages of development, it allows other contributors to propose security fixes as well as reported bug plus security issues, the license is MIT which matches the reference graphql-js and enables creation of multiple branches of similar projects plus forks with improvements as well as internal forks that require special characteristics that cover inner needs of private projects.
+Public Codebase: The project was publicly available since the early stages of development, it allowed other contributors to propose security fixes as well as report bugs and security issues. The license is MIT which matches the reference graphql-js and enables creation of multiple branches of similar projects plus forks with improvements as well as internal forks that require special characteristics that cover inner needs of private projects.
 
 Rapid Prototyping: Since we leveraged GitHub as a central part of the workflow of the project, it enabled rapid iterations of including sets of changes from the graphql-js reference implementation versions.
 
-Collaboration: it enabled different contributors from different parts that learned from the project and they were to add value.
+Collaboration: It enabled different contributors from different parts that learned from the project and they were able to add value.
 
 #### Validation
 
@@ -310,18 +310,18 @@ The following frameworks for compatibility validation were created:
 
 It was decided to choose JavaScript because there are more JavaScript compilers available.
 
-Risk Assessment: Compatibility validation of risks, done by wiring the three frameworks created to the continous integration pipeline and in case of regressions against not fullfilling the standard there is warnings and newer changes always being validated for keeping the implementation stable, the following frameworks guarantee risk assessment:
+Risk Assessment: Compatibility validation of risks was done by wiring the three frameworks created to the continuous integration pipeline and in case of regressions against not fulfilling the standard there are warnings and newer changes are always being validated for keeping the implementation stable. The following frameworks guarantee risk assessment:
 - Compatibility Unit Tests.
 - Compatibility Standard Definitions.
 - Compatibility User Acceptance.
   
-Functionality Testing: Compatibility validation against the JavaScript official reference implementation unit tests via the following framework:
+Functionality Testing: Compatibility validation against the JavaScript official reference implementation unit tests was done via the following framework:
 - Compatibility Unit Tests.
 
-Validation Testing & Design Verification and Reviews: Compatibility validation against the official standard documentation, via the following framework:
+Validation Testing & Design Verification and Reviews: Compatibility validation against the official standard documentation was done via the following framework:
 - Compatibility Standard Definitions. 
 
-User Acceptance Testing: Compatibility validation via collecting acceptance information from GitHub, via the following framework:
+User Acceptance Testing: Compatibility validation via collecting acceptance information from GitHub was done via the following framework:
 - Compatibility User Acceptance.
 
 
@@ -343,9 +343,9 @@ GitHub Pull Request: https://github.com/tomarrell/wrapcheck/pull/62
 
 The implementation was decided to be built because at the time the GraphQL standard was released in 2015 there were no implementations available in the Go programming language therefore the opportunity to create an open source software library was available.
 
-One important highlight is that the standard was released at similar time together with the reference implementation graphql-js therefore those two artifacts were used to identify the tasks that are part of this section.
+One important highlight is that the standard was released at a similar time together with the reference implementation graphql-js therefore those two artifacts were used to identify the tasks that are part of this section.
 
-The tasks matches the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via GitHub so we could accomplish implementation at each version.
+The tasks match the main functionalities of the reference implementation graphql-js, so the main components were the central part of each iteration via GitHub so we could accomplish implementation at each version.
 
 ## 4.4 Tasks
 
