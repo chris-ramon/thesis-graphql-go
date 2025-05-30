@@ -872,7 +872,7 @@ What are the internal design of the GraphQL standard, let’s add here diagrams 
   - Printer
   - Visitor
 - Executor
- - Resolver
+  - Resolver
 - Validator
 - Definition
 - Directives
