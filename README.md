@@ -555,23 +555,6 @@ Listing the tasks that covers the implementation and compatibility validation:
     </tr>
     <tr>
       <td>11</td>
-      <td>Collector</td>
-      <td>2015-09-16 04:23:35 +0000 UTC - 2015-09-25 23:13:25 +0000 UTC</td>
-      <td>9</td>
-      <td>
-- https://github.com/sogko</br>- https://github.com/chris-ramon
-      </td>
-      <td>Collector, Executor, Types.</td>
-      <td>
-<p>- Collector fields implementation.</p>
-<p>- Collector work related types, schema definition and scalars.</p>
-<p>- Collector related unit tests.</p>        
-      </td>
-      <td>https://github.com/graphql-go/graphql/pull/8</td>
-      <td>0.4.18</td>
-    </tr>
-    <tr>
-      <td>12</td>
       <td>Resolver</td>
       <td>2018-03-01 09:36:38 +0000 UTC - 2018-03-08 21:51:05 +0000 UTC</td>
       <td>7</td>
@@ -588,7 +571,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
 <tr>
-      <td>13</td>
+      <td>12</td>
       <td>Resolver</td>
       <td>2015-09-16 04:23:35 +0000 UTC - 2015-09-25 23:13:25 +0000 UTC</td>
       <td>9</td>
@@ -605,7 +588,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>  
     <tr>
-      <td>14</td>
+      <td>13</td>
       <td>Types</td>
       <td>2015-09-26 15:21:47 +0000 UTC - 2015-10-02 01:05:37 +0000 UTC</td>
       <td>5</td>
@@ -621,7 +604,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>15</td>
+      <td>14</td>
       <td>Errors</td>
       <td>2018-11-28 04:14:47 +0000 UTC - 2018-12-03 01:16:35 +0000 UTC</td>
       <td>4</td>
@@ -636,7 +619,7 @@ Listing the tasks that covers the implementation and compatibility validation:
       <td>0.4.18</td>
     </tr>
     <tr>
-      <td>16</td>
+      <td>15</td>
       <td>CircleCI</td>
       <td>2018-07-19 03:27:49 +0000 UTC - 2018-07-19 03:41:48 +0000 UTC</td>
       <td>1</td>
