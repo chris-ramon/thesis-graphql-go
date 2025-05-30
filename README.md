@@ -861,6 +861,25 @@ Go Standards:
 
 What are the internal design of the GraphQL standard, let’s add here diagrams of the workflow, also let’s add each component workflow, prop using uml something like that, also, let’s add GraphQL Playground, GraphQL GraphiQL.
 
+#### Components
+- Errors
+- Language
+  - AST
+  - Kinds
+  - Lexer
+  - Location
+  - Parser
+  - Printer
+  - Visitor
+- Executor
+  - Resolver
+- Validator
+- Definition
+- Directives
+- Introspection
+- Rules
+- Schema
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
