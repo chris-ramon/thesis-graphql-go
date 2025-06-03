@@ -845,6 +845,12 @@ Go Standards:
 What are the internal design of the GraphQL standard, let’s add here diagrams of the workflow, also let’s add each component workflow, prop using uml something like that, also, let’s add GraphQL Playground, GraphQL GraphiQL.
 
 #### Components
+
+##### Language Source
+Source is the component that contains the GraphQL root operation in byte format.
+
+Used within the Parse component as an entry point for accessing the library end-user GraphQL string operation.
+
 - Errors
 - Language
   - AST
