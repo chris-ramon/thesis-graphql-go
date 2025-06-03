@@ -849,7 +849,7 @@ What are the internal design of the GraphQL standard, let’s add here diagrams 
 ##### Language Source
 Source is the component that contains the GraphQL root operation in byte format.
 
-Used within the Parse component as a entry point for accessing the library end-user GraphQL string operation.
+Used within the Parse component as an entry point for accessing the library end-user GraphQL string operation.
 
 - Errors
 - Language
