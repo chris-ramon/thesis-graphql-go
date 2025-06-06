@@ -846,6 +846,36 @@ What are the internal design of the GraphQL standard, let’s add here diagrams 
 
 #### Components
 
+##### GraphQL
+GraphQL is the component that wraps most of the internal components, it contains the end-user Go APIs, which are
+syntactically similar to the graphql-js reference implementation APIs.
+
+###### `graphql-js` Main API
+
+```
+import {
+  graphql,
+} from 'graphql';
+
+graphql(schema, query).then(result => {
+});
+```
+
+###### `graphql-go` Main API
+```
+import "github.com/graphql-go/graphql"
+
+params := graphql.Params{Schema: schema, RequestString: query}
+graphql.Do(params)
+```
+
+The internal components wrapped are the following:
+- Source.
+- Extensions.
+- Parse.
+- Validate.
+- Execute.
+
 ##### Language Source
 Source is the component that contains the GraphQL root operation in byte format.
 
