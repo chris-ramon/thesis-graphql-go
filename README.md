@@ -848,7 +848,7 @@ What are the internal design of the GraphQL standard, let’s add here diagrams 
 
 ##### GraphQL
 GraphQL is the component that wraps most of the internal components, it contains the end-user Go APIs, which are
-syntactically similar than the graphql-js reference implementation APIs.
+syntactically similar to the graphql-js reference implementation APIs.
 
 ###### `graphql-js` Main API
 
