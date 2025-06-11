@@ -846,6 +846,31 @@ What are the internal design of the GraphQL standard, let’s add here diagrams 
 
 #### Components
 
+##### Implementation
+
+The graphql-go library contains the following components:
+
+- GraphQL:
+ - Source.
+ - Extensions.
+- Errors.
+- Language:
+  - AST.
+  - Kinds.
+  - Lexer.
+  - Location.
+  - Parser.
+  - Printer.
+  - Visitor.
+- Executor:
+  - Resolver.
+- Validator.
+- Definition.
+- Directives.
+- Introspection.
+- Rules.
+- Schema.
+
 ##### GraphQL
 GraphQL is the component that wraps most of the internal components, it contains the end-user Go APIs, which are
 syntactically similar to the graphql-js reference implementation APIs.
@@ -880,24 +905,6 @@ The internal components wrapped are the following:
 Source is the component that contains the GraphQL root operation in byte format.
 
 Used within the Parse component as an entry point for accessing the library end-user GraphQL string operation.
-
-- Errors
-- Language
-  - AST
-  - Kinds
-  - Lexer
-  - Location
-  - Parser
-  - Printer
-  - Visitor
-- Executor
-  - Resolver
-- Validator
-- Definition
-- Directives
-- Introspection
-- Rules
-- Schema
 
 ### 4.10 Architecture
 
