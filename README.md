@@ -906,6 +906,18 @@ Source is the component that contains the GraphQL root operation in byte format.
 
 Used within the Parse component as an entry point for accessing the library end-user GraphQL string operation.
 
+##### Extensions
+Extensions is a component that provides an interface for extending GraphQL execution with custom functionality through hooks into various phases of the GraphQL execution lifecycle.
+
+The Extensions interface defines methods that allow developers to intercept and extend the following phases:
+- **Init**: Initialize the extension with context and parameters
+- **ParseDidStart**: Hook called before GraphQL query parsing begins
+- **ValidationDidStart**: Hook called before GraphQL query validation begins  
+- **ExecutionDidStart**: Hook called before GraphQL query execution begins
+- **ResolveFieldDidStart**: Hook called before individual field resolution begins
+
+Each phase hook returns a corresponding finish function that is called when the operation completes, allowing extensions to perform cleanup, logging, metrics collection, or other post-processing tasks. This design enables powerful extensibility for cross-cutting concerns like performance monitoring, authentication, caching, and custom validation logic.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
