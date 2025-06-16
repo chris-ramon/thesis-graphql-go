@@ -853,7 +853,7 @@ The graphql-go library contains the following components:
 - GraphQL:
  - Source.
  - Extensions.
-- Errors.
+- GQLErrors.
 - Language:
   - AST.
   - Kinds.
