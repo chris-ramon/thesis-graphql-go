@@ -918,6 +918,10 @@ The Extensions interface defines methods that allow developers to intercept and 
 
 Each phase hook returns a corresponding finish function that is called when the operation completes, allowing extensions to perform cleanup, logging, metrics collection, or other post-processing tasks. This design enables powerful extensibility for cross-cutting concerns like performance monitoring, authentication, caching, and custom validation logic.
 
+##### GQLErrors
+
+GQLErrors is the component responsible for modeling, collecting, and propagating errors that occur during GraphQL execution. It provides structures for representing errors with context such as locations, paths, and original error messages, aligning with the GraphQL specification’s error format. The component is based on the upstream [gqlerrors](https://github.com/graphql-go/graphql/tree/master/gqlerrors) package and ensures that errors are reported in a consistent and extensible way. This enables clients to receive detailed and actionable error information in GraphQL responses.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
