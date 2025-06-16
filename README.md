@@ -918,6 +918,22 @@ The Extensions interface defines methods that allow developers to intercept and 
 
 Each phase hook returns a corresponding finish function that is called when the operation completes, allowing extensions to perform cleanup, logging, metrics collection, or other post-processing tasks. This design enables powerful extensibility for cross-cutting concerns like performance monitoring, authentication, caching, and custom validation logic.
 
+##### Language AST
+AST (Abstract Syntax Tree) is the component that represents the parsed GraphQL document as a hierarchical tree structure of nodes.
+
+The AST serves as the intermediate representation between the raw GraphQL query string and the execution engine. It is produced by the Parser component from the tokenized source and consumed by various other components including the Validator, Executor, and Printer.
+
+The AST structure consists of different node types that correspond to GraphQL language constructs:
+- **Document**: The root node representing the entire GraphQL document
+- **OperationDefinition**: Represents query, mutation, or subscription operations
+- **FieldDefinition**: Represents individual fields within operations
+- **FragmentDefinition**: Represents reusable query fragments
+- **SelectionSet**: Represents groups of field selections
+- **Arguments**: Represents field arguments and their values
+- **Directives**: Represents GraphQL directives applied to fields or fragments
+
+The AST enables the GraphQL engine to traverse and analyze the query structure programmatically, allowing for validation rules to be applied, execution planning to be performed, and query introspection capabilities to be provided. This tree representation abstracts away the textual syntax and provides a structured format that can be efficiently processed by the subsequent stages of GraphQL execution.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
