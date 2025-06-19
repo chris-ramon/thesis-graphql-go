@@ -957,6 +957,24 @@ The Kinds constants include:
 
 The Kinds component enables type-safe AST traversal and manipulation by providing a standardized way to identify and categorize nodes. This is essential for the Visitor pattern implementation, validation rules, and other components that need to process specific types of AST nodes. The constants ensure consistency across the entire GraphQL processing pipeline and facilitate debugging by providing human-readable node type identifiers.
 
+##### Language Lexer
+Lexer is the component responsible for tokenizing the GraphQL source string into a sequence of meaningful tokens that can be processed by the Parser component.
+
+The Lexer performs lexical analysis by scanning through the raw GraphQL query string character by character and identifying distinct tokens such as:
+- **Names**: Field names, type names, and identifiers
+- **Keywords**: GraphQL language keywords like `query`, `mutation`, `subscription`, `fragment`
+- **Punctuation**: Braces `{}`, brackets `[]`, parentheses `()`, colons `:`, commas `,`
+- **Operators**: Equality operators, directives `@`, spread operators `...`
+- **Literals**: String literals, numeric literals, boolean literals
+- **Comments**: Single-line and multi-line comments that are preserved or ignored as needed
+
+The tokenization process transforms the linear text input into a structured sequence of tokens, each containing:
+- **Token Type**: The category of the token (e.g., NAME, STRING, NUMBER)
+- **Value**: The actual text content of the token
+- **Location**: Position information including line and column numbers for error reporting
+
+The Lexer serves as the foundation for the parsing pipeline, providing clean, categorized input to the Parser component which then constructs the AST. This separation of concerns allows for efficient error detection and reporting at the lexical level, helping developers identify syntax issues in their GraphQL queries before they reach the parsing stage.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
