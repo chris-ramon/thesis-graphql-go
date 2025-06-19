@@ -934,6 +934,29 @@ The AST structure consists of different node types that correspond to GraphQL la
 
 The AST enables the GraphQL engine to traverse and analyze the query structure programmatically, allowing for validation rules to be applied, execution planning to be performed, and query introspection capabilities to be provided. This tree representation abstracts away the textual syntax and provides a structured format that can be efficiently processed by the subsequent stages of GraphQL execution.
 
+##### Language Kinds
+Kinds is the component that defines constants for identifying different types of AST nodes in the GraphQL document structure.
+
+The Kinds component serves as a central registry of node type identifiers that are used throughout the GraphQL processing pipeline. It provides string constants that categorize each AST node according to its syntactic role in the GraphQL language.
+
+The Kinds constants include:
+- **Document**: Identifies the root document node
+- **OperationDefinition**: Identifies query, mutation, and subscription operations
+- **VariableDefinition**: Identifies variable declarations in operations
+- **SelectionSet**: Identifies groups of field selections
+- **Field**: Identifies individual field selections
+- **Argument**: Identifies field arguments
+- **FragmentSpread**: Identifies fragment usage
+- **InlineFragment**: Identifies inline fragment selections
+- **FragmentDefinition**: Identifies reusable fragment definitions
+- **Variable**: Identifies variable references
+- **IntValue**, **FloatValue**, **StringValue**, **BooleanValue**: Identify literal values
+- **ListValue**, **ObjectValue**: Identify complex value structures
+- **Directive**: Identifies GraphQL directives
+- **NamedType**, **ListType**, **NonNullType**: Identify type references
+
+The Kinds component enables type-safe AST traversal and manipulation by providing a standardized way to identify and categorize nodes. This is essential for the Visitor pattern implementation, validation rules, and other components that need to process specific types of AST nodes. The constants ensure consistency across the entire GraphQL processing pipeline and facilitate debugging by providing human-readable node type identifiers.
+
 ##### Language Lexer
 Lexer is the component responsible for tokenizing the GraphQL source string into a sequence of meaningful tokens that can be processed by the Parser component.
 
