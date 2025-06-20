@@ -853,7 +853,7 @@ The graphql-go library contains the following components:
 - GraphQL:
  - Source.
  - Extensions.
-- Errors.
+- GQLErrors.
 - Language:
   - AST.
   - Kinds.
@@ -917,6 +917,10 @@ The Extensions interface defines methods that allow developers to intercept and 
 - **ResolveFieldDidStart**: Hook called before individual field resolution begins
 
 Each phase hook returns a corresponding finish function that is called when the operation completes, allowing extensions to perform cleanup, logging, metrics collection, or other post-processing tasks. This design enables powerful extensibility for cross-cutting concerns like performance monitoring, authentication, caching, and custom validation logic.
+
+##### GQLErrors
+
+GQLErrors is the component responsible for modeling, collecting, and propagating errors that occur during GraphQL execution. It provides structures for representing errors with context such as locations, paths, and original error messages, aligning with the GraphQL specification’s error format. The component is based on the upstream [gqlerrors](https://github.com/graphql-go/graphql/tree/master/gqlerrors) package and ensures that errors are reported in a consistent and extensible way. This enables clients to receive detailed and actionable error information in GraphQL responses.
 
 ##### Language AST
 AST (Abstract Syntax Tree) is the component that represents the parsed GraphQL document as a hierarchical tree structure of nodes.
@@ -996,6 +1000,23 @@ The parsing process includes comprehensive error handling and reporting:
 - **Location Tracking**: Maintains line and column information for each AST node to support debugging
 
 The Parser serves as the critical bridge between the raw text input and the structured AST representation, enabling subsequent components like the Validator and Executor to process GraphQL operations efficiently. By converting the linear token stream into a hierarchical tree structure, the Parser facilitates pattern matching, validation rule application, and execution planning across the GraphQL processing pipeline.
+
+##### Language Location
+Location is the component responsible for tracking and maintaining position information within the GraphQL source text during parsing and processing.
+
+The Location component provides precise positional data that enables accurate error reporting and debugging capabilities. It tracks multiple types of position information:
+- **Line Numbers**: The line position where tokens, nodes, or errors occur in the source text
+- **Column Numbers**: The column position within a specific line
+- **Character Offsets**: The absolute character position from the beginning of the source
+- **Source References**: Links back to the original source document
+
+The Location information is embedded throughout the parsing pipeline:
+- **Tokens**: Each token produced by the Lexer includes location data
+- **AST Nodes**: Every AST node contains location information for the source text it represents
+- **Errors**: GraphQL errors include precise location data to help developers identify problematic areas
+- **Validation**: Location data enables context-aware validation messages
+
+The Location component is essential for developer experience as it transforms generic parsing or validation errors into actionable feedback. Instead of reporting "syntax error," the system can report "syntax error at line 15, column 23," allowing developers to quickly locate and fix issues in their GraphQL queries. This positional tracking is maintained throughout the entire GraphQL processing lifecycle, from initial tokenization through final execution, ensuring that any errors or warnings can be traced back to their precise origin in the source text.
 
 ### 4.10 Architecture
 
