@@ -922,6 +922,80 @@ Each phase hook returns a corresponding finish function that is called when the 
 
 GQLErrors is the component responsible for modeling, collecting, and propagating errors that occur during GraphQL execution. It provides structures for representing errors with context such as locations, paths, and original error messages, aligning with the GraphQL specification’s error format. The component is based on the upstream [gqlerrors](https://github.com/graphql-go/graphql/tree/master/gqlerrors) package and ensures that errors are reported in a consistent and extensible way. This enables clients to receive detailed and actionable error information in GraphQL responses.
 
+##### Language AST
+AST (Abstract Syntax Tree) is the component that represents the parsed GraphQL document as a hierarchical tree structure of nodes.
+
+The AST serves as the intermediate representation between the raw GraphQL query string and the execution engine. It is produced by the Parser component from the tokenized source and consumed by various other components including the Validator, Executor, and Printer.
+
+The AST structure consists of different node types that correspond to GraphQL language constructs:
+- **Document**: The root node representing the entire GraphQL document
+- **OperationDefinition**: Represents query, mutation, or subscription operations
+- **FieldDefinition**: Represents individual fields within operations
+- **FragmentDefinition**: Represents reusable query fragments
+- **SelectionSet**: Represents groups of field selections
+- **Arguments**: Represents field arguments and their values
+- **Directives**: Represents GraphQL directives applied to fields or fragments
+
+The AST enables the GraphQL engine to traverse and analyze the query structure programmatically, allowing for validation rules to be applied, execution planning to be performed, and query introspection capabilities to be provided. This tree representation abstracts away the textual syntax and provides a structured format that can be efficiently processed by the subsequent stages of GraphQL execution.
+
+##### Language Kinds
+Kinds is the component that defines constants for identifying different types of AST nodes in the GraphQL document structure.
+
+The Kinds component serves as a central registry of node type identifiers that are used throughout the GraphQL processing pipeline. It provides string constants that categorize each AST node according to its syntactic role in the GraphQL language.
+
+The Kinds constants include:
+- **Document**: Identifies the root document node
+- **OperationDefinition**: Identifies query, mutation, and subscription operations
+- **VariableDefinition**: Identifies variable declarations in operations
+- **SelectionSet**: Identifies groups of field selections
+- **Field**: Identifies individual field selections
+- **Argument**: Identifies field arguments
+- **FragmentSpread**: Identifies fragment usage
+- **InlineFragment**: Identifies inline fragment selections
+- **FragmentDefinition**: Identifies reusable fragment definitions
+- **Variable**: Identifies variable references
+- **IntValue**, **FloatValue**, **StringValue**, **BooleanValue**: Identify literal values
+- **ListValue**, **ObjectValue**: Identify complex value structures
+- **Directive**: Identifies GraphQL directives
+- **NamedType**, **ListType**, **NonNullType**: Identify type references
+
+The Kinds component enables type-safe AST traversal and manipulation by providing a standardized way to identify and categorize nodes. This is essential for the Visitor pattern implementation, validation rules, and other components that need to process specific types of AST nodes. The constants ensure consistency across the entire GraphQL processing pipeline and facilitate debugging by providing human-readable node type identifiers.
+
+##### Language Lexer
+Lexer is the component responsible for tokenizing the GraphQL source string into a sequence of meaningful tokens that can be processed by the Parser component.
+
+The Lexer performs lexical analysis by scanning through the raw GraphQL query string character by character and identifying distinct tokens such as:
+- **Names**: Field names, type names, and identifiers
+- **Keywords**: GraphQL language keywords like `query`, `mutation`, `subscription`, `fragment`
+- **Punctuation**: Braces `{}`, brackets `[]`, parentheses `()`, colons `:`, commas `,`
+- **Operators**: Equality operators, directives `@`, spread operators `...`
+- **Literals**: String literals, numeric literals, boolean literals
+- **Comments**: Single-line and multi-line comments that are preserved or ignored as needed
+
+The tokenization process transforms the linear text input into a structured sequence of tokens, each containing:
+- **Token Type**: The category of the token (e.g., NAME, STRING, NUMBER)
+- **Value**: The actual text content of the token
+- **Location**: Position information including line and column numbers for error reporting
+
+The Lexer serves as the foundation for the parsing pipeline, providing clean, categorized input to the Parser component which then constructs the AST. This separation of concerns allows for efficient error detection and reporting at the lexical level, helping developers identify syntax issues in their GraphQL queries before they reach the parsing stage.
+
+##### Language Location
+Location is the component responsible for tracking and maintaining position information within the GraphQL source text during parsing and processing.
+
+The Location component provides precise positional data that enables accurate error reporting and debugging capabilities. It tracks multiple types of position information:
+- **Line Numbers**: The line position where tokens, nodes, or errors occur in the source text
+- **Column Numbers**: The column position within a specific line
+- **Character Offsets**: The absolute character position from the beginning of the source
+- **Source References**: Links back to the original source document
+
+The Location information is embedded throughout the parsing pipeline:
+- **Tokens**: Each token produced by the Lexer includes location data
+- **AST Nodes**: Every AST node contains location information for the source text it represents
+- **Errors**: GraphQL errors include precise location data to help developers identify problematic areas
+- **Validation**: Location data enables context-aware validation messages
+
+The Location component is essential for developer experience as it transforms generic parsing or validation errors into actionable feedback. Instead of reporting "syntax error," the system can report "syntax error at line 15, column 23," allowing developers to quickly locate and fix issues in their GraphQL queries. This positional tracking is maintained throughout the entire GraphQL processing lifecycle, from initial tokenization through final execution, ensuring that any errors or warnings can be traced back to their precise origin in the source text.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
