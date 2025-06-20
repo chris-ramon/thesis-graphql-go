@@ -975,6 +975,23 @@ The tokenization process transforms the linear text input into a structured sequ
 
 The Lexer serves as the foundation for the parsing pipeline, providing clean, categorized input to the Parser component which then constructs the AST. This separation of concerns allows for efficient error detection and reporting at the lexical level, helping developers identify syntax issues in their GraphQL queries before they reach the parsing stage.
 
+##### Language Location
+Location is the component responsible for tracking and maintaining position information within the GraphQL source text during parsing and processing.
+
+The Location component provides precise positional data that enables accurate error reporting and debugging capabilities. It tracks multiple types of position information:
+- **Line Numbers**: The line position where tokens, nodes, or errors occur in the source text
+- **Column Numbers**: The column position within a specific line
+- **Character Offsets**: The absolute character position from the beginning of the source
+- **Source References**: Links back to the original source document
+
+The Location information is embedded throughout the parsing pipeline:
+- **Tokens**: Each token produced by the Lexer includes location data
+- **AST Nodes**: Every AST node contains location information for the source text it represents
+- **Errors**: GraphQL errors include precise location data to help developers identify problematic areas
+- **Validation**: Location data enables context-aware validation messages
+
+The Location component is essential for developer experience as it transforms generic parsing or validation errors into actionable feedback. Instead of reporting "syntax error," the system can report "syntax error at line 15, column 23," allowing developers to quickly locate and fix issues in their GraphQL queries. This positional tracking is maintained throughout the entire GraphQL processing lifecycle, from initial tokenization through final execution, ensuring that any errors or warnings can be traced back to their precise origin in the source text.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
