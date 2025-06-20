@@ -975,6 +975,28 @@ The tokenization process transforms the linear text input into a structured sequ
 
 The Lexer serves as the foundation for the parsing pipeline, providing clean, categorized input to the Parser component which then constructs the AST. This separation of concerns allows for efficient error detection and reporting at the lexical level, helping developers identify syntax issues in their GraphQL queries before they reach the parsing stage.
 
+##### Language Parser
+Parser is the component responsible for analyzing the sequence of tokens produced by the Lexer and constructing an Abstract Syntax Tree (AST) that represents the hierarchical structure of a GraphQL document.
+
+The Parser performs syntactic analysis by consuming tokens from the Lexer and applying GraphQL grammar rules to build a structured representation of the query. It processes the tokens according to the GraphQL specification and creates corresponding AST nodes for each language construct.
+
+The Parser handles various GraphQL language elements including:
+- **Document Parsing**: Processes the root level of a GraphQL document containing operations and fragments
+- **Operation Parsing**: Handles query, mutation, and subscription operations with their selection sets
+- **Selection Set Parsing**: Processes field selections, fragment spreads, and inline fragments
+- **Field Parsing**: Handles field names, arguments, aliases, and nested selections
+- **Fragment Parsing**: Processes both named fragment definitions and inline fragments
+- **Value Parsing**: Handles literals (strings, numbers, booleans), variables, lists, and objects
+- **Type Parsing**: Processes type references including named types, list types, and non-null types
+- **Directive Parsing**: Handles directive applications with their arguments
+
+The parsing process includes comprehensive error handling and reporting:
+- **Syntax Error Detection**: Identifies malformed GraphQL syntax and provides precise error locations
+- **Error Recovery**: Attempts to continue parsing after encountering errors to find additional issues
+- **Location Tracking**: Maintains line and column information for each AST node to support debugging
+
+The Parser serves as the critical bridge between the raw text input and the structured AST representation, enabling subsequent components like the Validator and Executor to process GraphQL operations efficiently. By converting the linear token stream into a hierarchical tree structure, the Parser facilitates pattern matching, validation rule application, and execution planning across the GraphQL processing pipeline.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
