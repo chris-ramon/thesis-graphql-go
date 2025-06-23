@@ -1018,10 +1018,6 @@ The Location information is embedded throughout the parsing pipeline:
 
 The Location component is essential for developer experience as it transforms generic parsing or validation errors into actionable feedback. Instead of reporting "syntax error," the system can report "syntax error at line 15, column 23," allowing developers to quickly locate and fix issues in their GraphQL queries. This positional tracking is maintained throughout the entire GraphQL processing lifecycle, from initial tokenization through final execution, ensuring that any errors or warnings can be traced back to their precise origin in the source text.
 
-##### GQLErrors
-
-GQLErrors is the component responsible for modeling, collecting, and propagating errors that occur during GraphQL execution. It provides structures for representing errors with context such as locations, paths, and original error messages, aligning with the GraphQL specification’s error format. The component is based on the upstream [gqlerrors](https://github.com/graphql-go/graphql/tree/master/gqlerrors) package and ensures that errors are reported in a consistent and extensible way. This enables clients to receive detailed and actionable error information in GraphQL responses.
-
 ##### Executor / Resolver
 
 The Executor/Resolver is a core component responsible for executing GraphQL operations and resolving the fields requested in a query. It forms the bridge between the parsed GraphQL Abstract Syntax Tree (AST) and the actual data retrieval logic, orchestrating the process from query execution to final response construction.
