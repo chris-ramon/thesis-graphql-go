@@ -1022,6 +1022,28 @@ The Location component is essential for developer experience as it transforms ge
 
 GQLErrors is the component responsible for modeling, collecting, and propagating errors that occur during GraphQL execution. It provides structures for representing errors with context such as locations, paths, and original error messages, aligning with the GraphQL specification’s error format. The component is based on the upstream [gqlerrors](https://github.com/graphql-go/graphql/tree/master/gqlerrors) package and ensures that errors are reported in a consistent and extensible way. This enables clients to receive detailed and actionable error information in GraphQL responses.
 
+##### Executor / Resolver
+
+The Executor/Resolver is a core component responsible for executing GraphQL operations and resolving the fields requested in a query. It forms the bridge between the parsed GraphQL Abstract Syntax Tree (AST) and the actual data retrieval logic, orchestrating the process from query execution to final response construction.
+
+- **Executor**: Traverses the AST produced by the Parser, determining the operation type (query, mutation, subscription) and evaluating each node.
+- **Resolver**: Each field in the schema can specify a resolver function. The resolver is called by the Executor to fetch or compute the data for that field. If no custom resolver is specified, a default resolver is used, often retrieving values directly from the source object.
+
+**Responsibilities:**
+- Receives an operation (query/mutation/subscription) and variables.
+- Traverses the AST, matching fields to resolver functions.
+- Calls each resolver with the parent object, arguments, context, and info about the execution state.
+- Handles asynchronous and nested field resolution, supporting fragments, directives, and error propagation.
+- Aggregates the resolved data into the final response structure.
+
+This design allows for extensibility—custom business logic, authentication, and side effects can be injected at the resolver level. The clear separation also makes the execution engine reusable and testable.
+
+Implementation details can be found throughout the codebase, notably in files and PRs related to Executor and Resolver components.
+
+References:
+- [Partial implementation of resolve fields](https://github.com/graphql-go/graphql/pull/8)
+- [Field resolver interface support](https://github.com/graphql-go/graphql/pull/288)
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
