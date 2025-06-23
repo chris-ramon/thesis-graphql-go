@@ -1018,6 +1018,35 @@ The Location information is embedded throughout the parsing pipeline:
 
 The Location component is essential for developer experience as it transforms generic parsing or validation errors into actionable feedback. Instead of reporting "syntax error," the system can report "syntax error at line 15, column 23," allowing developers to quickly locate and fix issues in their GraphQL queries. This positional tracking is maintained throughout the entire GraphQL processing lifecycle, from initial tokenization through final execution, ensuring that any errors or warnings can be traced back to their precise origin in the source text.
 
+##### Language Printer
+Printer is the component responsible for converting Abstract Syntax Tree (AST) nodes back into their textual GraphQL representation, essentially performing the reverse operation of the Parser component.
+
+The Printer component serves as a bridge between the structured AST representation and human-readable GraphQL syntax. It enables various use cases including query formatting, AST manipulation debugging, and GraphQL document generation from programmatically constructed ASTs.
+
+The Printer performs AST-to-text transformation by traversing AST nodes and generating corresponding GraphQL syntax:
+- **Document Printing**: Converts document nodes back to complete GraphQL documents
+- **Operation Printing**: Transforms operation definition nodes into query, mutation, or subscription syntax
+- **Selection Set Printing**: Converts selection set nodes into properly formatted field selections with proper indentation
+- **Field Printing**: Handles field nodes including names, aliases, arguments, and nested selections
+- **Fragment Printing**: Processes both named fragment definitions and inline fragment nodes
+- **Value Printing**: Converts value nodes back to their literal representations (strings, numbers, booleans, lists, objects)
+- **Type Printing**: Transforms type reference nodes into their textual type notation
+- **Directive Printing**: Handles directive nodes with their arguments and proper placement
+
+The Printer component works closely with the Visitor component to traverse the AST structure:
+- **AST Traversal**: Uses visitor pattern to systematically process each node type
+- **Node Transformation**: Applies specific formatting rules for each AST node kind
+- **String Building**: Constructs the final GraphQL string representation incrementally
+- **Formatting Control**: Maintains proper indentation, spacing, and line breaks for readable output
+
+Key features of the Printer implementation include:
+- **Reversible Operations**: Ensures that Parser → Printer → Parser operations preserve semantic meaning
+- **Format Consistency**: Produces consistently formatted GraphQL output regardless of input formatting
+- **Debugging Support**: Enables developers to inspect and understand AST transformations
+- **Integration with Visitor**: Leverages the visitor pattern for extensible and maintainable AST traversal
+
+The Printer component is essential for development tooling, query analysis, and any scenario where programmatically generated or modified ASTs need to be converted back to GraphQL syntax for human consumption or further processing.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
