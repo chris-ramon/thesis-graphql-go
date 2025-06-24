@@ -1018,6 +1018,47 @@ The Location information is embedded throughout the parsing pipeline:
 
 The Location component is essential for developer experience as it transforms generic parsing or validation errors into actionable feedback. Instead of reporting "syntax error," the system can report "syntax error at line 15, column 23," allowing developers to quickly locate and fix issues in their GraphQL queries. This positional tracking is maintained throughout the entire GraphQL processing lifecycle, from initial tokenization through final execution, ensuring that any errors or warnings can be traced back to their precise origin in the source text.
 
+##### Language Visitor
+Visitor is the component responsible for traversing and processing Abstract Syntax Tree (AST) nodes using the visitor pattern, providing a systematic and extensible approach to AST manipulation and analysis.
+
+The Visitor component implements the visitor design pattern, which separates algorithms from the object structure on which they operate. This enables the definition of new operations on AST nodes without modifying the node classes themselves, promoting extensibility and maintainability in the GraphQL processing pipeline.
+
+The Visitor provides structured AST traversal capabilities:
+- **Node Visitation**: Systematically visits each AST node in a defined order (depth-first traversal)
+- **Enter/Leave Hooks**: Provides entry and exit points for each node, allowing pre-processing and post-processing operations
+- **Type-Specific Handling**: Enables different processing logic for each AST node type (Document, Field, Fragment, etc.)
+- **Traversal Control**: Allows visitors to control traversal flow, including skipping subtrees or early termination
+- **Context Preservation**: Maintains traversal context and state throughout the visiting process
+
+The Visitor component supports various traversal patterns:
+- **Pre-order Traversal**: Processes parent nodes before their children (enter phase)
+- **Post-order Traversal**: Processes parent nodes after their children (leave phase)
+- **Conditional Traversal**: Allows selective processing based on node types or conditions
+- **Stateful Traversal**: Maintains accumulated state across multiple node visits
+- **Multi-pass Traversal**: Enables multiple traversal passes for complex analysis tasks
+
+Key visitor operations include:
+- **AST Transformation**: Modifies or replaces AST nodes during traversal
+- **Information Collection**: Gathers data from AST nodes for analysis purposes
+- **Validation Support**: Enables validation rules to be applied systematically across the AST
+- **Code Generation**: Supports code generation workflows that require comprehensive AST analysis
+- **Query Analysis**: Facilitates query complexity analysis and optimization planning
+
+The Visitor component integrates with other language components:
+- **Parser Integration**: Processes ASTs produced by the Parser component
+- **Printer Integration**: Works with the Printer to enable AST-to-text transformation
+- **Validator Integration**: Provides the foundation for validation rule application
+- **Executor Integration**: Supports execution planning and field resolution analysis
+
+Visitor implementation features:
+- **Extensible Design**: New visitor types can be easily added without modifying existing code
+- **Composable Patterns**: Multiple visitors can be combined for complex processing workflows
+- **Error Handling**: Provides mechanisms for error collection and propagation during traversal
+- **Performance Optimization**: Implements efficient traversal algorithms to minimize processing overhead
+- **Memory Management**: Manages traversal state efficiently to prevent memory leaks during large AST processing
+
+The Visitor component is fundamental to the GraphQL-Go implementation, enabling modular and extensible AST processing that supports validation, execution planning, introspection, and development tooling throughout the GraphQL processing pipeline.
+
 ##### Language Printer
 Printer is the component responsible for converting Abstract Syntax Tree (AST) nodes back into their textual GraphQL representation, essentially performing the reverse operation of the Parser component.
 
