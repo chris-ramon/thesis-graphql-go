@@ -1110,6 +1110,28 @@ References:
 - [Partial implementation of resolve fields](https://github.com/graphql-go/graphql/pull/8)
 - [Field resolver interface support](https://github.com/graphql-go/graphql/pull/288)
 
+##### Validator
+
+The Validator component is responsible for ensuring that incoming GraphQL queries conform to the GraphQL specification and the schema defined by the application. After the Parser creates the Abstract Syntax Tree (AST) from the query, the Validator traverses the AST and applies a set of validation rules.
+
+**Key responsibilities:**
+- Confirms that the query structure and field selections are valid according to the schema.
+- Ensures that fragments and operations are used correctly and do not conflict.
+- Checks for type compatibility, required arguments, valid variable usage, and directive application.
+- Leverages the Visitor pattern for AST traversal, enabling modular validation rule implementations.
+- Produces detailed and actionable error messages for invalid queries.
+
+The Validator is essential for catching errors and enforcing GraphQL best practices before execution proceeds, contributing to the reliability and security of the system.
+
+Notable improvements include:
+- Enhanced error messages with suggestions.
+- Deepened introspection queries.
+- Support for schema language directives and deprecations.
+
+References:
+- [Visitor wired to Printer and Validator](https://github.com/graphql-go/graphql/pull/10)
+- [Validation improvements and error handling](https://github.com/graphql-go/graphql/pull/192)
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
