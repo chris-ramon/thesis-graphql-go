@@ -1132,6 +1132,31 @@ References:
 - [Visitor wired to Printer and Validator](https://github.com/graphql-go/graphql/pull/10)
 - [Validation improvements and error handling](https://github.com/graphql-go/graphql/pull/192)
 
+##### Definition
+
+The Definition component is responsible for providing the building blocks and structures needed to define GraphQL schemas programmatically. It contains the core type definitions and interfaces that developers use to construct their GraphQL type system.
+
+**Key responsibilities:**
+- Provides foundational type definitions for creating GraphQL schemas including Object types, Interface types, Union types, Enum types, and Scalar types.
+- Defines the structure and interfaces for field definitions, argument definitions, and input type definitions.
+- Establishes the contracts and behavior patterns that all GraphQL types must follow.
+- Enables programmatic schema construction by providing the necessary building blocks and type safety.
+- Supports schema extension and composition through modular type definitions.
+
+**Core definition types provided:**
+- **ObjectTypeDefinition**: Defines GraphQL object types with fields and resolvers
+- **InterfaceTypeDefinition**: Defines GraphQL interface types for polymorphic schemas
+- **UnionTypeDefinition**: Defines GraphQL union types for type alternatives
+- **EnumTypeDefinition**: Defines GraphQL enum types for predefined value sets
+- **ScalarTypeDefinition**: Defines custom GraphQL scalar types
+- **InputTypeDefinition**: Defines GraphQL input types for mutations and field arguments
+- **FieldDefinition**: Defines individual fields within types including their types, arguments, and resolvers
+- **ArgumentDefinition**: Defines arguments for fields and directives
+
+The Definition component serves as the foundation for schema construction, enabling developers to build type-safe GraphQL APIs by providing well-defined interfaces and structures. It ensures consistency across the schema definition process and facilitates schema validation and introspection capabilities.
+
+This component integrates closely with the Schema component to construct complete GraphQL schemas and with the Validator component to ensure schema definitions conform to GraphQL specification requirements.
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
