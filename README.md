@@ -1222,6 +1222,24 @@ References:
 - [Schema validation and error message improvements](https://github.com/graphql-go/graphql/pull/192)
 - [Rules and validation enhancements](https://github.com/graphql-go/graphql/pull/123)
 
+##### Introspection
+
+The Introspection component enables clients and tools to query the schema structure and metadata at runtime. This functionality is central to GraphQL’s self-describing nature, supporting features like schema documentation, auto-completion, validation, and IDE integrations.
+
+**Key responsibilities:**
+- Implements the introspection system as defined by the GraphQL specification, exposing types, fields, directives, and their relationships via special introspection queries (such as `__schema`, `__type`, and `__directive`).
+- Integrates with the Executor and Schema components to resolve introspection fields dynamically based on the current schema.
+- Supports deep, recursive queries to inspect nested types and directives, enabling clients to fully explore the schema capabilities.
+- Provides compatibility with tools and environments that rely on introspection, such as GraphQL Playground, GraphiQL, and code generators.
+
+Implementation details:
+- The introspection system is kept up to date with changes from the graphql-js reference, ensuring compatibility and feature parity.
+- The standard introspection query used for validation and testing can be found at:
+  [testutil/introspection_query.go](https://github.com/graphql-go/graphql/blob/58689e0742f217137ac0c82b16e2d658e0cc1853/testutil/introspection_query.go#L4)
+
+References:
+- [GraphQL Introspection Query (Go implementation)](https://github.com/graphql-go/graphql/blob/58689e0742f217137ac0c82b16e2d658e0cc1853/testutil/introspection_query.go#L4)
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
