@@ -1157,6 +1157,29 @@ The Definition component serves as the foundation for schema construction, enabl
 
 This component integrates closely with the Schema component to construct complete GraphQL schemas and with the Validator component to ensure schema definitions conform to GraphQL specification requirements.
 
+##### Schema
+
+The Schema component is the central definition and organizational structure for all types, queries, mutations, and subscriptions in a GraphQL service. It acts as the contract between the client and server, specifying what operations and data are available, and how they relate.
+
+**Key responsibilities:**
+- Defines root operation types (Query, Mutation, Subscription).
+- Registers all object types, scalars, enums, interfaces, unions, and input types.
+- Describes relationships between types, fields, arguments, and return values.
+- Provides the basis for the Validator to enforce query correctness and for the Executor to resolve fields.
+- Supports schema introspection, allowing clients to query the schema structure itself.
+- Integrates schema language features (e.g., directives, deprecations, custom extensions).
+
+The Schema enables modular, type-safe API development, supporting both code-first and schema-first approaches. In GraphQL-Go, schema construction can be programmatic, mirroring the graphql-js reference implementation, with Go types and resolvers mapped to schema elements.
+
+Implementation enhancements include:
+- Support for schema language directives and introspection improvements.
+- Schema definition integration into the language components.
+- Enhanced handling of types and arguments, including context propagation to executors.
+
+References:
+- [Schema language directives & improvements](https://github.com/graphql-go/graphql/pull/123)
+- [Schema validation and introspection enhancements](https://github.com/graphql-go/graphql/pull/192)
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
