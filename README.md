@@ -1180,6 +1180,27 @@ References:
 - [Schema language directives & improvements](https://github.com/graphql-go/graphql/pull/123)
 - [Schema validation and introspection enhancements](https://github.com/graphql-go/graphql/pull/192)
 
+##### Directives
+
+The Directives component manages the definition, registration, and application of directives in the GraphQL execution pipeline. Directives are special annotations that can be attached to fields, fragments, and other schema elements to modify query behavior at runtime or affect schema interpretation.
+
+**Key responsibilities:**
+- Defines built-in directives (such as `@include`, `@skip`, and `@deprecated`) and supports user-defined custom directives.
+- Registers directive locations (e.g., on fields, fragments, schema definitions) in compliance with the GraphQL specification.
+- Applies directive logic during query validation and execution phases, allowing conditional field inclusion/exclusion, deprecation warnings, and extensible custom behaviors.
+- Ensures that directives are type-safe, context-aware, and validated against their declared arguments and locations.
+- Supports directive introspection, enabling clients to discover available directives and their intended use.
+
+Directives extend the expressiveness and adaptability of the GraphQL schema and queries, supporting common patterns like conditional data fetching and schema evolution with minimal changes.
+
+Implementation highlights:
+- Integrates tightly with the schema, validator, and executor components.
+- Enables extensible directive creation for reusable, cross-cutting concerns.
+
+References:
+- [Schema language directives & improvements](https://github.com/graphql-go/graphql/pull/123)
+- [Schema validation and introspection enhancements](https://github.com/graphql-go/graphql/pull/192)
+
 ### 4.10 Architecture
 
 query/mutation/subscription as source.
