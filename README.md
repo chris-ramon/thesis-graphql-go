@@ -1201,6 +1201,27 @@ References:
 - [Schema language directives & improvements](https://github.com/graphql-go/graphql/pull/123)
 - [Schema validation and introspection enhancements](https://github.com/graphql-go/graphql/pull/192)
 
+##### Rules
+
+The Rules component encapsulates the set of validation rules applied to GraphQL operations to ensure they conform to the GraphQL specification and the schema’s constraints. Each rule encapsulates a specific aspect of query validity, such as detecting field selection conflicts, enforcing fragment naming, or checking variable usage.
+
+**Key responsibilities:**
+- Defines and organizes individual validation rules, each targeting a different aspect of query or schema correctness according to the GraphQL specification.
+- Integrates with the Validator and Visitor components to traverse the AST and apply rules systematically.
+- Reports detailed error messages for violations, aiding developers in quickly resolving issues.
+- Supports extensibility, allowing custom rules to be defined and composed with built-in rules.
+- Handles advanced concerns such as overlapping fields, argument defaults, and fragment cycles.
+
+The Rules component ensures the reliability and safety of GraphQL queries by systematically enforcing correctness, enabling robust validation workflows for both built-in and user-defined constraints.
+
+Implementation highlights:
+- Maintains parity with the reference graphql-js implementation.
+- Improvements include enhanced validation error messages and deeper introspection for more comprehensive rule enforcement.
+
+References:
+- [Schema validation and error message improvements](https://github.com/graphql-go/graphql/pull/192)
+- [Rules and validation enhancements](https://github.com/graphql-go/graphql/pull/123)
+
 ##### Introspection
 
 The Introspection component enables clients and tools to query the schema structure and metadata at runtime. This functionality is central to GraphQL’s self-describing nature, supporting features like schema documentation, auto-completion, validation, and IDE integrations.
