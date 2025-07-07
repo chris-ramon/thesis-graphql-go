@@ -1,29 +1,196 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="24.7.17">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
-    <mxGraphModel dx="635" dy="410" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="17acba5748e5396b-1" value="&lt;span style=&quot;font-size: 14px; text-align: left; text-wrap: nowrap;&quot;&gt;github.com/graphql-go/graphql&lt;/span&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=10;align=center;width=220;height=30;" parent="1" vertex="1">
-          <mxGeometry x="20" y="20" width="1492.11" height="700" as="geometry" />
+        
+        <!-- Main Frame -->
+        <mxCell id="main-frame" value="github.com/graphql-go/graphql" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;width=300;height=30;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1800" height="1200" as="geometry" />
         </mxCell>
-        <mxCell id="17acba5748e5396b-20" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/font&gt;&lt;/div&gt;&lt;font face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;&lt;b&gt;github.com/graphql-go/graphql/language/source.Source&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=48;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=10;align=center;" parent="1" vertex="1">
-          <mxGeometry x="500" y="80" width="436.38" height="300" as="geometry">
-            <mxRectangle x="350" y="42" width="70" height="30" as="alternateBounds" />
-          </mxGeometry>
+        
+        <!-- Main GraphQL API -->
+        <mxCell id="graphql-api" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Package&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;github.com/graphql-go/graphql&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Do(p Params): *Result&lt;br&gt;+ NewSchema(config SchemaConfig): Schema&lt;br&gt;+ NewObject(config ObjectConfig): *Object&lt;br&gt;+ NewField(config *FieldConfig): *FieldDefinition&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=11;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="320" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="17acba5748e5396b-21" value="+ Body: []byte" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="17acba5748e5396b-20" vertex="1">
-          <mxGeometry y="48" width="436.38" height="26" as="geometry" />
+        
+        <!-- Language Package -->
+        <mxCell id="language-package" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Package&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;github.com/graphql-go/graphql/language&lt;/b&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=11;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fillColor=#f0f0f0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="1000" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="17acba5748e5396b-24" value="+ Name: string" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="17acba5748e5396b-20" vertex="1">
-          <mxGeometry y="74" width="436.38" height="26" as="geometry" />
+        
+        <!-- Source Component -->
+        <mxCell id="source-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Source&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Body: []byte&lt;br&gt;+ Name: string&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewSource(body string, name string): *Source" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="120" width="220" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="5d2195bd80daf111-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=10;fontFamily=Verdana;fontSize=10;dashed=1;" parent="1" source="5d2195bd80daf111-18" target="17acba5748e5396b-20" edge="1">
+        
+        <!-- AST Component -->
+        <mxCell id="ast-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;AST&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Document: *Document&lt;br&gt;+ Operation: *OperationDefinition&lt;br&gt;+ SelectionSet: *SelectionSet&lt;br&gt;+ Field: *Field&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewDocument(): *Document&lt;br&gt;+ NewField(): *Field" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="660" y="120" width="220" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- Parser Component -->
+        <mxCell id="parser-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Parser&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Source: *Source&lt;br&gt;+ Options: ParseOptions&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Parse(source *Source): *Document&lt;br&gt;+ ParseValue(source *Source): Value&lt;br&gt;+ ParseType(source *Source): Type" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="900" y="120" width="220" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Lexer Component -->
+        <mxCell id="lexer-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Lexer&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Source: *Source&lt;br&gt;+ Position: int&lt;br&gt;+ Line: int&lt;br&gt;+ Column: int&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NextToken(): Token&lt;br&gt;+ ReadToken(): Token" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="120" width="220" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- Visitor Component -->
+        <mxCell id="visitor-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Visitor&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ EnterFuncs: map[string]VisitFunc&lt;br&gt;+ LeaveFuncs: map[string]VisitFunc&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Visit(node Node): Node&lt;br&gt;+ VisitInParallel(): *Visitor&lt;br&gt;+ VisitWithTypeInfo(): *Visitor" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="420" y="280" width="220" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Printer Component -->
+        <mxCell id="printer-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Printer&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Options: PrintOptions&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Print(node Node): string&lt;br&gt;+ PrintIntrospectionSchema(): string" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="660" y="280" width="220" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Location Component -->
+        <mxCell id="location-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Location&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Start: int&lt;br&gt;+ End: int&lt;br&gt;+ Source: *Source&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ GetLocation(): *SourceLocation" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="900" y="280" width="220" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Kinds Component -->
+        <mxCell id="kinds-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Constants&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Kinds&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Document: string&lt;br&gt;+ OperationDefinition: string&lt;br&gt;+ Field: string&lt;br&gt;+ FragmentDefinition: string&lt;br&gt;+ Variable: string&lt;br&gt;+ Directive: string" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="280" width="220" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Schema Component -->
+        <mxCell id="schema-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Schema&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ QueryType: *Object&lt;br&gt;+ MutationType: *Object&lt;br&gt;+ SubscriptionType: *Object&lt;br&gt;+ Types: []Type&lt;br&gt;+ Directives: []*Directive&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewSchema(config SchemaConfig): Schema&lt;br&gt;+ GetType(name string): Type&lt;br&gt;+ GetDirective(name string): *Directive" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="520" width="280" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- Executor Component -->
+        <mxCell id="executor-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Executor&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Schema: Schema&lt;br&gt;+ Document: *Document&lt;br&gt;+ RootValue: interface{}&lt;br&gt;+ ContextValue: context.Context&lt;br&gt;+ Variables: map[string]interface{}&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Execute(params ExecutionParams): *Result&lt;br&gt;+ ExecuteFields(): map[string]interface{}&lt;br&gt;+ ResolveField(): interface{}" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="350" y="520" width="280" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- Validator Component -->
+        <mxCell id="validator-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Validator&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Schema: Schema&lt;br&gt;+ Document: *Document&lt;br&gt;+ Rules: []ValidationRule&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Validate(schema Schema, ast *Document): []gqlerrors.FormattedError&lt;br&gt;+ ValidateDocument(): []gqlerrors.FormattedError&lt;br&gt;+ GetValidationRules(): []ValidationRule" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="650" y="520" width="320" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- Introspection Component -->
+        <mxCell id="introspection-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Introspection&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ SchemaMetaFieldDef: *FieldDefinition&lt;br&gt;+ TypeMetaFieldDef: *FieldDefinition&lt;br&gt;+ TypeNameMetaFieldDef: *FieldDefinition&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ GetIntrospectionQuery(): string&lt;br&gt;+ BuildClientSchema(): Schema&lt;br&gt;+ GetSchemaFromAST(): Schema" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="990" y="520" width="280" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- GQLErrors Component -->
+        <mxCell id="gqlerrors-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;GQLErrors&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Error: error&lt;br&gt;+ Message: string&lt;br&gt;+ Locations: []Location&lt;br&gt;+ Path: []interface{}&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewFormattedError(): *FormattedError&lt;br&gt;+ NewLocatedError(): *Error&lt;br&gt;+ FormatError(): *FormattedError" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="520" width="280" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- Directives Component -->
+        <mxCell id="directives-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Directives&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ IncludeDirective: *Directive&lt;br&gt;+ SkipDirective: *Directive&lt;br&gt;+ DeprecatedDirective: *Directive&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewDirective(config DirectiveConfig): *Directive&lt;br&gt;+ GetDirectiveValues(): map[string]interface{}" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="50" y="720" width="280" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Rules Component -->
+        <mxCell id="rules-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Rules&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ ArgumentsOfCorrectType: ValidationRule&lt;br&gt;+ DefaultValuesOfCorrectType: ValidationRule&lt;br&gt;+ FieldsOnCorrectType: ValidationRule&lt;br&gt;+ FragmentsOnCompositeTypes: ValidationRule&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ GetSpecifiedRules(): []ValidationRule&lt;br&gt;+ GetValidationRules(): []ValidationRule" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="350" y="720" width="320" height="120" as="geometry" />
+        </mxCell>
+        
+        <!-- Definition Component -->
+        <mxCell id="definition-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ ObjectType: *Object&lt;br&gt;+ InterfaceType: *Interface&lt;br&gt;+ UnionType: *Union&lt;br&gt;+ ScalarType: *Scalar&lt;br&gt;+ EnumType: *Enum&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewObjectType(): *Object&lt;br&gt;+ NewInterfaceType(): *Interface&lt;br&gt;+ NewUnionType(): *Union" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="690" y="720" width="280" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- Extensions Component -->
+        <mxCell id="extensions-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Extensions&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Init(): interface{}&lt;br&gt;+ ParseDidStart(): interface{}&lt;br&gt;+ ValidationDidStart(): interface{}&lt;br&gt;+ ExecutionDidStart(): interface{}&lt;br&gt;+ ResolveFieldDidStart(): interface{}&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewExtensionManager(): *ExtensionManager" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="990" y="720" width="280" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- Resolver Component -->
+        <mxCell id="resolver-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Resolver&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Resolve(p ResolveParams): interface{}&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ FieldResolver: interface{}&lt;br&gt;+ ResolveParams: struct&lt;br&gt;+ ResolveInfo: struct" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="720" width="280" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Dependencies/Relationships -->
+        
+        <!-- GraphQL API to Language -->
+        <mxCell id="graphql-to-language" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="graphql-api" target="language-package">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="5d2195bd80daf111-18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Function&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;github.com/graphql-go/graphql.Do&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Do(p Params): *Result&amp;nbsp;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
-          <mxGeometry x="60" y="144" width="300" height="176" as="geometry" />
+        
+        <!-- Parser uses Source -->
+        <mxCell id="parser-to-source" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="parser-component" target="source-component">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        
+        <!-- Parser produces AST -->
+        <mxCell id="parser-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="parser-component" target="ast-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Parser uses Lexer -->
+        <mxCell id="parser-to-lexer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="parser-component" target="lexer-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Visitor uses AST -->
+        <mxCell id="visitor-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="visitor-component" target="ast-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Validator uses AST -->
+        <mxCell id="validator-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="validator-component" target="ast-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Executor uses AST -->
+        <mxCell id="executor-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="executor-component" target="ast-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Executor uses Resolver -->
+        <mxCell id="executor-to-resolver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="executor-component" target="resolver-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Validator uses Rules -->
+        <mxCell id="validator-to-rules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="validator-component" target="rules-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Schema uses Definition -->
+        <mxCell id="schema-to-definition" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="schema-component" target="definition-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Schema uses Directives -->
+        <mxCell id="schema-to-directives" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="schema-component" target="directives-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxGeometry>
+        
+        <!-- GraphQL API uses Schema -->
+        <mxCell id="graphql-to-schema" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="graphql-api" target="schema-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- GraphQL API uses Executor -->
+        <mxCell id="graphql-to-executor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="graphql-api" target="executor-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- GraphQL API uses Validator -->
+        <mxCell id="graphql-to-validator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="graphql-api" target="validator-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Components use GQLErrors -->
+        <mxCell id="validator-to-gqlerrors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="validator-component" target="gqlerrors-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="executor-to-gqlerrors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="executor-component" target="gqlerrors-component">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
       </root>
     </mxGraphModel>
   </diagram>
