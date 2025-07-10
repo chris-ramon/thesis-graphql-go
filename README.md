@@ -1242,20 +1242,9 @@ References:
 
 ### 4.10 Architecture
 
-query/mutation/subscription as source.
-Source: Source-in.
-Parser: Source to AST and Lexer.
-Lexer: Tokenizes the source-in.
-AST: The source as a tree.
-Collector: Matches AST to resolvers.
-Resolver: Produces end-result, meaning the source-out.
+#### UML Packages Diagram
 
-State machine is a representation of a workflow of nodes that produce as an end-result a given state, the nodes that produce the final state can be partial, meaning the paths of the end-result are defined per set.
-
-GraphQL have multiple components that can be represented as a state machine, for example the most important component that are abstracted as:
-AST state machine, up-down direction.
-Source partial state machine, because one way flow.
-
+<img width="817" height="939" alt="Image" src="https://github.com/user-attachments/assets/a2ec9426-4764-4e68-8fba-d2894e390fb3" />
 
 ### 4.11 Development
 
