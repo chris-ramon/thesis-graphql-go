@@ -1,196 +1,286 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="24.7.17">
   <diagram name="Page-1" id="c4acf3e9-155e-7222-9cf6-157b1a14988f">
-    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1258" dy="1440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        
-        <!-- Main Frame -->
-        <mxCell id="main-frame" value="github.com/graphql-go/graphql" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;width=300;height=30;" vertex="1" parent="1">
-          <mxGeometry x="20" y="20" width="1800" height="1200" as="geometry" />
+        <mxCell id="main-frame" value="github.com/graphql-go/graphql" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;width=300;height=30;" parent="1" vertex="1">
+          <mxGeometry x="20" y="-650" width="2380" height="2080" as="geometry" />
         </mxCell>
-        
-        <!-- Main GraphQL API -->
-        <mxCell id="graphql-api" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Package&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;github.com/graphql-go/graphql&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Do(p Params): *Result&lt;br&gt;+ NewSchema(config SchemaConfig): Schema&lt;br&gt;+ NewObject(config ObjectConfig): *Object&lt;br&gt;+ NewField(config *FieldConfig): *FieldDefinition&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=11;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" vertex="1" parent="1">
-          <mxGeometry x="50" y="80" width="320" height="120" as="geometry" />
+        <mxCell id="graphql-api" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Package&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;github.com/graphql-go/graphql&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Do(p Params): *Result&lt;br&gt;+ NewSchema(config SchemaConfig): Schema&lt;br&gt;+ NewObject(config ObjectConfig): *Object&lt;br&gt;+ NewField(config *FieldConfig): *FieldDefinition&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=11;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1" parent="1" vertex="1">
+          <mxGeometry x="70" y="-500" width="320" height="120" as="geometry" />
         </mxCell>
-        
-        <!-- Language Package -->
-        <mxCell id="language-package" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Package&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;github.com/graphql-go/graphql/language&lt;/b&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=11;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fillColor=#f0f0f0;" vertex="1" parent="1">
-          <mxGeometry x="400" y="80" width="1000" height="400" as="geometry" />
+        <mxCell id="language-package" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Package&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;github.com/graphql-go/graphql/language&lt;/b&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=11;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fillColor=#f0f0f0;" parent="1" vertex="1">
+          <mxGeometry x="500" y="-520" width="1560" height="770" as="geometry" />
         </mxCell>
-        
-        <!-- Source Component -->
-        <mxCell id="source-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Source&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Body: []byte&lt;br&gt;+ Name: string&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewSource(body string, name string): *Source" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="420" y="120" width="220" height="100" as="geometry" />
-        </mxCell>
-        
-        <!-- AST Component -->
-        <mxCell id="ast-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;AST&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Document: *Document&lt;br&gt;+ Operation: *OperationDefinition&lt;br&gt;+ SelectionSet: *SelectionSet&lt;br&gt;+ Field: *Field&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewDocument(): *Document&lt;br&gt;+ NewField(): *Field" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="660" y="120" width="220" height="140" as="geometry" />
-        </mxCell>
-        
-        <!-- Parser Component -->
-        <mxCell id="parser-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Parser&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Source: *Source&lt;br&gt;+ Options: ParseOptions&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Parse(source *Source): *Document&lt;br&gt;+ ParseValue(source *Source): Value&lt;br&gt;+ ParseType(source *Source): Type" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="900" y="120" width="220" height="120" as="geometry" />
-        </mxCell>
-        
-        <!-- Lexer Component -->
-        <mxCell id="lexer-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Lexer&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Source: *Source&lt;br&gt;+ Position: int&lt;br&gt;+ Line: int&lt;br&gt;+ Column: int&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NextToken(): Token&lt;br&gt;+ ReadToken(): Token" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="1140" y="120" width="220" height="140" as="geometry" />
-        </mxCell>
-        
-        <!-- Visitor Component -->
-        <mxCell id="visitor-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Visitor&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ EnterFuncs: map[string]VisitFunc&lt;br&gt;+ LeaveFuncs: map[string]VisitFunc&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Visit(node Node): Node&lt;br&gt;+ VisitInParallel(): *Visitor&lt;br&gt;+ VisitWithTypeInfo(): *Visitor" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="420" y="280" width="220" height="120" as="geometry" />
-        </mxCell>
-        
-        <!-- Printer Component -->
-        <mxCell id="printer-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Printer&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Options: PrintOptions&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Print(node Node): string&lt;br&gt;+ PrintIntrospectionSchema(): string" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="660" y="280" width="220" height="100" as="geometry" />
-        </mxCell>
-        
-        <!-- Location Component -->
-        <mxCell id="location-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Location&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Start: int&lt;br&gt;+ End: int&lt;br&gt;+ Source: *Source&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ GetLocation(): *SourceLocation" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="900" y="280" width="220" height="100" as="geometry" />
-        </mxCell>
-        
-        <!-- Kinds Component -->
-        <mxCell id="kinds-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Constants&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Kinds&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Document: string&lt;br&gt;+ OperationDefinition: string&lt;br&gt;+ Field: string&lt;br&gt;+ FragmentDefinition: string&lt;br&gt;+ Variable: string&lt;br&gt;+ Directive: string" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="1140" y="280" width="220" height="120" as="geometry" />
-        </mxCell>
-        
-        <!-- Schema Component -->
-        <mxCell id="schema-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Schema&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ QueryType: *Object&lt;br&gt;+ MutationType: *Object&lt;br&gt;+ SubscriptionType: *Object&lt;br&gt;+ Types: []Type&lt;br&gt;+ Directives: []*Directive&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewSchema(config SchemaConfig): Schema&lt;br&gt;+ GetType(name string): Type&lt;br&gt;+ GetDirective(name string): *Directive" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="50" y="520" width="280" height="160" as="geometry" />
-        </mxCell>
-        
-        <!-- Executor Component -->
-        <mxCell id="executor-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Executor&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Schema: Schema&lt;br&gt;+ Document: *Document&lt;br&gt;+ RootValue: interface{}&lt;br&gt;+ ContextValue: context.Context&lt;br&gt;+ Variables: map[string]interface{}&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Execute(params ExecutionParams): *Result&lt;br&gt;+ ExecuteFields(): map[string]interface{}&lt;br&gt;+ ResolveField(): interface{}" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="350" y="520" width="280" height="160" as="geometry" />
-        </mxCell>
-        
-        <!-- Validator Component -->
-        <mxCell id="validator-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Validator&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Schema: Schema&lt;br&gt;+ Document: *Document&lt;br&gt;+ Rules: []ValidationRule&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ Validate(schema Schema, ast *Document): []gqlerrors.FormattedError&lt;br&gt;+ ValidateDocument(): []gqlerrors.FormattedError&lt;br&gt;+ GetValidationRules(): []ValidationRule" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="650" y="520" width="320" height="140" as="geometry" />
-        </mxCell>
-        
-        <!-- Introspection Component -->
-        <mxCell id="introspection-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Introspection&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ SchemaMetaFieldDef: *FieldDefinition&lt;br&gt;+ TypeMetaFieldDef: *FieldDefinition&lt;br&gt;+ TypeNameMetaFieldDef: *FieldDefinition&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ GetIntrospectionQuery(): string&lt;br&gt;+ BuildClientSchema(): Schema&lt;br&gt;+ GetSchemaFromAST(): Schema" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="990" y="520" width="280" height="140" as="geometry" />
-        </mxCell>
-        
-        <!-- GQLErrors Component -->
-        <mxCell id="gqlerrors-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;GQLErrors&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Error: error&lt;br&gt;+ Message: string&lt;br&gt;+ Locations: []Location&lt;br&gt;+ Path: []interface{}&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewFormattedError(): *FormattedError&lt;br&gt;+ NewLocatedError(): *Error&lt;br&gt;+ FormatError(): *FormattedError" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="520" width="280" height="140" as="geometry" />
-        </mxCell>
-        
-        <!-- Directives Component -->
-        <mxCell id="directives-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Directives&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ IncludeDirective: *Directive&lt;br&gt;+ SkipDirective: *Directive&lt;br&gt;+ DeprecatedDirective: *Directive&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewDirective(config DirectiveConfig): *Directive&lt;br&gt;+ GetDirectiveValues(): map[string]interface{}" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="50" y="720" width="280" height="120" as="geometry" />
-        </mxCell>
-        
-        <!-- Rules Component -->
-        <mxCell id="rules-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Rules&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ ArgumentsOfCorrectType: ValidationRule&lt;br&gt;+ DefaultValuesOfCorrectType: ValidationRule&lt;br&gt;+ FieldsOnCorrectType: ValidationRule&lt;br&gt;+ FragmentsOnCompositeTypes: ValidationRule&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ GetSpecifiedRules(): []ValidationRule&lt;br&gt;+ GetValidationRules(): []ValidationRule" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="350" y="720" width="320" height="120" as="geometry" />
-        </mxCell>
-        
-        <!-- Definition Component -->
-        <mxCell id="definition-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ ObjectType: *Object&lt;br&gt;+ InterfaceType: *Interface&lt;br&gt;+ UnionType: *Union&lt;br&gt;+ ScalarType: *Scalar&lt;br&gt;+ EnumType: *Enum&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewObjectType(): *Object&lt;br&gt;+ NewInterfaceType(): *Interface&lt;br&gt;+ NewUnionType(): *Union" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="690" y="720" width="280" height="140" as="geometry" />
-        </mxCell>
-        
-        <!-- Extensions Component -->
-        <mxCell id="extensions-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Extensions&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Init(): interface{}&lt;br&gt;+ ParseDidStart(): interface{}&lt;br&gt;+ ValidationDidStart(): interface{}&lt;br&gt;+ ExecutionDidStart(): interface{}&lt;br&gt;+ ResolveFieldDidStart(): interface{}&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ NewExtensionManager(): *ExtensionManager" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="990" y="720" width="280" height="140" as="geometry" />
-        </mxCell>
-        
-        <!-- Resolver Component -->
-        <mxCell id="resolver-component" value="&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b&gt;Resolver&lt;/b&gt;&lt;hr size=&quot;1&quot;&gt;+ Resolve(p ResolveParams): interface{}&lt;br&gt;&lt;hr size=&quot;1&quot;&gt;+ FieldResolver: interface{}&lt;br&gt;+ ResolveParams: struct&lt;br&gt;+ ResolveInfo: struct" style="swimlane;html=1;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;swimlaneFillColor=#ffffff;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Helvetica;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="1290" y="720" width="280" height="100" as="geometry" />
-        </mxCell>
-        
-        <!-- Dependencies/Relationships -->
-        
-        <!-- GraphQL API to Language -->
-        <mxCell id="graphql-to-language" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="graphql-api" target="language-package">
+        <mxCell id="graphql-to-language" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" parent="1" source="graphql-api" target="language-package" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        
-        <!-- Parser uses Source -->
-        <mxCell id="parser-to-source" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="parser-component" target="source-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="parser-to-source" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="6qxDTgi48stSFXTzXoa0-51" target="6qxDTgi48stSFXTzXoa0-46" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990" y="-280.4666666666667" as="sourcePoint" />
+          </mxGeometry>
         </mxCell>
-        
-        <!-- Parser produces AST -->
-        <mxCell id="parser-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="parser-component" target="ast-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="parser-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;exitX=0.505;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="6qxDTgi48stSFXTzXoa0-53" target="6qxDTgi48stSFXTzXoa0-55" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1100" y="-146" as="sourcePoint" />
+            <mxPoint x="896" y="132" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        
-        <!-- Parser uses Lexer -->
-        <mxCell id="parser-to-lexer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="parser-component" target="lexer-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="parser-to-lexer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6qxDTgi48stSFXTzXoa0-51" target="6qxDTgi48stSFXTzXoa0-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210" y="-280.4666666666667" as="sourcePoint" />
+            <mxPoint x="1360" y="-321.46153846153857" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        
-        <!-- Visitor uses AST -->
-        <mxCell id="visitor-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="visitor-component" target="ast-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="validator-to-rules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="6qxDTgi48stSFXTzXoa0-14" target="6qxDTgi48stSFXTzXoa0-19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1070" y="770.0434782608695" as="sourcePoint" />
+            <mxPoint x="920" y="1400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="549" />
+              <mxPoint x="480" y="860" />
+              <mxPoint x="690" y="860" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        
-        <!-- Validator uses AST -->
-        <mxCell id="validator-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="validator-component" target="ast-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="schema-to-directives" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="6qxDTgi48stSFXTzXoa0-6" target="6qxDTgi48stSFXTzXoa0-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="227" y="899" as="sourcePoint" />
+            <mxPoint x="227" y="1010" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        
-        <!-- Executor uses AST -->
-        <mxCell id="executor-to-ast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="executor-component" target="ast-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="graphql-to-schema" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="graphql-api" target="6qxDTgi48stSFXTzXoa0-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="227" y="739" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        
-        <!-- Executor uses Resolver -->
-        <mxCell id="executor-to-resolver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="executor-component" target="resolver-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="validator-to-gqlerrors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="6qxDTgi48stSFXTzXoa0-38" target="6qxDTgi48stSFXTzXoa0-42" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2160" y="640.0000000000002" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        
-        <!-- Validator uses Rules -->
-        <mxCell id="validator-to-rules" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="validator-component" target="rules-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="executor-to-gqlerrors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="6qxDTgi48stSFXTzXoa0-15" target="6qxDTgi48stSFXTzXoa0-42" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="1040" as="sourcePoint" />
+            <mxPoint x="2300.0000000000005" y="710" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="830" y="628" />
+              <mxPoint x="2190" y="628" />
+              <mxPoint x="2190" y="376" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        
-        <!-- Schema uses Definition -->
-        <mxCell id="schema-to-definition" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="schema-component" target="definition-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="6qxDTgi48stSFXTzXoa0-1" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px; text-align: left; text-wrap: nowrap;&quot;&gt;Directives&lt;/b&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="810" width="280" height="180" as="geometry" />
         </mxCell>
-        
-        <!-- Schema uses Directives -->
-        <mxCell id="schema-to-directives" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="schema-component" target="directives-component">
-          <mxGeometry relative="1" as="geometry" />
-        </mxGeometry>
-        
-        <!-- GraphQL API uses Schema -->
-        <mxCell id="graphql-to-schema" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="graphql-api" target="schema-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="6qxDTgi48stSFXTzXoa0-5" value="&lt;span style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 10px;&quot;&gt;+ IncludeDirective: *Directive&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 10px;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 10px;&quot;&gt;+ SkipDirective: *Directive&lt;/span&gt;&lt;br style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 10px;&quot;&gt;&lt;span style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 10px;&quot;&gt;+ DeprecatedDirective: *Directive&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-1">
+          <mxGeometry y="41" width="280" height="66" as="geometry" />
         </mxCell>
-        
-        <!-- GraphQL API uses Executor -->
-        <mxCell id="graphql-to-executor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="graphql-api" target="executor-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="6qxDTgi48stSFXTzXoa0-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-1">
+          <mxGeometry y="107" width="280" height="10" as="geometry" />
         </mxCell>
-        
-        <!-- GraphQL API uses Validator -->
-        <mxCell id="graphql-to-validator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="graphql-api" target="validator-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="6qxDTgi48stSFXTzXoa0-4" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewDirective(config DirectiveConfig): *Directive&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetDirectiveValues(): map[string]interface{}&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-1">
+          <mxGeometry y="117" width="280" height="63" as="geometry" />
         </mxCell>
-        
-        <!-- Components use GQLErrors -->
-        <mxCell id="validator-to-gqlerrors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="validator-component" target="gqlerrors-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="6qxDTgi48stSFXTzXoa0-6" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Schema&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="340" width="230" height="210" as="geometry" />
         </mxCell>
-        
-        <mxCell id="executor-to-gqlerrors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;" edge="1" parent="1" source="executor-component" target="gqlerrors-component">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="6qxDTgi48stSFXTzXoa0-7" value="&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ QueryType: *Object&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ MutationType: *Object&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ SubscriptionType: *Object&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Types: []Type&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Directives: []*Directive&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-6">
+          <mxGeometry y="41" width="230" height="89" as="geometry" />
         </mxCell>
-        
+        <mxCell id="6qxDTgi48stSFXTzXoa0-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-6">
+          <mxGeometry y="130" width="230" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-9" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewSchema(config SchemaConfig): Schema&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetType(name string): Type&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetDirective(name string): *Directive&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-6">
+          <mxGeometry y="140" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-19" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Rules&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="990" width="280" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-20" value="&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ArgumentsOfCorrectType: ValidationRule&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ DefaultValuesOfCorrectType: ValidationRule&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ FieldsOnCorrectType: ValidationRule&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ FragmentsOnCompositeTypes: ValidationRule&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-19">
+          <mxGeometry y="41" width="280" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-21" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-19">
+          <mxGeometry y="130" width="280" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-22" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetSpecifiedRules(): []ValidationRule&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetValidationRules(): []ValidationRule&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-19">
+          <mxGeometry y="140" width="280" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-23" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Definition&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="830" width="280" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-24" value="&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ObjectType: *Object&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ InterfaceType: *Interface&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ UnionType: *Union&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ScalarType: *Scalar&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ EnumType: *Enum&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-23">
+          <mxGeometry y="41" width="280" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-25" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-23">
+          <mxGeometry y="130" width="280" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-26" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewObjectType(): *Object&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewInterfaceType(): *Interface&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewUnionType(): *Union&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-23">
+          <mxGeometry y="140" width="280" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-27" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Extensions&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="1050" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-28" value="&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Init(): interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ParseDidStart(): interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ValidationDidStart(): interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ExecutionDidStart(): interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ResolveFieldDidStart(): interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewExtensionManager(): *ExtensionManager&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-27">
+          <mxGeometry y="41" width="280" height="119" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-31" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Resolver&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1930" y="990" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-32" value="&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Resolve(p ResolveParams): interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ FieldResolver: interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ResolveParams: struct&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ResolveInfo: struct&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-31">
+          <mxGeometry y="41" width="280" height="79" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-33" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Introspection&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="690" width="280" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-34" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ SchemaMetaFieldDef: *FieldDefinition&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ TypeMetaFieldDef: *FieldDefinition&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ TypeNameMetaFieldDef: *FieldDefinition&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-33">
+          <mxGeometry y="41" width="280" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-35" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-33">
+          <mxGeometry y="130" width="280" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-36" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetIntrospectionQuery(): string&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ BuildClientSchema(): Schema&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetSchemaFromAST(): Schema&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-33">
+          <mxGeometry y="140" width="280" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-37" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Validator&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="323.5" width="370" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-38" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Schema: Schema&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Document: *Document&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Rules: []ValidationRule&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-37">
+          <mxGeometry y="41" width="370" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-39" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-37">
+          <mxGeometry y="130" width="370" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-40" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Validate(schema Schema, ast *Document): []gqlerrors.FormattedError&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ValidateDocument(): []gqlerrors.FormattedError&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetValidationRules(): []ValidationRule&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-37">
+          <mxGeometry y="140" width="370" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-41" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;GQLErrors&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1816" y="290" width="280" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-42" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Error: error&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Message: string&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Locations: []Location&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Path: []interface{}&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-41">
+          <mxGeometry y="41" width="280" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-43" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-41">
+          <mxGeometry y="130" width="280" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-44" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewFormattedError(): *FormattedError&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewLocatedError(): *Error&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ FormatError(): *FormattedError&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-41">
+          <mxGeometry y="140" width="280" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-45" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Source&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="-430" width="244" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-46" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Body: []byte&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Name: string&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-45">
+          <mxGeometry y="41" width="244" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-47" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-45">
+          <mxGeometry y="130" width="244" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-48" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewSource(body string, name string): *Source&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-45">
+          <mxGeometry y="140" width="244" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-50" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Parser&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="901" y="-430" width="220" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-51" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Source: *Source&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Options: ParseOptions&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-50">
+          <mxGeometry y="41" width="220" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-52" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-50">
+          <mxGeometry y="130" width="220" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-53" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Parse(source *Source): *Document&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ParseValue(source *Source): Value&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ParseType(source *Source): Type&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-50">
+          <mxGeometry y="140" width="220" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-55" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;AST&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="-110" width="220" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-56" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; background-color: initial;&quot;&gt;+ Document: *Document&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Operation: *OperationDefinition&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ SelectionSet: *SelectionSet&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Field: *Field&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-55">
+          <mxGeometry y="41" width="220" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-57" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-55">
+          <mxGeometry y="130" width="220" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-58" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewDocument(): *Document&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NewField(): *Field&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-55">
+          <mxGeometry y="140" width="220" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-59" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Lexer&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1341" y="-430" width="220" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-60" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Source: *Source&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Position: int&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Line: int&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Column: int&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-59">
+          <mxGeometry y="41" width="220" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-61" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-59">
+          <mxGeometry y="130" width="220" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-62" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ NextToken(): Token&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ReadToken(): Token&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-59">
+          <mxGeometry y="140" width="220" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-64" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Constants&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Kinds&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1760" y="-430" width="220" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-65" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Document: string&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ OperationDefinition: string&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Field: string&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ FragmentDefinition: string&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Variable: string&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Directive: string&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-64">
+          <mxGeometry y="41" width="220" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-66" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-64">
+          <mxGeometry y="130" width="220" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-67" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-64">
+          <mxGeometry y="140" width="220" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-68" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Visitor&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="-110" width="220" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-69" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ EnterFuncs: map[string]VisitFunc&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ LeaveFuncs: map[string]VisitFunc&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-68">
+          <mxGeometry y="41" width="220" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-70" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-68">
+          <mxGeometry y="130" width="220" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-71" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Visit(node Node): Node&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ VisitInParallel(): *Visitor&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ VisitWithTypeInfo(): *Visitor&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-68">
+          <mxGeometry y="140" width="220" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-73" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Printer&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="-110" width="220" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-74" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Options: PrintOptions&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-73">
+          <mxGeometry y="41" width="220" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-75" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-73">
+          <mxGeometry y="130" width="220" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-76" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Print(node Node): string&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ PrintIntrospectionSchema(): string&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-73">
+          <mxGeometry y="140" width="220" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-77" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Location&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1636" y="-110" width="220" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-78" value="&lt;div style=&quot;text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Start: int&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ End: int&lt;/span&gt;&lt;br style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;+ Source: *Source&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-77">
+          <mxGeometry y="41" width="220" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-79" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-77">
+          <mxGeometry y="130" width="220" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-80" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ GetLocation(): *SourceLocation&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-77">
+          <mxGeometry y="140" width="220" height="103" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;labelBackgroundColor=none;startFill=0;endArrow=open;endFill=0;endSize=8;fontFamily=Helvetica;fontSize=10;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="6qxDTgi48stSFXTzXoa0-38" target="6qxDTgi48stSFXTzXoa0-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1160" y="393" as="sourcePoint" />
+            <mxPoint x="770" y="1136" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-14" value="&lt;div style=&quot;font-weight: 400; text-align: left; text-wrap: nowrap; font-size: 11px;&quot;&gt;&lt;div&gt;&lt;i&gt;&amp;lt;&amp;lt;Class&amp;gt;&amp;gt;&lt;/i&gt;&lt;/div&gt;&lt;b style=&quot;font-size: 10px;&quot;&gt;Executor&lt;/b&gt;&lt;br&gt;&lt;/div&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=41;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="488" width="280" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-15" value="&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Schema: Schema&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Document: *Document&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ RootValue: interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ContextValue: context.Context&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Variables: map[string]interface{}&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;spacingLeft=4;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-14">
+          <mxGeometry y="41" width="280" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-14">
+          <mxGeometry y="130" width="280" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="6qxDTgi48stSFXTzXoa0-17" value="&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ Execute(params ExecutionParams): *Result&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ExecuteFields(): map[string]interface{}&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-wrap: nowrap;&quot;&gt;+ ResolveField(): interface{}&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="6qxDTgi48stSFXTzXoa0-14">
+          <mxGeometry y="140" width="280" height="103" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
