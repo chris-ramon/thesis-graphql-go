@@ -1240,6 +1240,26 @@ Implementation details:
 References:
 - [GraphQL Introspection Query (Go implementation)](https://github.com/graphql-go/graphql/blob/58689e0742f217137ac0c82b16e2d658e0cc1853/testutil/introspection_query.go#L4)
 
+##### Language/TypeInfo
+
+The `TypeInfo` component provides utilities for tracking and managing GraphQL type information during syntax tree traversal, such as when validating or analyzing queries. It encapsulates the logic required to keep track of the current type context, input and output types, field definitions, directives, and arguments as the AST is visited.
+
+**Key responsibilities:**
+- Maintains the current type context while traversing the GraphQL AST (Abstract Syntax Tree), updating its internal state as new nodes are entered or exited.
+- Exposes methods to access the current type, parent type, input type, field definition, directive, and argument.
+- Supports validation and schema analysis by providing accurate and up-to-date type information at any point in the traversal.
+- Integrates with the Validator and Visitor components, serving as the backbone for context-aware validation rules and advanced analysis.
+- Enables correct interpretation of fragments, fields, arguments, and directives as specified in the GraphQL specification.
+
+**Implementation highlights:**
+- The design mirrors the reference implementation in graphql-js, ensuring feature parity and reliability.
+- TypeInfo is stateful and designed for reuse across different traversals within the same schema.
+- Provides a clear interface for external tools and rules to query type context without directly mutating internal state.
+
+References:
+- [GraphQL Specification: Type System](https://spec.graphql.org/June2018/#sec-Type-System)
+- [graphql-js TypeInfo source](https://github.com/graphql/graphql-js/blob/main/src/utilities/TypeInfo.ts)
+
 ### 4.10 Architecture
 
 #### UML Packages Diagram
