@@ -1244,7 +1244,7 @@ References:
 
 #### UML Packages Diagram
 
-<img width="817" height="939" alt="Image" src="https://github.com/user-attachments/assets/a2ec9426-4764-4e68-8fba-d2894e390fb3" />
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/architecture/uml/packages/graphql-graphql-go-architecture-packages.drawio.png" />
 
 ### 4.11 Development
 
