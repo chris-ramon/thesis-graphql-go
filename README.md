@@ -1260,6 +1260,30 @@ References:
 - [GraphQL Specification: Type System](https://spec.graphql.org/June2018/#sec-Type-System)
 - [graphql-js TypeInfo source](https://github.com/graphql/graphql-js/blob/main/src/utilities/TypeInfo.ts)
 
+##### Compatibility
+
+The compatibility-unit-tests framework contains the following main components that enable validation of GraphQL implementation compatibility against the graphql-js reference implementation:
+
+- **App**: The main application orchestrator that coordinates the compatibility validation process between different GraphQL implementations.
+
+- **Cmd**: The command-line interface component that provides user interaction capabilities for selecting GraphQL implementations and configuring validation parameters.
+
+- **Extractor**: The component responsible for extracting unit test names and structures from GraphQL implementations, supporting both JavaScript (graphql-js) and Go implementations.
+
+- **Implementation**: The component that defines and manages different GraphQL implementation configurations, including repository information, test extraction strategies, and implementation-specific metadata.
+
+- **Result**: The component that handles the collection, aggregation, and presentation of compatibility validation results, including success/failure metrics and detailed comparison outcomes.
+
+- **Types**: The component that defines the core data structures and type definitions used throughout the compatibility validation framework.
+
+- **Validator**: The component that performs the actual compatibility comparison between the reference implementation (graphql-js) and target implementations, validating test coverage and identifying compatibility gaps.
+
+The compatibility framework operates by extracting unit test names from both the reference graphql-js implementation and the target implementation, then comparing them to identify missing tests or implementation gaps. This systematic approach ensures that GraphQL implementations maintain compatibility with the standard reference implementation.
+
+References:
+- [Compatibility Unit Tests Repository](https://github.com/graphql-go/compatibility-unit-tests)
+- [Compatibility validation framework documentation](https://github.com/graphql-go/compatibility-unit-tests#validation-compatibility)
+
 ### 4.10 Architecture
 
 #### UML Packages Diagram
