@@ -211,37 +211,23 @@
         <mxCell id="result-to-end" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="result-action" target="end-state" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Yh6gK2Kf1xA2v-_3BbH3-1" value="GraphQL" style="swimlane;whiteSpace=wrap;startSize=30;" vertex="1" parent="1">
-          <mxGeometry x="1850" y="50" width="200" height="1300" as="geometry" />
+        <mxCell id="format-error-to-result" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="format-error" target="result-action" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Yh6gK2Kf1xA2v-_3BbH3-4" value="Return Result" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Yh6gK2Kf1xA2v-_3BbH3-1">
-          <mxGeometry x="40" y="580" width="120" height="50" as="geometry" />
+        <mxCell id="located-error-to-result" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="located-error" target="result-action" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Yh6gK2Kf1xA2v-_3BbH3-5" value="" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="Yh6gK2Kf1xA2v-_3BbH3-1">
-          <mxGeometry x="85" y="1220" width="30" height="30" as="geometry" />
+        <mxCell id="schema-meta-to-result" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="schema-meta" target="result-action" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Yh6gK2Kf1xA2v-_3BbH3-6" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Yh6gK2Kf1xA2v-_3BbH3-1" source="Yh6gK2Kf1xA2v-_3BbH3-4" target="Yh6gK2Kf1xA2v-_3BbH3-5">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-100" y="1250" as="sourcePoint" />
-            <mxPoint x="-460" y="1330" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="validation-hook-to-apply" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="validation-hook" target="apply-rules" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Yh6gK2Kf1xA2v-_3BbH3-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="init-extensions" target="Yh6gK2Kf1xA2v-_3BbH3-4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1910" y="600" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="execution-hook-to-resolve" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="execution-hook" target="resolve-fields" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="Yh6gK2Kf1xA2v-_3BbH3-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="parse-hook" target="Yh6gK2Kf1xA2v-_3BbH3-4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1420" y="205" as="sourcePoint" />
-            <mxPoint x="1960" y="640" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="Yh6gK2Kf1xA2v-_3BbH3-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF0000;endArrow=open;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="validation-hook" target="Yh6gK2Kf1xA2v-_3BbH3-4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1420" y="292" as="sourcePoint" />
-            <mxPoint x="1880" y="630" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="resolve-hook-to-call" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="resolve-hook" target="call-resolvers" edge="1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
