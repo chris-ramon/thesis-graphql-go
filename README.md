@@ -842,8 +842,6 @@ Go Standards:
 
 ### 4.9 Design
 
-What are the internal design of the GraphQL standard, let’s add here diagrams of the workflow, also let’s add each component workflow, prop using uml something like that, also, let’s add GraphQL Playground, GraphQL GraphiQL.
-
 #### Components
 
 ##### Implementation
