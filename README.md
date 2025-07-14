@@ -1300,6 +1300,22 @@ References:
 - [Compatibility Standard Definitions Repository](https://github.com/graphql-go/compatibility-standard-definitions)
 - [GraphQL specification repository validation](https://github.com/graphql-go/compatibility-standard-definitions#implementation-details)
 
+##### User Acceptance Definitions
+
+The compatibility-user-acceptance framework contains the following main components that enable validation of GraphQL implementation developer experience metrics against the GraphQL specification and the graphql-js reference implementation:
+
+- **Extractor**: The component responsible for extracting GitHub repository metrics from GraphQL implementations. It fetches comprehensive repository data including stars count, issues statistics, pull requests metrics, fork counts, license information, last commit dates, contributor counts, and GraphQL specification version compatibility. The extractor provides both live GitHub API integration and test data capabilities for development and validation purposes.
+
+- **Repository**: The component that contains extracted repository metrics as structured data. It serves as the data model for storing and organizing the GitHub repository information collected by the extractor, providing a standardized interface for accessing metrics such as stars count, issues, pull requests, and other repository characteristics used in compatibility validation.
+
+- **CLI Tool**: The component that provides a command-line interface for running compatibility validation between GraphQL implementations. It orchestrates the extraction process, compares metrics against reference thresholds, calculates difference ratios, and presents results in a user-friendly table format. The CLI tool validates compatibility by comparing various developer experience metrics including repository engagement, community activity, and specification compliance indicators.
+
+The user acceptance framework operates by systematically extracting GitHub repository metrics from target GraphQL implementations, comparing them against the graphql-js reference implementation, and calculating difference ratios to determine compatibility levels. This approach ensures that GraphQL implementations maintain acceptable developer experience standards and community engagement metrics that align with the reference implementation's user acceptance patterns.
+
+References:
+- [Compatibility User Acceptance Repository](https://github.com/graphql-go/compatibility-user-acceptance)
+- [GraphQL implementation user acceptance validation](https://github.com/graphql-go/compatibility-user-acceptance#use-cases)
+
 ### 4.10 Architecture
 
 #### UML Packages Diagram
