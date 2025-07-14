@@ -1300,9 +1300,9 @@ References:
 - [Compatibility Standard Definitions Repository](https://github.com/graphql-go/compatibility-standard-definitions)
 - [GraphQL specification repository validation](https://github.com/graphql-go/compatibility-standard-definitions#implementation-details)
 
-##### User Acceptance Definitions
+##### User Acceptance
 
-The compatibility-user-acceptance framework contains the following main components that enable validation of GraphQL implementation developer experience metrics against the GraphQL specification and the graphql-js reference implementation:
+The compatibility-user-acceptance framework contains the following main components that enable validation of GraphQL implementation developer experience metrics against the graphql-js reference implementation:
 
 - **Extractor**: The component responsible for extracting GitHub repository metrics from GraphQL implementations. It fetches comprehensive repository data including stars count, issues statistics, pull requests metrics, fork counts, license information, last commit dates, contributor counts, and GraphQL specification version compatibility. The extractor provides both live GitHub API integration and test data capabilities for development and validation purposes.
 
@@ -1314,7 +1314,6 @@ The user acceptance framework operates by systematically extracting GitHub repos
 
 References:
 - [Compatibility User Acceptance Repository](https://github.com/graphql-go/compatibility-user-acceptance)
-- [GraphQL implementation user acceptance validation](https://github.com/graphql-go/compatibility-user-acceptance#use-cases)
 
 ### 4.10 Architecture
 
