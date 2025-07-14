@@ -1282,6 +1282,24 @@ References:
 - [Compatibility Unit Tests Repository](https://github.com/graphql-go/compatibility-unit-tests)
 - [Compatibility validation framework documentation](https://github.com/graphql-go/compatibility-unit-tests#validation-compatibility)
 
+##### Standard Definitions
+
+The compatibility-standard-definitions framework contains the following main components that enable validation of GraphQL implementation type system compatibility against the GraphQL specification and the graphql-js reference implementation:
+
+- **Puller**: The component responsible for cloning GraphQL repositories including the GraphQL specification repository, the GraphQL JavaScript reference implementation repository, and target GraphQL implementation repositories. It manages the retrieval and synchronization of source code from multiple repositories to enable cross-implementation compatibility analysis.
+
+- **Extractor**: The component that extracts type system definitions from different sources using multiple strategies. It pulls type system definitions by parsing from the GraphQL specification repository, by introspection from the GraphQL JavaScript reference implementation, and by introspection from target GraphQL implementations. This component bridges different extraction methodologies to create a unified comparison baseline.
+
+- **Executor**: The component that executes type system definitions introspection results on GraphQL implementations. It processes the extracted type system definitions and applies them to target implementations to validate their compatibility and correctness against the standard definitions.
+
+- **Validator**: The component that performs comprehensive validation by comparing schemas and type system definitions across different implementations. It validates the GraphQL specification schema against the GraphQL JavaScript reference implementation schema, compares GraphQL implementation schemas against the GraphQL specification schema, and performs detailed comparisons of type system definitions between the specification and implementations.
+
+The standard definitions framework operates by systematically extracting, processing, and comparing type system definitions from the GraphQL specification, the reference implementation, and target implementations. This approach ensures that GraphQL implementations maintain structural compatibility with the standard type system definitions as defined by the GraphQL specification.
+
+References:
+- [Compatibility Standard Definitions Repository](https://github.com/graphql-go/compatibility-standard-definitions)
+- [GraphQL specification repository validation](https://github.com/graphql-go/compatibility-standard-definitions#implementation-details)
+
 ### 4.10 Architecture
 
 #### UML Packages Diagram
