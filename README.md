@@ -1318,6 +1318,10 @@ References:
 
 ### 4.10 Architecture
 
+#### UML Core Components Diagram
+
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/architecture/uml/core-components/graphql-graphql-go-architecture-core-components.drawio.png" />
+
 #### UML Packages Diagram
 
 <img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/architecture/uml/packages/graphql-graphql-go-architecture-packages.drawio.png" />
