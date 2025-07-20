@@ -1344,6 +1344,18 @@ References:
 
 <img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/architecture/uml/compatibility/standard-definitions/core-components.drawio.png" />
 
+##### UML Packages Diagram
+
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/architecture/uml/compatibility/standard-definitions/compatibility-standard-definitions-packages.png" />
+
+##### UML Components Diagram
+
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/architecture/uml/compatibility/standard-definitions/compatibility-standard-definitions-components.drawio.png" />
+
+##### UML Activity Diagram
+
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/architecture/uml/compatibility/standard-definitions/compatibility-standard-definitions-activity.drawio.png" />
+
 ### 4.11 Development
 
 How is the distribution of the task accomplished ? Let’s add here screenshots of the PRs, maybe a table, let’s break the task into a simpler list and here let’s add more detailed tasks.
