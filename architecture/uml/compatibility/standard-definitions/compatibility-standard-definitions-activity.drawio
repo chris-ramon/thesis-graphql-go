@@ -1,0 +1,219 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="compatibility-standard-definitions-activity">
+    <mxGraphModel dx="2000" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Main Lane -->
+        <mxCell id="main-lane" value="Main" style="swimlane;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="50" y="50" width="200" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="start-state" value="" style="ellipse;shape=startState;fillColor=#000000;strokeColor=#ff0000;" parent="main-lane" vertex="1">
+          <mxGeometry x="85" y="50" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="main-action" value="main()" style="rounded=1;whiteSpace=wrap;html=1;" parent="main-lane" vertex="1">
+          <mxGeometry x="40" y="110" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="return-result" value="Return Result" style="rounded=1;whiteSpace=wrap;html=1;" parent="main-lane" vertex="1">
+          <mxGeometry x="40" y="1150" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="end-state" value="" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="main-lane" vertex="1">
+          <mxGeometry x="85" y="1220" width="30" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Config Lane -->
+        <mxCell id="config-lane" value="Config" style="swimlane;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="250" y="50" width="200" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="new-config" value="New()" style="rounded=1;whiteSpace=wrap;html=1;" parent="config-lane" vertex="1">
+          <mxGeometry x="40" y="180" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="load-config" value="Load Configuration" style="rounded=1;whiteSpace=wrap;html=1;" parent="config-lane" vertex="1">
+          <mxGeometry x="40" y="260" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- App Lane -->
+        <mxCell id="app-lane" value="App" style="swimlane;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="450" y="50" width="200" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="app-run" value="Run(params)" style="rounded=1;whiteSpace=wrap;html=1;" parent="app-lane" vertex="1">
+          <mxGeometry x="40" y="340" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="coordinate-processing" value="Coordinate Processing" style="rounded=1;whiteSpace=wrap;html=1;" parent="app-lane" vertex="1">
+          <mxGeometry x="40" y="420" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- CMD Lane -->
+        <mxCell id="cmd-lane" value="CMD" style="swimlane;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="650" y="50" width="200" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="cli-run" value="CLI.Run()" style="rounded=1;whiteSpace=wrap;html=1;" parent="cmd-lane" vertex="1">
+          <mxGeometry x="40" y="500" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="parse-args" value="Parse Arguments" style="rounded=1;whiteSpace=wrap;html=1;" parent="cmd-lane" vertex="1">
+          <mxGeometry x="40" y="580" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Puller Lane -->
+        <mxCell id="puller-lane" value="Puller" style="swimlane;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="850" y="50" width="200" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="pull-specs" value="Pull(params)" style="rounded=1;whiteSpace=wrap;html=1;" parent="puller-lane" vertex="1">
+          <mxGeometry x="40" y="660" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fetch-graphql-spec" value="Fetch GraphQL Specifications" style="rounded=1;whiteSpace=wrap;html=1;" parent="puller-lane" vertex="1">
+          <mxGeometry x="40" y="740" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Executor Lane -->
+        <mxCell id="executor-lane" value="Executor" style="swimlane;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="50" width="200" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="executor-new" value="New()" style="rounded=1;whiteSpace=wrap;html=1;" parent="executor-lane" vertex="1">
+          <mxGeometry x="40" y="820" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="execute-processing" value="Execute Processing" style="rounded=1;whiteSpace=wrap;html=1;" parent="executor-lane" vertex="1">
+          <mxGeometry x="40" y="900" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Extractor Lane -->
+        <mxCell id="extractor-lane" value="Extractor" style="swimlane;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="1250" y="50" width="200" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="extractor-new" value="New(params)" style="rounded=1;whiteSpace=wrap;html=1;" parent="extractor-lane" vertex="1">
+          <mxGeometry x="40" y="980" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="extract-definitions" value="Extract Standard Definitions" style="rounded=1;whiteSpace=wrap;html=1;" parent="extractor-lane" vertex="1">
+          <mxGeometry x="40" y="1060" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- Validator Lane -->
+        <mxCell id="validator-lane" value="Validator" style="swimlane;whiteSpace=wrap;startSize=30;" parent="1" vertex="1">
+          <mxGeometry x="1450" y="50" width="200" height="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" value="Validate()" style="rounded=1;whiteSpace=wrap;html=1;" parent="validator-lane" vertex="1">
+          <mxGeometry x="40" y="1140" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="validation-check" value="Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffffc0;" parent="validator-lane" vertex="1">
+          <mxGeometry x="60" y="1220" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections -->
+        <!-- Start to main -->
+        <mxCell id="start-to-main" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="start-state" target="main-action" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Main to config -->
+        <mxCell id="main-to-config" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="main-action" target="new-config" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Config flow -->
+        <mxCell id="config-new-to-load" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="new-config" target="load-config" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Config to app -->
+        <mxCell id="config-to-app" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="load-config" target="app-run" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- App flow -->
+        <mxCell id="app-run-to-coordinate" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="app-run" target="coordinate-processing" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- App to CLI -->
+        <mxCell id="app-to-cli" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="coordinate-processing" target="cli-run" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- CLI flow -->
+        <mxCell id="cli-run-to-parse" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="cli-run" target="parse-args" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- CLI to puller -->
+        <mxCell id="cli-to-puller" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="parse-args" target="pull-specs" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Puller flow -->
+        <mxCell id="pull-to-fetch" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="pull-specs" target="fetch-graphql-spec" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Puller to executor -->
+        <mxCell id="puller-to-executor" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="fetch-graphql-spec" target="executor-new" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Executor flow -->
+        <mxCell id="executor-new-to-execute" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="executor-new" target="execute-processing" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Executor to extractor -->
+        <mxCell id="executor-to-extractor" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="execute-processing" target="extractor-new" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Extractor flow -->
+        <mxCell id="extractor-new-to-extract" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="extractor-new" target="extract-definitions" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Extractor to validator -->
+        <mxCell id="extractor-to-validator" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="extract-definitions" target="validate" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Validator flow -->
+        <mxCell id="validate-to-check" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="validate" target="validation-check" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Validator to result (valid) -->
+        <mxCell id="validator-to-result" value="yes" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="validation-check" target="return-result" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1535" y="1175" />
+              <mxPoint x="150" y="1175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Validation error path -->
+        <mxCell id="validation-error" value="Return Error" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;" parent="validator-lane" vertex="1">
+          <mxGeometry x="40" y="1000" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="validator-to-error" value="no" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="validation-check" target="validation-error" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1535" y="1025" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="error-to-result" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="validation-error" target="return-result" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1565" y="1025" />
+              <mxPoint x="1565" y="1175" />
+              <mxPoint x="150" y="1175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Result to end -->
+        <mxCell id="result-to-end" value="" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;" parent="1" source="return-result" target="end-state" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
