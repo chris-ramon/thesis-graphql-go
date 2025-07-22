@@ -63,7 +63,7 @@
 
     // Defines a GraphQL fetcher using the fetch API.
     function graphQLFetcher(graphQLParams) {
-      return fetch(fetchURL, {
+      return fetch("localhost:8080"+fetchURL, {
         method: 'post',
         headers: {
           'Accept': 'application/json',
