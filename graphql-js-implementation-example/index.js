@@ -2,23 +2,30 @@ const {
   graphql,
   GraphQLSchema,
   GraphQLObjectType,
-  GraphQLString,
+  GraphQLInt,
 } = require("graphql");
 
-const schema = new GraphQLSchema({
+const implementationSchema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "RootQueryType",
     fields: {
-      echo: {
-        type: GraphQLString,
+      int: {
+        type: GraphQLInt,
         resolve() {
-          return "ok";
+          return 20;
         },
       },
     },
   }),
 });
 
-graphql(schema, `{ echo }`).then((result) => {
+graphql(
+  implementationSchema,
+  `
+    {
+      int
+    }
+  `,
+).then((result) => {
   console.log(JSON.stringify(result.data, null, 4));
 });
