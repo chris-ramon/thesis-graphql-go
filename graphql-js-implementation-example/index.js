@@ -34,7 +34,7 @@ const implementationSchema = new GraphQLSchema({
       boolean: {
         type: GraphQLBoolean,
         resolve() {
-          return 20;
+          return true;
         },
       },
       ID: {
@@ -51,11 +51,11 @@ graphql(
   implementationSchema,
   `
     {
-      int
-      float
-      string
-      boolean
       ID
+      boolean
+      float
+      int
+      string
     }
   `,
 ).then((result) => {
