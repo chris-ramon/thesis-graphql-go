@@ -12,6 +12,16 @@ func main() {
 		log.Fatal(err)
 	}
 
+	objectType := graphql.NewObject(graphql.ObjectConfig{
+		Name: "object",
+		Fields: graphql.Fields{
+			"name": &graphql.Field{
+				Description: "The name of the object.",
+				Type:        graphql.String,
+			},
+		},
+	})
+
 	queryType := graphql.NewObject(graphql.ObjectConfig{
 		Name: "Query",
 		Fields: graphql.Fields{
@@ -45,6 +55,17 @@ func main() {
 					return "d983b9d9-681c-4059-b5a3-5329d1c6f82d", nil
 				},
 			},
+			"object": &graphql.Field{
+				Type: objectType,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					obj := struct {
+						Name string
+					}{
+						Name: "Name of the object instance.",
+					}
+					return obj, nil
+				},
+			},
 		},
 	})
 
@@ -64,6 +85,9 @@ func main() {
       string
       boolean
       ID
+      object {
+        name
+      }
     }
     `,
 	})
