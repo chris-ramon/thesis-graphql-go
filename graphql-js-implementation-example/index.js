@@ -22,6 +22,20 @@ const objectType = new GraphQLObjectType({
   },
 });
 
+const objectTypeWithArguments = new GraphQLObjectType({
+  name: "objectTypeWithArguments",
+  description: "An object with arguments.",
+
+  fields: () => {
+    return {
+      name: {
+        type: GraphQLString,
+        description: "The name of the object.",
+      },
+    };
+  },
+});
+
 const implementationSchema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "RootQueryType",
@@ -64,6 +78,20 @@ const implementationSchema = new GraphQLSchema({
           };
         },
       },
+      objectWithArguments: {
+        type: objectTypeWithArguments,
+        args: {
+          id: {
+            type: GraphQLString,
+            description: "id of the object with arguments",
+          },
+        },
+        resolve(root, { id }) {
+          return {
+            name: `Name of the object with arguments instance, id: ${id}`,
+          };
+        },
+      },
     },
   }),
 });
@@ -80,8 +108,14 @@ graphql(
       object {
         name
       }
+      objectWithArguments(id: "1") {
+        name
+      }
     }
   `,
 ).then((result) => {
+  if (result.errors) {
+    console.log(result.errors);
+  }
   console.log(JSON.stringify(result.data, null, 4));
 });
