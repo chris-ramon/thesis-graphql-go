@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 
 	"github.com/graphql-go/graphql"
@@ -11,6 +12,26 @@ func main() {
 	handleErr := func(err error) {
 		log.Fatal(err)
 	}
+
+	objectType := graphql.NewObject(graphql.ObjectConfig{
+		Name: "object",
+		Fields: graphql.Fields{
+			"name": &graphql.Field{
+				Description: "The name of the object.",
+				Type:        graphql.String,
+			},
+		},
+	})
+
+	objectTypeWithArguments := graphql.NewObject(graphql.ObjectConfig{
+		Name: "objectTypeWithArguments",
+		Fields: graphql.Fields{
+			"name": &graphql.Field{
+				Description: "The name of the object.",
+				Type:        graphql.String,
+			},
+		},
+	})
 
 	queryType := graphql.NewObject(graphql.ObjectConfig{
 		Name: "Query",
@@ -45,6 +66,34 @@ func main() {
 					return "d983b9d9-681c-4059-b5a3-5329d1c6f82d", nil
 				},
 			},
+			"object": &graphql.Field{
+				Type: objectType,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					obj := struct {
+						Name string
+					}{
+						Name: "Name of the object instance.",
+					}
+					return obj, nil
+				},
+			},
+			"objectWithArguments": &graphql.Field{
+				Type: objectTypeWithArguments,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the object with arguments",
+						Type:        graphql.String,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					obj := struct {
+						Name string
+					}{
+						Name: fmt.Sprintf("Name of the object with arguments instance, id: %v", p.Args["id"]),
+					}
+					return obj, nil
+				},
+			},
 		},
 	})
 
@@ -64,6 +113,12 @@ func main() {
       string
       boolean
       ID
+      object {
+        name
+      }
+      objectWithArguments(id: "1") {
+        name
+      }
     }
     `,
 	})
