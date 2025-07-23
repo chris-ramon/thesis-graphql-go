@@ -33,6 +33,68 @@ func main() {
 		},
 	})
 
+	var nodeInterface *graphql.Interface
+	var userType *graphql.Object
+	var productType *graphql.Object
+
+	nodeInterface = graphql.NewInterface(graphql.InterfaceConfig{
+		Name:        "Node",
+		Description: "An object with an ID.",
+		Fields: graphql.Fields{
+			"id": &graphql.Field{
+				Type:        graphql.ID,
+				Description: "The ID of the object.",
+			},
+		},
+		ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+			if obj, ok := p.Value.(map[string]interface{}); ok {
+				if objType, exists := obj["type"]; exists && objType == "user" {
+					return userType
+				}
+				if objType, exists := obj["type"]; exists && objType == "product" {
+					return productType
+				}
+			}
+			return nil
+		},
+	})
+
+	userType = graphql.NewObject(graphql.ObjectConfig{
+		Name:        "User",
+		Description: "A user.",
+		Interfaces:  []*graphql.Interface{nodeInterface},
+		Fields: graphql.Fields{
+			"id": &graphql.Field{
+				Type:        graphql.ID,
+				Description: "The ID of the user.",
+			},
+			"name": &graphql.Field{
+				Type:        graphql.String,
+				Description: "The name of the user.",
+			},
+		},
+	})
+
+	productType = graphql.NewObject(graphql.ObjectConfig{
+		Name:        "Product",
+		Description: "A product.",
+		Interfaces:  []*graphql.Interface{nodeInterface},
+		Fields: graphql.Fields{
+			"id": &graphql.Field{
+				Type:        graphql.ID,
+				Description: "The ID of the product.",
+			},
+			"name": &graphql.Field{
+				Type:        graphql.String,
+				Description: "The name of the product.",
+			},
+			"price": &graphql.Field{
+				Type:        graphql.Float,
+				Description: "The price of the product.",
+			},
+		},
+	})
+
 	queryType := graphql.NewObject(graphql.ObjectConfig{
 		Name: "Query",
 		Fields: graphql.Fields{
@@ -94,6 +156,55 @@ func main() {
 					return obj, nil
 				},
 			},
+			"node": &graphql.Field{
+				Type: nodeInterface,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the node",
+						Type:        graphql.ID,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					if id == "user-1" {
+						return map[string]interface{}{
+							"type": "user",
+							"id":   "user-1",
+							"name": "John Doe",
+						}, nil
+					}
+					if id == "product-1" {
+						return map[string]interface{}{
+							"type":  "product",
+							"id":    "product-1",
+							"name":  "GraphQL Book",
+							"price": 29.99,
+						}, nil
+					}
+					return nil, nil
+				},
+			},
+			"user": &graphql.Field{
+				Type: userType,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return map[string]interface{}{
+						"type": "user",
+						"id":   "user-1",
+						"name": "John Doe",
+					}, nil
+				},
+			},
+			"product": &graphql.Field{
+				Type: productType,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return map[string]interface{}{
+						"type":  "product",
+						"id":    "product-1",
+						"name":  "GraphQL Book",
+						"price": 29.99,
+					}, nil
+				},
+			},
 		},
 	})
 
@@ -118,6 +229,25 @@ func main() {
       }
       objectWithArguments(id: "1") {
         name
+      }
+      node(id: "user-1") {
+        id
+        ... on User {
+          name
+        }
+        ... on Product {
+          name
+          price
+        }
+      }
+      user {
+        id
+        name
+      }
+      product {
+        id
+        name
+        price
       }
     }
     `,
