@@ -21,6 +21,30 @@ func main() {
 					return 20, nil
 				},
 			},
+			"float": &graphql.Field{
+				Type: graphql.Float,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return 20.01, nil
+				},
+			},
+			"string": &graphql.Field{
+				Type: graphql.String,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return "str", nil
+				},
+			},
+			"boolean": &graphql.Field{
+				Type: graphql.Boolean,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return true, nil
+				},
+			},
+			"ID": &graphql.Field{
+				Type: graphql.ID,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return "d983b9d9-681c-4059-b5a3-5329d1c6f82d", nil
+				},
+			},
 		},
 	})
 
@@ -32,8 +56,16 @@ func main() {
 	}
 
 	result := graphql.Do(graphql.Params{
-		Schema:        implementationSchema,
-		RequestString: "{int}",
+		Schema: implementationSchema,
+		RequestString: `
+    {
+      int
+      float
+      string
+      boolean
+      ID
+    }
+    `,
 	})
 
 	d, err := json.MarshalIndent(result, "", "    ")
