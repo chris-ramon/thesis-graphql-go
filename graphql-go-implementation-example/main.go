@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"log"
 
 	"github.com/graphql-go/graphql"
@@ -14,6 +15,16 @@ func main() {
 
 	objectType := graphql.NewObject(graphql.ObjectConfig{
 		Name: "object",
+		Fields: graphql.Fields{
+			"name": &graphql.Field{
+				Description: "The name of the object.",
+				Type:        graphql.String,
+			},
+		},
+	})
+
+	objectTypeWithArguments := graphql.NewObject(graphql.ObjectConfig{
+		Name: "objectTypeWithArguments",
 		Fields: graphql.Fields{
 			"name": &graphql.Field{
 				Description: "The name of the object.",
@@ -66,6 +77,23 @@ func main() {
 					return obj, nil
 				},
 			},
+			"objectWithArguments": &graphql.Field{
+				Type: objectTypeWithArguments,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the object with arguments",
+						Type:        graphql.String,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					obj := struct {
+						Name string
+					}{
+						Name: fmt.Sprintf("Name of the object with arguments instance, id: %v", p.Args["id"]),
+					}
+					return obj, nil
+				},
+			},
 		},
 	})
 
@@ -86,6 +114,9 @@ func main() {
       boolean
       ID
       object {
+        name
+      }
+      objectWithArguments(id: "1") {
         name
       }
     }
