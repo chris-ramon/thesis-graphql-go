@@ -36,6 +36,7 @@ func main() {
 	var nodeInterface *graphql.Interface
 	var userType *graphql.Object
 	var productType *graphql.Object
+	var searchResultUnion *graphql.Union
 
 	nodeInterface = graphql.NewInterface(graphql.InterfaceConfig{
 		Name:        "Node",
@@ -92,6 +93,23 @@ func main() {
 				Type:        graphql.Float,
 				Description: "The price of the product.",
 			},
+		},
+	})
+
+	searchResultUnion = graphql.NewUnion(graphql.UnionConfig{
+		Name:        "SearchResult",
+		Description: "A union of User and Product types.",
+		Types:       []*graphql.Object{userType, productType},
+		ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+			if obj, ok := p.Value.(map[string]interface{}); ok {
+				if objType, exists := obj["type"]; exists && objType == "user" {
+					return userType
+				}
+				if objType, exists := obj["type"]; exists && objType == "product" {
+					return productType
+				}
+			}
+			return nil
 		},
 	})
 
@@ -205,6 +223,34 @@ func main() {
 					}, nil
 				},
 			},
+			"searchResult": &graphql.Field{
+				Type: searchResultUnion,
+				Args: graphql.FieldConfigArgument{
+					"type": &graphql.ArgumentConfig{
+						Description: "type of the search result",
+						Type:        graphql.String,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					searchType := p.Args["type"].(string)
+					if searchType == "user" {
+						return map[string]interface{}{
+							"type": "user",
+							"id":   "user-1",
+							"name": "John Doe",
+						}, nil
+					}
+					if searchType == "product" {
+						return map[string]interface{}{
+							"type":  "product",
+							"id":    "product-1",
+							"name":  "GraphQL Book",
+							"price": 29.99,
+						}, nil
+					}
+					return nil, nil
+				},
+			},
 		},
 	})
 
@@ -248,6 +294,17 @@ func main() {
         id
         name
         price
+      }
+      searchResult(type: "user") {
+        ... on User {
+          id
+          name
+        }
+        ... on Product {
+          id
+          name
+          price
+        }
       }
     }
     `,

@@ -3,6 +3,7 @@ const {
   GraphQLSchema,
   GraphQLObjectType,
   GraphQLInterfaceType,
+  GraphQLUnionType,
   GraphQLInt,
   GraphQLFloat,
   GraphQLString,
@@ -95,6 +96,21 @@ const productType = new GraphQLObjectType({
         description: "The price of the product.",
       },
     };
+  },
+});
+
+const searchResultUnion = new GraphQLUnionType({
+  name: "SearchResult",
+  description: "A union of User and Product types.",
+  types: [userType, productType],
+  resolveType: (obj) => {
+    if (obj.type === "user") {
+      return userType;
+    }
+    if (obj.type === "product") {
+      return productType;
+    }
+    return null;
   },
 });
 
@@ -202,6 +218,33 @@ const implementationSchema = new GraphQLSchema({
           };
         },
       },
+      searchResult: {
+        type: searchResultUnion,
+        args: {
+          type: {
+            description: "type of the search result",
+            type: GraphQLString,
+          },
+        },
+        resolve(root, { type }) {
+          if (type === "user") {
+            return {
+              type: "user",
+              id: "user-1",
+              name: "John Doe",
+            };
+          }
+          if (type === "product") {
+            return {
+              type: "product",
+              id: "product-1",
+              name: "GraphQL Book",
+              price: 29.99,
+            };
+          }
+          return null;
+        },
+      },
     },
   }),
 });
@@ -239,6 +282,17 @@ graphql(
         id
         name
         price
+      }
+      searchResult(type: "user") {
+        ... on User {
+          id
+          name
+        }
+        ... on Product {
+          id
+          name
+          price
+        }
       }
     }
   `,
