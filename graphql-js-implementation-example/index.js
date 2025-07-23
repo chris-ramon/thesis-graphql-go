@@ -25,12 +25,11 @@ const objectType = new GraphQLObjectType({
 const objectTypeWithArguments = new GraphQLObjectType({
   name: "objectTypeWithArguments",
   description: "An object with arguments.",
-
   fields: () => {
     return {
       name: {
-        type: GraphQLString,
         description: "The name of the object.",
+        type: GraphQLString,
       },
     };
   },
@@ -82,8 +81,8 @@ const implementationSchema = new GraphQLSchema({
         type: objectTypeWithArguments,
         args: {
           id: {
-            type: GraphQLString,
             description: "id of the object with arguments",
+            type: GraphQLString,
           },
         },
         resolve(root, { id }) {
