@@ -2,6 +2,7 @@ const {
   graphql,
   GraphQLSchema,
   GraphQLObjectType,
+  GraphQLInterfaceType,
   GraphQLInt,
   GraphQLFloat,
   GraphQLString,
@@ -30,6 +31,68 @@ const objectTypeWithArguments = new GraphQLObjectType({
       name: {
         description: "The name of the object.",
         type: GraphQLString,
+      },
+    };
+  },
+});
+
+const nodeInterface = new GraphQLInterfaceType({
+  name: "Node",
+  description: "An object with an ID.",
+  fields: () => {
+    return {
+      id: {
+        type: GraphQLID,
+        description: "The ID of the object.",
+      },
+    };
+  },
+  resolveType: (obj) => {
+    if (obj.type === "user") {
+      return userType;
+    }
+    if (obj.type === "product") {
+      return productType;
+    }
+    return null;
+  },
+});
+
+const userType = new GraphQLObjectType({
+  name: "User",
+  description: "A user.",
+  interfaces: [nodeInterface],
+  fields: () => {
+    return {
+      id: {
+        type: GraphQLID,
+        description: "The ID of the user.",
+      },
+      name: {
+        type: GraphQLString,
+        description: "The name of the user.",
+      },
+    };
+  },
+});
+
+const productType = new GraphQLObjectType({
+  name: "Product",
+  description: "A product.",
+  interfaces: [nodeInterface],
+  fields: () => {
+    return {
+      id: {
+        type: GraphQLID,
+        description: "The ID of the product.",
+      },
+      name: {
+        type: GraphQLString,
+        description: "The name of the product.",
+      },
+      price: {
+        type: GraphQLFloat,
+        description: "The price of the product.",
       },
     };
   },
@@ -91,6 +154,54 @@ const implementationSchema = new GraphQLSchema({
           };
         },
       },
+      node: {
+        type: nodeInterface,
+        args: {
+          id: {
+            description: "id of the node",
+            type: GraphQLID,
+          },
+        },
+        resolve(root, { id }) {
+          if (id === "user-1") {
+            return {
+              type: "user",
+              id: "user-1",
+              name: "John Doe",
+            };
+          }
+          if (id === "product-1") {
+            return {
+              type: "product",
+              id: "product-1",
+              name: "GraphQL Book",
+              price: 29.99,
+            };
+          }
+          return null;
+        },
+      },
+      user: {
+        type: userType,
+        resolve() {
+          return {
+            type: "user",
+            id: "user-1",
+            name: "John Doe",
+          };
+        },
+      },
+      product: {
+        type: productType,
+        resolve() {
+          return {
+            type: "product",
+            id: "product-1",
+            name: "GraphQL Book",
+            price: 29.99,
+          };
+        },
+      },
     },
   }),
 });
@@ -109,6 +220,25 @@ graphql(
       }
       objectWithArguments(id: "1") {
         name
+      }
+      node(id: "user-1") {
+        id
+        ... on User {
+          name
+        }
+        ... on Product {
+          name
+          price
+        }
+      }
+      user {
+        id
+        name
+      }
+      product {
+        id
+        name
+        price
       }
     }
   `,
