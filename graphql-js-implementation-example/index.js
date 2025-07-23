@@ -9,6 +9,19 @@ const {
   GraphQLID,
 } = require("graphql");
 
+const objectType = new GraphQLObjectType({
+  name: "object",
+  description: "An object.",
+  fields: () => {
+    return {
+      name: {
+        type: GraphQLString,
+        description: "The name of the object.",
+      },
+    };
+  },
+});
+
 const implementationSchema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "RootQueryType",
@@ -43,6 +56,14 @@ const implementationSchema = new GraphQLSchema({
           return "d983b9d9-681c-4059-b5a3-5329d1c6f82d";
         },
       },
+      object: {
+        type: objectType,
+        resolve() {
+          return {
+            name: "Name of the object instance.",
+          };
+        },
+      },
     },
   }),
 });
@@ -56,6 +77,9 @@ graphql(
       float
       int
       string
+      object {
+        name
+      }
     }
   `,
 ).then((result) => {
