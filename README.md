@@ -1466,7 +1466,11 @@ Go open-source library that obtains GitHub information.
 
 # 5. Results
 
-TBC.
+**5.1. Implementation**
+The Go-based implementation, [`graphql-go/graphql`](https://github.com/graphql-go/graphql), is open-source and faithfully follows the April 2016 GraphQL Specification. It reproduces all core features—syntax parsing, type system, validation, execution, and introspection—within a clean, modular architecture.
+
+**5.2. Compatibility Validation**
+The compatibility study compares the official JavaScript reference implementation, [`graphql/graphql-js`](https://github.com/graphql/graphql-js), with the Go library [`graphql-go/graphql`](https://github.com/graphql-go/graphql). A custom open-source tool uses introspection to compare internal type systems, aiming to confirm compatibility across both libraries.
 
 # 6. Conclusions
 
