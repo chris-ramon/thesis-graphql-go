@@ -3,6 +3,10 @@ const {
   GraphQLSchema,
   GraphQLObjectType,
   GraphQLInt,
+  GraphQLFloat,
+  GraphQLString,
+  GraphQLBoolean,
+  GraphQLID,
 } = require("graphql");
 
 const implementationSchema = new GraphQLSchema({
@@ -15,6 +19,30 @@ const implementationSchema = new GraphQLSchema({
           return 20;
         },
       },
+      float: {
+        type: GraphQLFloat,
+        resolve() {
+          return 20.01;
+        },
+      },
+      ["string"]: {
+        type: GraphQLString,
+        resolve() {
+          return "str";
+        },
+      },
+      boolean: {
+        type: GraphQLBoolean,
+        resolve() {
+          return 20;
+        },
+      },
+      ID: {
+        type: GraphQLID,
+        resolve() {
+          return "d983b9d9-681c-4059-b5a3-5329d1c6f82d";
+        },
+      },
     },
   }),
 });
@@ -24,6 +52,10 @@ graphql(
   `
     {
       int
+      float
+      string
+      boolean
+      ID
     }
   `,
 ).then((result) => {
