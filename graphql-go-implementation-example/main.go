@@ -308,6 +308,22 @@ func main() {
 					return fmt.Sprintf("User created with name: %v, email: %v, age: %v", input["name"], input["email"], input["age"]), nil
 				},
 			},
+			"stringList": &graphql.Field{
+				Type: graphql.NewList(graphql.String),
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return []string{"first string", "second string", "third string"}, nil
+				},
+			},
+			"objectList": &graphql.Field{
+				Type: graphql.NewList(objectType),
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return []interface{}{
+						map[string]interface{}{"name": "First object in list"},
+						map[string]interface{}{"name": "Second object in list"},
+						map[string]interface{}{"name": "Third object in list"},
+					}, nil
+				},
+			},
 		},
 	})
 
@@ -365,6 +381,10 @@ func main() {
         }
       }
       createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
+      stringList
+      objectList {
+        name
+      }
     }
     `,
 	})
