@@ -1730,19 +1730,21 @@ const searchResultUnion = new GraphQLUnionType({
 ###### `graphql-go`
 
 ```go
-searchResultUnion := graphql.NewUnion(graphql.UnionConfig{
-  Name: "SearchResult",
-  Description: "A union of User and Product types.",
-  Types: []*graphql.Object{userType, productType},
-  ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
-    if obj, ok := p.Value.(map[string]interface{}); ok {
-      switch obj["type"] {
-      case "user": return userType
-      case "product": return productType
-      }
-    }
-    return nil
-  },
+searchResultUnion = graphql.NewUnion(graphql.UnionConfig{
+	Name:        "SearchResult",
+	Description: "A union of User and Product types.",
+	Types:       []*graphql.Object{userType, productType},
+	ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+		if obj, ok := p.Value.(map[string]interface{}); ok {
+			switch obj["type"] {
+			case "user":
+				return userType
+			case "product":
+				return productType
+			}
+		}
+		return nil
+	},
 })
 ```
 
