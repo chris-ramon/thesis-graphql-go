@@ -4,12 +4,32 @@ const {
   GraphQLObjectType,
   GraphQLInterfaceType,
   GraphQLUnionType,
+  GraphQLEnumType,
   GraphQLInt,
   GraphQLFloat,
   GraphQLString,
   GraphQLBoolean,
   GraphQLID,
 } = require("graphql");
+
+const episodeEnum = new GraphQLEnumType({
+  name: "Episode",
+  description: "The episodes of the Star Wars trilogy.",
+  values: {
+    NEWHOPE: {
+      value: 4,
+      description: "Star Wars Episode IV: A New Hope, released in 1977.",
+    },
+    EMPIRE: {
+      value: 5,
+      description: "Star Wars Episode V: The Empire Strikes Back, released in 1980.",
+    },
+    JEDI: {
+      value: 6,
+      description: "Star Wars Episode VI: Return of the Jedi, released in 1983.",
+    },
+  },
+});
 
 const objectType = new GraphQLObjectType({
   name: "object",
@@ -148,6 +168,12 @@ const implementationSchema = new GraphQLSchema({
           return "d983b9d9-681c-4059-b5a3-5329d1c6f82d";
         },
       },
+      episode: {
+        type: episodeEnum,
+        resolve() {
+          return 4;
+        },
+      },
       object: {
         type: objectType,
         resolve() {
@@ -258,6 +284,7 @@ graphql(
       float
       int
       string
+      episode
       object {
         name
       }
