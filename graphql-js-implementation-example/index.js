@@ -153,10 +153,6 @@ const searchResultUnion = new GraphQLUnionType({
   },
 });
 
-const stringListType = new GraphQLList(GraphQLString);
-
-const objectListType = new GraphQLList(objectType);
-
 const implementationSchema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "RootQueryType",
@@ -307,13 +303,13 @@ const implementationSchema = new GraphQLSchema({
         },
       },
       stringList: {
-        type: stringListType,
+        type: new GraphQLList(GraphQLString),
         resolve() {
           return ["first string", "second string", "third string"];
         },
       },
       objectList: {
-        type: objectListType,
+        type: new GraphQLList(objectType),
         resolve() {
           return [
             { name: "First object in list" },
