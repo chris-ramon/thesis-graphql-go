@@ -1761,8 +1761,14 @@ const enumType = new GraphQLEnumType({
   name: "Enum",
   description: "A enum.",
   values: {
-    FIRST_ENUM: { value: 1, description: "First enum value." },
-    SECOND_ENUM: { value: 2, description: "Second enum value." },
+    FIRST_ENUM: {
+      value: 1,
+      description: "First enum value.",
+    },
+    SECOND_ENUM: {
+      value: 2,
+      description: "Second enum value.",
+    },
   },
 });
 ```
