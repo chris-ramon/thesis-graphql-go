@@ -88,11 +88,11 @@ const nodeInterface = new GraphQLInterfaceType({
     };
   },
   resolveType: (obj) => {
-    if (obj.type === "user") {
-      return userType;
-    }
-    if (obj.type === "product") {
-      return productType;
+    switch (obj.type) {
+      case "user":
+        return userType;
+      case "product":
+        return productType;
     }
     return null;
   },
@@ -143,11 +143,11 @@ const searchResultUnion = new GraphQLUnionType({
   description: "A union of User and Product types.",
   types: [userType, productType],
   resolveType: (obj) => {
-    if (obj.type === "user") {
-      return userType;
-    }
-    if (obj.type === "product") {
-      return productType;
+    switch (obj.type) {
+      case "user":
+        return userType;
+      case "product":
+        return productType;
     }
     return null;
   },
