@@ -1827,13 +1827,22 @@ const userInputType = new GraphQLInputObjectType({
 
 ```go
 userInputType := graphql.NewInputObject(graphql.InputObjectConfig{
-  Name: "UserInput",
-  Description: "Input type for user data.",
-  Fields: graphql.InputObjectConfigFieldMap{
-    "name": &graphql.InputObjectFieldConfig{ Type: graphql.String },
-    "email": &graphql.InputObjectFieldConfig{ Type: graphql.String },
-    "age": &graphql.InputObjectFieldConfig{ Type: graphql.Int },
-  },
+	Name:        "UserInput",
+	Description: "Input type for user data.",
+	Fields: graphql.InputObjectConfigFieldMap{
+		"name": &graphql.InputObjectFieldConfig{
+			Type:        graphql.String,
+			Description: "The name of the user.",
+		},
+		"email": &graphql.InputObjectFieldConfig{
+			Type:        graphql.String,
+			Description: "The email of the user.",
+		},
+		"age": &graphql.InputObjectFieldConfig{
+			Type:        graphql.Int,
+			Description: "The age of the user.",
+		},
+	},
 })
 ```
 
