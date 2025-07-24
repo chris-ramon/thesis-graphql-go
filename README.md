@@ -33,7 +33,7 @@
 - [6. Conclusions](#6-conclusions)
 - [7. Recomendations](#7-recomendations)
 - [8. Acknowledgments](#8-acknowledgments)
-- [9. References](#8-references)
+- [9. References](#9-references)
 
 ## 1. Introduction
 This thesis developed the implementation of the GraphQL standard in the Go programming language and validated its compatibility.
