@@ -32,6 +32,25 @@ func main() {
 		},
 	})
 
+	userInputType := graphql.NewInputObject(graphql.InputObjectConfig{
+		Name:        "UserInput",
+		Description: "Input type for user data.",
+		Fields: graphql.InputObjectConfigFieldMap{
+			"name": &graphql.InputObjectFieldConfig{
+				Type:        graphql.String,
+				Description: "The name of the user.",
+			},
+			"email": &graphql.InputObjectFieldConfig{
+				Type:        graphql.String,
+				Description: "The email of the user.",
+			},
+			"age": &graphql.InputObjectFieldConfig{
+				Type:        graphql.Int,
+				Description: "The age of the user.",
+			},
+		},
+	})
+
 	objectType := graphql.NewObject(graphql.ObjectConfig{
 		Name: "object",
 		Fields: graphql.Fields{
@@ -276,6 +295,19 @@ func main() {
 					return nil, nil
 				},
 			},
+			"createUser": &graphql.Field{
+				Type: graphql.String,
+				Args: graphql.FieldConfigArgument{
+					"input": &graphql.ArgumentConfig{
+						Description: "input for creating a user",
+						Type:        userInputType,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					input := p.Args["input"].(map[string]interface{})
+					return fmt.Sprintf("User created with name: %v, email: %v, age: %v", input["name"], input["email"], input["age"]), nil
+				},
+			},
 		},
 	})
 
@@ -332,6 +364,7 @@ func main() {
           price
         }
       }
+      createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
     }
     `,
 	})
