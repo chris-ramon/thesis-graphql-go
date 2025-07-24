@@ -5,6 +5,7 @@ const {
   GraphQLInterfaceType,
   GraphQLUnionType,
   GraphQLEnumType,
+  GraphQLInputObjectType,
   GraphQLInt,
   GraphQLFloat,
   GraphQLString,
@@ -28,6 +29,27 @@ const episodeEnum = new GraphQLEnumType({
       value: 6,
       description: "Star Wars Episode VI: Return of the Jedi, released in 1983.",
     },
+  },
+});
+
+const userInputType = new GraphQLInputObjectType({
+  name: "UserInput",
+  description: "Input type for user data.",
+  fields: () => {
+    return {
+      name: {
+        type: GraphQLString,
+        description: "The name of the user.",
+      },
+      email: {
+        type: GraphQLString,
+        description: "The email of the user.",
+      },
+      age: {
+        type: GraphQLInt,
+        description: "The age of the user.",
+      },
+    };
   },
 });
 
@@ -271,6 +293,18 @@ const implementationSchema = new GraphQLSchema({
           return null;
         },
       },
+      createUser: {
+        type: GraphQLString,
+        args: {
+          input: {
+            description: "input for creating a user",
+            type: userInputType,
+          },
+        },
+        resolve(root, { input }) {
+          return `User created with name: ${input.name}, email: ${input.email}, age: ${input.age}`;
+        },
+      },
     },
   }),
 });
@@ -321,6 +355,7 @@ graphql(
           price
         }
       }
+      createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
     }
   `,
 ).then((result) => {
