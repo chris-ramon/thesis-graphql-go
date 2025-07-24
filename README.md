@@ -1464,13 +1464,443 @@ Description:
 Go open-source library that obtains GitHub information.
 
 
-# 5. Results
+### 5. Results
 
-**5.1. Implementation**
+#### Implementation
+
 The Go-based implementation, graphql-go/graphql, is a stable, open-source library developed in accordance with the April 2016 GraphQL Specification. It implements the full language, type system, validation logic, execution semantics, and introspection capabilities—within a simple and modular architecture.
 
-**5.2. Compatibility Validation**
+#### Compatibility Validation
+
 The compatibility study compares the official JavaScript reference implementation, [`graphql/graphql-js`](https://github.com/graphql/graphql-js), with the Go library [`graphql-go/graphql`](https://github.com/graphql-go/graphql). A custom open-source tool uses introspection to compare internal type systems, aiming to confirm compatibility across both libraries.
+
+#### Implementation: Type System
+
+To validate the implementation of the core GraphQL type system, we created equivalent fields and types in both the JavaScript and Go example applications using `graphql-js` and `graphql-go`, respectively. Both libraries follow an imperative schema definition pattern and maintain a near-identical API surface, faithfully reproducing the GraphQL Specification’s flexibility in schema construction styles while emphasizing programmatic control.
+
+This section presents the implementation details of various GraphQL type system elements. Each type is documented with side-by-side code snippets and concise descriptions to aid in comparative understanding.
+
+> **Note:** In all `graphql-go` examples, we adhere to Go coding style conventions. For instance, all `Resolve` functions return two values—data and an `error`—which is a fundamental idiom in Go for error handling.
+
+---
+
+##### 1. **Scalars**
+
+Scalars are the basic leaf values in GraphQL.
+
+###### `Int`
+
+###### `graphql-js`
+
+```js
+int: {
+  type: GraphQLInt,
+  resolve() {
+    return 20;
+  },
+},
+```
+
+###### `graphql-go`
+
+```go
+"int": &graphql.Field{
+  Type: graphql.Int,
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return 20, nil
+  },
+},
+```
+
+###### `Float`
+
+###### `graphql-js`
+
+```js
+float: {
+  type: GraphQLFloat,
+  resolve() {
+    return 20.01;
+  },
+},
+```
+
+###### `graphql-go`
+
+```go
+"float": &graphql.Field{
+  Type: graphql.Float,
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return 20.01, nil
+  },
+},
+```
+
+###### `String`
+
+###### `graphql-js`
+
+```js
+string: {
+  type: GraphQLString,
+  resolve() {
+    return "str";
+  },
+},
+```
+
+###### `graphql-go`
+
+```go
+"string": &graphql.Field{
+  Type: graphql.String,
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return "str", nil
+  },
+},
+```
+
+###### `Boolean`
+
+###### `graphql-js`
+
+```js
+boolean: {
+  type: GraphQLBoolean,
+  resolve() {
+    return true;
+  },
+},
+```
+
+###### `graphql-go`
+
+```go
+"boolean": &graphql.Field{
+  Type: graphql.Boolean,
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return true, nil
+  },
+},
+```
+
+###### `ID`
+
+###### `graphql-js`
+
+```js
+ID: {
+  type: GraphQLID,
+  resolve() {
+    return "d983b9d9-681c-4059-b5a3-5329d1c6f82d";
+  },
+},
+```
+
+###### `graphql-go`
+
+```go
+"ID": &graphql.Field{
+  Type: graphql.ID,
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return "d983b9d9-681c-4059-b5a3-5329d1c6f82d", nil
+  },
+},
+```
+
+---
+
+##### 2. **Objects**
+
+Defines structured data types with fields.
+
+###### `graphql-js`
+
+```js
+const objectTypeWithArguments = new GraphQLObjectType({
+  name: "objectTypeWithArguments",
+  description: "An object with arguments.",
+  fields: () => {
+    return {
+      name: {
+        description: "The name of the object.",
+        type: GraphQLString,
+      },
+    };
+  },
+});
+```
+
+###### `graphql-go`
+
+```go
+objectTypeWithArguments := graphql.NewObject(graphql.ObjectConfig{
+  Name: "objectTypeWithArguments",
+  Description: "An object with arguments.",
+  Fields: graphql.Fields{
+    "name": &graphql.Field{
+      Description: "The name of the object.",
+      Type: graphql.String,
+    },
+  },
+})
+```
+
+---
+
+###### 3. **Interfaces**
+
+Used to abstract fields shared by multiple types.
+
+###### `graphql-js`
+
+```js
+const nodeInterface = new GraphQLInterfaceType({
+  name: "Node",
+  description: "An object with an ID.",
+  fields: {
+    id: {
+      type: GraphQLID,
+      description: "The ID of the object."
+    }
+  },
+  resolveType(obj) {
+    switch (obj.type) {
+      case "user":
+        return userType;
+      case "product":
+        return productType;
+    }
+    return null;
+  },
+});
+```
+
+###### `graphql-go`
+
+```go
+nodeInterface = graphql.NewInterface(graphql.InterfaceConfig{
+	Name:        "Node",
+	Description: "An object with an ID.",
+	Fields: graphql.Fields{
+		"id": &graphql.Field{
+			Type:        graphql.ID,
+			Description: "The ID of the object.",
+		},
+	},
+	ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+		if obj, ok := p.Value.(map[string]interface{}); ok {
+			switch obj["type"] {
+			case "user":
+				return userType
+			case "product":
+				return productType
+			}
+		}
+		return nil
+	},
+})
+```
+
+---
+
+###### 4. **Unions**
+
+Allows fields to return one of multiple object types.
+
+###### `graphql-js`
+
+```js
+const searchResultUnion = new GraphQLUnionType({
+  name: "SearchResult",
+  description: "A union of User and Product types.",
+  types: [userType, productType],
+  resolveType: (obj) => {
+    switch (obj.type) {
+      case "user":
+        return userType;
+      case "product":
+        return productType;
+    }
+    return null;
+  },
+});
+```
+
+###### `graphql-go`
+
+```go
+searchResultUnion = graphql.NewUnion(graphql.UnionConfig{
+	Name:        "SearchResult",
+	Description: "A union of User and Product types.",
+	Types:       []*graphql.Object{userType, productType},
+	ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+		if obj, ok := p.Value.(map[string]interface{}); ok {
+			switch obj["type"] {
+			case "user":
+				return userType
+			case "product":
+				return productType
+			}
+		}
+		return nil
+	},
+})
+```
+
+---
+
+###### 5. **Enums**
+
+Defines a fixed set of possible values.
+
+###### `graphql-js`
+
+```js
+const enumType = new GraphQLEnumType({
+  name: "Enum",
+  description: "A enum.",
+  values: {
+    FIRST_ENUM: {
+      value: 1,
+      description: "First enum value.",
+    },
+    SECOND_ENUM: {
+      value: 2,
+      description: "Second enum value.",
+    },
+  },
+});
+```
+
+###### `graphql-go`
+
+```go
+enumType := graphql.NewEnum(graphql.EnumConfig{
+  Name: "Enum",
+  Description: "A enum.",
+  Values: graphql.EnumValueConfigMap{
+    "FIRST_ENUM": &graphql.EnumValueConfig{
+      Value: 1,
+      Description: "First enum value.",
+    },
+    "SECOND_ENUM": &graphql.EnumValueConfig{
+      Value: 2,
+      Description: "Second enum value.",
+    },
+  },
+})
+```
+
+---
+
+###### 6. **Input Objects**
+
+Used for passing structured input to queries or mutations.
+
+###### `graphql-js`
+
+```js
+const userInputType = new GraphQLInputObjectType({
+  name: "UserInput",
+  description: "Input type for user data.",
+  fields: () => {
+    return {
+      name: {
+        type: GraphQLString,
+        description: "The name of the user.",
+      },
+      email: {
+        type: GraphQLString,
+        description: "The email of the user.",
+      },
+      age: {
+        type: GraphQLInt,
+        description: "The age of the user.",
+      },
+    };
+  },
+});
+```
+
+###### `graphql-go`
+
+```go
+userInputType := graphql.NewInputObject(graphql.InputObjectConfig{
+	Name:        "UserInput",
+	Description: "Input type for user data.",
+	Fields: graphql.InputObjectConfigFieldMap{
+		"name": &graphql.InputObjectFieldConfig{
+			Type:        graphql.String,
+			Description: "The name of the user.",
+		},
+		"email": &graphql.InputObjectFieldConfig{
+			Type:        graphql.String,
+			Description: "The email of the user.",
+		},
+		"age": &graphql.InputObjectFieldConfig{
+			Type:        graphql.Int,
+			Description: "The age of the user.",
+		},
+	},
+})
+```
+
+---
+
+###### 7. **Lists**
+
+Represents arrays of values or objects.
+
+###### `graphql-js`
+
+```js
+stringList: {
+  type: new GraphQLList(GraphQLString),
+  resolve() {
+    return ["first string", "second string", "third string"];
+  },
+},
+
+objectList: {
+  type: new GraphQLList(objectType),
+  resolve() {
+    return [
+      { name: "First object in list" },
+      { name: "Second object in list" },
+      { name: "Third object in list" },
+    ];
+  },
+},
+```
+
+###### `graphql-go`
+
+```go
+"stringList": &graphql.Field{
+  Type: graphql.NewList(graphql.String),
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return []string{"first string", "second string", "third string"}, nil
+  },
+},
+
+"objectList": &graphql.Field{
+  Type: graphql.NewList(objectType),
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return []interface{}{
+      map[string]interface{}{ "name": "First object in list" },
+      map[string]interface{}{ "name": "Second object in list" },
+      map[string]interface{}{ "name": "Third object in list" },
+    }, nil
+  },
+},
+```
+
+---
+
+This detailed breakdown forms the foundation for the Conclusions section, where we compare design patterns and resolver behaviors across implementations.
+
+This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
 
 # 6. Conclusions
 

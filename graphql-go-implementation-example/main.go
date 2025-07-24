@@ -83,10 +83,10 @@ func main() {
 		},
 		ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
 			if obj, ok := p.Value.(map[string]interface{}); ok {
-				if objType, exists := obj["type"]; exists && objType == "user" {
+				switch obj["type"] {
+				case "user":
 					return userType
-				}
-				if objType, exists := obj["type"]; exists && objType == "product" {
+				case "product":
 					return productType
 				}
 			}
@@ -136,10 +136,10 @@ func main() {
 		Types:       []*graphql.Object{userType, productType},
 		ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
 			if obj, ok := p.Value.(map[string]interface{}); ok {
-				if objType, exists := obj["type"]; exists && objType == "user" {
+				switch obj["type"] {
+				case "user":
 					return userType
-				}
-				if objType, exists := obj["type"]; exists && objType == "product" {
+				case "product":
 					return productType
 				}
 			}
