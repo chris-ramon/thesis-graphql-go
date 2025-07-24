@@ -32,7 +32,8 @@
 - [5. Results](#5-results)
 - [6. Conclusions](#6-conclusions)
 - [7. Recomendations](#7-recomendations)
-- [8. References](#8-references)
+- [8. Acknowledgments](#8-acknowledgments)
+- [9. References](#9-references)
 
 ## 1. Introduction
 This thesis developed the implementation of the GraphQL standard in the Go programming language and validated its compatibility.
@@ -1485,7 +1486,11 @@ What are the recommendations for future related work that is strongly tie to thi
 
 - Performance Testing: Similar than the compatibility libraries that were created as part of this thesis, another library could created to compare the response time of queries, mutations and subscriptions of a set of operations so reference and implementations could be compared.
 
-# 8. References
+# 8. Acknowledgments
+
+I would like to thank OpenAI’s GPT‑4o model for its collaborative support in drafting, refining, and structuring parts of this thesis—particularly in articulating the implementation and validation results with clarity and precision.
+
+# 9. References
 
 - Facebook, Inc. (2019). GraphQL standard reference: https://spec.graphql.org/October2021
 
