@@ -1680,23 +1680,25 @@ const nodeInterface = new GraphQLInterfaceType({
 
 ```go
 nodeInterface = graphql.NewInterface(graphql.InterfaceConfig{
-  Name: "Node",
-  Description: "An object with an ID.",
-  Fields: graphql.Fields{
-    "id": &graphql.Field{
-      Type: graphql.ID,
-      Description: "The ID of the object.",
-    },
-  },
-  ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
-    if obj, ok := p.Value.(map[string]interface{}); ok {
-      switch obj["type"] {
-      case "user": return userType
-      case "product": return productType
-      }
-    }
-    return nil
-  },
+	Name:        "Node",
+	Description: "An object with an ID.",
+	Fields: graphql.Fields{
+		"id": &graphql.Field{
+			Type:        graphql.ID,
+			Description: "The ID of the object.",
+		},
+	},
+	ResolveType: func(p graphql.ResolveTypeParams) *graphql.Object {
+		if obj, ok := p.Value.(map[string]interface{}); ok {
+			switch obj["type"] {
+			case "user":
+				return userType
+			case "product":
+				return productType
+			}
+		}
+		return nil
+	},
 })
 ```
 
