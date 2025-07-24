@@ -6,6 +6,7 @@ const {
   GraphQLUnionType,
   GraphQLEnumType,
   GraphQLInputObjectType,
+  GraphQLList,
   GraphQLInt,
   GraphQLFloat,
   GraphQLString,
@@ -156,6 +157,10 @@ const searchResultUnion = new GraphQLUnionType({
   },
 });
 
+const stringListType = new GraphQLList(GraphQLString);
+
+const objectListType = new GraphQLList(objectType);
+
 const implementationSchema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "RootQueryType",
@@ -305,6 +310,22 @@ const implementationSchema = new GraphQLSchema({
           return `User created with name: ${input.name}, email: ${input.email}, age: ${input.age}`;
         },
       },
+      stringList: {
+        type: stringListType,
+        resolve() {
+          return ["first string", "second string", "third string"];
+        },
+      },
+      objectList: {
+        type: objectListType,
+        resolve() {
+          return [
+            { name: "First object in list" },
+            { name: "Second object in list" },
+            { name: "Third object in list" },
+          ];
+        },
+      },
     },
   }),
 });
@@ -356,6 +377,10 @@ graphql(
         }
       }
       createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
+      stringList
+      objectList {
+        name
+      }
     }
   `,
 ).then((result) => {
