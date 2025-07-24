@@ -23,11 +23,13 @@ const episodeEnum = new GraphQLEnumType({
     },
     EMPIRE: {
       value: 5,
-      description: "Star Wars Episode V: The Empire Strikes Back, released in 1980.",
+      description:
+        "Star Wars Episode V: The Empire Strikes Back, released in 1980.",
     },
     JEDI: {
       value: 6,
-      description: "Star Wars Episode VI: Return of the Jedi, released in 1983.",
+      description:
+        "Star Wars Episode VI: Return of the Jedi, released in 1983.",
     },
   },
 });
@@ -172,7 +174,7 @@ const implementationSchema = new GraphQLSchema({
           return 20.01;
         },
       },
-      ["string"]: {
+      string: {
         type: GraphQLString,
         resolve() {
           return "str";
