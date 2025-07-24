@@ -1804,10 +1804,21 @@ Used for passing structured input to queries or mutations.
 const userInputType = new GraphQLInputObjectType({
   name: "UserInput",
   description: "Input type for user data.",
-  fields: {
-    name: { type: GraphQLString },
-    email: { type: GraphQLString },
-    age: { type: GraphQLInt },
+  fields: () => {
+    return {
+      name: {
+        type: GraphQLString,
+        description: "The name of the user.",
+      },
+      email: {
+        type: GraphQLString,
+        description: "The email of the user.",
+      },
+      age: {
+        type: GraphQLInt,
+        description: "The age of the user.",
+      },
+    };
   },
 });
 ```
