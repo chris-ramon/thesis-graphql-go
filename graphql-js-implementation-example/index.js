@@ -14,21 +14,17 @@ const {
   GraphQLID,
 } = require("graphql");
 
-const episodeEnum = new GraphQLEnumType({
-  name: "Episode",
-  description: "The episodes of the Star Wars trilogy.",
+const enumType = new GraphQLEnumType({
+  name: "Enum",
+  description: "A enum.",
   values: {
-    NEWHOPE: {
-      value: 4,
-      description: "Star Wars Episode IV: A New Hope, released in 1977.",
+    FIRST_ENUM: {
+      value: 1,
+      description: "First enum value.",
     },
-    EMPIRE: {
-      value: 5,
-      description: "Star Wars Episode V: The Empire Strikes Back, released in 1980.",
-    },
-    JEDI: {
-      value: 6,
-      description: "Star Wars Episode VI: Return of the Jedi, released in 1983.",
+    SECOND_ENUM: {
+      value: 2,
+      description: "Second enum value.",
     },
   },
 });
@@ -177,7 +173,7 @@ const implementationSchema = new GraphQLSchema({
           return 20.01;
         },
       },
-      ["string"]: {
+      string: {
         type: GraphQLString,
         resolve() {
           return "str";
@@ -195,10 +191,10 @@ const implementationSchema = new GraphQLSchema({
           return "d983b9d9-681c-4059-b5a3-5329d1c6f82d";
         },
       },
-      episode: {
-        type: episodeEnum,
+      enum: {
+        type: enumType,
         resolve() {
-          return 4;
+          return 2;
         },
       },
       object: {
@@ -339,7 +335,7 @@ graphql(
       float
       int
       string
-      episode
+      enum
       object {
         name
       }

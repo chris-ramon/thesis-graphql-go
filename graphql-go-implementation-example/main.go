@@ -13,21 +13,17 @@ func main() {
 		log.Fatal(err)
 	}
 
-	episodeEnum := graphql.NewEnum(graphql.EnumConfig{
-		Name:        "Episode",
-		Description: "The episodes of the Star Wars trilogy.",
+	enumType := graphql.NewEnum(graphql.EnumConfig{
+		Name:        "Enum",
+		Description: "A enum.",
 		Values: graphql.EnumValueConfigMap{
-			"NEWHOPE": &graphql.EnumValueConfig{
-				Value:       4,
-				Description: "Star Wars Episode IV: A New Hope, released in 1977.",
+			"FIRST_ENUM": &graphql.EnumValueConfig{
+				Value:       1,
+				Description: "First enum value.",
 			},
-			"EMPIRE": &graphql.EnumValueConfig{
-				Value:       5,
-				Description: "Star Wars Episode V: The Empire Strikes Back, released in 1980.",
-			},
-			"JEDI": &graphql.EnumValueConfig{
-				Value:       6,
-				Description: "Star Wars Episode VI: Return of the Jedi, released in 1983.",
+			"SECOND_ENUM": &graphql.EnumValueConfig{
+				Value:       2,
+				Description: "Second enum value.",
 			},
 		},
 	})
@@ -184,10 +180,10 @@ func main() {
 					return "d983b9d9-681c-4059-b5a3-5329d1c6f82d", nil
 				},
 			},
-			"episode": &graphql.Field{
-				Type: episodeEnum,
+			"enum": &graphql.Field{
+				Type: enumType,
 				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
-					return 4, nil
+					return 2, nil
 				},
 			},
 			"object": &graphql.Field{
@@ -343,7 +339,7 @@ func main() {
       string
       boolean
       ID
-      episode
+      enum
       object {
         name
       }
