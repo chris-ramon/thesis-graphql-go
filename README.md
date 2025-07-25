@@ -1922,7 +1922,7 @@ Below are the outputs returned by each library. Identical structures and values 
 
 #### ✅ Query Results
 
-**Identical outputs were observed across both implementations.**
+**Identical outputs** were observed across both implementations.
 
 ```json
 {
