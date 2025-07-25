@@ -110,6 +110,21 @@ func main() {
 		},
 	})
 
+	userTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
+		Name:        "UserNonNull",
+		Description: "A user with non-null fields.",
+		Fields: graphql.Fields{
+			"id": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.ID),
+				Description: "The non-null ID of the user.",
+			},
+			"name": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.String),
+				Description: "The non-null name of the user.",
+			},
+		},
+	})
+
 	productType = graphql.NewObject(graphql.ObjectConfig{
 		Name:        "Product",
 		Description: "A product.",
@@ -126,6 +141,25 @@ func main() {
 			"price": &graphql.Field{
 				Type:        graphql.Float,
 				Description: "The price of the product.",
+			},
+		},
+	})
+
+	productTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
+		Name:        "ProductNonNull",
+		Description: "A product with non-null fields.",
+		Fields: graphql.Fields{
+			"id": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.ID),
+				Description: "The non-null ID of the product.",
+			},
+			"name": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.String),
+				Description: "The non-null name of the product.",
+			},
+			"price": &graphql.Field{
+				Type:        graphql.NewNonNull(graphql.Float),
+				Description: "The non-null price of the product.",
 			},
 		},
 	})
@@ -320,6 +354,25 @@ func main() {
 					}, nil
 				},
 			},
+			"userNonNull": &graphql.Field{
+				Type: userTypeNonNull,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return map[string]interface{}{
+						"id":   "user-non-null-1",
+						"name": "John Doe Non-Null",
+					}, nil
+				},
+			},
+			"productNonNull": &graphql.Field{
+				Type: productTypeNonNull,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return map[string]interface{}{
+						"id":    "product-non-null-1",
+						"name":  "GraphQL Book Non-Null",
+						"price": 39.99,
+					}, nil
+				},
+			},
 		},
 	})
 
@@ -380,6 +433,15 @@ func main() {
       stringList
       objectList {
         name
+      }
+      userNonNull {
+        id
+        name
+      }
+      productNonNull {
+        id
+        name
+        price
       }
     }
     `,

@@ -7,6 +7,7 @@ const {
   GraphQLEnumType,
   GraphQLInputObjectType,
   GraphQLList,
+  GraphQLNonNull,
   GraphQLInt,
   GraphQLFloat,
   GraphQLString,
@@ -116,6 +117,23 @@ const userType = new GraphQLObjectType({
   },
 });
 
+const userTypeNonNull = new GraphQLObjectType({
+  name: "UserNonNull",
+  description: "A user with non-null fields.",
+  fields: () => {
+    return {
+      id: {
+        type: new GraphQLNonNull(GraphQLID),
+        description: "The non-null ID of the user.",
+      },
+      name: {
+        type: new GraphQLNonNull(GraphQLString),
+        description: "The non-null name of the user.",
+      },
+    };
+  },
+});
+
 const productType = new GraphQLObjectType({
   name: "Product",
   description: "A product.",
@@ -133,6 +151,27 @@ const productType = new GraphQLObjectType({
       price: {
         type: GraphQLFloat,
         description: "The price of the product.",
+      },
+    };
+  },
+});
+
+const productTypeNonNull = new GraphQLObjectType({
+  name: "ProductNonNull",
+  description: "A product with non-null fields.",
+  fields: () => {
+    return {
+      id: {
+        type: new GraphQLNonNull(GraphQLID),
+        description: "The non-null ID of the product.",
+      },
+      name: {
+        type: new GraphQLNonNull(GraphQLString),
+        description: "The non-null name of the product.",
+      },
+      price: {
+        type: new GraphQLNonNull(GraphQLFloat),
+        description: "The non-null price of the product.",
       },
     };
   },
@@ -318,6 +357,25 @@ const implementationSchema = new GraphQLSchema({
           ];
         },
       },
+      userNonNull: {
+        type: userTypeNonNull,
+        resolve() {
+          return {
+            id: "user-non-null-1",
+            name: "John Doe Non-Null",
+          };
+        },
+      },
+      productNonNull: {
+        type: productTypeNonNull,
+        resolve() {
+          return {
+            id: "product-non-null-1",
+            name: "GraphQL Book Non-Null",
+            price: 39.99,
+          };
+        },
+      },
     },
   }),
 });
@@ -372,6 +430,15 @@ graphql(
       stringList
       objectList {
         name
+      }
+      userNonNull {
+        id
+        name
+      }
+      productNonNull {
+        id
+        name
+        price
       }
     }
   `,
