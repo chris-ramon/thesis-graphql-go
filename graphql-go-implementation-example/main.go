@@ -650,8 +650,8 @@ func main() {
     }
     `,
 		VariableValues: map[string]interface{}{
-			"skipUserName":     false,
-			"skipProductPrice": true,
+			"skipUserName":        false,
+			"skipProductPrice":    true,
 			"includeUserName":     true,
 			"includeProductPrice": false,
 		},
