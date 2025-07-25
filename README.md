@@ -2012,6 +2012,65 @@ query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boole
 
 ---
 
+###### 11. **Mutations**
+
+Represents an operation to mutate data.
+
+###### `graphql-js`
+
+```
+mutation: new GraphQLObjectType({
+  name: "RootMutationType",
+  fields: {
+    createUser: {
+      type: userType,
+      args: {
+        input: {
+          description: "input for creating a user",
+          type: userInputType,
+        },
+      },
+      resolve(root, { input }) {
+        return {
+          type: "user",
+          id: `user-${Date.now()}`,
+          name: input.name,
+        };
+      },
+    },
+  },
+}),
+```
+
+###### `graphql-go`
+
+```
+mutationType := graphql.NewObject(graphql.ObjectConfig{
+	Name: "Mutation",
+	Fields: graphql.Fields{
+		"createUser": &graphql.Field{
+			Type: userType,
+			Args: graphql.FieldConfigArgument{
+				"input": &graphql.ArgumentConfig{
+					Description: "input for creating a user",
+					Type:        userInputType,
+				},
+			},
+			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+				input := p.Args["input"].(map[string]interface{})
+				return map[string]interface{}{
+					"type": "user",
+					"id":   fmt.Sprintf("user-%d", time.Now().Unix()),
+					"name": input["name"],
+				}, nil
+			},
+		},
+	},
+})
+```
+
+---
+
 This detailed breakdown forms the foundation for the Conclusions section, where we compare design patterns and resolver behaviors across implementations.
 
 This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
