@@ -51,6 +51,23 @@ const userInputType = new GraphQLInputObjectType({
   },
 });
 
+const productInputType = new GraphQLInputObjectType({
+  name: "ProductInput",
+  description: "Input type for product data.",
+  fields: () => {
+    return {
+      name: {
+        type: GraphQLString,
+        description: "The name of the product.",
+      },
+      price: {
+        type: GraphQLFloat,
+        description: "The price of the product.",
+      },
+    };
+  },
+});
+
 const objectType = new GraphQLObjectType({
   name: "object",
   description: "An object.",
@@ -329,18 +346,6 @@ const implementationSchema = new GraphQLSchema({
           return null;
         },
       },
-      createUser: {
-        type: GraphQLString,
-        args: {
-          input: {
-            description: "input for creating a user",
-            type: userInputType,
-          },
-        },
-        resolve(root, { input }) {
-          return `User created with name: ${input.name}, email: ${input.email}, age: ${input.age}`;
-        },
-      },
       stringList: {
         type: new GraphQLList(GraphQLString),
         resolve() {
@@ -374,6 +379,109 @@ const implementationSchema = new GraphQLSchema({
             name: "GraphQL Book Non-Null",
             price: 39.99,
           };
+        },
+      },
+    },
+  }),
+  mutation: new GraphQLObjectType({
+    name: "RootMutationType",
+    fields: {
+      createUser: {
+        type: userType,
+        args: {
+          input: {
+            description: "input for creating a user",
+            type: userInputType,
+          },
+        },
+        resolve(root, { input }) {
+          return {
+            type: "user",
+            id: `user-${Date.now()}`,
+            name: input.name,
+          };
+        },
+      },
+      createProduct: {
+        type: productType,
+        args: {
+          input: {
+            description: "input for creating a product",
+            type: productInputType,
+          },
+        },
+        resolve(root, { input }) {
+          return {
+            type: "product",
+            id: `product-${Date.now()}`,
+            name: input.name,
+            price: input.price,
+          };
+        },
+      },
+      updateUser: {
+        type: userType,
+        args: {
+          id: {
+            description: "id of the user to update",
+            type: new GraphQLNonNull(GraphQLID),
+          },
+          input: {
+            description: "input for updating a user",
+            type: userInputType,
+          },
+        },
+        resolve(root, { id, input }) {
+          return {
+            type: "user",
+            id: id,
+            name: input.name,
+          };
+        },
+      },
+      updateProduct: {
+        type: productType,
+        args: {
+          id: {
+            description: "id of the product to update",
+            type: new GraphQLNonNull(GraphQLID),
+          },
+          input: {
+            description: "input for updating a product",
+            type: productInputType,
+          },
+        },
+        resolve(root, { id, input }) {
+          return {
+            type: "product",
+            id: id,
+            name: input.name,
+            price: input.price,
+          };
+        },
+      },
+      deleteUser: {
+        type: GraphQLString,
+        args: {
+          id: {
+            description: "id of the user to delete",
+            type: new GraphQLNonNull(GraphQLID),
+          },
+        },
+        resolve(root, { id }) {
+          return `User with id: ${id} deleted successfully`;
+        },
+      },
+      deleteProduct: {
+        type: GraphQLString,
+        args: {
+          id: {
+            description: "id of the product to delete",
+            type: new GraphQLNonNull(GraphQLID),
+          },
+        },
+        resolve(root, { id }) {
+          return `Product with id: ${id} deleted successfully`;
         },
       },
     },
@@ -426,7 +534,6 @@ graphql(
           price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
         }
       }
-      createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
       stringList
       objectList {
         name
@@ -441,6 +548,28 @@ graphql(
         price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
       }
     }
+    mutation ExampleMutation {
+      createUser(input: { name: "Alice", email: "alice@example.com", age: 30 }) {
+        id
+        name
+      }
+      createProduct(input: { name: "GraphQL Guide", price: 49.99 }) {
+        id
+        name
+        price
+      }
+      updateUser(id: "user-1", input: { name: "Alice Updated", email: "alice.updated@example.com", age: 31 }) {
+        id
+        name
+      }
+      updateProduct(id: "product-1", input: { name: "GraphQL Guide Updated", price: 59.99 }) {
+        id
+        name
+        price
+      }
+      deleteUser(id: "user-2")
+      deleteProduct(id: "product-2")
+    }
   `,
   null,
   null,
@@ -450,9 +579,50 @@ graphql(
     includeUserName: true,
     includeProductPrice: false,
   },
+  "ExampleQuery",
 ).then((result) => {
   if (result.errors) {
-    console.log(result.errors);
+    console.log("Query errors:", result.errors);
   }
+  console.log("Query results:");
+  console.log(JSON.stringify(result.data, null, 4));
+  
+  // Now run the mutation
+  return graphql(
+    implementationSchema,
+    `
+      mutation ExampleMutation {
+        createUser(input: { name: "Alice", email: "alice@example.com", age: 30 }) {
+          id
+          name
+        }
+        createProduct(input: { name: "GraphQL Guide", price: 49.99 }) {
+          id
+          name
+          price
+        }
+        updateUser(id: "user-1", input: { name: "Alice Updated", email: "alice.updated@example.com", age: 31 }) {
+          id
+          name
+        }
+        updateProduct(id: "product-1", input: { name: "GraphQL Guide Updated", price: 59.99 }) {
+          id
+          name
+          price
+        }
+        deleteUser(id: "user-2")
+        deleteProduct(id: "product-2")
+      }
+    `,
+    null,
+    null,
+    {},
+    "ExampleMutation"
+  );
+}).then((result) => {
+  if (result.errors) {
+    console.log("Mutation errors:", result.errors);
+  }
+  console.log("Mutation results:");
   console.log(JSON.stringify(result.data, null, 4));
 });

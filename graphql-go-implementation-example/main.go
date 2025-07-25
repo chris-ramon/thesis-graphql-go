@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/graphql-go/graphql"
 )
@@ -43,6 +44,21 @@ func main() {
 			"age": &graphql.InputObjectFieldConfig{
 				Type:        graphql.Int,
 				Description: "The age of the user.",
+			},
+		},
+	})
+
+	productInputType := graphql.NewInputObject(graphql.InputObjectConfig{
+		Name:        "ProductInput",
+		Description: "Input type for product data.",
+		Fields: graphql.InputObjectConfigFieldMap{
+			"name": &graphql.InputObjectFieldConfig{
+				Type:        graphql.String,
+				Description: "The name of the product.",
+			},
+			"price": &graphql.InputObjectFieldConfig{
+				Type:        graphql.Float,
+				Description: "The price of the product.",
 			},
 		},
 	})
@@ -325,19 +341,6 @@ func main() {
 					return nil, nil
 				},
 			},
-			"createUser": &graphql.Field{
-				Type: graphql.String,
-				Args: graphql.FieldConfigArgument{
-					"input": &graphql.ArgumentConfig{
-						Description: "input for creating a user",
-						Type:        userInputType,
-					},
-				},
-				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
-					input := p.Args["input"].(map[string]interface{})
-					return fmt.Sprintf("User created with name: %v, email: %v, age: %v", input["name"], input["email"], input["age"]), nil
-				},
-			},
 			"stringList": &graphql.Field{
 				Type: graphql.NewList(graphql.String),
 				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
@@ -376,14 +379,127 @@ func main() {
 		},
 	})
 
+	mutationType := graphql.NewObject(graphql.ObjectConfig{
+		Name: "Mutation",
+		Fields: graphql.Fields{
+			"createUser": &graphql.Field{
+				Type: userType,
+				Args: graphql.FieldConfigArgument{
+					"input": &graphql.ArgumentConfig{
+						Description: "input for creating a user",
+						Type:        userInputType,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					input := p.Args["input"].(map[string]interface{})
+					return map[string]interface{}{
+						"type": "user",
+						"id":   fmt.Sprintf("user-%d", time.Now().Unix()),
+						"name": input["name"],
+					}, nil
+				},
+			},
+			"createProduct": &graphql.Field{
+				Type: productType,
+				Args: graphql.FieldConfigArgument{
+					"input": &graphql.ArgumentConfig{
+						Description: "input for creating a product",
+						Type:        productInputType,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					input := p.Args["input"].(map[string]interface{})
+					return map[string]interface{}{
+						"type":  "product",
+						"id":    fmt.Sprintf("product-%d", time.Now().Unix()),
+						"name":  input["name"],
+						"price": input["price"],
+					}, nil
+				},
+			},
+			"updateUser": &graphql.Field{
+				Type: userType,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the user to update",
+						Type:        graphql.NewNonNull(graphql.ID),
+					},
+					"input": &graphql.ArgumentConfig{
+						Description: "input for updating a user",
+						Type:        userInputType,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					input := p.Args["input"].(map[string]interface{})
+					return map[string]interface{}{
+						"type": "user",
+						"id":   id,
+						"name": input["name"],
+					}, nil
+				},
+			},
+			"updateProduct": &graphql.Field{
+				Type: productType,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the product to update",
+						Type:        graphql.NewNonNull(graphql.ID),
+					},
+					"input": &graphql.ArgumentConfig{
+						Description: "input for updating a product",
+						Type:        productInputType,
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					input := p.Args["input"].(map[string]interface{})
+					return map[string]interface{}{
+						"type":  "product",
+						"id":    id,
+						"name":  input["name"],
+						"price": input["price"],
+					}, nil
+				},
+			},
+			"deleteUser": &graphql.Field{
+				Type: graphql.String,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the user to delete",
+						Type:        graphql.NewNonNull(graphql.ID),
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					return fmt.Sprintf("User with id: %s deleted successfully", id), nil
+				},
+			},
+			"deleteProduct": &graphql.Field{
+				Type: graphql.String,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the product to delete",
+						Type:        graphql.NewNonNull(graphql.ID),
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					return fmt.Sprintf("Product with id: %s deleted successfully", id), nil
+				},
+			},
+		},
+	})
+
 	implementationSchema, err := graphql.NewSchema(graphql.SchemaConfig{
-		Query: queryType,
+		Query:    queryType,
+		Mutation: mutationType,
 	})
 	if err != nil {
 		handleErr(err)
 	}
 
-	result := graphql.Do(graphql.Params{
+	queryResult := graphql.Do(graphql.Params{
 		Schema: implementationSchema,
 		RequestString: `
     query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
@@ -429,7 +545,6 @@ func main() {
           price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
         }
       }
-      createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
       stringList
       objectList {
         name
@@ -451,12 +566,50 @@ func main() {
 			"includeUserName":     true,
 			"includeProductPrice": false,
 		},
+		OperationName: "ExampleQuery",
 	})
 
-	d, err := json.MarshalIndent(result, "", "    ")
+	d, err := json.MarshalIndent(queryResult, "", "    ")
 	if err != nil {
 		handleErr(err)
 	}
 
-	log.Printf("%+v", string(d))
+	log.Printf("Query results: %+v", string(d))
+
+	// Now run the mutation
+	mutationResult := graphql.Do(graphql.Params{
+		Schema: implementationSchema,
+		RequestString: `
+    mutation ExampleMutation {
+      createUser(input: { name: "Alice", email: "alice@example.com", age: 30 }) {
+        id
+        name
+      }
+      createProduct(input: { name: "GraphQL Guide", price: 49.99 }) {
+        id
+        name
+        price
+      }
+      updateUser(id: "user-1", input: { name: "Alice Updated", email: "alice.updated@example.com", age: 31 }) {
+        id
+        name
+      }
+      updateProduct(id: "product-1", input: { name: "GraphQL Guide Updated", price: 59.99 }) {
+        id
+        name
+        price
+      }
+      deleteUser(id: "user-2")
+      deleteProduct(id: "product-2")
+    }
+    `,
+		OperationName: "ExampleMutation",
+	})
+
+	d2, err := json.MarshalIndent(mutationResult, "", "    ")
+	if err != nil {
+		handleErr(err)
+	}
+
+	log.Printf("Mutation results: %+v", string(d2))
 }
