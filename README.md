@@ -1968,6 +1968,28 @@ userTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
 
 ---
 
+###### 8. **Directives @skip**
+
+Allows for conditional exclusion during execution.
+
+###### `graphql-js`
+
+```
+query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
+ // ...
+}
+```
+
+###### `graphql-go`
+
+```
+query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
+ // ...
+}
+```
+
+---
+
 This detailed breakdown forms the foundation for the Conclusions section, where we compare design patterns and resolver behaviors across implementations.
 
 This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
