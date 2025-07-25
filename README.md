@@ -2071,6 +2071,52 @@ mutationType := graphql.NewObject(graphql.ObjectConfig{
 
 ---
 
+###### 11. **Subscriptions**
+
+Represents an operation for subscribing to data.
+
+###### `graphql-js`
+
+```
+subscription: new GraphQLObjectType({
+  name: "RootSubscriptionType",
+  fields: {
+    userAdded: {
+      type: userType,
+      resolve() {
+        return {
+          type: "user",
+          id: `user-${Date.now()}`,
+          name: "New User Added",
+        };
+      },
+    },
+  },
+}),
+```
+
+###### `graphql-go`
+
+```
+subscriptionType := graphql.NewObject(graphql.ObjectConfig{
+	Name: "Subscription",
+	Fields: graphql.Fields{
+		"userAdded": &graphql.Field{
+			Type: userType,
+			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+				return map[string]interface{}{
+					"type": "user",
+					"id":   fmt.Sprintf("user-%d", time.Now().Unix()),
+					"name": "New User Added",
+				}, nil
+			},
+		},
+	},
+})
+```
+
+---
+
 This detailed breakdown forms the foundation for the Conclusions section, where we compare design patterns and resolver behaviors across implementations.
 
 This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
