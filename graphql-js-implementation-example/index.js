@@ -383,7 +383,7 @@ const implementationSchema = new GraphQLSchema({
 graphql(
   implementationSchema,
   `
-    {
+    query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!) {
       ID
       boolean
       float
@@ -399,31 +399,31 @@ graphql(
       node(id: "user-1") {
         id
         ... on User {
-          name
+          name @skip(if: $skipUserName)
         }
         ... on Product {
           name
-          price
+          price @skip(if: $skipProductPrice)
         }
       }
       user {
         id
-        name
+        name @skip(if: $skipUserName)
       }
       product {
         id
         name
-        price
+        price @skip(if: $skipProductPrice)
       }
       searchResult(type: "user") {
         ... on User {
           id
-          name
+          name @skip(if: $skipUserName)
         }
         ... on Product {
           id
           name
-          price
+          price @skip(if: $skipProductPrice)
         }
       }
       createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
@@ -433,15 +433,21 @@ graphql(
       }
       userNonNull {
         id
-        name
+        name @skip(if: $skipUserName)
       }
       productNonNull {
         id
         name
-        price
+        price @skip(if: $skipProductPrice)
       }
     }
   `,
+  null,
+  null,
+  {
+    skipUserName: false,
+    skipProductPrice: true,
+  },
 ).then((result) => {
   if (result.errors) {
     console.log(result.errors);
