@@ -574,7 +574,12 @@ const implementationSchema = new GraphQLSchema({
 graphql(
   implementationSchema,
   `
-    query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
+    query ExampleQuery(
+      $skipUserName: Boolean!
+      $skipProductPrice: Boolean!
+      $includeUserName: Boolean!
+      $includeProductPrice: Boolean!
+    ) {
       ID
       boolean
       float
@@ -632,7 +637,9 @@ graphql(
       }
     }
     mutation ExampleMutation {
-      createUser(input: { name: "Alice", email: "alice@example.com", age: 30 }) {
+      createUser(
+        input: { name: "Alice", email: "alice@example.com", age: 30 }
+      ) {
         id
         name
       }
@@ -641,11 +648,21 @@ graphql(
         name
         price
       }
-      updateUser(id: "user-1", input: { name: "Alice Updated", email: "alice.updated@example.com", age: 31 }) {
+      updateUser(
+        id: "user-1"
+        input: {
+          name: "Alice Updated"
+          email: "alice.updated@example.com"
+          age: 31
+        }
+      ) {
         id
         name
       }
-      updateProduct(id: "product-1", input: { name: "GraphQL Guide Updated", price: 59.99 }) {
+      updateProduct(
+        id: "product-1"
+        input: { name: "GraphQL Guide Updated", price: 59.99 }
+      ) {
         id
         name
         price
@@ -663,91 +680,105 @@ graphql(
     includeProductPrice: false,
   },
   "ExampleQuery",
-).then((result) => {
-  if (result.errors) {
-    console.log("Query errors:", result.errors);
-  }
-  console.log("Query results:");
-  console.log(JSON.stringify(sortResultData(result), null, 4));
-  
-  // Now run the mutation
-  return graphql(
-    implementationSchema,
-    `
-      mutation ExampleMutation {
-        createUser(input: { name: "Alice", email: "alice@example.com", age: 30 }) {
-          id
-          name
-        }
-        createProduct(input: { name: "GraphQL Guide", price: 49.99 }) {
-          id
-          name
-          price
-        }
-        updateUser(id: "user-1", input: { name: "Alice Updated", email: "alice.updated@example.com", age: 31 }) {
-          id
-          name
-        }
-        updateProduct(id: "product-1", input: { name: "GraphQL Guide Updated", price: 59.99 }) {
-          id
-          name
-          price
-        }
-        deleteUser(id: "user-2")
-        deleteProduct(id: "product-2")
-      }
-    `,
-    null,
-    null,
-    {},
-    "ExampleMutation"
-  );
-}).then((result) => {
-  if (result.errors) {
-    console.log("Mutation errors:", result.errors);
-  }
-  console.log("Mutation results:");
-  console.log(JSON.stringify(sortResultData(result), null, 4));
+)
+  .then((result) => {
+    if (result.errors) {
+      console.log("Query errors:", result.errors);
+    }
+    console.log("Query results:");
+    console.log(JSON.stringify(sortResultData(result), null, 4));
 
-  // Now run subscription examples
-  return graphql(
-    implementationSchema,
-    `
-      subscription ExampleSubscription {
-        userAdded {
-          id
-          name
+    // Now run the mutation
+    return graphql(
+      implementationSchema,
+      `
+        mutation ExampleMutation {
+          createUser(
+            input: { name: "Alice", email: "alice@example.com", age: 30 }
+          ) {
+            id
+            name
+          }
+          createProduct(input: { name: "GraphQL Guide", price: 49.99 }) {
+            id
+            name
+            price
+          }
+          updateUser(
+            id: "user-1"
+            input: {
+              name: "Alice Updated"
+              email: "alice.updated@example.com"
+              age: 31
+            }
+          ) {
+            id
+            name
+          }
+          updateProduct(
+            id: "product-1"
+            input: { name: "GraphQL Guide Updated", price: 59.99 }
+          ) {
+            id
+            name
+            price
+          }
+          deleteUser(id: "user-2")
+          deleteProduct(id: "product-2")
         }
-        productAdded {
-          id
-          name
-          price
+      `,
+      null,
+      null,
+      {},
+      "ExampleMutation",
+    );
+  })
+  .then((result) => {
+    if (result.errors) {
+      console.log("Mutation errors:", result.errors);
+    }
+    console.log("Mutation results:");
+    console.log(JSON.stringify(sortResultData(result), null, 4));
+
+    // Now run subscription examples
+    return graphql(
+      implementationSchema,
+      `
+        subscription ExampleSubscription {
+          userAdded {
+            id
+            name
+          }
+          productAdded {
+            id
+            name
+            price
+          }
         }
-      }
-    `,
-    null,
-    null,
-    {},
-    "ExampleSubscription"
-  );
-}).then((result) => {
-  if (result.errors) {
-    console.log("Subscription errors:", result.errors);
-  }
-  console.log("Subscription results:");
-  console.log(JSON.stringify(sortResultData(result), null, 4));
-});
+      `,
+      null,
+      null,
+      {},
+      "ExampleSubscription",
+    );
+  })
+  .then((result) => {
+    if (result.errors) {
+      console.log("Subscription errors:", result.errors);
+    }
+    console.log("Subscription results:");
+    console.log(JSON.stringify(sortResultData(result), null, 4));
+  });
 
 // sortResultData results given result by key.
 function sortResultData(result) {
-	const data = result.data;
-	const dataOrdered = Object.keys(data).sort().reduce(
-	  (obj, key) => {
-	    obj[key] = data[key];
-	    return obj;
-	  },
-	  {}
-	);
-	result.data = dataOrdered;
-	return result;
+  const data = result.data;
+  const dataOrdered = Object.keys(data)
+    .sort()
+    .reduce((obj, key) => {
+      obj[key] = data[key];
+      return obj;
+    }, {});
+  result.data = dataOrdered;
+  return result;
 }
