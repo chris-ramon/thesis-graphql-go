@@ -1990,6 +1990,28 @@ query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
 
 ---
 
+###### 8. **Directives @include**
+
+Allows for conditional inclusion during execution.
+
+###### `graphql-js`
+
+```
+query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
+ // ...
+}
+```
+
+###### `graphql-go`
+
+```
+query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
+ // ...
+}
+```
+
+---
+
 This detailed breakdown forms the foundation for the Conclusions section, where we compare design patterns and resolver behaviors across implementations.
 
 This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
