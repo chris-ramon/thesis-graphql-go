@@ -386,7 +386,7 @@ func main() {
 	result := graphql.Do(graphql.Params{
 		Schema: implementationSchema,
 		RequestString: `
-    {
+    query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!) {
       int
       float
       string
@@ -402,31 +402,31 @@ func main() {
       node(id: "user-1") {
         id
         ... on User {
-          name
+          name @skip(if: $skipUserName)
         }
         ... on Product {
           name
-          price
+          price @skip(if: $skipProductPrice)
         }
       }
       user {
         id
-        name
+        name @skip(if: $skipUserName)
       }
       product {
         id
         name
-        price
+        price @skip(if: $skipProductPrice)
       }
       searchResult(type: "user") {
         ... on User {
           id
-          name
+          name @skip(if: $skipUserName)
         }
         ... on Product {
           id
           name
-          price
+          price @skip(if: $skipProductPrice)
         }
       }
       createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
@@ -436,15 +436,19 @@ func main() {
       }
       userNonNull {
         id
-        name
+        name @skip(if: $skipUserName)
       }
       productNonNull {
         id
         name
-        price
+        price @skip(if: $skipProductPrice)
       }
     }
     `,
+		VariableValues: map[string]interface{}{
+			"skipUserName":     false,
+			"skipProductPrice": true,
+		},
 	})
 
 	d, err := json.MarshalIndent(result, "", "    ")
