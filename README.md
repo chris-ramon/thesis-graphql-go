@@ -1904,7 +1904,7 @@ Represents a declaration that a type disallows null.
 
 ###### `graphql-js`
 
-```
+```js
 const userTypeNonNull = new GraphQLObjectType({
   name: "UserNonNull",
   description: "A user with non-null fields.",
@@ -1923,7 +1923,7 @@ const userTypeNonNull = new GraphQLObjectType({
 });
 ```
 
-```
+```js
 userNonNull: {
   type: userTypeNonNull,
   resolve() {
@@ -1937,7 +1937,7 @@ userNonNull: {
 
 ###### `graphql-go`
 
-```
+```go
 userTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
 	Name:        "UserNonNull",
 	Description: "A user with non-null fields.",
@@ -1954,7 +1954,7 @@ userTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
 })
 ```
 
-```
+```go
 "userNonNull": &graphql.Field{
 	Type: userTypeNonNull,
 	Resolve: func(p graphql.ResolveParams) (interface{}, error) {
@@ -1974,7 +1974,7 @@ Allows for conditional exclusion during execution.
 
 ###### `graphql-js`
 
-```
+```graphql
 query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
  // ...
 }
@@ -1982,7 +1982,7 @@ query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
 
 ###### `graphql-go`
 
-```
+```graphql
 query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
  // ...
 }
@@ -1996,7 +1996,7 @@ Allows for conditional inclusion during execution.
 
 ###### `graphql-js`
 
-```
+```graphql
 query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
  // ...
 }
@@ -2004,7 +2004,7 @@ query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boole
 
 ###### `graphql-go`
 
-```
+```graphql
 query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
  // ...
 }
@@ -2018,7 +2018,7 @@ Represents an operation to mutate data.
 
 ###### `graphql-js`
 
-```
+```js
 mutation: new GraphQLObjectType({
   name: "RootMutationType",
   fields: {
@@ -2044,7 +2044,7 @@ mutation: new GraphQLObjectType({
 
 ###### `graphql-go`
 
-```
+```go
 mutationType := graphql.NewObject(graphql.ObjectConfig{
 	Name: "Mutation",
 	Fields: graphql.Fields{
@@ -2077,7 +2077,7 @@ Represents an operation for subscribing to data.
 
 ###### `graphql-js`
 
-```
+```js
 subscription: new GraphQLObjectType({
   name: "RootSubscriptionType",
   fields: {
@@ -2097,7 +2097,7 @@ subscription: new GraphQLObjectType({
 
 ###### `graphql-go`
 
-```
+```go
 subscriptionType := graphql.NewObject(graphql.ObjectConfig{
 	Name: "Subscription",
 	Fields: graphql.Fields{
