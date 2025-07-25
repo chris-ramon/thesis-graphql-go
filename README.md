@@ -1898,6 +1898,225 @@ objectList: {
 
 ---
 
+###### 8. **Non Null**
+
+Represents a declaration that a type disallows null.
+
+###### `graphql-js`
+
+```js
+const userTypeNonNull = new GraphQLObjectType({
+  name: "UserNonNull",
+  description: "A user with non-null fields.",
+  fields: () => {
+    return {
+      id: {
+        type: new GraphQLNonNull(GraphQLID),
+        description: "The non-null ID of the user.",
+      },
+      name: {
+        type: new GraphQLNonNull(GraphQLString),
+        description: "The non-null name of the user.",
+      },
+    };
+  },
+});
+```
+
+```js
+userNonNull: {
+  type: userTypeNonNull,
+  resolve() {
+    return {
+      id: "user-non-null-1",
+      name: "John Doe Non-Null",
+    };
+  },
+},
+```
+
+###### `graphql-go`
+
+```go
+userTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
+	Name:        "UserNonNull",
+	Description: "A user with non-null fields.",
+	Fields: graphql.Fields{
+		"id": &graphql.Field{
+			Type:        graphql.NewNonNull(graphql.ID),
+			Description: "The non-null ID of the user.",
+		},
+		"name": &graphql.Field{
+			Type:        graphql.NewNonNull(graphql.String),
+			Description: "The non-null name of the user.",
+		},
+	},
+})
+```
+
+```go
+"userNonNull": &graphql.Field{
+	Type: userTypeNonNull,
+	Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+		return map[string]interface{}{
+			"id":   "user-non-null-1",
+			"name": "John Doe Non-Null",
+		}, nil
+	},
+},
+```
+
+---
+
+###### 9. **Directives @skip**
+
+Allows for conditional exclusion during execution.
+
+###### `graphql-js`
+
+```graphql
+query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
+ // ...
+}
+```
+
+###### `graphql-go`
+
+```graphql
+query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
+ // ...
+}
+```
+
+---
+
+###### 10. **Directives @include**
+
+Allows for conditional inclusion during execution.
+
+###### `graphql-js`
+
+```graphql
+query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
+ // ...
+}
+```
+
+###### `graphql-go`
+
+```graphql
+query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
+ // ...
+}
+```
+
+---
+
+###### 11. **Mutations**
+
+Represents an operation to mutate data.
+
+###### `graphql-js`
+
+```js
+mutation: new GraphQLObjectType({
+  name: "RootMutationType",
+  fields: {
+    createUser: {
+      type: userType,
+      args: {
+        input: {
+          description: "input for creating a user",
+          type: userInputType,
+        },
+      },
+      resolve(root, { input }) {
+        return {
+          type: "user",
+          id: `user-${Date.now()}`,
+          name: input.name,
+        };
+      },
+    },
+  },
+}),
+```
+
+###### `graphql-go`
+
+```go
+mutationType := graphql.NewObject(graphql.ObjectConfig{
+	Name: "Mutation",
+	Fields: graphql.Fields{
+		"createUser": &graphql.Field{
+			Type: userType,
+			Args: graphql.FieldConfigArgument{
+				"input": &graphql.ArgumentConfig{
+					Description: "input for creating a user",
+					Type:        userInputType,
+				},
+			},
+			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+				input := p.Args["input"].(map[string]interface{})
+				return map[string]interface{}{
+					"type": "user",
+					"id":   fmt.Sprintf("user-%d", time.Now().Unix()),
+					"name": input["name"],
+				}, nil
+			},
+		},
+	},
+})
+```
+
+---
+
+###### 11. **Subscriptions**
+
+Represents an operation for subscribing to data.
+
+###### `graphql-js`
+
+```js
+subscription: new GraphQLObjectType({
+  name: "RootSubscriptionType",
+  fields: {
+    userAdded: {
+      type: userType,
+      resolve() {
+        return {
+          type: "user",
+          id: `user-${Date.now()}`,
+          name: "New User Added",
+        };
+      },
+    },
+  },
+}),
+```
+
+###### `graphql-go`
+
+```go
+subscriptionType := graphql.NewObject(graphql.ObjectConfig{
+	Name: "Subscription",
+	Fields: graphql.Fields{
+		"userAdded": &graphql.Field{
+			Type: userType,
+			Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+				return map[string]interface{}{
+					"type": "user",
+					"id":   fmt.Sprintf("user-%d", time.Now().Unix()),
+					"name": "New User Added",
+				}, nil
+			},
+		},
+	},
+})
+```
+
+---
+
 This detailed breakdown forms the foundation for the Conclusions section, where we compare design patterns and resolver behaviors across implementations.
 
 This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
