@@ -383,7 +383,7 @@ const implementationSchema = new GraphQLSchema({
 graphql(
   implementationSchema,
   `
-    query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!) {
+    query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
       ID
       boolean
       float
@@ -399,31 +399,31 @@ graphql(
       node(id: "user-1") {
         id
         ... on User {
-          name @skip(if: $skipUserName)
+          name @skip(if: $skipUserName) @include(if: $includeUserName)
         }
         ... on Product {
           name
-          price @skip(if: $skipProductPrice)
+          price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
         }
       }
       user {
         id
-        name @skip(if: $skipUserName)
+        name @skip(if: $skipUserName) @include(if: $includeUserName)
       }
       product {
         id
         name
-        price @skip(if: $skipProductPrice)
+        price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
       }
       searchResult(type: "user") {
         ... on User {
           id
-          name @skip(if: $skipUserName)
+          name @skip(if: $skipUserName) @include(if: $includeUserName)
         }
         ... on Product {
           id
           name
-          price @skip(if: $skipProductPrice)
+          price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
         }
       }
       createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
@@ -433,12 +433,12 @@ graphql(
       }
       userNonNull {
         id
-        name @skip(if: $skipUserName)
+        name @skip(if: $skipUserName) @include(if: $includeUserName)
       }
       productNonNull {
         id
         name
-        price @skip(if: $skipProductPrice)
+        price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
       }
     }
   `,
@@ -447,6 +447,8 @@ graphql(
   {
     skipUserName: false,
     skipProductPrice: true,
+    includeUserName: true,
+    includeProductPrice: false,
   },
 ).then((result) => {
   if (result.errors) {
