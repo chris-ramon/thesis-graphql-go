@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
-	"time"
 
 	"github.com/graphql-go/graphql"
 )
@@ -394,7 +393,7 @@ func main() {
 					input := p.Args["input"].(map[string]interface{})
 					return map[string]interface{}{
 						"type": "user",
-						"id":   fmt.Sprintf("user-%d", time.Now().Unix()),
+						"id":   "user-1",
 						"name": input["name"],
 					}, nil
 				},
@@ -411,7 +410,7 @@ func main() {
 					input := p.Args["input"].(map[string]interface{})
 					return map[string]interface{}{
 						"type":  "product",
-						"id":    fmt.Sprintf("product-%d", time.Now().Unix()),
+						"id":    "product-1",
 						"name":  input["name"],
 						"price": input["price"],
 					}, nil
@@ -499,7 +498,7 @@ func main() {
 				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
 					return map[string]interface{}{
 						"type": "user",
-						"id":   fmt.Sprintf("user-%d", time.Now().Unix()),
+						"id":   "user-1",
 						"name": "New User Added",
 					}, nil
 				},
@@ -539,7 +538,7 @@ func main() {
 				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
 					return map[string]interface{}{
 						"type":  "product",
-						"id":    fmt.Sprintf("product-%d", time.Now().Unix()),
+						"id":    "product-1",
 						"name":  "New Product Added",
 						"price": 0.0,
 					}, nil
@@ -650,8 +649,8 @@ func main() {
     }
     `,
 		VariableValues: map[string]interface{}{
-			"skipUserName":     false,
-			"skipProductPrice": true,
+			"skipUserName":        false,
+			"skipProductPrice":    true,
 			"includeUserName":     true,
 			"includeProductPrice": false,
 		},
@@ -663,7 +662,7 @@ func main() {
 		handleErr(err)
 	}
 
-	log.Printf("Query results: %+v", string(d))
+	fmt.Printf("Query results:\n%+v\n", string(d))
 
 	// Now run the mutation
 	mutationResult := graphql.Do(graphql.Params{
@@ -700,7 +699,7 @@ func main() {
 		handleErr(err)
 	}
 
-	log.Printf("Mutation results: %+v", string(d2))
+	fmt.Printf("\nMutation results:\n%+v\n", string(d2))
 
 	// Now run subscription examples
 	subscriptionResult := graphql.Do(graphql.Params{
@@ -726,5 +725,5 @@ func main() {
 		handleErr(err)
 	}
 
-	log.Printf("Subscription results: %+v", string(d3))
+	fmt.Printf("\nSubscription results:\n%+v\n", string(d3))
 }
