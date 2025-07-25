@@ -1968,7 +1968,7 @@ userTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
 
 ---
 
-###### 8. **Directives @skip**
+###### 9. **Directives @skip**
 
 Allows for conditional exclusion during execution.
 
@@ -1990,7 +1990,7 @@ query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
 
 ---
 
-###### 8. **Directives @include**
+###### 10. **Directives @include**
 
 Allows for conditional inclusion during execution.
 
