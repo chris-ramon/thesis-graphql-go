@@ -2121,10 +2121,141 @@ This detailed breakdown forms the foundation for the Conclusions section, where 
 
 This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
 
-# 6. Conclusions
+### 6. Conclusions
 
-TBC.
+#### Operational Equivalence
 
+To assess whether both `graphql-js` and `graphql-go` yield the same runtime behavior, we executed equivalent GraphQL operations—**Query**, **Mutation**, and **Subscription**—against each implementation.
+
+Below are the outputs returned by each library. Identical structures and values across both implementations demonstrate **operational equivalence**, reinforcing that the Go implementation faithfully replicates the behavior of the JavaScript reference.
+
+---
+
+#### 🔍 Output Comparison Table
+
+| `graphql-js`                                        | `graphql-go`                                        |
+| --------------------------------------------------- | --------------------------------------------------- |
+| Identical query, mutation, and subscription outputs | Identical query, mutation, and subscription outputs |
+
+---
+
+#### ✅ Query Results
+
+**Identical outputs** were observed across both implementations.
+
+```json
+{
+  "data": {
+    "ID": "d983b9d9-681c-4059-b5a3-5329d1c6f82d",
+    "boolean": true,
+    "enum": "SECOND_ENUM",
+    "float": 20.01,
+    "int": 20,
+    "node": {
+      "id": "user-1",
+      "name": "John Doe"
+    },
+    "object": {
+      "name": "Name of the object instance."
+    },
+    "objectList": [
+      { "name": "First object in list" },
+      { "name": "Second object in list" },
+      { "name": "Third object in list" }
+    ],
+    "objectWithArguments": {
+      "name": "Name of the object with arguments instance, id: 1"
+    },
+    "product": {
+      "id": "product-1",
+      "name": "GraphQL Book"
+    },
+    "productNonNull": {
+      "id": "product-non-null-1",
+      "name": "GraphQL Book Non-Null"
+    },
+    "searchResult": {
+      "id": "user-1",
+      "name": "John Doe"
+    },
+    "string": "str",
+    "stringList": [
+      "first string",
+      "second string",
+      "third string"
+    ],
+    "user": {
+      "id": "user-1",
+      "name": "John Doe"
+    },
+    "userNonNull": {
+      "id": "user-non-null-1",
+      "name": "John Doe Non-Null"
+    }
+  }
+}
+```
+
+---
+
+#### ✅ Mutation Results
+
+**Identical outputs** were observed across both implementations.
+
+```json
+{
+  "data": {
+    "createProduct": {
+      "id": "product-1",
+      "name": "GraphQL Guide",
+      "price": 49.99
+    },
+    "createUser": {
+      "id": "user-1",
+      "name": "Alice"
+    },
+    "deleteProduct": "Product with id: product-2 deleted successfully",
+    "deleteUser": "User with id: user-2 deleted successfully",
+    "updateProduct": {
+      "id": "product-1",
+      "name": "GraphQL Guide Updated",
+      "price": 59.99
+    },
+    "updateUser": {
+      "id": "user-1",
+      "name": "Alice Updated"
+    }
+  }
+}
+```
+
+---
+
+#### ✅ Subscription Results
+
+**Both implementations emit the same payloads for real-time events.**
+
+```json
+{
+  "data": {
+    "productAdded": {
+      "id": "product-1",
+      "name": "New Product Added",
+      "price": 0
+    },
+    "userAdded": {
+      "id": "user-1",
+      "name": "New User Added"
+    }
+  }
+}
+```
+
+---
+
+#### ✅ Conclusion
+
+The exact match in structure and values for all GraphQL operations confirms the **operational equivalence** between the JavaScript and Go implementations. This not only validates the correctness of the `graphql-go` implementation but also supports its use as a reliable alternative to the reference library when building production-grade GraphQL APIs in Go.
 
 # 7. Recomendations
 What are the recommendations for future related work that is strongly tie to this thesis ?
