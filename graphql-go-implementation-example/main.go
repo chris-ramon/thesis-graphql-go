@@ -491,9 +491,98 @@ func main() {
 		},
 	})
 
+	subscriptionType := graphql.NewObject(graphql.ObjectConfig{
+		Name: "Subscription",
+		Fields: graphql.Fields{
+			"userAdded": &graphql.Field{
+				Type: userType,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return map[string]interface{}{
+						"type": "user",
+						"id":   fmt.Sprintf("user-%d", time.Now().Unix()),
+						"name": "New User Added",
+					}, nil
+				},
+			},
+			"userUpdated": &graphql.Field{
+				Type: userType,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the user being updated",
+						Type:        graphql.NewNonNull(graphql.ID),
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					return map[string]interface{}{
+						"type": "user",
+						"id":   id,
+						"name": "User Updated",
+					}, nil
+				},
+			},
+			"userDeleted": &graphql.Field{
+				Type: graphql.String,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the user being deleted",
+						Type:        graphql.NewNonNull(graphql.ID),
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					return fmt.Sprintf("User with id: %s has been deleted", id), nil
+				},
+			},
+			"productAdded": &graphql.Field{
+				Type: productType,
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					return map[string]interface{}{
+						"type":  "product",
+						"id":    fmt.Sprintf("product-%d", time.Now().Unix()),
+						"name":  "New Product Added",
+						"price": 0.0,
+					}, nil
+				},
+			},
+			"productUpdated": &graphql.Field{
+				Type: productType,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the product being updated",
+						Type:        graphql.NewNonNull(graphql.ID),
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					return map[string]interface{}{
+						"type":  "product",
+						"id":    id,
+						"name":  "Product Updated",
+						"price": 99.99,
+					}, nil
+				},
+			},
+			"productDeleted": &graphql.Field{
+				Type: graphql.String,
+				Args: graphql.FieldConfigArgument{
+					"id": &graphql.ArgumentConfig{
+						Description: "id of the product being deleted",
+						Type:        graphql.NewNonNull(graphql.ID),
+					},
+				},
+				Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+					id := p.Args["id"].(string)
+					return fmt.Sprintf("Product with id: %s has been deleted", id), nil
+				},
+			},
+		},
+	})
+
 	implementationSchema, err := graphql.NewSchema(graphql.SchemaConfig{
-		Query:    queryType,
-		Mutation: mutationType,
+		Query:        queryType,
+		Mutation:     mutationType,
+		Subscription: subscriptionType,
 	})
 	if err != nil {
 		handleErr(err)
@@ -612,4 +701,30 @@ func main() {
 	}
 
 	log.Printf("Mutation results: %+v", string(d2))
+
+	// Now run subscription examples
+	subscriptionResult := graphql.Do(graphql.Params{
+		Schema: implementationSchema,
+		RequestString: `
+    subscription ExampleSubscription {
+      userAdded {
+        id
+        name
+      }
+      productAdded {
+        id
+        name
+        price
+      }
+    }
+    `,
+		OperationName: "ExampleSubscription",
+	})
+
+	d3, err := json.MarshalIndent(subscriptionResult, "", "    ")
+	if err != nil {
+		handleErr(err)
+	}
+
+	log.Printf("Subscription results: %+v", string(d3))
 }
