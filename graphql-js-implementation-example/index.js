@@ -397,7 +397,7 @@ const implementationSchema = new GraphQLSchema({
         resolve(root, { input }) {
           return {
             type: "user",
-            id: `user-${Date.now()}`,
+            id: "user-1",
             name: input.name,
           };
         },
@@ -413,7 +413,7 @@ const implementationSchema = new GraphQLSchema({
         resolve(root, { input }) {
           return {
             type: "product",
-            id: `product-${Date.now()}`,
+            id: "product-1",
             name: input.name,
             price: input.price,
           };
@@ -494,7 +494,7 @@ const implementationSchema = new GraphQLSchema({
         resolve() {
           return {
             type: "user",
-            id: `user-${Date.now()}`,
+            id: "user-1",
             name: "New User Added",
           };
         },
@@ -532,7 +532,7 @@ const implementationSchema = new GraphQLSchema({
         resolve() {
           return {
             type: "product",
-            id: `product-${Date.now()}`,
+            id: "product-1",
             name: "New Product Added",
             price: 0.0,
           };
@@ -737,7 +737,7 @@ graphql(
     if (result.errors) {
       console.log("Mutation errors:", result.errors);
     }
-    console.log("Mutation results:");
+    console.log("\nMutation results:");
     console.log(JSON.stringify(sortResultData(result), null, 4));
 
     // Now run subscription examples
@@ -766,7 +766,7 @@ graphql(
     if (result.errors) {
       console.log("Subscription errors:", result.errors);
     }
-    console.log("Subscription results:");
+    console.log("\nSubscription results:");
     console.log(JSON.stringify(sortResultData(result), null, 4));
   });
 
