@@ -386,7 +386,7 @@ func main() {
 	result := graphql.Do(graphql.Params{
 		Schema: implementationSchema,
 		RequestString: `
-    query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!) {
+    query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
       int
       float
       string
@@ -402,31 +402,31 @@ func main() {
       node(id: "user-1") {
         id
         ... on User {
-          name @skip(if: $skipUserName)
+          name @skip(if: $skipUserName) @include(if: $includeUserName)
         }
         ... on Product {
           name
-          price @skip(if: $skipProductPrice)
+          price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
         }
       }
       user {
         id
-        name @skip(if: $skipUserName)
+        name @skip(if: $skipUserName) @include(if: $includeUserName)
       }
       product {
         id
         name
-        price @skip(if: $skipProductPrice)
+        price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
       }
       searchResult(type: "user") {
         ... on User {
           id
-          name @skip(if: $skipUserName)
+          name @skip(if: $skipUserName) @include(if: $includeUserName)
         }
         ... on Product {
           id
           name
-          price @skip(if: $skipProductPrice)
+          price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
         }
       }
       createUser(input: { name: "Alice", email: "alice@example.com", age: 30 })
@@ -436,18 +436,20 @@ func main() {
       }
       userNonNull {
         id
-        name @skip(if: $skipUserName)
+        name @skip(if: $skipUserName) @include(if: $includeUserName)
       }
       productNonNull {
         id
         name
-        price @skip(if: $skipProductPrice)
+        price @skip(if: $skipProductPrice) @include(if: $includeProductPrice)
       }
     }
     `,
 		VariableValues: map[string]interface{}{
 			"skipUserName":     false,
 			"skipProductPrice": true,
+			"includeUserName":     true,
+			"includeProductPrice": false,
 		},
 	})
 
