@@ -663,7 +663,7 @@ func main() {
 		handleErr(err)
 	}
 
-	log.Printf("Query results: %+v", string(d))
+	fmt.Printf("Query results: %+v\n", string(d))
 
 	// Now run the mutation
 	mutationResult := graphql.Do(graphql.Params{
@@ -700,7 +700,7 @@ func main() {
 		handleErr(err)
 	}
 
-	log.Printf("Mutation results: %+v", string(d2))
+	fmt.Printf("Mutation results: %+v\n", string(d2))
 
 	// Now run subscription examples
 	subscriptionResult := graphql.Do(graphql.Params{
@@ -726,5 +726,5 @@ func main() {
 		handleErr(err)
 	}
 
-	log.Printf("Subscription results: %+v", string(d3))
+	fmt.Printf("Subscription results: %+v\n", string(d3))
 }
