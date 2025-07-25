@@ -486,6 +486,89 @@ const implementationSchema = new GraphQLSchema({
       },
     },
   }),
+  subscription: new GraphQLObjectType({
+    name: "RootSubscriptionType",
+    fields: {
+      userAdded: {
+        type: userType,
+        resolve() {
+          return {
+            type: "user",
+            id: `user-${Date.now()}`,
+            name: "New User Added",
+          };
+        },
+      },
+      userUpdated: {
+        type: userType,
+        args: {
+          id: {
+            description: "id of the user being updated",
+            type: new GraphQLNonNull(GraphQLID),
+          },
+        },
+        resolve(root, { id }) {
+          return {
+            type: "user",
+            id: id,
+            name: "User Updated",
+          };
+        },
+      },
+      userDeleted: {
+        type: GraphQLString,
+        args: {
+          id: {
+            description: "id of the user being deleted",
+            type: new GraphQLNonNull(GraphQLID),
+          },
+        },
+        resolve(root, { id }) {
+          return `User with id: ${id} has been deleted`;
+        },
+      },
+      productAdded: {
+        type: productType,
+        resolve() {
+          return {
+            type: "product",
+            id: `product-${Date.now()}`,
+            name: "New Product Added",
+            price: 0.0,
+          };
+        },
+      },
+      productUpdated: {
+        type: productType,
+        args: {
+          id: {
+            description: "id of the product being updated",
+            type: new GraphQLNonNull(GraphQLID),
+          },
+        },
+        resolve(root, { id }) {
+          return {
+            type: "product",
+            id: id,
+            name: "Product Updated",
+            price: 99.99,
+          };
+        },
+      },
+      productDeleted: {
+        type: GraphQLString,
+        args: {
+          id: {
+            description: "id of the product being deleted",
+            type: new GraphQLNonNull(GraphQLID),
+          },
+        },
+        resolve(root, { id }) {
+          return `Product with id: ${id} has been deleted`;
+        },
+      },
+    },
+  }),
 });
 
 graphql(
@@ -624,5 +707,33 @@ graphql(
     console.log("Mutation errors:", result.errors);
   }
   console.log("Mutation results:");
+  console.log(JSON.stringify(result.data, null, 4));
+
+  // Now run subscription examples
+  return graphql(
+    implementationSchema,
+    `
+      subscription ExampleSubscription {
+        userAdded {
+          id
+          name
+        }
+        productAdded {
+          id
+          name
+          price
+        }
+      }
+    `,
+    null,
+    null,
+    {},
+    "ExampleSubscription"
+  );
+}).then((result) => {
+  if (result.errors) {
+    console.log("Subscription errors:", result.errors);
+  }
+  console.log("Subscription results:");
   console.log(JSON.stringify(result.data, null, 4));
 });
