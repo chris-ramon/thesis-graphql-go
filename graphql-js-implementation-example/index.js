@@ -668,7 +668,7 @@ graphql(
     console.log("Query errors:", result.errors);
   }
   console.log("Query results:");
-  console.log(JSON.stringify(result.data, null, 4));
+  console.log(JSON.stringify(sortResultData(result), null, 4));
   
   // Now run the mutation
   return graphql(
@@ -707,7 +707,7 @@ graphql(
     console.log("Mutation errors:", result.errors);
   }
   console.log("Mutation results:");
-  console.log(JSON.stringify(result.data, null, 4));
+  console.log(JSON.stringify(sortResultData(result), null, 4));
 
   // Now run subscription examples
   return graphql(
@@ -735,5 +735,19 @@ graphql(
     console.log("Subscription errors:", result.errors);
   }
   console.log("Subscription results:");
-  console.log(JSON.stringify(result.data, null, 4));
+  console.log(JSON.stringify(sortResultData(result), null, 4));
 });
+
+// sortResultData results given result by key.
+function sortResultData(result) {
+	const data = result.data;
+	const dataOrdered = Object.keys(data).sort().reduce(
+	  (obj, key) => {
+	    obj[key] = data[key];
+	    return obj;
+	  },
+	  {}
+	);
+	result.data = dataOrdered;
+	return result;
+}
