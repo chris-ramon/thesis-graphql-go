@@ -1,5 +1,4 @@
-
-# Thesis: GraphQL-Go Compatibility with graphql-js
+# Thesis: GraphQL Go — Implementation and Compatibility Validation (TL;DR)
 
 ## Table of Contents
 
@@ -13,20 +12,23 @@
 
 ## Abbreviations
 
-| Abbreviation | Description                              |
-|--------------|------------------------------------------|
+| Term         | Description                                 |
+| ------------ | ------------------------------------------- |
+| GraphQL      | Graph Query Language                        |
 | `graphql-js` | GraphQL JavaScript reference implementation |
-| `graphql-go` | Go implementation of the GraphQL Specification |
+| `graphql-go` | GraphQL Go implementation                   |
 
 ---
 
 ## Research Questions
 
-**RQ1.** Is the `graphql-go` implementation aligned with the design and structure of `graphql-js`?
+**RQ1.** Is `graphql-go` implemented according to `graphql-js`?
 
-**RQ2.** Is `graphql-go` compatible with `graphql-js` in terms of runtime behavior and type system output?
+> This question investigates how the `graphql-go` implementation aligns with the structure and behavior of `graphql-js`, including type system definitions, resolver handling, and API design.
 
-The study confirms that `graphql-go` adheres to `graphql-js` and yields equivalent runtime behavior, thereby demonstrating strong compatibility with the GraphQL Specification.
+**RQ2.** Is `graphql-go` compatible with `graphql-js`?
+
+> This question focuses on runtime behavior, API consistency, and validation through introspection and execution results.
 
 ---
 
@@ -38,9 +40,10 @@ This comparison demonstrates that the Go implementation faithfully reproduces th
 
 ### Scalars
 
-**Int**
+#### Int
 
 `graphql-js`
+
 ```js
 int: {
   type: GraphQLInt,
@@ -51,6 +54,7 @@ int: {
 ```
 
 `graphql-go`
+
 ```go
 "int": &graphql.Field{
   Type: graphql.Int,
@@ -60,9 +64,10 @@ int: {
 },
 ```
 
-**Float**
+#### Float
 
 `graphql-js`
+
 ```js
 float: {
   type: GraphQLFloat,
@@ -73,6 +78,7 @@ float: {
 ```
 
 `graphql-go`
+
 ```go
 "float": &graphql.Field{
   Type: graphql.Float,
@@ -82,25 +88,99 @@ float: {
 },
 ```
 
-*(similar blocks continue for String, Boolean, ID)*
+#### String
+
+`graphql-js`
+
+```js
+string: {
+  type: GraphQLString,
+  resolve() {
+    return "str";
+  },
+},
+```
+
+`graphql-go`
+
+```go
+"string": &graphql.Field{
+  Type: graphql.String,
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return "str", nil
+  },
+},
+```
+
+#### Boolean
+
+`graphql-js`
+
+```js
+boolean: {
+  type: GraphQLBoolean,
+  resolve() {
+    return true;
+  },
+},
+```
+
+`graphql-go`
+
+```go
+"boolean": &graphql.Field{
+  Type: graphql.Boolean,
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return true, nil
+  },
+},
+```
+
+#### ID
+
+`graphql-js`
+
+```js
+ID: {
+  type: GraphQLID,
+  resolve() {
+    return "d983b9d9-681c-4059-b5a3-5329d1c6f82d";
+  },
+},
+```
+
+`graphql-go`
+
+```go
+"ID": &graphql.Field{
+  Type: graphql.ID,
+  Resolve: func(p graphql.ResolveParams) (interface{}, error) {
+    return "d983b9d9-681c-4059-b5a3-5329d1c6f82d", nil
+  },
+},
+```
 
 ### Objects
 
 `graphql-js`
+
 ```js
 const objectTypeWithArguments = new GraphQLObjectType({
   name: "objectTypeWithArguments",
   description: "An object with arguments.",
-  fields: () => ({
-    name: {
-      description: "The name of the object.",
-      type: GraphQLString,
-    },
-  }),
+  fields: () => {
+    return {
+      name: {
+        description: "The name of the object.",
+        type: GraphQLString,
+      },
+    };
+  },
 });
 ```
 
 `graphql-go`
+
 ```go
 objectTypeWithArguments := graphql.NewObject(graphql.ObjectConfig{
   Name: "objectTypeWithArguments",
@@ -113,7 +193,7 @@ objectTypeWithArguments := graphql.NewObject(graphql.ObjectConfig{
 })
 ```
 
-*(... continued for Interfaces, Unions, Enums, Input Objects, Lists, Non-Null ...)*
+*(Sections continue for Interfaces, Unions, Enums, Input Objects, Lists, Non-Null)*
 
 ---
 
@@ -121,22 +201,28 @@ objectTypeWithArguments := graphql.NewObject(graphql.ObjectConfig{
 
 Identical outputs were observed across both implementations.
 
-### 🔍 Output Comparison Table
+| `graphql-js` Output | `graphql-go` Output |
+| ------------------- | ------------------- |
+| ✅ Matches           | ✅ Matches           |
 
-| graphql-js | graphql-go |
-|------------|------------|
-| ✅ Matched Query Output | ✅ Matched Query Output |
-| ✅ Matched Mutation Output | ✅ Matched Mutation Output |
-| ✅ Matched Subscription Output | ✅ Matched Subscription Output |
+### Query Results
+
+✔ Output for all scalar and complex types matches in both implementations.
+
+### Mutation Results
+
+✔ All mutation operations (create, update, delete) returned consistent results.
+
+### Subscription Results
+
+✔ Subscriptions received equivalent events and payloads.
 
 ---
 
 ## Results: Compatibility Validation
 
-A novel contribution of this study is the development of the open-source compatibility validation library: [`graphql-go/compatibility-standard-definitions`](https://github.com/graphql-go/compatibility-standard-definitions).
+We developed a compatibility validation library [`graphql-go/compatibility-standard-definitions`](https://github.com/graphql-go/compatibility-standard-definitions) that ensures schema equivalence using introspection. This validates the internal type system alignment between the implementations.
 
-It ensures that the internal type systems of `graphql-js` and `graphql-go` are equivalent by leveraging GraphQL's introspection feature. This validation approach enables implementers to verify structural parity between their custom GraphQL servers and the canonical JavaScript reference.
-
-This compatibility layer plays a critical role in proving RQ2 and supports the operational equivalence observed in practical usage.
+This confirms that `graphql-go` adheres to `graphql-js` and yields equivalent runtime behavior, thereby demonstrating strong compatibility with the GraphQL Specification.
 
 
