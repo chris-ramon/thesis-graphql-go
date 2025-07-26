@@ -28,13 +28,14 @@
 
 **RQ2.** Is `graphql-go` compatible with `graphql-js`?
 
-> This question focuses on runtime behavior, API consistency, and validation through introspection and execution results.
+> This question focuses on runtime behavior, internal API consistency, and validation through introspection and execution results.
 
 ---
 
 ## Results: Type System
 
-To validate the implementation of the core GraphQL type system, we created equivalent fields in both the JavaScript and Go example applications using `graphql-js` and `graphql-go`, respectively. Both follow an imperative schema definition pattern and maintain a near-identical API surface.
+To validate the implementation of the core GraphQL type system, we created similar fields in both the JavaScript and Go example applications using `graphql-js` and `graphql-go`, respectively. Both follow an imperative schema definition pattern and maintain a near-identical API surface.  
+Go best practices were followed, such as returning an error as the second value in the `resolve` function.
 
 This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
 
