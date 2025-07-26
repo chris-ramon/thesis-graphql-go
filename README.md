@@ -14,7 +14,7 @@
 
 | Term         | Description                                 |
 | ------------ | ------------------------------------------- |
-| GraphQL      | Graph Query Language                        |
+| GraphQL      | A Query Language                            |
 | `graphql-js` | GraphQL JavaScript reference implementation |
 | `graphql-go` | GraphQL Go implementation                   |
 
@@ -224,5 +224,3 @@ Identical outputs were observed across both implementations.
 We developed a compatibility validation library [`graphql-go/compatibility-standard-definitions`](https://github.com/graphql-go/compatibility-standard-definitions) that ensures schema equivalence using introspection. This validates the internal type system alignment between the implementations.
 
 This confirms that `graphql-go` adheres to `graphql-js` and yields equivalent runtime behavior, thereby demonstrating strong compatibility with the GraphQL Specification.
-
-
