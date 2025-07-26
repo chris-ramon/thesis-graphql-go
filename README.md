@@ -2267,7 +2267,7 @@ This approach allows us to **automatically assert structural and semantic alignm
 
 ---
 
-##### ✅ Key Insight
+##### ✅ Conclusion
 
 This compatibility validation framework serves as **conclusive evidence** that `graphql-go` conforms to the same type system semantics as `graphql-js`. It answers one of the central research questions of this thesis:
 
