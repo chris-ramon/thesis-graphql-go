@@ -2257,6 +2257,26 @@ Below are the outputs returned by each library. Identical structures and values 
 
 The exact match in structure and values for all GraphQL operations confirms the **operational equivalence** between the JavaScript and Go implementations. This not only validates the correctness of the `graphql-go` implementation but also supports its use as a reliable alternative to the reference library when building production-grade GraphQL APIs in Go.
 
+### Compatibility Validation
+
+To further validate the compatibility between `graphql-js` and `graphql-go`, we developed an open-source utility: [`graphql-go/compatibility-standard-definitions`](https://github.com/graphql-go/compatibility-standard-definitions).
+
+This library leverages the GraphQL specification’s built-in **introspection system** to programmatically extract and compare the internal type systems of both implementations. By querying each server's schema metadata (via `__schema` and `__type` fields), we can confirm that the registered type definitions—such as objects, interfaces, enums, unions, inputs, and scalars—match precisely between the two.
+
+This approach allows us to **automatically assert structural and semantic alignment** between the JavaScript reference implementation and the Go alternative, even in deeply nested or polymorphic types.
+
+---
+
+##### ✅ Conclusion
+
+This compatibility validation framework serves as **conclusive evidence** that `graphql-go` conforms to the same type system semantics as `graphql-js`. It answers one of the central research questions of this thesis:
+
+> “Is `graphql-go` compatible with the GraphQL type system as defined and implemented by `graphql-js`?”
+
+The answer, supported by introspection-based comparisons, is **yes**.
+
+---
+
 # 7. Recomendations
 What are the recommendations for future related work that is strongly tie to this thesis ?
 
