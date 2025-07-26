@@ -2257,7 +2257,7 @@ Below are the outputs returned by each library. Identical structures and values 
 
 The exact match in structure and values for all GraphQL operations confirms the **operational equivalence** between the JavaScript and Go implementations. This not only validates the correctness of the `graphql-go` implementation but also supports its use as a reliable alternative to the reference library when building production-grade GraphQL APIs in Go.
 
-#### Compatibility Validation
+### Compatibility Validation
 
 To further validate the compatibility between `graphql-js` and `graphql-go`, we developed an open-source utility: [`graphql-go/compatibility-standard-definitions`](https://github.com/graphql-go/compatibility-standard-definitions).
 
