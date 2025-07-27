@@ -34,10 +34,11 @@
 
 ## Results: Type System
 
-To validate the implementation of the core GraphQL type system, we created similar fields in both the JavaScript and Go example applications using `graphql-js` and `graphql-go`, respectively. Both follow an imperative schema definition pattern and maintain a near-identical API surface.  
-Go best practices were followed, such as returning an error as the second value in the `resolve` function.
+To validate the implementation of the core GraphQL type system, we created similar fields in both the JavaScript and Go example applications using `graphql-js` and `graphql-go`, respectively. Both follow an imperative schema definition pattern and maintain a near-identical API surface.
 
-This comparison demonstrates that the Go implementation faithfully reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
+This comparison demonstrates that the Go implementation closely reproduces the API design of the JavaScript reference implementation. The imperative construction of the type system remains consistent, aligning with the GraphQL Specification’s flexibility in schema definition styles while emphasizing programmatic control.
+
+> We adopted Go best practices when implementing the similar API. For example, the `Resolve` function in `graphql-go` includes an error return value, which is idiomatic in Go.
 
 ### Scalars
 
@@ -222,6 +223,6 @@ Identical outputs were observed across both implementations.
 
 ## Results: Compatibility Validation
 
-We developed a compatibility validation library [`graphql-go/compatibility-standard-definitions`](https://github.com/graphql-go/compatibility-standard-definitions) that ensures schema equivalence using introspection. This validates the internal type system alignment between the implementations.
+The novel part of this thesis is the development of an open-source compatibility validation library: [`graphql-go/compatibility-standard-definitions`](https://github.com/graphql-go/compatibility-standard-definitions). This library ensures schema equivalence using introspection. It validates the internal type system alignment between the implementations.
 
 This confirms that `graphql-go` adheres to `graphql-js` and yields equivalent runtime behavior, thereby demonstrating strong compatibility with the GraphQL Specification.
