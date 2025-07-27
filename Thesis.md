@@ -38,7 +38,7 @@
 ## Research Framework
 
 1. **Justification Framework**
-   The structured approach divides justification into three categories—Introduction, Applied, and Social—aligning with the layered reasoning recommended by Hernández‑Sampieri & Mendoza.
+   The structured approach divides justification into three categories—Introduction, Applied, and Social—aligning with the layered reasoning recommended by Hernández‑Sampieri & Mendoza (2018).
 
 2. **Research Strategy Alignment**
    This study follows a **mixed-method** approach as outlined by Hernández‑Sampieri & Mendoza (2018):
