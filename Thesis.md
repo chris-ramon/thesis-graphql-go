@@ -4,11 +4,12 @@
 
 1. [Abbreviations](#abbreviations)
 2. [Research Questions](#research-questions)
-3. [Research Methodology](#research-methodology)
-4. [Results: Type System](#results-type-system)
-5. [Results: Operational Equivalence](#results-operational-equivalence)
-6. [Results: Compatibility Validation](#results-compatibility-validation)
-7. [Conclusions](#conclusions)
+3. [Research Framework](#research-framework)
+4. [Research Methodology](#research-methodology)
+5. [Results: Type System](#results-type-system)
+6. [Results: Operational Equivalence](#results-operational-equivalence)
+7. [Results: Compatibility Validation](#results-compatibility-validation)
+8. [Conclusions](#conclusions)
 
 ---
 
