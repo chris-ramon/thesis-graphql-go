@@ -57,13 +57,13 @@ This section presents the implementation details of various GraphQL type system 
 
 ---
 
-##### 1. **Scalars**
+### 1. **Scalars**
 
 Scalars are the basic leaf values in GraphQL.
 
-###### `Int`
+### `Int`
 
-###### `graphql-js`
+`graphql-js`:
 
 ```js
 int: {
@@ -74,7 +74,7 @@ int: {
 },
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 "int": &graphql.Field{
@@ -85,9 +85,9 @@ int: {
 },
 ```
 
-###### `Float`
+### `Float`
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 float: {
@@ -98,7 +98,7 @@ float: {
 },
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 "float": &graphql.Field{
@@ -109,9 +109,9 @@ float: {
 },
 ```
 
-###### `String`
+### `String`
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 string: {
@@ -122,7 +122,7 @@ string: {
 },
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 "string": &graphql.Field{
@@ -133,9 +133,9 @@ string: {
 },
 ```
 
-###### `Boolean`
+### `Boolean`
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 boolean: {
@@ -146,7 +146,7 @@ boolean: {
 },
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 "boolean": &graphql.Field{
@@ -157,9 +157,9 @@ boolean: {
 },
 ```
 
-###### `ID`
+### `ID`
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 ID: {
@@ -170,7 +170,7 @@ ID: {
 },
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 "ID": &graphql.Field{
@@ -183,11 +183,11 @@ ID: {
 
 ---
 
-##### 2. **Objects**
+### 2. **Objects**
 
 Defines structured data types with fields.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 const objectTypeWithArguments = new GraphQLObjectType({
@@ -204,7 +204,7 @@ const objectTypeWithArguments = new GraphQLObjectType({
 });
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 objectTypeWithArguments := graphql.NewObject(graphql.ObjectConfig{
@@ -221,11 +221,11 @@ objectTypeWithArguments := graphql.NewObject(graphql.ObjectConfig{
 
 ---
 
-###### 3. **Interfaces**
+### 3. **Interfaces**
 
 Used to abstract fields shared by multiple types.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 const nodeInterface = new GraphQLInterfaceType({
@@ -249,7 +249,7 @@ const nodeInterface = new GraphQLInterfaceType({
 });
 ```
 
-###### `graphql-go`
+### `graphql-go`
 
 ```go
 nodeInterface = graphql.NewInterface(graphql.InterfaceConfig{
@@ -277,11 +277,11 @@ nodeInterface = graphql.NewInterface(graphql.InterfaceConfig{
 
 ---
 
-###### 4. **Unions**
+### 4. **Unions**
 
 Allows fields to return one of multiple object types.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 const searchResultUnion = new GraphQLUnionType({
@@ -300,7 +300,7 @@ const searchResultUnion = new GraphQLUnionType({
 });
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 searchResultUnion = graphql.NewUnion(graphql.UnionConfig{
@@ -323,11 +323,11 @@ searchResultUnion = graphql.NewUnion(graphql.UnionConfig{
 
 ---
 
-###### 5. **Enums**
+### 5. **Enums**
 
 Defines a fixed set of possible values.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 const enumType = new GraphQLEnumType({
@@ -346,7 +346,7 @@ const enumType = new GraphQLEnumType({
 });
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 enumType := graphql.NewEnum(graphql.EnumConfig{
@@ -367,11 +367,11 @@ enumType := graphql.NewEnum(graphql.EnumConfig{
 
 ---
 
-###### 6. **Input Objects**
+### 6. **Input Objects**
 
 Used for passing structured input to queries or mutations.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 const userInputType = new GraphQLInputObjectType({
@@ -396,7 +396,7 @@ const userInputType = new GraphQLInputObjectType({
 });
 ```
 
-###### `graphql-go`
+### `graphql-go`
 
 ```go
 userInputType := graphql.NewInputObject(graphql.InputObjectConfig{
@@ -421,11 +421,11 @@ userInputType := graphql.NewInputObject(graphql.InputObjectConfig{
 
 ---
 
-###### 7. **Lists**
+### 7. **Lists**
 
 Represents arrays of values or objects.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 stringList: {
@@ -447,7 +447,7 @@ objectList: {
 },
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 "stringList": &graphql.Field{
@@ -471,11 +471,11 @@ objectList: {
 
 ---
 
-###### 8. **Non Null**
+### 8. **Non Null**
 
 Represents a declaration that a type disallows null.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 const userTypeNonNull = new GraphQLObjectType({
@@ -508,7 +508,7 @@ userNonNull: {
 },
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 userTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
@@ -541,11 +541,11 @@ userTypeNonNull := graphql.NewObject(graphql.ObjectConfig{
 
 ---
 
-###### 9. **Directives @skip**
+### 9. **Directives @skip**
 
 Allows for conditional exclusion during execution.
 
-###### `graphql-js`
+`graphql-js`
 
 ```graphql
 query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
@@ -553,7 +553,7 @@ query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
 }
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```graphql
 query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
@@ -563,11 +563,11 @@ query ExampleQuery($skipUserName: Boolean!, $skipProductPrice: Boolean!, ...) {
 
 ---
 
-###### 10. **Directives @include**
+### 10. **Directives @include**
 
 Allows for conditional inclusion during execution.
 
-###### `graphql-js`
+`graphql-js`
 
 ```graphql
 query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
@@ -575,7 +575,7 @@ query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boole
 }
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```graphql
 query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boolean!) {
@@ -585,11 +585,11 @@ query ExampleQuery(... , $includeUserName: Boolean!, $includeProductPrice: Boole
 
 ---
 
-###### 11. **Mutations**
+### 11. **Mutations**
 
 Represents an operation to mutate data.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 mutation: new GraphQLObjectType({
@@ -615,7 +615,7 @@ mutation: new GraphQLObjectType({
 }),
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 mutationType := graphql.NewObject(graphql.ObjectConfig{
@@ -644,11 +644,11 @@ mutationType := graphql.NewObject(graphql.ObjectConfig{
 
 ---
 
-###### 11. **Subscriptions**
+### 11. **Subscriptions**
 
 Represents an operation for subscribing to data.
 
-###### `graphql-js`
+`graphql-js`
 
 ```js
 subscription: new GraphQLObjectType({
@@ -668,7 +668,7 @@ subscription: new GraphQLObjectType({
 }),
 ```
 
-###### `graphql-go`
+`graphql-go`
 
 ```go
 subscriptionType := graphql.NewObject(graphql.ObjectConfig{
