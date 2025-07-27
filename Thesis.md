@@ -37,7 +37,7 @@
 ## Research Methodology
 
 ### Introduction
-The study of the research was decided due to the novel introduction of GraphQL at 2015. It was the opportunity to implement the specification in the Go programming language. GraphQL has since been not yet widely adopted across diverse ecosystems.
+The study of the research was decided due to the novel introduction of GraphQL at 2015. It was the opportunity to implement the specification in the Go programming language. Although GraphQL was initially adopted internally at Facebook, it was not widely adopted across diverse ecosystems immediately after its public release in 2015.
 
 ### Applied Justification
 With `graphql-go` we solve the problem of the lack of a `graphql-js` version in Go. There were notable innovation because it was one of the earliest open-source project. The quality of the library is guarantee due to keeping consistency by aligning with `graphql-js` design.
