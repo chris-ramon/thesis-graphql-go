@@ -47,7 +47,7 @@
    - **Quantitative:** Applied to **RQ2**, focusing on compatibility validation. Using introspection, the internal type systems are programmatically compared, ensuring output equivalence across implementations.
 
 3. **Problem Definition & Validation Mechanisms**
-   Their methodology encourages clear research problem statements, guided questions (Covered by **RQ1** and **RQ2**), empirical evidence gathering, and comparative analysis (all reflected by the `graphql-go` implementation, cross-language validation, and compatibility tool).
+   Their methodology encourages clear research problem statements, guided questions (Covered by **RQ1** and **RQ2**), empirical evidence gathering, and comparative analysis (Reflected by the `graphql-go` implementation, cross-language validation, and compatibility tool).
 
 ---
 
