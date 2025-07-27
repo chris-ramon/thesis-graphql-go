@@ -249,7 +249,7 @@ const nodeInterface = new GraphQLInterfaceType({
 });
 ```
 
-### `graphql-go`
+`graphql-go`
 
 ```go
 nodeInterface = graphql.NewInterface(graphql.InterfaceConfig{
@@ -396,7 +396,7 @@ const userInputType = new GraphQLInputObjectType({
 });
 ```
 
-### `graphql-go`
+`graphql-go`
 
 ```go
 userInputType := graphql.NewInputObject(graphql.InputObjectConfig{
