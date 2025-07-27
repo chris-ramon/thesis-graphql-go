@@ -34,6 +34,22 @@
 
 ---
 
+## Research Framework
+
+1. **Justification Framework**
+   The structured approach divides justification into three categories—Introduction, Applied, and Social—aligning with the layered reasoning recommended by Hernández‑Sampieri & Mendoza.
+
+2. **Research Strategy Alignment**
+   This study follows a **mixed-method** approach as outlined by Hernández‑Sampieri & Mendoza (2018):
+
+   - **Qualitative:** Applied to **RQ1**, focusing on the implementation. This includes analyzing code structures and comparing API design and runtime outputs between `graphql-js` and `graphql-go`.
+   - **Quantitative:** Applied to **RQ2**, focusing on compatibility validation. Using introspection, the internal type systems are programmatically compared, ensuring output equivalence across implementations.
+
+3. **Problem Definition & Validation Mechanisms**
+   Their methodology encourages clear research problem statements, guided questions (Covered by **RQ1** and **RQ2**), empirical evidence gathering, and comparative analysis (all reflected by the `graphql-go` implementation, cross-language validation, and compatibility tool).
+
+---
+
 ## Research Methodology
 
 ### Introduction
