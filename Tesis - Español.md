@@ -16,24 +16,22 @@
 
 ## Resumen
 
-Esta tesis desarrolló la implementación de GraphQL en el lenguaje de programación Go y validó su compatibilidad.
+Esta tesis presenta el desarrollo de una implementación del lenguaje de consulta GraphQL en el lenguaje de programación Go, así como la validación de su compatibilidad con implementaciones de referencia.
 
-GraphQL es un protocolo de comunicación entre clientes y servidores, donde las capacidades están delegadas en los servidores definidos mediante esquemas. Es una interfaz para realizar diferentes operaciones como: consultas (queries), mutaciones (mutations) y suscripciones (subscriptions), y fue creada para la comunicación entre servidores y clientes orientados a interfaces de usuario.
+GraphQL es un protocolo de comunicación entre clientes y servidores, en el cual los servidores definen sus capacidades mediante esquemas. Este lenguaje permite realizar operaciones como consultas, mutaciones y suscripciones, y fue diseñado para facilitar la interacción entre interfaces de usuario y servidores.
 
-La implementación tuvo dos fuentes principales de desarrollo:
+La implementación se fundamentó en dos fuentes principales:
 
-- La Especificación de GraphQL.
+- La Especificación oficial de GraphQL.
 - La implementación de GraphQL en el lenguaje de programación JavaScript.
 
-El objetivo principal de la implementación fue alcanzar compatibilidad con la implementación de JavaScript hasta la versión v0.6.0.
+El objetivo principal fue desarrollar una implementación compatible con la versión v0.6.0 de `graphql-js`, la biblioteca de referencia en JavaScript.
 
-La implementación creó un proyecto en GitHub: `graphql-go/graphql`. GitHub fue adoptado como sistema de control de versiones de código y herramienta para el ciclo de vida del desarrollo de software.
+Como resultado, se creó el proyecto de código abierto `graphql-go/graphql`, utilizando GitHub como sistema de control de versiones y plataforma para el ciclo de vida del desarrollo del software.
 
-Se eligió el lenguaje de programación Go por ser moderno y por su adopción constante en nuevos proyectos. Go está enfocado en la computación en la nube y por ello aprovecha todos los beneficios de GraphQL.
+Se eligió el lenguaje Go debido a su naturaleza moderna, su creciente adopción en nuevos proyectos y su enfoque en la computación en la nube, lo cual se alinea con los beneficios ofrecidos por GraphQL.
 
-El éxito de la implementación se confirmó mediante la comparación del diseño de la API y los resultados de salida de dos aplicaciones de ejemplo.
-
-El correcto funcionamiento de la implementación se validó mediante una biblioteca novedosa de código abierto: `graphql-go/compatibility-standard-definitions`.
+El correcto funcionamiento del diseño de la API se confirmó mediante la comparación de aplicaciones de ejemplo desarrolladas en ambos lenguajes. Asimismo, la compatibilidad fue verificada a través de una biblioteca de código abierto denominada `graphql-go/compatibility-standard-definitions`, que representa una contribución novedosa dentro del contexto de esta investigación.
 
 ---
 
