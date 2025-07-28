@@ -8,7 +8,7 @@
 4. [Research Questions](#research-questions)
 5. [Research Framework](#research-framework)
 6. [Research Methodology](#research-methodology)
-7. [Objectivos](#objectivos)
+7. [Objetivos](#objetivos)
 8. [Results: Type System](#results-type-system)
 9. [Results: Operational Equivalence](#results-operational-equivalence)
 10. [Results: Compatibility Validation](#results-compatibility-validation)
@@ -100,7 +100,7 @@ Los protocolos tradicionales generan múltiples estrategias para gestionar el ve
 
 ---
 
-## Objectivos
+## Objetivos
 
 ### Objetivo General
 - Implementar un motor de ejecución GraphQL en el lenguaje de programación Go y validar su compatibilidad con la implementación de referencia en JavaScript (`graphql-js`).
