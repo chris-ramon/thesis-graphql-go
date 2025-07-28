@@ -8,10 +8,11 @@
 4. [Research Questions](#research-questions)
 5. [Research Framework](#research-framework)
 6. [Research Methodology](#research-methodology)
-7. [Results: Type System](#results-type-system)
-8. [Results: Operational Equivalence](#results-operational-equivalence)
-9. [Results: Compatibility Validation](#results-compatibility-validation)
-10. [Conclusions](#conclusions)
+7. [Objetivos](#objetivos)
+8. [Results: Type System](#results-type-system)
+9. [Results: Operational Equivalence](#results-operational-equivalence)
+10. [Results: Compatibility Validation](#results-compatibility-validation)
+11. [Conclusions](#conclusions)
 
 ---
 
@@ -96,6 +97,22 @@ Los protocolos tradicionales generan múltiples estrategias para gestionar el ve
 
 3. **Problem Definition & Validation Mechanisms**
    Their methodology encourages clear research problem statements, guided questions (Covered by **RQ1** and **RQ2**), empirical evidence gathering, and comparative analysis (Reflected by the `graphql-go` implementation, cross-language validation, and compatibility tool).
+
+---
+
+## Objetivos
+
+### Objetivo General
+- Implementar GraphQL en el lenguaje de programación Go.
+- Validar la compatibilidad de la implementación de GraphQL Go con `graphql-js`.
+
+### Objetivos Específicos
+- Investigar el contexto y las motivaciones del diseño de GraphQL y su relevancia en los sistemas modernos.
+- Estudiar el estado actual de las implementaciones de GraphQL en Go.
+- Analizar la arquitectura y el proceso de desarrollo del proyecto de código abierto `graphql-go/graphql`.
+- Documentar las prácticas de ingeniería de software utilizadas en el desarrollo de la biblioteca de GraphQL en Go.
+- Diseñar y desarrollar una biblioteca de validación: `graphql-go/compatibility-standard-definitions`.
+- Evaluar la compatibilidad con `graphql-js` mediante introspección y comparaciones de tiempo de ejecución.
 
 ---
 
