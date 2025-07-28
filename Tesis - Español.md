@@ -103,17 +103,18 @@ Los protocolos tradicionales generan múltiples estrategias para gestionar el ve
 ## Objetivos
 
 ### Objetivo General
-- Implementar un motor de ejecución GraphQL en el lenguaje de programación Go y validar su compatibilidad con la implementación de referencia en JavaScript (`graphql-js`).
+- Implementar GraphQL en el lenguaje de programación Go.
+- Validar la compatibilidad de la implementación de GraphQL Go con `graphql-js`.
 
 ### Objetivos Específicos
-- Analizar el contexto histórico y técnico que dio origen a GraphQL y su adopción dentro del ecosistema de Go.
-- Evaluar el estado actual de las implementaciones de GraphQL en Go, incluyendo sus objetivos de diseño, madurez y nivel de adopción.
-- Documentar el proceso de desarrollo de software libre de la librería `graphql-go/graphql`, incluyendo su arquitectura, prácticas de control de versiones y alineación con la Especificación de GraphQL.
-- Diseñar e implementar una librería de validación de compatibilidad (`graphql-go/compatibility-standard-definitions`) para asegurar la conformidad estructural y de comportamiento con `graphql-js`.
-- Validar la compatibilidad mediante pruebas empíricas que involucren introspección del esquema, comparación del sistema de tipos y ejecución de consultas en tiempo de ejecución.
+- Investigar el contexto y las motivaciones del diseño de GraphQL y su relevancia en los sistemas modernos.
+- Estudiar el estado actual de las implementaciones de GraphQL en Go.
+- Analizar la arquitectura y el proceso de desarrollo del proyecto de código abierto `graphql-go/graphql`.
+- Documentar las prácticas de ingeniería de software utilizadas en el desarrollo de la biblioteca de GraphQL en Go.
+- Diseñar y desarrollar una biblioteca de validación: `graphql-go/compatibility-standard-definitions`.
+- Evaluar la compatibilidad con `graphql-js` mediante introspección y comparaciones de tiempo de ejecución.
 
 ---
-
 
 ## Research Methodology
 
