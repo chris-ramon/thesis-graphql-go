@@ -684,7 +684,7 @@ mutationType := graphql.NewObject(graphql.ObjectConfig{
 
 ---
 
-### 11. **Subscriptions**
+### 12. **Subscriptions**
 
 Represents an operation for subscribing to data.
 
