@@ -4,13 +4,14 @@
 
 1. [Resumen](#resumen)
 2. [Abbreviations](#abbreviations)
-3. [Research Questions](#research-questions)
-4. [Research Framework](#research-framework)
-5. [Research Methodology](#research-methodology)
-6. [Results: Type System](#results-type-system)
-7. [Results: Operational Equivalence](#results-operational-equivalence)
-8. [Results: Compatibility Validation](#results-compatibility-validation)
-9. [Conclusions](#conclusions)
+3. [Contexto](#contexto)
+4. [Research Questions](#research-questions)
+5. [Research Framework](#research-framework)
+6. [Research Methodology](#research-methodology)
+7. [Results: Type System](#results-type-system)
+8. [Results: Operational Equivalence](#results-operational-equivalence)
+9. [Results: Compatibility Validation](#results-compatibility-validation)
+10. [Conclusions](#conclusions)
 
 ---
 
@@ -43,6 +44,30 @@ El correcto funcionamiento del diseño de la API se confirmó mediante la compar
 | GraphQL      | A Query Language                            |
 | `graphql-js` | GraphQL JavaScript reference implementation |
 | `graphql-go` | GraphQL Go implementation                   |
+
+---
+
+## Contexto
+
+La estrategia tradicional para desarrollar software se basa en herramientas que permiten la comunicación entre clientes y servidores utilizando protocolos tradicionales como: RPC[1], SOAP[2], REST[3].
+
+Estas herramientas centralizan el funcionamiento en el lado del servidor, donde se define la información con la que se puede interactuar. Estas estrategias de comunicación generan diversos problemas que se resuelven bajo demanda con distintas soluciones.
+
+Se crean múltiples endpoints para cubrir diversos casos de uso, lo que genera complejidad en su gestión debido a que en el lado del cliente se agregan soluciones ad-hoc.
+
+Estos diferentes endpoints provocan problemas de sobrecarga o insuficiencia de datos. Como consecuencia, se requieren múltiples solicitudes para consolidar la información, ya que el servidor decide qué datos enviar, generando cargas útiles mayores o menores a las esperadas.
+
+Una de las principales consecuencias de tener múltiples endpoints es la generación de solicitudes anidadas, lo cual conlleva una complejidad conocida como el problema n + 1.
+
+Se produce ineficiencia en el mantenimiento porque cuando se hacen cambios en el servidor, estos impactan en los distintos clientes que dependen de él, volviendo a los clientes más propensos a errores.
+
+Los costos aumentan porque los datos enviados desde los servidores requieren mayor capacidad para atender la demanda, por lo tanto se necesitan más recursos y aprovisionamiento.
+
+La experiencia de desarrollo se ve limitada porque se requieren múltiples herramientas para interactuar con cada uno de los protocolos utilizados por los servidores, lo que impacta negativamente al momento de integrar nuevos miembros al equipo y también afecta la curva de aprendizaje.
+
+Existe complejidad en el lado del cliente de la aplicación porque se requieren múltiples capas de abstracción para coordinar y re-consolidar la información, lo que vuelve al código difícil de mantener debido a la necesidad de múltiples soluciones para abordar los problemas.
+
+Los protocolos tradicionales generan múltiples estrategias para gestionar el versionado de la API, lo que desencadena complejidad en el lado del servidor y provoca una extensibilidad limitada.
 
 ---
 
