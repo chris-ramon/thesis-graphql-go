@@ -2,14 +2,34 @@
 
 ## Table of Contents
 
-1. [Abbreviations](#abbreviations)
-2. [Research Questions](#research-questions)
-3. [Research Framework](#research-framework)
-4. [Research Methodology](#research-methodology)
-5. [Results: Type System](#results-type-system)
-6. [Results: Operational Equivalence](#results-operational-equivalence)
-7. [Results: Compatibility Validation](#results-compatibility-validation)
-8. [Conclusions](#conclusions)
+1. [Abstract](#abstract)
+2. [Abbreviations](#abbreviations)
+3. [Research Questions](#research-questions)
+4. [Research Framework](#research-framework)
+5. [Research Methodology](#research-methodology)
+6. [Results: Type System](#results-type-system)
+7. [Results: Operational Equivalence](#results-operational-equivalence)
+8. [Results: Compatibility Validation](#results-compatibility-validation)
+9. [Conclusions](#conclusions)
+
+## Abstract
+
+This thesis presents the development of a GraphQL implementation in the Go programming language and validates its compatibility with the JavaScript reference implementation.
+
+GraphQL is a communication protocol between clients and servers, where server capabilities are defined via schemas. It provides an interface for performing operations such as queries, mutations, and subscriptions, and was designed for efficient client-server communication, particularly in user interface–oriented contexts.
+
+The implementation was based on two main sources:
+
+- The GraphQL Specification.
+- The JavaScript implementation of GraphQL (`graphql-js`).
+
+The primary goal was to develop a compatible implementation with the `graphql-js` version v0.6.0.
+
+This effort resulted in the creation of the open-source project `graphql-go/graphql`, with GitHub used as the platform for version control and software development lifecycle management.
+
+The Go programming language was chosen for its modern design, growing adoption in new projects, and suitability for cloud computing environments, all of which align with GraphQL’s strengths.
+
+The correctness of the API design was confirmed through comparisons between two example applications. Compatibility was further validated using a novel open-source library: `graphql-go/compatibility-standard-definitions`.
 
 ---
 
