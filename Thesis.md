@@ -8,10 +8,11 @@
 4. [Research Questions](#research-questions)
 5. [Research Framework](#research-framework)
 6. [Research Methodology](#research-methodology)
-7. [Results: Type System](#results-type-system)
-8. [Results: Operational Equivalence](#results-operational-equivalence)
-9. [Results: Compatibility Validation](#results-compatibility-validation)
-10. [Conclusions](#conclusions)
+7. [Objectives](#objectives)
+8. [Results: Type System](#results-type-system)
+9. [Results: Operational Equivalence](#results-operational-equivalence)
+10. [Results: Compatibility Validation](#results-compatibility-validation)
+11. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -106,6 +107,20 @@ With `graphql-go` we solve the problem of the lack of a `graphql-js` version in 
 
 ### Social Justification
 The study has social impact due to the artifacts produced are open-source therefore the benefits for the end-users of the research.
+
+---
+
+## Objectives
+
+### General Objective
+- To implement a GraphQL execution engine in the Go programming language, and to validate its compatibility with the canonical JavaScript reference implementation (`graphql-js`).
+
+### Specific Objectives
+- To analyze the historical and technical context surrounding the emergence of GraphQL and its adoption within the Go programming ecosystem.
+- To evaluate the current state of existing GraphQL implementations in Go, including their design goals, maturity, and adoption.
+- To document the open-source development process of the `graphql-go/graphql` library, including its architecture, version control practices, and alignment with the GraphQL Specification.
+- To design and implement a compatibility validation library (`graphql-go/compatibility-standard-definitions`) to ensure structural and behavioral conformance with `graphql-js`.
+- To validate compatibility through empirical testing involving schema introspection, type system comparison, and runtime query execution.
 
 ---
 
