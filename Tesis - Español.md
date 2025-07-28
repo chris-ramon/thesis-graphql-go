@@ -1,4 +1,4 @@
-# Tesis: GraphQL Go — Implementación y Validación de Compatibibilidad
+# Tesis: GraphQL Go — Implementación y Validación de Compatibilidad
 
 ## Contenidos 
 
