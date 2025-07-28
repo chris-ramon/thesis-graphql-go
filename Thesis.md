@@ -4,11 +4,12 @@
 
 1. [Abbreviations](#abbreviations)
 2. [Research Questions](#research-questions)
-3. [Research Methodology](#research-methodology)
-4. [Results: Type System](#results-type-system)
-5. [Results: Operational Equivalence](#results-operational-equivalence)
-6. [Results: Compatibility Validation](#results-compatibility-validation)
-7. [Conclusions](#conclusions)
+3. [Research Framework](#research-framework)
+4. [Research Methodology](#research-methodology)
+5. [Results: Type System](#results-type-system)
+6. [Results: Operational Equivalence](#results-operational-equivalence)
+7. [Results: Compatibility Validation](#results-compatibility-validation)
+8. [Conclusions](#conclusions)
 
 ---
 
@@ -34,10 +35,26 @@
 
 ---
 
+## Research Framework
+
+1. **Justification Framework**
+   The structured approach divides justification into three categories—Introduction, Applied, and Social—aligning with the layered reasoning recommended by Hernández‑Sampieri & Mendoza (2018).
+
+2. **Research Strategy Alignment**
+   This study follows a **mixed-method** approach as outlined by Hernández‑Sampieri & Mendoza (2018):
+
+   - **Qualitative:** Applied to **RQ1**, focusing on the implementation. This includes analyzing code structures and comparing API design and runtime outputs between `graphql-js` and `graphql-go`.
+   - **Quantitative:** Applied to **RQ2**, focusing on compatibility validation. Using introspection, the internal type systems are programmatically compared, ensuring output equivalence across implementations.
+
+3. **Problem Definition & Validation Mechanisms**
+   Their methodology encourages clear research problem statements, guided questions (Covered by **RQ1** and **RQ2**), empirical evidence gathering, and comparative analysis (Reflected by the `graphql-go` implementation, cross-language validation, and compatibility tool).
+
+---
+
 ## Research Methodology
 
 ### Introduction
-The study of the research was decided due to the novel introduction of GraphQL at 2015. It was the opportunity to implement the specification in the Go programming language. GraphQL has since been not yet widely adopted across diverse ecosystems.
+The study of the research was decided due to the novel introduction of GraphQL at 2015. It was the opportunity to implement the specification in the Go programming language. Although GraphQL was initially adopted internally at Facebook, it was not widely adopted across diverse ecosystems immediately after its public release in 2015.
 
 ### Applied Justification
 With `graphql-go` we solve the problem of the lack of a `graphql-js` version in Go. There were notable innovation because it was one of the earliest open-source project. The quality of the library is guarantee due to keeping consistency by aligning with `graphql-js` design.
