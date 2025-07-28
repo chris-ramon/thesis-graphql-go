@@ -8,10 +8,11 @@
 4. [Research Questions](#research-questions)
 5. [Research Framework](#research-framework)
 6. [Research Methodology](#research-methodology)
-7. [Results: Type System](#results-type-system)
-8. [Results: Operational Equivalence](#results-operational-equivalence)
-9. [Results: Compatibility Validation](#results-compatibility-validation)
-10. [Conclusions](#conclusions)
+7. [Objectivos](#objectivos)
+8. [Results: Type System](#results-type-system)
+9. [Results: Operational Equivalence](#results-operational-equivalence)
+10. [Results: Compatibility Validation](#results-compatibility-validation)
+11. [Conclusions](#conclusions)
 
 ---
 
@@ -98,6 +99,21 @@ Los protocolos tradicionales generan múltiples estrategias para gestionar el ve
    Their methodology encourages clear research problem statements, guided questions (Covered by **RQ1** and **RQ2**), empirical evidence gathering, and comparative analysis (Reflected by the `graphql-go` implementation, cross-language validation, and compatibility tool).
 
 ---
+
+## Objectivos
+
+### Objetivo General
+- Implementar un motor de ejecución GraphQL en el lenguaje de programación Go y validar su compatibilidad con la implementación de referencia en JavaScript (`graphql-js`).
+
+### Objetivos Específicos
+- Analizar el contexto histórico y técnico que dio origen a GraphQL y su adopción dentro del ecosistema de Go.
+- Evaluar el estado actual de las implementaciones de GraphQL en Go, incluyendo sus objetivos de diseño, madurez y nivel de adopción.
+- Documentar el proceso de desarrollo de software libre de la librería `graphql-go/graphql`, incluyendo su arquitectura, prácticas de control de versiones y alineación con la Especificación de GraphQL.
+- Diseñar e implementar una librería de validación de compatibilidad (`graphql-go/compatibility-standard-definitions`) para asegurar la conformidad estructural y de comportamiento con `graphql-js`.
+- Validar la compatibilidad mediante pruebas empíricas que involucren introspección del esquema, comparación del sistema de tipos y ejecución de consultas en tiempo de ejecución.
+
+---
+
 
 ## Research Methodology
 
