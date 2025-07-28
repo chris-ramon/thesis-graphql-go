@@ -16,13 +16,24 @@
 
 ## Resumen
 
-Esta tesis presenta el desarrollo de una implementación de GraphQL en el lenguaje de programación Go y valida su compatibilidad con la implementación de referencia en JavaScript (`graphql-js`). GraphQL es un protocolo que permite la comunicación estructurada entre clientes y servidores mediante una interfaz definida por esquemas. Soporta operaciones como consultas (queries), mutaciones y suscripciones, lo que lo hace ideal para aplicaciones orientadas a interfaces de usuario.
+Esta tesis desarrolló la implementación de GraphQL en el lenguaje de programación Go y validó su compatibilidad.
 
-La implementación se guió por dos fuentes fundamentales: la Especificación oficial de GraphQL y la implementación de referencia en JavaScript. El objetivo principal fue crear una implementación en Go—`graphql-go/graphql`—que fuera compatible con `graphql-js` hasta la versión 0.6.0. GitHub se utilizó como sistema de control de versiones y plataforma para la gestión del ciclo de vida del desarrollo de software.
+GraphQL es un protocolo de comunicación entre clientes y servidores, donde las capacidades están delegadas en los servidores definidos mediante esquemas. Es una interfaz para realizar diferentes operaciones como: consultas (queries), mutaciones (mutations) y suscripciones (subscriptions), y fue creada para la comunicación entre servidores y clientes orientados a interfaces de usuario.
 
-Go fue seleccionado por su diseño moderno, creciente adopción en entornos de desarrollo nativos en la nube y su alineación con los objetivos de rendimiento y escalabilidad de GraphQL. La corrección de la implementación se validó mediante un análisis comparativo utilizando dos aplicaciones de ejemplo, enfocándose en diseños de API compartidos y comportamiento de salida.
+La implementación tuvo dos fuentes principales de desarrollo:
 
-Una contribución novedosa de esta tesis es la creación de la biblioteca de código abierto `graphql-go/compatibility-standard-definitions`, que aprovecha la introspección de GraphQL para validar la compatibilidad del sistema de tipos interno. Esta herramienta sirve como prueba empírica de conformidad y refuerza la confianza en el uso de `graphql-go` como un servidor GraphQL apto para producción.
+- La Especificación de GraphQL.
+- La implementación de GraphQL en el lenguaje de programación JavaScript.
+
+El objetivo principal de la implementación fue alcanzar compatibilidad con la implementación de JavaScript hasta la versión v0.6.0.
+
+La implementación creó un proyecto en GitHub: `graphql-go/graphql`. GitHub fue adoptado como sistema de control de versiones de código y herramienta para el ciclo de vida del desarrollo de software.
+
+Se eligió el lenguaje de programación Go por ser moderno y por su adopción constante en nuevos proyectos. Go está enfocado en la computación en la nube y por ello aprovecha todos los beneficios de GraphQL.
+
+El éxito de la implementación se confirmó mediante la comparación del diseño de la API y los resultados de salida de dos aplicaciones de ejemplo.
+
+El correcto funcionamiento de la implementación se validó mediante una biblioteca novedosa de código abierto: `graphql-go/compatibility-standard-definitions`.
 
 ---
 
