@@ -203,6 +203,28 @@ This section defines the research variables and their alignment to the research 
 
 ---
 
+### Fundamental Methodologies
+
+#### Rapid Application Development (RAD)
+
+A methodology that emphasizes and prioritizes rapid iterations of software development.
+
+- **Prototyping**: Encourages building early versions and iterating based on feedback.
+- **User Feedback**: Continuous integration of user responses into development.
+- **Fast Turnaround**: Suited for fast-paced development cycles.
+
+#### Open-source Development Methodology
+
+Focuses on collaborative, decentralized software creation.
+
+- **Peer Review**: Contributions are community-reviewed to minimize bugs and promote improvements.
+- **Decentralized Contributors**: Contributors operate across geographies using shared tooling.
+- **Public Codebase**: Code is open for all, enabling transparency and security auditing.
+- **Rapid Prototyping**: Encourages fast iteration through transparent access to code and issue tracking.
+- **Collaboration**: Broad participation from varying skill levels fosters diversity and learning.
+
+---
+
 ## Results: Type System
 
 To validate the implementation of the core GraphQL type system, we created equivalent fields and types in both the JavaScript and Go example applications using `graphql-js` and `graphql-go`, respectively. Both libraries follow an imperative schema definition pattern and maintain a near-identical API surface, faithfully reproducing the GraphQL Specification’s flexibility in schema construction styles while emphasizing programmatic control.
