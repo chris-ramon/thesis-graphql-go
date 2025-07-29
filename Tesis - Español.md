@@ -9,10 +9,11 @@
 5. [Research Framework](#research-framework)
 6. [Research Methodology](#research-methodology)
 7. [Objetivos](#objetivos)
-8. [Results: Type System](#results-type-system)
-9. [Results: Operational Equivalence](#results-operational-equivalence)
-10. [Results: Compatibility Validation](#results-compatibility-validation)
-11. [Conclusions](#conclusions)
+8. [Marco Teórico](#marco-teórico)
+9. [Results: Type System](#results-type-system)
+10. [Results: Operational Equivalence](#results-operational-equivalence)
+11. [Results: Compatibility Validation](#results-compatibility-validation)
+12. [Conclusions](#conclusions)
 
 ---
 
@@ -113,6 +114,97 @@ Los protocolos tradicionales generan múltiples estrategias para gestionar el ve
 - Documentar las prácticas de ingeniería de software utilizadas en el desarrollo de la biblioteca de GraphQL en Go.
 - Diseñar y desarrollar una biblioteca de validación: `graphql-go/compatibility-standard-definitions`.
 - Evaluar la compatibilidad con `graphql-js` mediante introspección y comparaciones de tiempo de ejecución.
+
+---
+
+## Marco Teórico
+
+### Trabajos Internacionales Previos
+
+##### Análisis Basado en Generación de Código
+
+**99designs/gqlgen** ([GitHub][1])
+Esta biblioteca implementa GraphQL a partir de un esquema definido en un archivo `.graphql`, generando automáticamente todos los componentes necesarios del lado del servidor en tiempo de compilación. Entre los elementos generados se incluyen: un servidor HTTPS, punto de acceso GraphQL, pruebas unitarias, y herramientas de desarrollo como GraphQL Playground. Su ventaja principal radica en la centralización de la definición del sistema de tipos y la automatización de su desarrollo.
+
+**Limitaciones**: La extensibilidad se ve restringida debido a la generación automática de código Go, dificultando las personalizaciones avanzadas sin modificar dependencias internas del proyecto.
+
+##### Análisis Basado en Definición de Resolutores Imperativos
+
+**graph-gophers/graphql-go** ([GitHub][2])
+
+Implementa la especificación de GraphQL iniciando desde un archivo de esquema en texto plano, mientras que los resolutores se definen manualmente en código Go. Su ventaja principal radica en la adopción generalizada por parte de la comunidad de Go y su núcleo compartido, que favorece el mantenimiento colaborativo.
+
+**Limitaciones**: Al definirse el esquema a nivel de texto, se requiere infraestructura adicional para mantener la fuente de verdad del sistema de tipos.
+
+##### Análisis Declarativo Query-to-SQL
+
+**dosco/graphjin** ([GitHub][3])
+Propone una solución declarativa de extremo a extremo que traduce un esquema GraphQL directamente a consultas SQL. Esta biblioteca genera código Go que permite consultas, mutaciones y suscripciones sin necesidad de lógica personalizada.
+
+**Limitaciones**: Al ser una solución integrada, introduce dependencia en su núcleo, dificultando su extensión sin intervención directa sobre el proyecto principal.
+
+### Trabajos Nacionales Previos
+
+**Karla Cecilia Reyes Burgos (2023)**: En su estudio titulado *Servicios web con GraphQL*, se realiza una revisión sistemática de literatura sobre el uso de GraphQL. Se enfocó en responder las siguientes preguntas:
+
+- ¿Qué áreas científicas muestran mayor interés en el desarrollo de servicios web con GraphQL?  
+  La industria médica lidera el interés en la implementación de GraphQL.
+
+- ¿Qué países presentan mayor interés en el desarrollo de servicios web con GraphQL?  
+  Estados Unidos encabeza el uso e implementación de GraphQL.
+
+- ¿Cuál fue el año con mayor número de investigaciones relacionadas al desarrollo de servicios con GraphQL?  
+  El año 2019 reportó el mayor número de soluciones informáticas basadas en GraphQL.
+
+---
+
+[1]: https://github.com/99designs/gqlgen
+[2]: https://github.com/graph-gophers/graphql-go
+[3]: https://github.com/dosco/graphjin
+
+### Variables
+
+#### Variables Independientes
+
+- **Implementación de GraphQL en Go**
+  - Paridad de Implementación
+  - Corrección de Implementación
+
+- **Validación de Compatibilidad de GraphQL en Go**
+  - Equivalencia de Validación de Compatibilidad vía Introspección
+
+#### Variables Dependientes
+
+- **graphql-js** (Implementación de Referencia en JavaScript)
+  - Actualizaciones de la API
+  - Cambios en Componentes Centrales
+  - Cambios en el Sistema de Tipos
+  - Capacidades de Introspección
+
+- **Especificación de GraphQL**
+  - Cambios en la Documentación de la Especificación
+
+---
+
+### Metodologías Fundamentales
+
+#### Desarrollo Rápido de Aplicaciones (RAD)
+
+Enfatiza iteraciones rápidas para desarrollar software.
+
+- **Prototipado**: Validar ideas mediante versiones tempranas.
+- **Retroalimentación del usuario**: Incorporar mejoras basadas en uso real.
+- **Desarrollo veloz**: Ideal para entornos de desarrollo ágil.
+
+#### Metodología de Desarrollo de Código Abierto
+
+Se enfoca en colaboración abierta y descentralizada.
+
+- **Revisión por pares**: Verificación constante para minimizar errores.
+- **Contribución descentralizada**: Apoyo global con herramientas compartidas.
+- **Código público**: Transparencia total que facilita auditoría y colaboración.
+- **Prototipado rápido**: Permite innovación acelerada por el acceso directo al código fuente.
+- **Colaboración**: Participación diversa que enriquece el aprendizaje colectivo.
 
 ---
 

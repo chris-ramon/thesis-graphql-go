@@ -9,10 +9,11 @@
 5. [Research Framework](#research-framework)
 6. [Research Methodology](#research-methodology)
 7. [Objectives](#objectives)
-8. [Results: Type System](#results-type-system)
-9. [Results: Operational Equivalence](#results-operational-equivalence)
-10. [Results: Compatibility Validation](#results-compatibility-validation)
-11. [Conclusions](#conclusions)
+8. [Theory Framework](#theory-framework)
+9. [Results: Type System](#results-type-system)
+10. [Results: Operational Equivalence](#results-operational-equivalence)
+11. [Results: Compatibility Validation](#results-compatibility-validation)
+12. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -121,6 +122,106 @@ The study has social impact due to the artifacts produced are open-source theref
 - To document the open-source development process of the `graphql-go/graphql` library, including its architecture, version control practices, and alignment with the GraphQL Specification.
 - To design and implement a compatibility validation library (`graphql-go/compatibility-standard-definitions`) to ensure structural and behavioral conformance with `graphql-js`.
 - To validate compatibility through empirical testing involving schema introspection, type system comparison, and runtime query execution.
+
+---
+
+## Theory Framework
+
+### International Previous Work
+
+#### Schema Parsing with Imperative Resolver Definition
+
+**99designs/gqlgen** ([GitHub][1])
+
+Implements schema-first GraphQL with code generation on the server side. A complete GraphQL schema file is used as the authoritative source to generate Go code for an HTTPS server, GraphQL endpoint, unit tests, and developer tools like GraphQL Playground. This approach facilitates rapid development and enforces structure.
+
+*Drawbacks*: The generated code is rigid and may limit extensibility. Modifying behavior often requires changes to the upstream generator or reliance on extension hooks.
+
+**graph-gophers/graphql-go** ([GitHub][2])
+
+Implements the GraphQL specification using a schema definition file and Go code to define resolvers. It is used as a reusable library and benefits from widespread adoption within the Go community. Its modular architecture and shared core across implementations enhance its sustainability and contributor base.
+
+*Drawbacks*: Because the schema is maintained in raw text, it requires external tools to ensure consistency and extensibility, particularly as the schema evolves.
+
+#### Declarative Query-to-SQL
+
+**dosco/graphjin** ([GitHub][3])
+
+Offers an end-to-end declarative approach that compiles GraphQL queries into SQL statements using schema metadata. Its design is analogous to an ORM and includes built-in support for query execution, subscriptions, and multi-database configurations. The tool emphasizes productivity and abstraction by allowing developers to focus primarily on schema design.
+
+*Drawbacks*: While efficient, the abstraction introduces tight coupling to the underlying toolchain. Extending features or deviating from default behaviors often requires deep integration or internal hook exposure, increasing the learning curve and maintenance effort.
+
+### National Previous Work
+
+**Karla Cecilia Reyes Burgos (2023)**
+
+Conducted a systematic literature review titled *“Web Services with GraphQL”*. This study surveyed publications that examined GraphQL in the context of web services, with the objective of identifying usage trends in academic and professional domains.
+
+Key findings include:
+
+- **Domains with highest adoption**: The medical field showed the most interest in applying GraphQL.
+- **Geographical adoption**: The United States led in the number of implementations and studies related to GraphQL.
+- **Peak research year**: The highest concentration of published investigations occurred in 2019.
+
+---
+
+[1]: https://github.com/99designs/gqlgen
+[2]: https://github.com/graph-gophers/graphql-go
+[3]: https://github.com/dosco/graphjin
+
+## Variables
+
+This section defines the research variables and their alignment to the research questions.
+
+### Independent Variables
+
+- **GraphQL Go Implementation**
+  - *Implementation Parity*: Degree of design and API similarity with `graphql-js`.
+  - *Implementation Correctness*: Compliance with the GraphQL Specification.
+
+- **Compatibility Validation Introspection Equivalence**
+  - *Compatibility Validation Acceptance*: Whether introspection comparisons result in equivalent type system structures.
+
+### Dependent Variables
+
+- **GraphQL JavaScript Reference Implementation**
+  - Influences the design expectations and serves as the canonical benchmark.
+
+- **GraphQL Specification**
+  - Serves as the official standard guiding correctness and completeness.
+
+### Dependent Variables: Dimensions
+
+- **GraphQL JavaScript Reference Implementation** updates:
+  - API
+  - Core components
+  - Type system
+  - Introspection
+
+- **GraphQL Specification** updates:
+  - Documentation refinements and structural definitions
+
+---
+
+### Fundamental Methodologies
+
+#### Rapid Application Development (RAD)
+
+A methodology that emphasizes and prioritizes rapid iterations of software development.
+
+- **Prototyping**: Encourages building early versions and iterating based on feedback.
+- **User Feedback**: Continuous integration of user responses into development.
+- **Fast Turnaround**: Suited for fast-paced development cycles.
+
+#### Open-source Development Methodology
+
+Focuses on collaborative, decentralized software creation.
+
+- **Peer Review**: Contributions are community-reviewed to minimize bugs and promote improvements.
+- **Decentralized Contributors**: Contributors operate across geographies using shared tooling.
+- **Public Codebase**: Code is open for all, enabling transparency and security auditing.
+- **Rapid Prototyping**: Encourages fast iteration through transparent access to code and issue tracking.
+- **Collaboration**: Broad participation from varying skill levels fosters diversity and learning.
 
 ---
 
