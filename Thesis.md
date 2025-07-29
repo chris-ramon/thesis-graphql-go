@@ -9,10 +9,11 @@
 5. [Research Framework](#research-framework)
 6. [Research Methodology](#research-methodology)
 7. [Objectives](#objectives)
-8. [Results: Type System](#results-type-system)
-9. [Results: Operational Equivalence](#results-operational-equivalence)
-10. [Results: Compatibility Validation](#results-compatibility-validation)
-11. [Conclusions](#conclusions)
+8. [Theory Framework](#theory-framework)
+9. [Results: Type System](#results-type-system)
+10. [Results: Operational Equivalence](#results-operational-equivalence)
+11. [Results: Compatibility Validation](#results-compatibility-validation)
+12. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -121,6 +122,42 @@ The study has social impact due to the artifacts produced are open-source theref
 - To document the open-source development process of the `graphql-go/graphql` library, including its architecture, version control practices, and alignment with the GraphQL Specification.
 - To design and implement a compatibility validation library (`graphql-go/compatibility-standard-definitions`) to ensure structural and behavioral conformance with `graphql-js`.
 - To validate compatibility through empirical testing involving schema introspection, type system comparison, and runtime query execution.
+
+---
+
+## Theory Framework
+
+## Variables
+
+This section defines the research variables and their alignment to the research questions.
+
+### Independent Variables
+
+- **GraphQL Go Implementation**
+  - *Implementation Parity*: Degree of design and API similarity with `graphql-js`.
+  - *Implementation Correctness*: Compliance with the GraphQL Specification.
+
+- **Compatibility Validation Introspection Equivalence**
+  - *Compatibility Validation Acceptance*: Whether introspection comparisons result in equivalent type system structures.
+
+### Dependent Variables
+
+- **GraphQL JavaScript Reference Implementation**
+  - Influences the design expectations and serves as the canonical benchmark.
+
+- **GraphQL Specification**
+  - Serves as the official standard guiding correctness and completeness.
+
+### Dependent Variables: Dimensions
+
+- **GraphQL JavaScript Reference Implementation** updates:
+  - API
+  - Core components
+  - Type system
+  - Introspection
+
+- **GraphQL Specification** updates:
+  - Documentation refinements and structural definitions
 
 ---
 
