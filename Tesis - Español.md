@@ -9,7 +9,7 @@
 5. [Research Framework](#research-framework)
 6. [Research Methodology](#research-methodology)
 7. [Objetivos](#objetivos)
-8. [Marco Teórico](#marco-teorico)
+8. [Marco Teórico](#marco-teórico)
 9. [Results: Type System](#results-type-system)
 10. [Results: Operational Equivalence](#results-operational-equivalence)
 11. [Results: Compatibility Validation](#results-compatibility-validation)
