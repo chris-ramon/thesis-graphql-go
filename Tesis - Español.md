@@ -121,23 +121,25 @@ Los protocolos tradicionales generan múltiples estrategias para gestionar el ve
 
 ### Trabajos Internacionales Previos
 
-#### Análisis por Enfoque de Implementación
-
 ##### Análisis Basado en Generación de Código
 
-**99designs/gqlgen**[^1]: Esta biblioteca implementa GraphQL a partir de un esquema definido en un archivo `.graphql`, generando automáticamente todos los componentes necesarios del lado del servidor en tiempo de compilación. Entre los elementos generados se incluyen: un servidor HTTPS, punto de acceso GraphQL, pruebas unitarias, y herramientas de desarrollo como GraphQL Playground. Su ventaja principal radica en la centralización de la definición del sistema de tipos y la automatización de su desarrollo.
+**99designs/gqlgen** ([GitHub][1])
+Esta biblioteca implementa GraphQL a partir de un esquema definido en un archivo `.graphql`, generando automáticamente todos los componentes necesarios del lado del servidor en tiempo de compilación. Entre los elementos generados se incluyen: un servidor HTTPS, punto de acceso GraphQL, pruebas unitarias, y herramientas de desarrollo como GraphQL Playground. Su ventaja principal radica en la centralización de la definición del sistema de tipos y la automatización de su desarrollo.
 
 **Limitaciones**: La extensibilidad se ve restringida debido a la generación automática de código Go, dificultando las personalizaciones avanzadas sin modificar dependencias internas del proyecto.
 
 ##### Análisis Basado en Definición de Resolutores Imperativos
 
-**graph-gophers/graphql-go**[^2]: Implementa la especificación de GraphQL iniciando desde un archivo de esquema en texto plano, mientras que los resolutores se definen manualmente en código Go. Su ventaja principal radica en la adopción generalizada por parte de la comunidad de Go y su núcleo compartido, que favorece el mantenimiento colaborativo.
+**graph-gophers/graphql-go** ([GitHub][2])
+
+Implementa la especificación de GraphQL iniciando desde un archivo de esquema en texto plano, mientras que los resolutores se definen manualmente en código Go. Su ventaja principal radica en la adopción generalizada por parte de la comunidad de Go y su núcleo compartido, que favorece el mantenimiento colaborativo.
 
 **Limitaciones**: Al definirse el esquema a nivel de texto, se requiere infraestructura adicional para mantener la fuente de verdad del sistema de tipos.
 
 ##### Análisis Declarativo Query-to-SQL
 
-**dosco/graphjin**[^3]: Propone una solución declarativa de extremo a extremo que traduce un esquema GraphQL directamente a consultas SQL. Esta biblioteca genera código Go que permite consultas, mutaciones y suscripciones sin necesidad de lógica personalizada.
+**dosco/graphjin** ([GitHub][3])
+Propone una solución declarativa de extremo a extremo que traduce un esquema GraphQL directamente a consultas SQL. Esta biblioteca genera código Go que permite consultas, mutaciones y suscripciones sin necesidad de lógica personalizada.
 
 **Limitaciones**: Al ser una solución integrada, introduce dependencia en su núcleo, dificultando su extensión sin intervención directa sobre el proyecto principal.
 
@@ -155,6 +157,10 @@ Los protocolos tradicionales generan múltiples estrategias para gestionar el ve
   El año 2019 reportó el mayor número de soluciones informáticas basadas en GraphQL.
 
 ---
+
+[1]: https://github.com/99designs/gqlgen
+[2]: https://github.com/graph-gophers/graphql-go
+[3]: https://github.com/dosco/graphjin
 
 ### Variables
 
