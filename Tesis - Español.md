@@ -186,6 +186,28 @@ Propone una solución declarativa de extremo a extremo que traduce un esquema Gr
 
 ---
 
+### Metodologías Fundamentales
+
+#### Desarrollo Rápido de Aplicaciones (RAD)
+
+Enfatiza iteraciones rápidas para desarrollar software.
+
+- **Prototipado**: Validar ideas mediante versiones tempranas.
+- **Retroalimentación del usuario**: Incorporar mejoras basadas en uso real.
+- **Desarrollo veloz**: Ideal para entornos de desarrollo ágil.
+
+#### Metodología de Desarrollo de Código Abierto
+
+Se enfoca en colaboración abierta y descentralizada.
+
+- **Revisión por pares**: Verificación constante para minimizar errores.
+- **Contribución descentralizada**: Apoyo global con herramientas compartidas.
+- **Código público**: Transparencia total que facilita auditoría y colaboración.
+- **Prototipado rápido**: Permite innovación acelerada por el acceso directo al código fuente.
+- **Colaboración**: Participación diversa que enriquece el aprendizaje colectivo.
+
+---
+
 ## Research Methodology
 
 ### Introduction
