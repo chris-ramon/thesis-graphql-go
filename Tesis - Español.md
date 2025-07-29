@@ -209,9 +209,11 @@ Se enfoca en colaboración abierta y descentralizada.
 
 ---
 
-## Desarrollo: Implementación
+## Desarrollo: Metodología
 
-### Desarrollo Rápido de Aplicaciones (RAD)
+### Implementación
+
+#### Desarrollo Rápido de Aplicaciones (RAD)
 
 El desarrollo de la biblioteca `graphql-go/graphql` siguió la metodología de Desarrollo Rápido de Aplicaciones (RAD) para facilitar una implementación ágil e iterativa alineada con el modelo de referencia `graphql-js`.
 
@@ -227,7 +229,7 @@ A medida que el proyecto evolucionaba, la retroalimentación de los usuarios jug
 
 El proyecto se benefició de ciclos de desarrollo cortos, lo que permitió lanzamientos frecuentes. Esta entrega acelerada fue impulsada por la demanda real de empresas que requerían capacidades funcionales de GraphQL en Go, lo que exigía un ritmo de desarrollo eficiente y adaptable.
 
-### Metodología de Desarrollo de Código Abierto
+#### Metodología de Desarrollo de Código Abierto
 
 El paradigma de desarrollo de código abierto sustentó el ciclo de vida del proyecto, promoviendo la transparencia, la colaboración y la innovación impulsada por la comunidad. Alojado en GitHub, el proyecto se mantuvo accesible públicamente desde sus primeras etapas y fomentó la participación global.
 

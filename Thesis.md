@@ -10,7 +10,7 @@
 6. [Research Methodology](#research-methodology)
 7. [Objectives](#objectives)
 8. [Theory Framework](#theory-framework)
-8. [Development: Implementation](#development-implementation)
+8. [Development: Methodology](#development-methodology)
 9. [Results: Type System](#results-type-system)
 10. [Results: Operational Equivalence](#results-operational-equivalence)
 11. [Results: Compatibility Validation](#results-compatibility-validation)
@@ -226,9 +226,11 @@ Focuses on collaborative, decentralized software creation.
 
 ---
 
-## Development: Implementation
+## Development: Methodology
 
-### Rapid Application Development (RAD)
+### Implementation
+
+#### Rapid Application Development (RAD)
 This methodology was adopted to implement the GraphQL Go library efficiently and iteratively, following the `graphql-js` reference implementation.
 
 #### Prototyping
@@ -240,7 +242,7 @@ As the project evolved, it continuously integrated community feedback through Gi
 #### Fast Turnaround
 The project progressed through incremental iterations of varying complexity. This approach enabled regular releases and met the demand from companies seeking early access to a functional GraphQL Go library. Contributors maintained a fast-paced development cycle to support these needs.
 
-### Open-Source Development Methodology
+#### Open-Source Development Methodology
 The project was developed in alignment with open-source principles, enabling contributions from a global community. The use of GitHub provided resilience and long-term sustainability through transparent and decentralized development.
 
 #### Peer Review
