@@ -169,8 +169,6 @@ Key findings include:
 [2]: https://github.com/graph-gophers/graphql-go
 [3]: https://github.com/dosco/graphjin
 
----
-
 ## Variables
 
 This section defines the research variables and their alignment to the research questions.
