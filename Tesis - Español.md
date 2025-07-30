@@ -11,10 +11,11 @@
 7. [Objetivos](#objetivos)
 8. [Marco Teórico](#marco-teórico)
 9. [Desarrollo: Metodología](#desarrollo-metodología)
-10. [Results: Type System](#results-type-system)
-11. [Results: Operational Equivalence](#results-operational-equivalence)
-12. [Results: Compatibility Validation](#results-compatibility-validation)
-13. [Conclusions](#conclusions)
+10. [Desarrollo: Requerimientos](#desarrollo-requerimientos)
+11. [Results: Type System](#results-type-system)
+12. [Results: Operational Equivalence](#results-operational-equivalence)
+13. [Results: Compatibility Validation](#results-compatibility-validation)
+14. [Conclusions](#conclusions)
 
 ---
 
@@ -257,40 +258,77 @@ La colaboración entre equipos multidisciplinarios fue una piedra angular del pr
 
 ---
 
-### Requisitos No Funcionales: Implementación
+## Desarrollo: Requerimientos
+
+### Funcionales: Implementación
+
+- La implementación debe estar escrita en el lenguaje de programación Go.
+- Debe implementar GraphQL siguiendo la versión 0.6.0 de `graphql-js`.
+- La Especificación GraphQL servirá como guía alternativa en caso de ambigüedad o ausencia de detalles en `graphql-js`.
+
+### No Funcionales: Implementación
 
 #### Portabilidad
-- El sistema debe ser compatible con los principales sistemas operativos para asegurar su accesibilidad y utilidad en entornos diversos.
-- Debe ser compatible con el entorno de ejecución estándar de Go, evitando el uso de `cgo` para maximizar la portabilidad y simplicidad del despliegue.
+- Compatible con sistemas operativos cruzados.
+- Ejecutable en el entorno de ejecución estándar de Go, evitando dependencias de C (cgo).
 
 #### Seguridad
-- Se deben integrar las prácticas de seguridad recomendadas por la comunidad de Go para asegurar la robustez del sistema ante vulnerabilidades.
+- Debe seguir las mejores prácticas de seguridad recomendadas por la comunidad de Go.
 
 #### Mantenibilidad
-- La implementación debe seguir las mejores prácticas de Go tanto para el diseño de APIs públicas como para la arquitectura interna.
-- Se debe integrar una canalización de integración continua (CI) para soportar validaciones automáticas y control de calidad.
-- El código fuente debe estar debidamente documentado con comentarios en línea para facilitar su comprensión y revisión.
-- Se debe incluir una herramienta de cobertura de código para medir y mejorar la amplitud de las pruebas.
-- La interacción con la comunidad debe estar respaldada por un sistema de discusión/chat integrado en el sitio web.
-- Se deben proporcionar ejemplos de uso comunes para facilitar la adopción por parte de los desarrolladores.
+- Aplicar buenas prácticas de diseño de API y estructuras internas según las convenciones de Go.
+- Incluir comentarios explicativos en el código fuente.
+- Integrar herramientas de cobertura de pruebas.
+- Proveer ejemplos de código para casos de uso comunes.
+- Incluir scripts ejecutables para interacciones comunes vía CLI.
 
-#### Fiabilidad
-- El sistema debe mantenerse como un proyecto de código abierto.
-- Debe adoptarse un flujo de trabajo abierto, incluyendo revisiones por pares, para asegurar transparencia, mejora continua e integridad del código.
+#### Confiabilidad
+- El proyecto debe ser de código abierto.
+- Debe seguir flujos de trabajo colaborativos que incluyan revisión de código.
 
 #### Escalabilidad
-- El proyecto debe ser adoptado y validado mediante su uso en comunidades externas de código abierto, demostrando su escalabilidad práctica.
+- La aceptación por parte de la comunidad de código abierto servirá como indicador de su capacidad de adopción y escalamiento.
 
 #### Rendimiento
-- El rendimiento debe ser verificado mediante pruebas unitarias orientadas a benchmarks.
-- Se debe optimizar el sistema para responder en menos de ~0.4 segundos utilizando mecanismos de caché que eviten procesos redundantes.
+- El rendimiento debe ser validado a través de pruebas unitarias que incluyan evaluaciones de desempeño fundamentales.
 
 #### Reusabilidad
-- La implementación debe evitar dependencias con bibliotecas externas de Go para asegurar su reutilización e integración en diversos proyectos.
+- La solución debe poder integrarse en otros proyectos de Go mediante interfaz de línea de comandos (CLI).
 
 #### Flexibilidad
-- Las desviaciones respecto a `graphql-js` deben ser mínimas y debidamente justificadas, garantizando compatibilidad en el diseño de API y el comportamiento en tiempo de ejecución.
-- La arquitectura debe ser lo suficientemente flexible para soportar futuras extensiones y mejoras sin requerir refactorizaciones significativas.
+- Debe mantener una mínima desviación respecto a `graphql-js` para conservar la paridad de diseño de API.
+
+### No Funcionales: Validación de Compatibilidad
+
+#### Portabilidad
+- Compatible con sistemas operativos cruzados.
+- Ejecutable en el entorno de ejecución estándar de Go, sin necesidad de cgo.
+
+#### Seguridad
+- Debe aplicar las mejores prácticas de seguridad reconocidas en la comunidad de desarrollo en Go.
+
+#### Mantenibilidad
+- Aplicar buenas prácticas de diseño de API y estructuras internas en Go.
+- Incluir comentarios explicativos en el código fuente.
+- Integrar herramientas de cobertura de pruebas.
+- Proveer ejemplos prácticos de uso frecuente.
+- Incluir scripts ejecutables para facilitar la interacción mediante CLI.
+
+#### Confiabilidad
+- Debe tratarse de un proyecto de código abierto.
+- Requiere procesos colaborativos de revisión de código para garantizar calidad.
+
+#### Escalabilidad
+- La aceptación y uso por parte de la comunidad será un indicador clave.
+
+#### Rendimiento
+- La validación de rendimiento debe estar basada en la actividad del repositorio y la eficiencia del procesamiento con caché.
+
+#### Reusabilidad
+- El sistema debe ser integrable en otros proyectos de Go utilizando la interfaz de línea de comandos (CLI).
+
+#### Flexibilidad
+- Debe permitir la integración de nuevas funcionalidades dentro del CLI.
 
 ---
 
