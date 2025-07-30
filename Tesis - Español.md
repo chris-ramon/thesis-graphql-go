@@ -257,6 +257,43 @@ La colaboración entre equipos multidisciplinarios fue una piedra angular del pr
 
 ---
 
+### Requisitos No Funcionales: Implementación
+
+#### Portabilidad
+- El sistema debe ser compatible con los principales sistemas operativos para asegurar su accesibilidad y utilidad en entornos diversos.
+- Debe ser compatible con el entorno de ejecución estándar de Go, evitando el uso de `cgo` para maximizar la portabilidad y simplicidad del despliegue.
+
+#### Seguridad
+- Se deben integrar las prácticas de seguridad recomendadas por la comunidad de Go para asegurar la robustez del sistema ante vulnerabilidades.
+
+#### Mantenibilidad
+- La implementación debe seguir las mejores prácticas de Go tanto para el diseño de APIs públicas como para la arquitectura interna.
+- Se debe integrar una canalización de integración continua (CI) para soportar validaciones automáticas y control de calidad.
+- El código fuente debe estar debidamente documentado con comentarios en línea para facilitar su comprensión y revisión.
+- Se debe incluir una herramienta de cobertura de código para medir y mejorar la amplitud de las pruebas.
+- La interacción con la comunidad debe estar respaldada por un sistema de discusión/chat integrado en el sitio web.
+- Se deben proporcionar ejemplos de uso comunes para facilitar la adopción por parte de los desarrolladores.
+
+#### Fiabilidad
+- El sistema debe mantenerse como un proyecto de código abierto.
+- Debe adoptarse un flujo de trabajo abierto, incluyendo revisiones por pares, para asegurar transparencia, mejora continua e integridad del código.
+
+#### Escalabilidad
+- El proyecto debe ser adoptado y validado mediante su uso en comunidades externas de código abierto, demostrando su escalabilidad práctica.
+
+#### Rendimiento
+- El rendimiento debe ser verificado mediante pruebas unitarias orientadas a benchmarks.
+- Se debe optimizar el sistema para responder en menos de ~0.4 segundos utilizando mecanismos de caché que eviten procesos redundantes.
+
+#### Reusabilidad
+- La implementación debe evitar dependencias con bibliotecas externas de Go para asegurar su reutilización e integración en diversos proyectos.
+
+#### Flexibilidad
+- Las desviaciones respecto a `graphql-js` deben ser mínimas y debidamente justificadas, garantizando compatibilidad en el diseño de API y el comportamiento en tiempo de ejecución.
+- La arquitectura debe ser lo suficientemente flexible para soportar futuras extensiones y mejoras sin requerir refactorizaciones significativas.
+
+---
+
 ## Results: Type System
 
 To validate the implementation of the core GraphQL type system, we created equivalent fields and types in both the JavaScript and Go example applications using `graphql-js` and `graphql-go`, respectively. Both libraries follow an imperative schema definition pattern and maintain a near-identical API surface, faithfully reproducing the GraphQL Specification’s flexibility in schema construction styles while emphasizing programmatic control.

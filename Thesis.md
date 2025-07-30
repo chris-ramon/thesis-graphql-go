@@ -11,10 +11,11 @@
 7. [Objectives](#objectives)
 8. [Theory Framework](#theory-framework)
 9. [Development: Methodology](#development-methodology)
-10. [Results: Type System](#results-type-system)
-11. [Results: Operational Equivalence](#results-operational-equivalence)
-12. [Results: Compatibility Validation](#results-compatibility-validation)
-13. [Conclusions](#conclusions)
+10. [Development: Requirements](#development-requirements)
+11. [Results: Type System](#results-type-system)
+12. [Results: Operational Equivalence](#results-operational-equivalence)
+13. [Results: Compatibility Validation](#results-compatibility-validation)
+14. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -262,6 +263,51 @@ GitHub’s tooling—such as Issues, Pull Requests, Tags, Releases, Branches, an
 
 #### Collaboration
 Collaboration was driven primarily through GitHub Issues and Pull Requests, ensuring a permanent, transparent record of discussions, architectural decisions, feature documentation, and educational use.
+
+---
+
+## Development: Requirements
+
+### Functional Requirements: Implementation
+
+- The implementation must be written in the Go programming language to ensure consistency with the project's language ecosystem.
+- The implementation should follow the design and operational behavior defined in `graphql-js` up to version 0.6.0 to ensure conceptual alignment with the original reference.
+- The GraphQL Specification must serve as a complementary guideline to ensure standards compliance.
+
+### Non-Functional Requirements: Implementation
+
+#### Portability
+- The system must support execution across major operating systems to ensure accessibility and usability in diverse environments.
+- It must be compatible with the canonical Go runtime, avoiding reliance on `cgo` for enhanced cross-platform portability and deployment simplicity.
+
+#### Security
+- Security practices endorsed by the Go community must be integrated to ensure the system’s robustness against vulnerabilities.
+
+#### Maintainability
+- The implementation must follow Go’s best practices for both public API design and internal architectural organization.
+- A continuous integration (CI) pipeline must be integrated to support automated validation and quality control.
+- The source code must be sufficiently documented with inline comments to aid in code comprehension and review.
+- A code coverage tool should be included to measure and improve test comprehensiveness.
+- Community interaction should be supported via a website-integrated discussion/chat tool.
+- Examples illustrating common usage scenarios must be included for developer onboarding and adoption.
+
+#### Reliability
+- The system must be maintained as an open-source project.
+- It must adopt an open-source workflow, including peer reviews, to ensure transparency, continuous improvement, and code integrity.
+
+#### Scalability
+- The project must be adopted and validated through its use in external open-source communities, demonstrating practical scalability.
+
+#### Performance
+- Performance must be verified through benchmark-oriented unit tests.
+- Optimization must aim to deliver responses in under ~0.4 seconds with caching mechanisms to avoid redundant computation or downloads.
+
+#### Reusability
+- The implementation must avoid dependencies on third-party Go libraries to ensure it can be reused and embedded into a wide range of projects.
+
+#### Flexibility
+- Any deviations from `graphql-js` must be minimal and well-justified, ensuring compatibility in both API and runtime behavior.
+- The architecture must be flexible enough to support future extensions and enhancements without major refactors.
 
 ---
 
