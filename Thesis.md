@@ -270,7 +270,7 @@ Collaboration was driven primarily through GitHub Issues and Pull Requests, ensu
 
 ### Functional Requirements: Implementation
 
-- The implementation must be written in the Go programming language to ensure consistency with the project's language ecosystem.
+- The implementation must be written in the Go programming language.
 - The implementation should follow the design and operational behavior defined in `graphql-js` up to version 0.6.0 to ensure conceptual alignment with the original reference.
 - The GraphQL Specification must serve as a complementary guideline to ensure standards compliance.
 
