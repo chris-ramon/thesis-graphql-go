@@ -10,10 +10,11 @@
 6. [Research Methodology](#research-methodology)
 7. [Objetivos](#objetivos)
 8. [Marco Teórico](#marco-teórico)
-9. [Results: Type System](#results-type-system)
-10. [Results: Operational Equivalence](#results-operational-equivalence)
-11. [Results: Compatibility Validation](#results-compatibility-validation)
-12. [Conclusions](#conclusions)
+9. [Desarrollo: Metodología](#desarrollo-metodología)
+10. [Results: Type System](#results-type-system)
+11. [Results: Operational Equivalence](#results-operational-equivalence)
+12. [Results: Compatibility Validation](#results-compatibility-validation)
+13. [Conclusions](#conclusions)
 
 ---
 
@@ -208,16 +209,51 @@ Se enfoca en colaboración abierta y descentralizada.
 
 ---
 
-## Research Methodology
+## Desarrollo: Metodología
 
-### Introduction
-The study of the research was decided due to the novel introduction of GraphQL at 2015. It was the opportunity to implement the specification in the Go programming language. Although GraphQL was initially adopted internally at Facebook, it was not widely adopted across diverse ecosystems immediately after its public release in 2015.
+### Implementación
 
-### Applied Justification
-With `graphql-go` we solve the problem of the lack of a `graphql-js` version in Go. There were notable innovation because it was one of the earliest open-source project. The quality of the library is guarantee due to keeping consistency by aligning with `graphql-js` design.
+#### Desarrollo Rápido de Aplicaciones (RAD)
 
-### Social Justification
-The study has social impact due to the artifacts produced are open-source therefore the benefits for the end-users of the research.
+El desarrollo de la biblioteca `graphql-go/graphql` siguió la metodología de Desarrollo Rápido de Aplicaciones (RAD) para facilitar una implementación ágil e iterativa alineada con el modelo de referencia `graphql-js`.
+
+#### Prototipado
+
+La implementación comenzó con componentes funcionales mínimos y se expandió de manera incremental. Los esfuerzos iniciales se centraron en módulos fundamentales, incluidos el procesamiento del texto fuente, el análisis léxico (lexer), la construcción del árbol sintáctico (AST), el análisis del esquema y los mecanismos de resolución de campos.
+
+#### Retroalimentación del Usuario
+
+A medida que el proyecto evolucionaba, la retroalimentación de los usuarios jugó un papel clave. En lugar de seguir un plan de desarrollo rígido, se priorizó la integración continua de sugerencias recopiladas a través de GitHub mediante Issues y Pull Requests. Esto permitió una respuesta ágil a las necesidades emergentes, manteniendo al mismo tiempo la alineación con el código base de `graphql-js`, la Especificación de GraphQL y las mejores prácticas del lenguaje Go.
+
+#### Ciclos Rápidos de Entrega
+
+El proyecto se benefició de ciclos de desarrollo cortos, lo que permitió lanzamientos frecuentes. Esta entrega acelerada fue impulsada por la demanda real de empresas que requerían capacidades funcionales de GraphQL en Go, lo que exigía un ritmo de desarrollo eficiente y adaptable.
+
+#### Metodología de Desarrollo de Código Abierto
+
+El paradigma de desarrollo de código abierto sustentó el ciclo de vida del proyecto, promoviendo la transparencia, la colaboración y la innovación impulsada por la comunidad. Alojado en GitHub, el proyecto se mantuvo accesible públicamente desde sus primeras etapas y fomentó la participación global.
+
+#### Revisión por Pares
+
+La revisión por pares impulsada por la comunidad fue esencial para garantizar la calidad del software. Los colaboradores reportaron problemas, sugirieron mejoras, corrigieron errores y aplicaron parches de seguridad críticos, fortaleciendo la confiabilidad de la implementación.
+
+#### Colaboradores Descentralizados
+
+El desarrollo no estuvo vinculado a una única entidad u organización. Por el contrario, colaboradores de diversas regiones y perfiles profesionales contribuyeron de forma asincrónica utilizando GitHub como plataforma central de coordinación.
+
+#### Código Público y Licencia
+
+Desde sus primeras versiones, el repositorio fue publicado bajo la licencia permisiva MIT, fomentando el uso libre y la colaboración abierta. Esta decisión se alineó con el modelo de licencia adoptado por la implementación de referencia en JavaScript, `graphql-js`, que en su versión `v0.6.0` utilizaba una licencia BSD de tres cláusulas[^1]. Esta compatibilidad de licencias facilitó tanto el aprendizaje académico como el uso comercial, permitiendo la creación de proyectos derivados mediante forks, integraciones y adaptaciones particulares.
+
+[^1]: `graphql-js` v0.6.0 BSD License: [https://github.com/graphql/graphql-js/blob/v0.6.0/LICENSE](https://github.com/graphql/graphql-js/blob/v0.6.0/LICENSE)
+
+#### Prototipado Rápido
+
+La plataforma GitHub respaldó la naturaleza ágil del proyecto al proporcionar herramientas esenciales como seguimiento de incidencias, pull requests, etiquetado, ramificación y lanzamientos versionados. Estas capacidades permitieron a los colaboradores iterar rápidamente y gestionar eficazmente los hitos del desarrollo.
+
+#### Colaboración
+
+La colaboración entre equipos multidisciplinarios fue una piedra angular del proyecto. Las funciones colaborativas de GitHub fomentaron el intercambio de documentación, el seguimiento de decisiones y discusiones transparentes sobre compensaciones de diseño. Esto apoyó la mantenibilidad a largo plazo y redujo la curva de aprendizaje para nuevos colaboradores y usuarios.
 
 ---
 

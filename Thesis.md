@@ -10,10 +10,11 @@
 6. [Research Methodology](#research-methodology)
 7. [Objectives](#objectives)
 8. [Theory Framework](#theory-framework)
-9. [Results: Type System](#results-type-system)
-10. [Results: Operational Equivalence](#results-operational-equivalence)
-11. [Results: Compatibility Validation](#results-compatibility-validation)
-12. [Conclusions](#conclusions)
+9. [Development: Methodology](#development-methodology)
+10. [Results: Type System](#results-type-system)
+11. [Results: Operational Equivalence](#results-operational-equivalence)
+12. [Results: Compatibility Validation](#results-compatibility-validation)
+13. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -222,6 +223,45 @@ Focuses on collaborative, decentralized software creation.
 - **Public Codebase**: Code is open for all, enabling transparency and security auditing.
 - **Rapid Prototyping**: Encourages fast iteration through transparent access to code and issue tracking.
 - **Collaboration**: Broad participation from varying skill levels fosters diversity and learning.
+
+---
+
+## Development: Methodology
+
+### Implementation
+
+#### Rapid Application Development (RAD)
+This methodology was adopted to implement the GraphQL Go library efficiently and iteratively, following the `graphql-js` reference implementation.
+
+#### Prototyping
+The implementation began with foundational interfaces, including components such as the source text processor, parser, lexer, abstract syntax tree (AST), type collectors, and resolvers.
+
+#### User Feedback
+As the project evolved, it continuously integrated community feedback through GitHub. Instead of adhering to a strict, predefined plan, the development proceeded through iterative pull requests. This allowed for rapid adjustments guided by the `graphql-js` implementation, the official GraphQL specification, and Go best practices.
+
+#### Fast Turnaround
+The project progressed through incremental iterations of varying complexity. This approach enabled regular releases and met the demand from companies seeking early access to a functional GraphQL Go library. Contributors maintained a fast-paced development cycle to support these needs.
+
+#### Open-Source Development Methodology
+The project was developed in alignment with open-source principles, enabling contributions from a global community. The use of GitHub provided resilience and long-term sustainability through transparent and decentralized development.
+
+#### Peer Review
+The codebase benefited from peer reviews by contributors worldwide. These reviews led to enhancements, bug reports, and critical security patches—strengthening trust in the project.
+
+#### Decentralized Contributors
+GitHub facilitated a decentralized workflow where contributors could collaborate asynchronously across different time zones and regions.
+
+#### Public Codebase and License
+Since its early versions, the repository was published under the permissive MIT license, aligning with the licensing model of graphql-js (BSD)[^1]. This facilitated both academic learning and commercial use, allowing the creation of derivative projects through forks and integrations.
+
+[^1]: `graphql-js` v0.6.0 BSD License: [https://github.com/graphql/graphql-js/blob/v0.6.0/LICENSE](https://github.com/graphql/graphql-js/blob/v0.6.0/LICENSE)
+
+
+#### Rapid Prototyping
+GitHub’s tooling—such as Issues, Pull Requests, Tags, Releases, Branches, and Collaborator permissions—supported continuous and rapid iteration.
+
+#### Collaboration
+Collaboration was driven primarily through GitHub Issues and Pull Requests, ensuring a permanent, transparent record of discussions, architectural decisions, feature documentation, and educational use.
 
 ---
 
