@@ -297,6 +297,11 @@ La colaboración entre equipos multidisciplinarios fue una piedra angular del pr
 #### Flexibilidad
 - Debe mantener una mínima desviación respecto a `graphql-js` para conservar la paridad de diseño de API.
 
+### Requerimientos Funcionales: Validación de Compatibilidad
+- La herramienta de validación de compatibilidad debe comparar el sistema de tipos de graphql-js y graphql-go usando introspección.
+- Debe ser ejecutable via la interface de linea de commandos (CLI).
+- La herramienta debe ser escrita en Go e poder usar otras bibliotecas de Go open-source.
+
 ### No Funcionales: Validación de Compatibilidad
 
 #### Portabilidad
