@@ -375,7 +375,7 @@ Esta investigación se limita explícitamente a evaluar y replicar el comportami
 
 Las siguientes iniciativas fueron consideradas conceptualmente para enriquecer la validación de compatibilidad, pero quedaron fuera del alcance de este estudio debido a limitaciones de tiempo y recursos. Se proponen como trabajos futuros:
 
-- **Pruebas de Compatibilidad Unitarias** ([GitHub][1]): Marco para validar coincidencias de nombre y salida de pruebas entre `graphql-js` y `graphql-go`.
+- **Pruebas de Compatibilidad Unitarias** ([GitHub][1]): Framework para validar nombres de pruebas unitarias entre `graphql-js` y `graphql-go`.
 - **Aceptación de Usuario en Compatibilidad** ([GitHub][2]): Análisis centrado en el usuario para comparar métricas de adopción, patrones de retroalimentación y características de uso entre `graphql-js` y `graphql-go`.
 
 [1]: https://github.com/graphql-go/compatibility-unit-tests  

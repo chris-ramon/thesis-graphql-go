@@ -383,7 +383,7 @@ This research is explicitly limited to evaluating and replicating the behavior o
 
 The following initiatives were conceptually considered to further enrich the compatibility validation scope but were excluded from this study due to resource constraints. They are proposed as future work:
 
-- **Compatibility Unit Tests** ([GitHub][4]): A framework for validating test name and output alignment between `graphql-js` and `graphql-go`.
+- **Compatibility Unit Tests** ([GitHub][4]): A framework for validating test names alignment between `graphql-js` and `graphql-go`.
 - **Compatibility User Acceptance** ([GitHub][5]): A user-centered analysis comparing community adoption metrics, feedback patterns, and usage characteristics between `graphql-js` and `graphql-go`.
 
 [4]: https://github.com/graphql-go/compatibility-unit-tests
