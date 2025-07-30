@@ -10,11 +10,11 @@
 6. [Research Methodology](#research-methodology)
 7. [Objectives](#objectives)
 8. [Theory Framework](#theory-framework)
-8. [Development: Methodology](#development-methodology)
-9. [Results: Type System](#results-type-system)
-10. [Results: Operational Equivalence](#results-operational-equivalence)
-11. [Results: Compatibility Validation](#results-compatibility-validation)
-12. [Conclusions](#conclusions)
+9. [Development: Methodology](#development-methodology)
+10. [Results: Type System](#results-type-system)
+11. [Results: Operational Equivalence](#results-operational-equivalence)
+12. [Results: Compatibility Validation](#results-compatibility-validation)
+13. [Conclusions](#conclusions)
 
 ## Abstract
 
