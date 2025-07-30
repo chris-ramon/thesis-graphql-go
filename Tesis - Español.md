@@ -310,7 +310,6 @@ La colaboración entre equipos multidisciplinarios fue una piedra angular del pr
 - Aplicar buenas prácticas de diseño de API y estructuras internas en Go.
 - Incluir comentarios explicativos en el código fuente.
 - Integrar herramientas de cobertura de pruebas.
-- Proveer ejemplos prácticos de uso frecuente.
 - Incluir scripts ejecutables para facilitar la interacción mediante CLI.
 
 #### Confiabilidad
