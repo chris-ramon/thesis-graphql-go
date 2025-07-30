@@ -12,10 +12,11 @@
 8. [Marco Teórico](#marco-teórico)
 9. [Desarrollo: Metodología](#desarrollo-metodología)
 10. [Desarrollo: Requerimientos](#desarrollo-requerimientos)
-11. [Results: Type System](#results-type-system)
-12. [Results: Operational Equivalence](#results-operational-equivalence)
-13. [Results: Compatibility Validation](#results-compatibility-validation)
-14. [Conclusions](#conclusions)
+11. [Desarrollo: Alcance](#desarrollo-alcance)
+12. [Results: Type System](#results-type-system)
+13. [Results: Operational Equivalence](#results-operational-equivalence)
+14. [Results: Compatibility Validation](#results-compatibility-validation)
+15. [Conclusions](#conclusions)
 
 ---
 
@@ -333,6 +334,52 @@ La colaboración entre equipos multidisciplinarios fue una piedra angular del pr
 
 #### Flexibilidad
 - Debe permitir la integración de nuevas funcionalidades dentro del CLI.
+
+---
+
+## Desarrollo: Alcance
+
+### Objetivos de Investigación
+
+Esta investigación tiene como objetivo explorar la integración de GraphQL en el ecosistema de programación Go, centrándose tanto en la implementación de la especificación de GraphQL como en su validación de compatibilidad. El estudio establece una base técnica y metodológica para la evolución continua de bibliotecas open-source de GraphQL mediante herramientas automatizadas y entornos colaborativos de contribución.
+
+### Aclaraciones sobre el Alcance
+
+#### Implementación
+
+El alcance de la implementación se encuentra anclado a la implementación de referencia en JavaScript (`graphql-js`) en su versión 0.6.0. Aunque esta versión constituye la base del desarrollo, el proyecto promueve futuras mejoras mediante contribuciones de la comunidad, alineadas con principios de extensibilidad y compatibilidad retroactiva.
+
+Las mejoras no deben alterar la funcionalidad existente, a menos que sean impulsadas explícitamente por cambios en la implementación de referencia. La estabilidad es un objetivo clave, y la implementación es validada mediante aplicaciones reales en entornos de producción de múltiples organizaciones.
+
+La biblioteca reproduce el modelo imperativo de construcción de esquemas utilizado por `graphql-js`, lo que permite una interfaz completamente programable para interactuar con el sistema de tipos interno. La solidez del sistema se garantiza al replicar el conjunto original de pruebas unitarias, adaptado idiomáticamente para Go, asegurando paridad de características y coherencia de comportamiento.
+
+#### Validación de Compatibilidad
+
+La herramienta de validación de compatibilidad está diseñada como un componente externo, intencionalmente desacoplado de la implementación principal. Su arquitectura modular permite integrar futuras implementaciones de GraphQL más allá de las evaluadas en este estudio.
+
+La herramienta verifica la equivalencia en tiempo de ejecución mediante comparaciones basadas en introspección, enfocándose en la compatibilidad estructural entre sistemas de tipos. Además, sienta las bases para la integración con CI/CD, permitiendo que futuros mantenedores automaticen las verificaciones de compatibilidad durante los flujos de trabajo de desarrollo.
+
+### Identificación de Posibles Sesgos
+
+La implementación toma como referencia principal el diseño de `graphql-js`. Sin embargo, se realizan adaptaciones para ajustarse a las prácticas idiomáticas de Go, evitando patrones específicos del lenguaje JavaScript. Este proceso enfatiza la fidelidad conceptual sobre la replicación sintáctica.
+
+Asimismo, la herramienta de validación de compatibilidad se limita inicialmente a la versión 0.6.0 de `graphql-js`. Aunque esta restricción reduce su alcance inmediato, su diseño modular facilita su ampliación para futuras versiones u otras implementaciones de referencia.
+
+### Límites de la Investigación
+
+Esta investigación se limita explícitamente a evaluar y replicar el comportamiento de `graphql-js` en su versión 0.6.0. Si bien se considera la extensibilidad, los esfuerzos de validación y las conclusiones están limitados a dicha versión histórica.
+
+### Ámbitos Fuera del Alcance
+
+#### Limitaciones de Recursos
+
+Las siguientes iniciativas fueron consideradas conceptualmente para enriquecer la validación de compatibilidad, pero quedaron fuera del alcance de este estudio debido a limitaciones de tiempo y recursos. Se proponen como trabajos futuros:
+
+- **Pruebas de Compatibilidad Unitarias** ([GitHub][4]): Framework para validar nombres de pruebas unitarias entre `graphql-js` y `graphql-go`.
+- **Aceptación de Usuario en Compatibilidad** ([GitHub][5]): Análisis centrado en el usuario para comparar métricas de adopción, patrones de retroalimentación y características de uso entre `graphql-js` y `graphql-go`.
+
+[4]: https://github.com/graphql-go/compatibility-unit-tests
+[5]: https://github.com/graphql-go/compatibility-user-acceptance
 
 ---
 
