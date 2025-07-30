@@ -299,8 +299,7 @@ Collaboration was driven primarily through GitHub Issues and Pull Requests, ensu
 - The project must be adopted and validated through its use in external open-source communities, demonstrating practical scalability.
 
 #### Performance
-- Performance must be verified through benchmark-oriented unit tests.
-- Optimization must aim to deliver responses in under ~0.4 seconds with caching mechanisms to avoid redundant computation or downloads.
+- The implementation must include benchmark tests within its unit tests to evaluate performance metrics.
 
 #### Reusability
 - The implementation must avoid dependencies on third-party Go libraries to ensure it can be reused and embedded into a wide range of projects.
