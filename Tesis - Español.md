@@ -300,7 +300,8 @@ La colaboración entre equipos multidisciplinarios fue una piedra angular del pr
 ### Requerimientos Funcionales: Validación de Compatibilidad
 - La herramienta de validación de compatibilidad debe comparar el sistema de tipos de `graphql-js` y `graphql-go` usando introspección.
 - Debe ser ejecutable via la interface de linea de commandos (CLI).
-- La herramienta debe ser escrita en Go e poder usar otras bibliotecas de Go open-source.
+- La herramienta debe ser escrita en Go.
+- De ser necesario usar otras bibliotecas de Go open-source.
 
 ### No Funcionales: Validación de Compatibilidad
 
