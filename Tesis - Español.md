@@ -280,7 +280,6 @@ La colaboración entre equipos multidisciplinarios fue una piedra angular del pr
 - Incluir comentarios explicativos en el código fuente.
 - Integrar herramientas de cobertura de pruebas.
 - Proveer ejemplos de código para casos de uso comunes.
-- Incluir scripts ejecutables para interacciones comunes vía CLI.
 
 #### Confiabilidad
 - El proyecto debe ser de código abierto.
