@@ -12,10 +12,11 @@
 8. [Theory Framework](#theory-framework)
 9. [Development: Methodology](#development-methodology)
 10. [Development: Requirements](#development-requirements)
-11. [Results: Type System](#results-type-system)
-12. [Results: Operational Equivalence](#results-operational-equivalence)
-13. [Results: Compatibility Validation](#results-compatibility-validation)
-14. [Conclusions](#conclusions)
+11. [Development: Scope](#development-scope)
+12. [Results: Type System](#results-type-system)
+13. [Results: Operational Equivalence](#results-operational-equivalence)
+14. [Results: Compatibility Validation](#results-compatibility-validation)
+15. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -341,6 +342,52 @@ Collaboration was driven primarily through GitHub Issues and Pull Requests, ensu
 
 #### Flexibility
 - It must support the addition of new CLI features without significant architectural changes.
+
+---
+
+## Development: Scope
+
+### Research Goals
+
+This research aims to explore the integration of GraphQL within the Go programming ecosystem, focusing on both the implementation of the GraphQL specification and its compatibility validation. The study establishes a technical and methodological foundation for the ongoing evolution of open-source GraphQL libraries through automation tools and collaborative contribution environments.
+
+### Scope Clarifications
+
+#### Implementation
+
+The scope of the implementation is anchored to the GraphQL JavaScript reference implementation (`graphql-js`) at version 0.6.0. Although the baseline adheres strictly to this version, the project encourages future enhancements through community contributions aligned with extensibility and backward compatibility principles.
+
+Enhancements must avoid disrupting existing functionality unless explicitly motivated by changes in the reference implementation. Stability is paramount, and the implementation is validated through real-world applications in production environments across multiple organizations.
+
+The library reproduces the imperative schema construction model of `graphql-js`, thereby enabling a fully programmable interface to the internal type system. Robustness is ensured by replicating the original unit test suite, adapted idiomatically for Go, to confirm feature parity and behavioral consistency.
+
+#### Compatibility Validation
+
+The compatibility validation tool is designed as an external component, intentionally decoupled from the main implementation. Its modular architecture facilitates support for future integrations with additional GraphQL implementations beyond those evaluated in this study.
+
+The tool verifies runtime equivalence through introspection-based comparisons, focusing on structural compatibility between type systems. The tool also lays the groundwork for CI/CD integration, allowing future maintainers to automate compatibility checks during development workflows.
+
+### Potential Bias Identification
+
+The implementation considers `graphql-js` as its primary design reference. However, adaptations are made to conform with idiomatic Go practices rather than mimicking JavaScript-specific engineering patterns. This translation process emphasizes conceptual fidelity over syntactic replication.
+
+Similarly, the compatibility validation tool is scoped to support `graphql-js` version 0.6.0. Although this version constraint limits its immediate scope, the tool’s modular foundation facilitates future support for newer versions or alternate reference implementations.
+
+### Research Limitations
+
+This research is explicitly limited to evaluating and replicating the behavior of `graphql-js` version 0.6.0. While extensibility is accounted for, validation efforts and conclusions are constrained to this historical version.
+
+### Areas Outside the Scope
+
+#### Resource Limitations
+
+The following initiatives were conceptually considered to further enrich the compatibility validation scope but were excluded from this study due to time and resource constraints. They are proposed as future work:
+
+- **Compatibility Unit Tests** ([GitHub][1]): A framework for validating test name and output alignment between `graphql-js` and `graphql-go`.
+- **Compatibility User Acceptance** ([GitHub][2]): A user-centered analysis comparing community adoption metrics, feedback patterns, and usage characteristics between `graphql-js` and `graphql-go`.
+
+[1]: https://github.com/graphql-go/compatibility-unit-tests  
+[2]: https://github.com/graphql-go/compatibility-user-acceptance
 
 ---
 
