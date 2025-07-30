@@ -11,10 +11,11 @@
 7. [Objetivos](#objetivos)
 8. [Marco Teórico](#marco-teórico)
 9. [Desarrollo: Metodología](#desarrollo-metodología)
-10. [Results: Type System](#results-type-system)
-11. [Results: Operational Equivalence](#results-operational-equivalence)
-12. [Results: Compatibility Validation](#results-compatibility-validation)
-13. [Conclusions](#conclusions)
+10. [Desarrollo: Requerimientos](#desarrollo-requerimientos)
+11. [Results: Type System](#results-type-system)
+12. [Results: Operational Equivalence](#results-operational-equivalence)
+13. [Results: Compatibility Validation](#results-compatibility-validation)
+14. [Conclusions](#conclusions)
 
 ---
 
@@ -254,6 +255,84 @@ La plataforma GitHub respaldó la naturaleza ágil del proyecto al proporcionar 
 #### Colaboración
 
 La colaboración entre equipos multidisciplinarios fue una piedra angular del proyecto. Las funciones colaborativas de GitHub fomentaron el intercambio de documentación, el seguimiento de decisiones y discusiones transparentes sobre compensaciones de diseño. Esto apoyó la mantenibilidad a largo plazo y redujo la curva de aprendizaje para nuevos colaboradores y usuarios.
+
+---
+
+## Desarrollo: Requerimientos
+
+### Funcionales: Implementación
+
+- La implementación debe estar escrita en el lenguaje de programación Go.
+- Debe implementar GraphQL siguiendo la versión 0.6.0 de `graphql-js`.
+- La Especificación GraphQL servirá como guía alternativa en caso de ambigüedad o ausencia de detalles en `graphql-js`.
+
+### No Funcionales: Implementación
+
+#### Portabilidad
+- Compatible con sistemas operativos cruzados.
+- Ejecutable en el entorno de ejecución estándar de Go, evitando dependencias de C (cgo).
+
+#### Seguridad
+- Debe seguir las mejores prácticas de seguridad recomendadas por la comunidad de Go.
+
+#### Mantenibilidad
+- Aplicar buenas prácticas de diseño de API y estructuras internas según las convenciones de Go.
+- Incluir comentarios explicativos en el código fuente.
+- Integrar herramientas de cobertura de pruebas.
+- Proveer ejemplos de código para casos de uso comunes.
+
+#### Confiabilidad
+- El proyecto debe ser de código abierto.
+- Debe seguir flujos de trabajo colaborativos que incluyan revisión de código.
+
+#### Escalabilidad
+- La aceptación por parte de la comunidad de código abierto servirá como indicador de su capacidad de adopción y escalamiento.
+
+#### Rendimiento
+- El rendimiento debe ser validado a través de pruebas unitarias que incluyan evaluaciones de desempeño fundamentales.
+
+#### Reusabilidad
+- La solución debe poder integrarse en otros proyectos de Go mediante interfaz de línea de comandos (CLI).
+
+#### Flexibilidad
+- Debe mantener una mínima desviación respecto a `graphql-js` para conservar la paridad de diseño de API.
+
+### Requerimientos Funcionales: Validación de Compatibilidad
+- La herramienta de validación de compatibilidad debe comparar el sistema de tipos de `graphql-js` y `graphql-go` usando introspección.
+- Debe ser ejecutable via la interface de linea de commandos (CLI).
+- La herramienta debe ser escrita en Go.
+- De ser necesario usar otras bibliotecas de Go open-source.
+
+### No Funcionales: Validación de Compatibilidad
+
+#### Portabilidad
+- Compatible con sistemas operativos cruzados.
+- Ejecutable en el entorno de ejecución estándar de Go, sin necesidad de cgo.
+
+#### Seguridad
+- Debe aplicar las mejores prácticas de seguridad reconocidas en la comunidad de desarrollo en Go.
+
+#### Mantenibilidad
+- Aplicar buenas prácticas de diseño de API y estructuras internas en Go.
+- Incluir comentarios explicativos en el código fuente.
+- Integrar herramientas de cobertura de pruebas.
+- Incluir scripts ejecutables para facilitar la interacción mediante CLI.
+
+#### Confiabilidad
+- Debe tratarse de un proyecto de código abierto.
+- Requiere procesos colaborativos de revisión de código para garantizar calidad.
+
+#### Escalabilidad
+- La aceptación y uso por parte de la comunidad será un indicador clave.
+
+#### Rendimiento
+- La validación de rendimiento debe estar basada en la actividad del repositorio y la eficiencia del procesamiento con caché.
+
+#### Reusabilidad
+- El sistema debe ser integrable en otros proyectos de Go utilizando la interfaz de línea de comandos (CLI).
+
+#### Flexibilidad
+- Debe permitir la integración de nuevas funcionalidades dentro del CLI.
 
 ---
 

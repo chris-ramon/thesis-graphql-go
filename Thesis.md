@@ -11,10 +11,11 @@
 7. [Objectives](#objectives)
 8. [Theory Framework](#theory-framework)
 9. [Development: Methodology](#development-methodology)
-10. [Results: Type System](#results-type-system)
-11. [Results: Operational Equivalence](#results-operational-equivalence)
-12. [Results: Compatibility Validation](#results-compatibility-validation)
-13. [Conclusions](#conclusions)
+10. [Development: Requirements](#development-requirements)
+11. [Results: Type System](#results-type-system)
+12. [Results: Operational Equivalence](#results-operational-equivalence)
+13. [Results: Compatibility Validation](#results-compatibility-validation)
+14. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -262,6 +263,84 @@ GitHub’s tooling—such as Issues, Pull Requests, Tags, Releases, Branches, an
 
 #### Collaboration
 Collaboration was driven primarily through GitHub Issues and Pull Requests, ensuring a permanent, transparent record of discussions, architectural decisions, feature documentation, and educational use.
+
+---
+
+## Development: Requirements
+
+### Functional Requirements: Implementation
+
+- The implementation must be written in the Go programming language.
+- It must align with the GraphQL implementation in `graphql-js` up to version 0.6.0.
+- The GraphQL Specification should serve as a secondary reference when needed.
+
+### Non-Functional Requirements: Implementation
+
+#### Portability
+- The system should be cross-platform, running on various operating systems.
+- It must rely on the canonical Go runtime, avoiding dependencies on C-based bindings (non-cgo).
+
+#### Security
+- The implementation must adhere to Go community best practices for secure software development.
+
+#### Maintainability
+- The project should follow Go best practices for API design and internal architecture.
+- A continuous integration (CI) pipeline must be integrated.
+- The codebase should include meaningful comments to enhance readability and maintainability.
+- A code coverage tool must be incorporated to ensure testing reliability.
+- The project should offer a community discussion channel, such as a website chat.
+- Example code must be included for common use cases.
+
+#### Reliability
+- The project must be developed and maintained as open-source.
+- The workflow should leverage collaborative tools such as code reviews to ensure quality and resilience.
+
+#### Scalability
+- The implementation must be designed to accommodate the growing adoption of the open-source community.
+
+#### Performance
+- The implementation must include benchmark tests within its unit tests to evaluate performance metrics.
+
+#### Reusability
+- The project must be self-contained with zero dependencies on other Go open-source libraries.
+
+#### Flexibility
+- The API design must maintain minimal deviations from `graphql-js` to ensure design parity.
+
+### Functional Requirements: Compatibility Validation
+
+- The compatibility validation tool must compare the internal type systems of `graphql-js` and `graphql-go` using GraphQL introspection.
+- It must be executable from the command line interface (CLI).
+- The tool must be developed in Go and may leverage existing open-source Go libraries.
+
+### Non-Functional Requirements: Compatibility Validation
+
+#### Portability
+- The tool must run across various operating systems using the canonical Go runtime.
+
+#### Security
+- Security measures must align with Go best practices.
+
+#### Maintainability
+- The codebase must follow Go best practices and include code comments.
+- A code coverage tool must be integrated.
+- It must include runnable scripts for common CLI interactions.
+- Example usages should be provided to facilitate learning and integration.
+
+#### Reliability
+- The tool must be open-source and developed through a workflow that emphasizes transparency and peer review.
+
+#### Scalability
+- The implementation must support growing contributions and use within the open-source community.
+
+#### Performance
+- The tool must utilize caching mechanisms to avoid redundant operations or downloads.
+
+#### Reusability
+- The tool must be easily integrable into other Go-based CLI projects.
+
+#### Flexibility
+- It must support the addition of new CLI features without significant architectural changes.
 
 ---
 
