@@ -381,13 +381,13 @@ This research is explicitly limited to evaluating and replicating the behavior o
 
 #### Resource Limitations
 
-The following initiatives were conceptually considered to further enrich the compatibility validation scope but were excluded from this study due to time and resource constraints. They are proposed as future work:
+The following initiatives were conceptually considered to further enrich the compatibility validation scope but were excluded from this study due to resource constraints. They are proposed as future work:
 
-- **Compatibility Unit Tests** ([GitHub][1]): A framework for validating test name and output alignment between `graphql-js` and `graphql-go`.
-- **Compatibility User Acceptance** ([GitHub][2]): A user-centered analysis comparing community adoption metrics, feedback patterns, and usage characteristics between `graphql-js` and `graphql-go`.
+- **Compatibility Unit Tests** ([GitHub][4]): A framework for validating test name and output alignment between `graphql-js` and `graphql-go`.
+- **Compatibility User Acceptance** ([GitHub][5]): A user-centered analysis comparing community adoption metrics, feedback patterns, and usage characteristics between `graphql-js` and `graphql-go`.
 
-[1]: https://github.com/graphql-go/compatibility-unit-tests  
-[2]: https://github.com/graphql-go/compatibility-user-acceptance
+[4]: https://github.com/graphql-go/compatibility-unit-tests
+[5]: https://github.com/graphql-go/compatibility-user-acceptance
 
 ---
 
