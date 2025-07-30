@@ -251,8 +251,10 @@ The codebase benefited from peer reviews by contributors worldwide. These review
 #### Decentralized Contributors
 GitHub facilitated a decentralized workflow where contributors could collaborate asynchronously across different time zones and regions.
 
-#### Public Codebase
-From its inception, the codebase was publicly accessible. This transparency fostered engagement and enabled others to build upon the project. Licensed under MIT, like the `graphql-js` reference, it allowed for both open and closed-source forks.
+### Public Codebase and License
+Since its early versions, the repository was published under the permissive MIT license, aligning with the licensing model of graphql-js (BSD) [¹]. This facilitated both academic learning and commercial use, allowing the creation of derivative projects through forks and integrations.
+
+[¹] graphql-js v0.6.0 BSD License: https://github.com/graphql/graphql-js/blob/v0.6.0/LICENSE
 
 #### Rapid Prototyping
 GitHub’s tooling—such as Issues, Pull Requests, Tags, Releases, Branches, and Collaborator permissions—supported continuous and rapid iteration.

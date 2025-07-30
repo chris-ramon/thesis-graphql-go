@@ -241,9 +241,11 @@ La revisión por pares impulsada por la comunidad fue esencial para garantizar l
 
 El desarrollo no estuvo vinculado a una única entidad u organización. Por el contrario, colaboradores de diversas regiones y perfiles profesionales contribuyeron de forma asincrónica utilizando GitHub como plataforma central de coordinación.
 
-#### Código Fuente Público
+#### Código Público y Licencia
 
-Desde sus primeras versiones, el repositorio fue publicado bajo la licencia permisiva MIT, coincidiendo con el modelo de licencia de `graphql-js`. Esto facilitó tanto el aprendizaje académico como el uso comercial, permitiendo la creación de proyectos derivados mediante forks e integraciones.
+Desde sus primeras versiones, el repositorio fue publicado bajo la licencia permisiva MIT, fomentando el uso libre y la colaboración abierta. Esta decisión se alineó con el modelo de licencia adoptado por la implementación de referencia en JavaScript, `graphql-js`, que en su versión `v0.6.0` utilizaba una licencia BSD de tres cláusulas[^1]. Esta compatibilidad de licencias facilitó tanto el aprendizaje académico como el uso comercial, permitiendo la creación de proyectos derivados mediante forks, integraciones y adaptaciones particulares.
+
+[^1]: `graphql-js` v0.6.0 BSD License: [https://github.com/graphql/graphql-js/blob/v0.6.0/LICENSE](https://github.com/graphql/graphql-js/blob/v0.6.0/LICENSE)
 
 #### Prototipado Rápido
 
