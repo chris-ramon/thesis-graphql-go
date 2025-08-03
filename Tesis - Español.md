@@ -13,7 +13,7 @@
 9. [Desarrollo: Metodología](#desarrollo-metodología)
 10. [Desarrollo: Requerimientos](#desarrollo-requerimientos)
 11. [Desarrollo: Alcance](#desarrollo-alcance)
-12. [Desarrollo: Testeo](#desarrollo-testeo)
+12. [Desarrollo: Pruebas](#desarrollo-pruebas)
 13. [Results: Type System](#results-type-system)
 14. [Results: Operational Equivalence](#results-operational-equivalence)
 15. [Results: Compatibility Validation](#results-compatibility-validation)
