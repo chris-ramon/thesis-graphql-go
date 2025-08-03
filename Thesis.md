@@ -13,10 +13,11 @@
 9. [Development: Methodology](#development-methodology)
 10. [Development: Requirements](#development-requirements)
 11. [Development: Scope](#development-scope)
-12. [Results: Type System](#results-type-system)
-13. [Results: Operational Equivalence](#results-operational-equivalence)
-14. [Results: Compatibility Validation](#results-compatibility-validation)
-15. [Conclusions](#conclusions)
+12. [Development: Testing](#development-testing)
+13. [Results: Type System](#results-type-system)
+14. [Results: Operational Equivalence](#results-operational-equivalence)
+15. [Results: Compatibility Validation](#results-compatibility-validation)
+16. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -388,6 +389,32 @@ The following initiatives were conceptually considered to further enrich the com
 
 [4]: https://github.com/graphql-go/compatibility-unit-tests
 [5]: https://github.com/graphql-go/compatibility-user-acceptance
+
+---
+
+## Development: Testing
+
+### Implementation
+
+The strategy for the `graphql-go` implementation was to create unit tests following the `graphql-js` reference implementation naming of the unit tests, but then due to naturally creating own implementor conventions, the strategy of mapping unit test naming 1 to 1 was not strictly followed. Some unit tests are still renamed after their similar `graphql-js` parity of testing similar components.
+
+That’s why initially there was the intention to create `graphql-go/compatibility-unit-tests`, which required code refactors with the intention of matching `graphql-go` and `graphql-js` unit test names, but the project was left out of scope and added as a future work.
+
+Although the test names matching convention did not remain the established strategy, the implementation contains a robust test suite with tooling for ensuring it reduces the risks of bugs via regressions.
+
+The tooling around unit tests involves, for example, code coverage tools that ensure the project does not go below the desired state of quality. Currently, the baseline for code coverage is: **92%**.
+
+### Compatibility Validation
+
+The compatibility validation tool is a CLI-based library that contains unit tests for the core components.
+
+Currently, it does not contain CI tooling like the implementation library.
+
+It was added as a future work to improve the testing environment to support the following parts:
+
+- Code Coverage.
+- CI.
+- Increasing the code coverage numbers.
 
 ---
 
