@@ -13,10 +13,11 @@
 9. [Desarrollo: Metodología](#desarrollo-metodología)
 10. [Desarrollo: Requerimientos](#desarrollo-requerimientos)
 11. [Desarrollo: Alcance](#desarrollo-alcance)
-12. [Results: Type System](#results-type-system)
-13. [Results: Operational Equivalence](#results-operational-equivalence)
-14. [Results: Compatibility Validation](#results-compatibility-validation)
-15. [Conclusions](#conclusions)
+12. [Desarrollo: Pruebas](#desarrollo-pruebas)
+13. [Results: Type System](#results-type-system)
+14. [Results: Operational Equivalence](#results-operational-equivalence)
+15. [Results: Compatibility Validation](#results-compatibility-validation)
+16. [Conclusions](#conclusions)
 
 ---
 
@@ -380,6 +381,32 @@ Las siguientes iniciativas fueron consideradas conceptualmente para enriquecer l
 
 [4]: https://github.com/graphql-go/compatibility-unit-tests
 [5]: https://github.com/graphql-go/compatibility-user-acceptance
+
+---
+
+## Desarrollo: Pruebas
+
+### Implementación
+
+La estrategia para la implementación de `graphql-go` fue crear pruebas unitarias siguiendo la convención de nombres de las pruebas unitarias de la implementación de referencia `graphql-js`, pero debido a la creación natural de convenciones propias del implementador, la estrategia de mapeo 1 a 1 en los nombres de las pruebas unitarias no se siguió estrictamente. Algunas pruebas unitarias aún mantienen nombres similares a sus equivalentes en `graphql-js`, verificando componentes análogos.
+
+Por ello, inicialmente se tuvo la intención de crear `graphql-go/compatibility-unit-tests`, lo cual requería refactorizaciones de código con la intención de hacer coincidir los nombres de pruebas unitarias entre `graphql-go` y `graphql-js`, pero este proyecto quedó fuera del alcance y se agregó como trabajo futuro.
+
+Aunque la convención de coincidencia en los nombres de pruebas no se mantuvo como estrategia establecida, la implementación contiene una suite de pruebas robusta con herramientas que aseguran la reducción de riesgos de errores mediante regresiones.
+
+El entorno de pruebas incluye, por ejemplo, herramientas de cobertura de código que aseguran que el proyecto no descienda por debajo del estado de calidad deseado. Actualmente, la base de cobertura de código es: **92%**.
+
+### Validación de Compatibilidad
+
+La herramienta de validación de compatibilidad es una biblioteca basada en CLI que contiene pruebas unitarias para sus componentes principales.
+
+Actualmente no contiene herramientas de integración continua (CI) como la biblioteca de implementación.
+
+Se agregó como trabajo futuro mejorar el entorno de pruebas para soportar los siguientes aspectos:
+
+- Cobertura de código.
+- Integración continua (CI).
+- Aumento del número de pruebas y cobertura.
 
 ---
 
