@@ -14,10 +14,11 @@
 10. [Desarrollo: Requerimientos](#desarrollo-requerimientos)
 11. [Desarrollo: Alcance](#desarrollo-alcance)
 12. [Desarrollo: Pruebas](#desarrollo-pruebas)
-13. [Results: Type System](#results-type-system)
-14. [Results: Operational Equivalence](#results-operational-equivalence)
-15. [Results: Compatibility Validation](#results-compatibility-validation)
-16. [Conclusions](#conclusions)
+13. [Desarrollo: RAD](#desarrollo-rad)
+14. [Results: Type System](#results-type-system)
+15. [Results: Operational Equivalence](#results-operational-equivalence)
+16. [Results: Compatibility Validation](#results-compatibility-validation)
+17. [Conclusions](#conclusions)
 
 ---
 
@@ -407,6 +408,22 @@ Se agregó como trabajo futuro mejorar el entorno de pruebas para soportar los s
 - Cobertura de código.
 - Integración continua (CI).
 - Aumento del número de pruebas y cobertura.
+
+---
+
+## Desarrollo: RAD
+
+### Implementación
+
+La implementación de la biblioteca `graphql-go/graphql` adoptó un modelo de Desarrollo Rápido de Aplicaciones (RAD), caracterizado por contribuciones iterativas a través de pull requests en GitHub. En lugar de seguir una hoja de ruta estrictamente predefinida, el desarrollo surgió de manera orgánica mediante interacciones comunitarias, discusiones en issues y necesidades prácticas derivadas del portado de características desde la implementación de referencia, `graphql-js`.
+
+Cada tarea, representada como un pull request individual, abordó componentes específicos como el ejecutor, resolutor, impresor, analizador sintáctico e introspección. Este enfoque hizo énfasis en la modularidad, mantenibilidad y conformidad con la especificación de GraphQL versión 0.6.0, incorporando frecuentemente mejoras paralelas encontradas en `graphql-js`.
+
+Este enfoque ascendente, basado en pull requests, permitió una rápida creación de prototipos y pruebas de funcionalidades, donde muchas decisiones de diseño se discutieron y resolvieron abiertamente dentro de los hilos de las pull requests. En consecuencia, el historial de desarrollo constituye una línea de tiempo de soluciones prácticas moldeadas tanto por el conocimiento colectivo como por los requisitos en evolución para garantizar la compatibilidad de GraphQL en Go.
+
+### Implementation: Pull Requests
+
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-graphql.png" />
 
 ---
 

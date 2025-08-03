@@ -14,10 +14,11 @@
 10. [Development: Requirements](#development-requirements)
 11. [Development: Scope](#development-scope)
 12. [Development: Testing](#development-testing)
-13. [Results: Type System](#results-type-system)
-14. [Results: Operational Equivalence](#results-operational-equivalence)
-15. [Results: Compatibility Validation](#results-compatibility-validation)
-16. [Conclusions](#conclusions)
+13. [Development: RAD](#development-rad)
+14. [Results: Type System](#results-type-system)
+15. [Results: Operational Equivalence](#results-operational-equivalence)
+16. [Results: Compatibility Validation](#results-compatibility-validation)
+17. [Conclusions](#conclusions)
 
 ## Abstract
 
@@ -415,6 +416,22 @@ It was added as a future work to improve the testing environment to support the 
 - Code Coverage.
 - CI.
 - Increasing the code coverage numbers.
+
+---
+
+## Development: RAD
+
+### Implementation
+
+The implementation of the `graphql-go/graphql` library followed a Rapid Application Development (RAD) model, characterized by iterative contributions through GitHub pull requests. Instead of adhering to a strictly predefined roadmap, development emerged organically through community interactions, issue discussions, and practical needs derived from porting features from the reference implementation, `graphql-js`.
+
+Each task, represented as an individual pull request, addressed specific components such as the executor, resolver, printer, parser, and introspection. This approach emphasized modularity, maintainability, and conformance with the GraphQL Specification version 0.6.0, often incorporating parallel improvements found in `graphql-js`.
+
+This bottom-up pull-request-driven strategy enabled fast prototyping and feature testing, where many design decisions were discussed and resolved openly within pull request threads. As a result, the development history constitutes a timeline of practical solutions shaped by both collective knowledge and evolving requirements to ensure GraphQL compatibility in Go.
+
+### Implementation: Pull Requests
+
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-graphql.png" />
 
 ---
 
