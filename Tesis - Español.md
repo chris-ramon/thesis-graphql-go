@@ -421,7 +421,11 @@ Cada tarea, representada como un pull request individual, abordó componentes es
 
 Este enfoque ascendente, basado en pull requests, permitió una rápida creación de prototipos y pruebas de funcionalidades, donde muchas decisiones de diseño se discutieron y resolvieron abiertamente dentro de los hilos de las pull requests. En consecuencia, el historial de desarrollo constituye una línea de tiempo de soluciones prácticas moldeadas tanto por el conocimiento colectivo como por los requisitos en evolución para garantizar la compatibilidad de GraphQL en Go.
 
-### Implementación: Pull Requests
+Para facilitar la adopción y uso por parte de proyectos externos, se utilizaron etiquetas de GitHub (Tags) para publicar versiones. Estas etiquetas no siguen necesariamente una relación 1:1 con las versiones correspondientes de `graphql-js`, sino que representan hitos estables con sus respectivas notas de lanzamiento.
+
+La siguiente sección presenta una lista detallada de las solicitudes de extracción que documentan la evolución de la implementación.
+
+#### Implementación: Pull Requests
 
 <img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-graphql.png" />
 
