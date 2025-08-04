@@ -421,9 +421,25 @@ Cada tarea, representada como un pull request individual, abordó componentes es
 
 Este enfoque ascendente, basado en pull requests, permitió una rápida creación de prototipos y pruebas de funcionalidades, donde muchas decisiones de diseño se discutieron y resolvieron abiertamente dentro de los hilos de las pull requests. En consecuencia, el historial de desarrollo constituye una línea de tiempo de soluciones prácticas moldeadas tanto por el conocimiento colectivo como por los requisitos en evolución para garantizar la compatibilidad de GraphQL en Go.
 
-### Implementation: Pull Requests
+### Implementación: Pull Requests
 
 <img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-graphql.png" />
+
+### Validación de Compatibilidad
+
+La herramienta de validación de compatibilidad siguió un enfoque de desarrollo estrechamente alineado con la metodología de Desarrollo Rápido de Aplicaciones (RAD), caracterizada por ciclos cortos e incrementales, impulsados principalmente mediante pull requests. A diferencia de metodologías tradicionales basadas en planificación, el desarrollo no comenzó con una hoja de ruta completamente definida. En su lugar, la evolución del proyecto fue guiada por la integración continua de funcionalidades abordadas iterativamente.
+
+A diferencia de la implementación original de `graphql-go`, este proyecto puso un mayor énfasis en el seguimiento de tareas mediante GitHub Issues. Se mantuvo, en la mayoría de los casos, una relación uno a uno entre issues y sus pull requests asociados, lo que proporcionó trazabilidad y un mecanismo de planificación ligera.
+
+Además, el proyecto experimentó con el uso de herramientas inteligentes, como un agente de inteligencia artificial denominado **mentatbot**, al cual se le asignaron issues que luego fueron abordados mediante pull requests automatizadas o asistidas. Este enfoque refleja la creciente integración de herramientas inteligentes en los flujos modernos de desarrollo de software.
+
+Todos los pull requests fueron desarrollados en ramas aisladas antes de integrarse a la rama `main`, que funcionó como la versión estable por defecto del proyecto, dado que no se utilizaron etiquetas de versiones formales. Este flujo de trabajo basado en ramas permitió agilidad y menor sobrecarga, en línea con los principios del RAD.
+
+A continuación, se presenta un listado detallado de los pull requests que documentan la evolución de la herramienta de validación de compatibilidad.
+
+#### Validación de Compatibilidad: Pull Requests
+
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-compatibility-standard-definitions.png" />
 
 ---
 

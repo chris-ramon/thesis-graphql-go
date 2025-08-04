@@ -433,6 +433,22 @@ This bottom-up pull-request-driven strategy enabled fast prototyping and feature
 
 <img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-graphql.png" />
 
+### Compatibility Validation
+
+The compatibility validation tool followed a development approach closely aligned with Rapid Application Development (RAD), characterized by short, incremental cycles of implementation primarily driven by pull requests. Unlike traditional planning-based methodologies, development did not begin with a fully defined roadmap or a complete set of issues. Instead, the evolution of the project was guided through continuous integration of functionality, addressing requirements iteratively.
+
+In contrast with the earlier `graphql-go` implementation, the compatibility validation project placed a stronger emphasis on issue tracking via GitHub Issues. A 1-to-1 mapping was generally maintained between GitHub issues and their corresponding pull requests, providing traceability and a lightweight planning mechanism.
+
+The project also experimented with AI-assisted development using an agent named **mentatbot**, which was assigned issues that were then addressed through automated or assisted pull requests. This approach reflects the increasing integration of intelligent tooling in modern software development pipelines.
+
+All pull requests were developed in isolated branches before being merged into the `main` branch, which served as the de facto latest stable version, given the absence of formal release tags. This branch-oriented workflow enabled agility and reduced overhead, aligning with the RAD methodology’s emphasis on flexibility and rapid delivery.
+
+The following section presents a detailed list of pull requests that document the evolution of the compatibility validation tool.
+
+#### Compatibility Validation: Pull Requests
+
+<img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-compatibility-standard-definitions.png" />
+
 ---
 
 ## Results: Type System
