@@ -429,7 +429,11 @@ Each task, represented as an individual pull request, addressed specific compone
 
 This bottom-up pull-request-driven strategy enabled fast prototyping and feature testing, where many design decisions were discussed and resolved openly within pull request threads. As a result, the development history constitutes a timeline of practical solutions shaped by both collective knowledge and evolving requirements to ensure GraphQL compatibility in Go.
 
-### Implementation: Pull Requests
+To facilitate adoption and usage by external projects, we leveraged GitHub Tags to publish releases. These tags do not necessarily follow a 1:1 versioning with the corresponding `graphql-js` versions, but rather represent stable milestones with their associated release notes.
+
+The following section presents a detailed list of pull requests that document the evolution of the implementation.
+
+#### Implementation: Pull Requests
 
 <img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-graphql.png" />
 
