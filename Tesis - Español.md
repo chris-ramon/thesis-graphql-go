@@ -437,7 +437,7 @@ Todos los pull requests fueron desarrollados en ramas aisladas antes de integrar
 
 A continuación, se presenta un listado detallado de los pull requests que documentan la evolución de la herramienta de validación de compatibilidad.
 
-### Validación de Compatibilidad: Pull Requests
+#### Validación de Compatibilidad: Pull Requests
 
 <img width="817" height="939" alt="Image" src="https://raw.githubusercontent.com/chris-ramon/thesis-graphql-go/refs/heads/main/rad/pull-requests/graphql-go-compatibility-standard-definitions.png" />
 
